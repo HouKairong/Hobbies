@@ -88,7 +88,7 @@ const China = () => {
       { title: "Chiny: Portret cywilizacji i narodu" },
       {
         title:
-          "Cesarzowa wdowa Cixi: Konkubin która stworzyła współczesne Chiny",
+          "Cesarzowa wdowa Cixi: Konkubina która stworzyła współczesne Chiny",
       },
       { title: "Historia Kościoła w Chinach" },
       { title: "Daodejing" },
@@ -105,7 +105,11 @@ const China = () => {
     "Inne Azjatyckie": [
       {
         title: "Gry",
-        subitems: ["Ghost of Tsushima", "Ghost of Yotei", "Sekiro"],
+        subitems: [
+          "Ghost of Tsushima",
+          "Ghost of Yotei",
+          "Sekiro: Shadows Die Twice",
+        ],
       },
       {
         title: "Seriale",

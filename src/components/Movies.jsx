@@ -183,7 +183,7 @@ const Movies = () => {
     ],
 
     BoskaKomedia: {
-      PiekłoListaA: [
+      "Piekło Lista A": [
         { title: "L'Inferno" },
         { title: "Dante's Inferno: An Animated Epic" },
         { title: "Behemoth" },
@@ -210,7 +210,7 @@ const Movies = () => {
         { title: "Constantine" },
       ],
 
-      PiekłoListaB: [
+      "Piekło Lista B": [
         { title: "L'Inferno" },
         { title: "Dante's Inferno: An Animated Epic" },
         { title: "Behemoth" },

@@ -6,6 +6,7 @@ const Header = ({
   onClickGames,
   onClickSeries,
   onClickChina,
+  onClickPhilosophy,
 }) => {
   return (
     <div>
@@ -27,7 +28,9 @@ const Header = ({
           <li onClick={onClickChina} style={{ cursor: "pointer" }}>
             Chiny
           </li>
-          <li>Filozofia</li>
+          <li onClick={onClickPhilosophy} style={{ cursor: "pointer" }}>
+            Filozofia
+          </li>
         </ul>
       </nav>
     </div>

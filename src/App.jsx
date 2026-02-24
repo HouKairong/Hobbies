@@ -5,6 +5,7 @@ import Movies from "./components/Movies.jsx";
 import Games from "./components/Games.jsx";
 import Series from "./components/Series.jsx";
 import China from "./components/China.jsx";
+import Philosophy from "./components/Philosophy.jsx";
 import "./App.css";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         onClickGames={() => setActiveComponent("games")}
         onClickSeries={() => setActiveComponent("series")}
         onClickChina={() => setActiveComponent("china")}
+        onClickPhilosophy={() => setActiveComponent("philosophy")}
       />
 
       {activeComponent === "books" && <Books />}
@@ -25,6 +27,7 @@ const App = () => {
       {activeComponent === "games" && <Games />}
       {activeComponent === "series" && <Series />}
       {activeComponent === "china" && <China />}
+      {activeComponent === "philosophy" && <Philosophy />}
     </div>
   );
 };
