@@ -123,6 +123,7 @@ const Books = () => {
 
   return (
     <div>
+      <h2>Książki</h2>
       {/* Lista serii */}
       <ul>
         {Object.keys(books).map((series) => (

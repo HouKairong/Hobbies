@@ -171,6 +171,15 @@ const Movies = () => {
       },
       { title: "The Yinyang Master" },
       { title: "Konfucjusz" },
+      {
+        title: "Persona 3 The Movie",
+        parts: [
+          "#1 Spring of Birth",
+          "#2 Midsummer Knight's Dream",
+          "#3 Falling Down",
+          "#4 Winter of Rebirth",
+        ],
+      },
     ],
 
     BoskaKomedia: {
@@ -304,6 +313,7 @@ const Movies = () => {
 
   return (
     <div>
+      <h2>Filmy</h2>
       <label>
         Wybierz licencję:
         <select
