@@ -166,6 +166,10 @@ const Books = () => {
       { title: "Historia Kościoła w Chinach" },
       { title: "Daodejing" },
       { title: "Ocalała z chińskiego gułagu" },
+      {
+        title: "Assassin's Creed Miecz Shao Jun",
+        stories: ["Tom 1", "Tom 2", "Tom 3", "Tom 4"],
+      },
     ],
 
     "Boska Komedia": [

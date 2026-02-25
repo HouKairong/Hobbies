@@ -291,7 +291,111 @@ const Movies = () => {
       ],
     },
 
-    Filozofia: [],
+    Filozofia: [
+      {
+        title: "Persona 3 The Movie",
+        parts: [
+          "#1 Spring of Birth",
+          "#2 Midsummer Knight's Dream",
+          "#3 Falling Down",
+          "#4 Winter of Rebirth",
+        ],
+      },
+      {
+        title: "Wiedźmin",
+        parts: [
+          "Wiedźmin (2001)",
+          "Wiedźmin: Zmora Wilka (2021)",
+          "Wiedźmin: Syreny z głębin (2025)",
+          "Szczury: Opowieści ze świata Wiedźmina (2025)",
+        ],
+      },
+      { title: "El Camino" },
+      { title: "Death Note" },
+      { title: "Constantine" },
+      { title: "Pasja" },
+      { title: "Noe: Wybrany przez Boga" },
+      { title: "L'Inferno" },
+      { title: "Dante's Inferno: An Animated Epic" },
+      { title: "Behemoth" },
+      {
+        title: "Przyczajony Tygrys, Ukryty Smok",
+        parts: [
+          "Przyczajony Tygrys, Ukryty Smok",
+          "Przyczajony Tygrys, Ukryty Smok: Miecz Przeznaczenia",
+        ],
+      },
+      { title: "Spirited Away: W Krainie Bogów" },
+      { title: "Rower z Pekinu" },
+      {
+        title: "Gwiezdne wojny",
+        parts: [
+          "Mroczne Widmo",
+          "Atak klonów",
+          "Zemsta Sithów",
+          "Nowa Nadzieja",
+          "Imperium kontratakuje",
+          "Powrót Jedi",
+          "Przebudzenie Mocy",
+          "Ostatni Jedi",
+          "Skywalker: Odrodzenie",
+        ],
+      },
+      { title: "Między piekłem a niebem" },
+      { title: "Niebo istnieje... naprawdę" },
+      { title: "Wszystkie psy idą do Nieba" },
+      {
+        title: "Hellraiser",
+        parts: [
+          "Hellraiser: Wysłannik piekieł",
+          "Hellraiser: Wysłannik piekieł II",
+          "Hellraiser III: Piekło na ziemi",
+          "Hellraiser IV: Dziedzictwo krwi",
+          "Hellraiser V: Wrota piekieł",
+          "Hellraiser: Droga do piekła",
+          "Hellraiser: Sekta",
+          "Hellraiser: Hellworld.com",
+          "Hellraiser: Revelations",
+          "Hellraiser: Judgment",
+          "Hellraiser",
+        ],
+      },
+      { title: "Konfucjusz" },
+      { title: "Jako w piekle, tak i na ziemi" },
+      { title: "Norymberga" },
+      { title: "Czas Apokalipsy" },
+      { title: "Wiking" },
+      {
+        title: "Władca Pierścieni",
+        parts: [
+          "Władca Pierścieni: Drużyna Pierścienia",
+          "Władca Pierścieni: Dwie Wieże",
+          "Władca Pierścieni: Powrót Króla",
+          "Władca Pierścieni: Wojna Rohirrimów",
+        ],
+      },
+      {
+        title: "Hobbit",
+        parts: [
+          "Hobbit: Niezwykła Podróż",
+          "Hobbit: Pustkowie Smauga",
+          "Hobbit: Bitwa Pięciu Armii",
+        ],
+      },
+      {
+        title: "Matrix",
+        parts: [
+          "Matrix (1999)",
+          "Matrix: Reaktywacja (2003)",
+          "Matrix: Rewolucje (2003)",
+          "Matrix: Zmartwychwstanie (2021)",
+        ],
+      },
+      { title: "Heretyk" },
+      { title: "Jojo Rabbit" },
+      { title: "Sokrates" },
+      { title: "Assassin's Creed" },
+    ],
   };
 
   const handleCategoryChange = (value) => {

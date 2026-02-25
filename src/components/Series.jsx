@@ -19,6 +19,7 @@ const seriesData = [
   { title: "Dragon's Dogma", dimensions: ["Overworld", "End"] },
   { title: "The passage", dimensions: ["Nether"] },
   { title: "All of us are dead", dimensions: ["Nether"] },
+  { title: "The last of us", dimensions: ["Nether"] },
   { title: "Squid game", dimensions: ["Nether"] },
   { title: "Breaking bad", dimensions: ["Nether"] },
   { title: "Better call Saul", dimensions: ["Nether"] },
