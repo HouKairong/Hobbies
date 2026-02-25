@@ -1,0 +1,90 @@
+/* --- reset listy i linków --- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+/* reset listy i linków */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* wrapper header + nav */
+.headerAndNav {
+  position: relative; /* normalny flow */
+  width: 100%;
+  background-color: blueviolet;
+  padding: 10px 15px; /* zmniejszony padding */
+  box-shadow: 0 0 15px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1; /* wystarczy, nie musimy nad overlay */
+}
+
+/* główny nagłówek */
+header {
+  font-size: 36px; /* zmniejszone, żeby mieściło się w 1080p */
+  font-style: italic;
+  font-family: "Playfair Display", serif;
+  text-decoration: underline;
+  color: darkblue;
+  background-color: violet;
+  padding: 8px 20px; /* trochę mniejszy padding */
+  border-radius: 20px;
+  box-shadow: 0 0 15px black;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+header:hover {
+  transform: scale(1.05);
+  background-color: rgb(211, 105, 211);
+  cursor: pointer;
+}
+
+/* nawigacja */
+nav {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+  background-color: violet;
+  border-radius: 20px;
+  box-shadow: 0 0 15px black;
+}
+
+nav li a {
+  font-size: 18px;
+  font-weight: 500;
+  color: darkblue;
+  transition: 0.2s ease;
+}
+
+nav li a:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+/* aktywny link */
+.active-link {
+  color: white !important;
+  background-color: darkblue;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}

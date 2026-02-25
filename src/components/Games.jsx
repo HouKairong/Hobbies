@@ -1,3 +1,4 @@
+import "./Games.css";
 import { useState, useMemo } from "react";
 
 const worldsList = [
@@ -331,35 +332,43 @@ const Games = () => {
   }, [selectedWorld, search]);
 
   return (
-    <div>
-      <h2>Gry</h2>
+    <div className="games-wrapper">
+      <div className="games-container">
+        <h2 className="games-title">Gry</h2>
 
-      <input
-        type="text"
-        placeholder="Szukaj gry..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+        <div className="games-controls">
+          <input
+            type="text"
+            placeholder="Szukaj gry..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="games-search"
+          />
 
-      <select
-        value={selectedWorld}
-        onChange={(e) => setSelectedWorld(e.target.value)}
-      >
-        <option value="Wszystkie">Wszystkie</option>
-        {worldsList.map((world) => (
-          <option key={world} value={world}>
-            {world}
-          </option>
-        ))}
-      </select>
+          <select
+            value={selectedWorld}
+            onChange={(e) => setSelectedWorld(e.target.value)}
+            className="games-filter"
+          >
+            <option value="Wszystkie">Wszystkie</option>
+            {worldsList.map((world) => (
+              <option key={world} value={world}>
+                {world}
+              </option>
+            ))}
+          </select>
+        </div>
 
-      <p>Liczba gier: {filteredGames.length}</p>
+        <p className="games-count">Liczba gier: {filteredGames.length}</p>
 
-      <ul>
-        {filteredGames.map((game, index) => (
-          <li key={index}>{game.title}</li>
-        ))}
-      </ul>
+        <ul className="games-list">
+          {filteredGames.map((game, index) => (
+            <li className="games-item" key={index}>
+              {game.title}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import "./Movies.css";
 import { useState } from "react";
 
 const Movies = () => {
@@ -45,7 +46,7 @@ const Movies = () => {
       },
       {
         title: "Jak Wytresować Smoka",
-        parts: ["Część 1", "Część 2", "Część 3"],
+        parts: ["Część 1", "Część 2", "Część 3", "Live Action"],
       },
       {
         title: "Gwiezdne wojny",
@@ -111,7 +112,7 @@ const Movies = () => {
       },
       {
         title: "Jak Wytresować Smoka",
-        parts: ["Część 1", "Część 2", "Część 3"],
+        parts: ["Część 1", "Część 2", "Część 3", "Live Action"],
       },
       { title: "El Camino" },
       {
@@ -180,9 +181,11 @@ const Movies = () => {
           "#4 Winter of Rebirth",
         ],
       },
+      { title: "Death Note" },
+      { title: "Avatar: Ostatni Władca Wiatru" },
     ],
 
-    BoskaKomedia: {
+    "Boska Komedia": {
       "Piekło Lista A": [
         { title: "L'Inferno" },
         { title: "Dante's Inferno: An Animated Epic" },
@@ -395,6 +398,40 @@ const Movies = () => {
       { title: "Jojo Rabbit" },
       { title: "Sokrates" },
       { title: "Assassin's Creed" },
+      { title: "Dzień Świra" },
+      { title: "Menu" },
+      { title: "Kot w butach: Ostatnie życzenie" },
+      { title: "Coco" },
+    ],
+    IPiN: [
+      {
+        title: "Jak Wytresować Smoka",
+        parts: ["Jak Wytresować Smoka 1", "Jak Wytresować Smoka 2"],
+      },
+      {
+        title: "Kung Fu Panda",
+        parts: ["Kung Fu Panda 1", "Kung Fu Panda 2", "Kung Fu Panda 3"],
+      },
+      { title: "Spirited Away: W krainie bogów" },
+      { title: "Dzień Świra" },
+      {
+        title: "Shrek",
+        parts: [
+          "Shrek 1",
+          "Shrek 2",
+          "Shrek 3",
+          "Shrek 4",
+          "Kot w butach: Ostatnie życzenie",
+        ],
+      },
+      { title: "Coco" },
+      { title: "Film o pszczołach" },
+      { title: "Klatka" },
+      { title: "Zabawa w Pochowanego" },
+      { title: "Bilet do Raju" },
+      { title: "Sierota: Narodziny zła" },
+      { title: "Uśmiechnij się" },
+      { title: "Menu" },
     ],
   };
 
@@ -409,97 +446,103 @@ const Movies = () => {
     setOpenSeries(null);
   };
 
-  const toggleSeries = (title) => {
-    setOpenSeries(openSeries === title ? null : title);
+  const toggleSeries = (id) => {
+    setOpenSeries(openSeries === id ? null : id);
   };
 
-  const isBoskaKomedia = selectedCategory === "BoskaKomedia";
+  const isBoskaKomedia = selectedCategory === "Boska Komedia";
+  const boskaKomedia = movies["Boska Komedia"];
 
   return (
-    <div>
-      <h2>Filmy</h2>
-      <label>
-        Wybierz licencję:
-        <select
-          value={selectedCategory}
-          onChange={(e) => handleCategoryChange(e.target.value)}
-        >
-          <option value="" disabled hidden>
-            Wybierz licencję
-          </option>
+    <div className="movies-wrapper">
+      <div className="movies-container">
+        <h2 className="movies-title">Filmy</h2>
 
-          {Object.keys(movies).map((cat) => (
-            <option key={cat} value={cat}>
-              {cat}
+        <label className="movies-select-label">
+          Wybierz licencję:
+          <select
+            className="movies-select"
+            value={selectedCategory}
+            onChange={(e) => handleCategoryChange(e.target.value)}
+          >
+            <option value="" disabled hidden>
+              Wybierz licencję
             </option>
-          ))}
-        </select>
-      </label>
+            {Object.keys(movies).map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
+            ))}
+          </select>
+        </label>
 
-      {selectedCategory && !isBoskaKomedia && (
-        <ul>
-          {movies[selectedCategory].map((item) => (
-            <li key={item.title}>
-              <span
-                onClick={() => (item.parts ? toggleSeries(item.title) : null)}
-                style={{
-                  cursor: item.parts ? "pointer" : "default",
-                }}
-              >
-                {item.title}
-              </span>
+        {/* Zwykłe kategorie */}
+        {selectedCategory && !isBoskaKomedia && (
+          <ul className="movies-list">
+            {movies[selectedCategory].map((item) => (
+              <li key={item.title} className="movies-item">
+                <span
+                  className={`movies-title-item ${item.parts ? "clickable" : ""}`}
+                  onClick={() => item.parts && toggleSeries(item.title)}
+                >
+                  {item.title}
+                </span>
+                {item.parts && openSeries === item.title && (
+                  <ul className="movies-sublist">
+                    {item.parts.map((part) => (
+                      <li key={part} className="movies-subitem">
+                        {part}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
 
-              {item.parts && openSeries === item.title && (
-                <ul style={{ marginLeft: "20px" }}>
-                  {item.parts.map((part) => (
-                    <li key={part}>{part}</li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
-      )}
-
-      {isBoskaKomedia && (
-        <div>
-          {Object.keys(movies.BoskaKomedia).map((group) => (
-            <div key={group}>
-              <h3
-                onClick={() => toggleSubgroup(group)}
-                style={{ cursor: "pointer" }}
-              >
-                {group}
-              </h3>
-
-              {openSubgroup === group && (
-                <ul>
-                  {movies.BoskaKomedia[group].map((item) => (
-                    <li key={item.title}>
-                      <span
-                        onClick={() =>
-                          item.parts ? toggleSeries(group + item.title) : null
-                        }
-                        style={{ cursor: item.parts ? "pointer" : "default" }}
-                      >
-                        {item.title}
-                      </span>
-
-                      {item.parts && openSeries === group + item.title && (
-                        <ul style={{ marginLeft: "20px" }}>
-                          {item.parts.map((part) => (
-                            <li key={part}>{part}</li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))}
-        </div>
-      )}
+        {/* Boska Komedia */}
+        {isBoskaKomedia && (
+          <div>
+            {Object.keys(boskaKomedia).map((group) => (
+              <div key={group} className="movies-group">
+                <h3
+                  className="movies-group-title"
+                  onClick={() => toggleSubgroup(group)}
+                >
+                  {group}
+                </h3>
+                {openSubgroup === group && (
+                  <ul className="movies-list">
+                    {boskaKomedia[group].map((item) => {
+                      const uniqueId = group + item.title;
+                      return (
+                        <li key={item.title} className="movies-item">
+                          <span
+                            className={`movies-title-item ${item.parts ? "clickable" : ""}`}
+                            onClick={() => item.parts && toggleSeries(uniqueId)}
+                          >
+                            {item.title}
+                          </span>
+                          {item.parts && openSeries === uniqueId && (
+                            <ul className="movies-sublist">
+                              {item.parts.map((part) => (
+                                <li key={part} className="movies-subitem">
+                                  {part}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

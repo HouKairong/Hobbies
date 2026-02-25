@@ -1,0 +1,103 @@
+/* tło strony pod kontenerem z zaciemnieniem */
+.series-wrapper {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(25, 15, 45, 0.55), rgba(25, 15, 45, 0.55)),
+    url("/images/Minecraft.jpg"); /* zmień na swoje tło */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 30px;
+}
+
+/* kontener */
+.series-container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(245, 240, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* nagłówek */
+.series-container h2 {
+  text-align: center;
+  font-size: 36px;
+  color: darkblue;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* input wyszukiwania i select filtrujący - razem w jednej linii */
+.series-controls {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.series-search,
+.series-filter {
+  flex: 1 1 200px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid blueviolet;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.series-search:focus,
+.series-filter:hover {
+  border-color: violet;
+  transform: scale(1.02);
+}
+
+/* liczba seriali */
+.series-count {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* lista seriali w gridzie po 2 kolumny */
+.series-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  justify-items: stretch;
+}
+
+.series-item {
+  padding: 10px 15px;
+  background-color: #e5d9ff;
+  border-radius: 10px;
+  cursor: default;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.series-item:hover {
+  background-color: #d1b3ff;
+  transform: scale(1.02);
+}
+
+.series-item span {
+  font-weight: bold;
+}
+
+.series-item em {
+  font-style: italic;
+  color: gray;
+  margin-left: 8px;
+}

@@ -1,0 +1,121 @@
+/* tło całej sekcji */
+.books-wrapper {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(25, 15, 45, 0.55), rgba(25, 15, 45, 0.55)),
+    url("../../public/images/komedia.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 30px;
+}
+
+/* kontener */
+.books-container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(245, 240, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* nagłówek */
+.books-title {
+  text-align: center;
+  font-size: 36px;
+  color: darkblue;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* lista serii */
+.books-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  justify-items: stretch;
+}
+
+.books-series-item {
+  padding: 10px 15px;
+  background-color: #e5d9ff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.books-series-item:hover {
+  background-color: #d1b3ff;
+  transform: scale(1.02);
+}
+
+/* lista książek */
+.books-series {
+  margin-top: 20px;
+}
+
+.books-series-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #2c2c2c;
+  font-weight: 600;
+}
+
+.books-item-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.books-item {
+  padding: 10px 15px;
+  background-color: #f0ebff;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.books-item:hover {
+  background-color: #d1b3ff;
+  transform: scale(1.01);
+}
+
+.books-title-item.clickable {
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.books-title-item.clickable:hover {
+  color: #007acc;
+}
+
+/* podlisty */
+.books-sublist {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.books-subitem {
+  margin-bottom: 4px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.books-world {
+  font-style: italic;
+  color: gray;
+  font-size: 0.9em;
+}

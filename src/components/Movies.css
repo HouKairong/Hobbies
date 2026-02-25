@@ -1,0 +1,139 @@
+/* tło całej sekcji */
+.movies-wrapper {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(25, 15, 45, 0.55), rgba(25, 15, 45, 0.55)),
+    url("../../public/images/HTTYD.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* trzyma tło na miejscu */
+  padding: 30px;
+}
+
+/* kontener */
+.movies-container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(245, 240, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* nagłówek */
+.movies-title {
+  text-align: center;
+  font-size: 36px;
+  color: darkblue;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* select filtrujący */
+.movies-select-label {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+
+.movies-select {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid blueviolet;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.movies-select:hover,
+.movies-select:focus {
+  border-color: violet;
+  transform: scale(1.02);
+}
+
+/* lista filmów */
+.movies-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  justify-items: stretch;
+}
+
+.movies-item {
+  padding: 10px 15px;
+  background-color: #e5d9ff;
+  border-radius: 10px;
+  cursor: default;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.movies-item:hover {
+  background-color: #d1b3ff;
+  transform: scale(1.02);
+}
+
+.movies-title-item.clickable {
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.movies-title-item.clickable:hover {
+  color: #007acc;
+}
+
+/* podlisty */
+.movies-sublist {
+  list-style: none;
+  padding-left: 16px;
+  margin-top: 5px;
+}
+
+.movies-subitem {
+  margin-bottom: 4px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.movies-group {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: rgba(245, 240, 255, 0.85); /* delikatne tło */
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.movies-group:hover {
+  background-color: rgba(245, 240, 255, 1);
+  transform: scale(1.01);
+}
+
+.movies-group-title {
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  font-size: 1.1em;
+  cursor: pointer;
+  color: #2c2c2c;
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.movies-group-title:hover {
+  color: #007acc;
+  transform: translateX(4px);
+}

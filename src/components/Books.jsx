@@ -1,3 +1,4 @@
+import "./Books.css";
 import { useState } from "react";
 
 const Books = () => {
@@ -39,7 +40,6 @@ const Books = () => {
       { title: "Droga z której się nie wraca" },
       { title: "Coś się kończy, coś się zaczyna" },
     ],
-
     "Pieśń Lodu i Ognia": [
       { title: "Gra o Tron" },
       { title: "Starcie Królów" },
@@ -54,7 +54,6 @@ const Books = () => {
       { title: "Książę Łotrzyk" },
       { title: "Synowie Smoka" },
     ],
-
     "Sherlock Holmes": [
       { title: "Studium w szkarłacie" },
       { title: "Znak czterech" },
@@ -125,7 +124,6 @@ const Books = () => {
           "Pożegnalny ukłon",
         ],
       },
-
       {
         title: "Sprawy Sherlocka Holmesa",
         stories: [
@@ -171,7 +169,6 @@ const Books = () => {
         stories: ["Tom 1", "Tom 2", "Tom 3", "Tom 4"],
       },
     ],
-
     "Boska Komedia": [
       { title: "Inferno" },
       { title: "Czyściec" },
@@ -181,9 +178,19 @@ const Books = () => {
     "Obrona Sokratesa": [],
   };
 
+  const seriesWorlds = {
+    Wiedźmin: "Wizard City",
+    "Pieśń Lodu i Ognia": "Krokotopia, Grizzleheim",
+    "Sherlock Holmes": "Marleybone",
+    "Książki o Chinach": "Mooshu",
+    "Boska Komedia": "Dragonspyre",
+    "Mitologia Nordycka": "Grizzleheim",
+    "Obrona Sokratesa": "Aquila",
+  };
+
   const toggleSeries = (series) => {
     setSelectedSeries(selectedSeries === series ? null : series);
-    setOpenBooks({}); // reset otwartych tomów przy zmianie serii
+    setOpenBooks({});
   };
 
   const toggleBook = (bookTitle) => {
@@ -194,50 +201,52 @@ const Books = () => {
   };
 
   return (
-    <div>
-      <h2>Książki</h2>
-      {/* Lista serii */}
-      <ul>
-        {Object.keys(books).map((series) => (
-          <li
-            key={series}
-            onClick={() => toggleSeries(series)}
-            style={{ cursor: "pointer", fontWeight: "bold" }}
-          >
-            {series}
-          </li>
-        ))}
-      </ul>
+    <div className="books-wrapper">
+      <div className="books-container">
+        <h2 className="books-title">Książki</h2>
 
-      {/* Lista tomów */}
-      {selectedSeries && (
-        <div style={{ marginTop: "10px" }}>
-          <h3>{selectedSeries}</h3>
-          <ul>
-            {books[selectedSeries].map((book) => (
-              <li key={book.title}>
-                <span
-                  onClick={() => (book.stories ? toggleBook(book.title) : null)}
-                  style={{
-                    cursor: book.stories ? "pointer" : "default",
-                  }}
-                >
-                  {book.title}
-                </span>
+        <ul className="books-list">
+          {Object.keys(books).map((series) => (
+            <li
+              key={series}
+              className="books-series-item"
+              onClick={() => toggleSeries(series)}
+            >
+              {series}{" "}
+              <span className="books-world">({seriesWorlds[series]})</span>
+            </li>
+          ))}
+        </ul>
 
-                {/* Opowiadania */}
-                {book.stories && openBooks[book.title] && (
-                  <ul style={{ marginLeft: "20px" }}>
-                    {book.stories.map((story) => (
-                      <li key={story}>{story}</li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+        {selectedSeries && (
+          <div className="books-series">
+            <h3 className="books-series-title">{selectedSeries}</h3>
+            <ul className="books-item-list">
+              {books[selectedSeries].map((book) => (
+                <li key={book.title} className="books-item">
+                  <span
+                    className={`books-title-item ${
+                      book.stories ? "clickable" : ""
+                    }`}
+                    onClick={() => book.stories && toggleBook(book.title)}
+                  >
+                    {book.title}
+                  </span>
+                  {book.stories && openBooks[book.title] && (
+                    <ul className="books-sublist">
+                      {book.stories.map((story) => (
+                        <li key={story} className="books-subitem">
+                          {story}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import "./Series.css";
 import { useState, useMemo } from "react";
 
 const dimensionsList = ["Wszystkie", "Overworld", "Nether", "End"];
@@ -119,38 +120,42 @@ const Series = () => {
   }, [selectedDimension, search]);
 
   return (
-    <div>
-      <h2>Seriale</h2>
+    <div className="series-wrapper">
+      <div className="series-container">
+        <h2>Seriale</h2>
 
-      {/* Wyszukiwarka */}
-      <input
-        type="text"
-        placeholder="Szukaj serialu..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+        <div className="series-controls">
+          <input
+            type="text"
+            placeholder="Szukaj serialu..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="series-search"
+          />
 
-      {/* Kategorie / Wymiary */}
-      <select
-        value={selectedDimension}
-        onChange={(e) => setSelectedDimension(e.target.value)}
-      >
-        {dimensionsList.map((dimension) => (
-          <option key={dimension} value={dimension}>
-            {dimension}
-          </option>
-        ))}
-      </select>
+          <select
+            value={selectedDimension}
+            onChange={(e) => setSelectedDimension(e.target.value)}
+            className="series-filter"
+          >
+            {dimensionsList.map((dimension) => (
+              <option key={dimension} value={dimension}>
+                {dimension}
+              </option>
+            ))}
+          </select>
+        </div>
 
-      {/* Licznik */}
-      <p>Liczba seriali: {filteredSeries.length}</p>
+        <p className="series-count">Liczba seriali: {filteredSeries.length}</p>
 
-      {/* Lista */}
-      <ul>
-        {filteredSeries.map((serie, index) => (
-          <li key={index}>{serie.title}</li>
-        ))}
-      </ul>
+        <ul className="series-list">
+          {filteredSeries.map((serie, index) => (
+            <li className="series-item" key={index}>
+              {serie.title}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

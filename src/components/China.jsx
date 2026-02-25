@@ -1,3 +1,4 @@
+import "./China.css";
 import { useState } from "react";
 
 const China = () => {
@@ -60,7 +61,10 @@ const China = () => {
       { title: "Mulan", subitems: ["Mulan 1", "Mulan 2", "Mulan Live Action"] },
       {
         title: "Przyczajony Tygrys, Ukryty Smok",
-        subitems: ["Miecz Przeznaczenia"],
+        subitems: [
+          "Przyczajony Tygrys, Ukryty Smok",
+          "Przyczajony Tygrys, Ukryty Smok: Miecz Przeznaczenia",
+        ],
       },
       { title: "Małpi Król" },
       { title: "Wielki Mur" },
@@ -102,6 +106,23 @@ const China = () => {
       { title: "Szkoła Yin-Yang i Pięciu Przemian" },
       { title: "Buddyzm chiński" },
     ],
+    Historia: [
+      { title: "Prehistoria" },
+      { title: "Dynastia Shang i wczesna epoka brązu" },
+      { title: "Dynastia Zhou" },
+      { title: "Dynastia Qin (221–207 p.n.e.)" },
+      { title: "Dynastia Han (206 p.n.e.–220 n.e.)" },
+      { title: "Okres Rozbicia (220-589)" },
+      { title: "Dynastia Sui (581–618)" },
+      { title: "Dynastia Tang (618–907)" },
+      { title: "Pięć Dynastii i Dziesięć Królestw (907–960)" },
+      { title: "Dynastia Song (960–1279)" },
+      { title: "Dynastia Yuan (1279–1368)" },
+      { title: "Dynastia Ming (1368–1644)" },
+      { title: "Dynastia mandżurska Qing (1644–1911)" },
+      { title: "Republika Chińska (1911 - obecnie)" },
+      { title: "Chińska Republika Ludowa (1949 - obecnie)" },
+    ],
     "Inne Azjatyckie": [
       {
         title: "Gry",
@@ -109,6 +130,11 @@ const China = () => {
           "Ghost of Tsushima",
           "Ghost of Yotei",
           "Sekiro: Shadows Die Twice",
+          "Might and Magic: Heroes 6 (Kampania Świątyni",
+          "Kangurek Kao (Etap azjatycki)",
+          "LEGO Ninjago Film Gra",
+          "Age of Empires (Kampania Japonii)",
+          "Super Mario Odyssey (Bowser's Kingdom)",
         ],
       },
       {
@@ -118,6 +144,7 @@ const China = () => {
           "Squid Game",
           "All of Us are Dead",
           "Sweet Home",
+          "Ninjago",
         ],
       },
       {
@@ -136,12 +163,20 @@ const China = () => {
           "Persona 5 Dancing in The Starlight",
           "Persona Q",
           "Persona Q2",
+          "Persona 3 The Movie #1 Spring of Birth",
+          "Persona 3 The Movie #2 Midsummer Knight's Dream",
+          "Persona 3 The Movie #3 Falling Down",
+          "Persona 3 The Movie #4 Winter of Rebirth",
+          "Persona Trinity Soul",
+          "Persona 4 The Animation",
+          "Persona 4 Golden The Animation",
+          "Persona 5 The Animation",
         ],
       },
       {
         title: "Inne Anime",
         subitems: [
-          "Deathnote",
+          "Death Note",
           "Seven Deadly Sins",
           "One Punch Man",
           "Gakkou Gurashi",
@@ -153,6 +188,15 @@ const China = () => {
           "Devil May Cry Netflix",
           "Attack on Titan",
           "Shiboyugi: Playing Death Games to Put Food on the Table",
+          "Spirited Away: W krainie bogów",
+        ],
+      },
+      {
+        title: "Filmy",
+        subitems: [
+          "LEGO Ninjago Film",
+          "K-Popowe Łowczynie Demonów",
+          "Raya i Ostatni Smok",
         ],
       },
     ],
@@ -164,51 +208,53 @@ const China = () => {
   };
 
   const toggleItem = (itemTitle) => {
-    setOpenItems((prev) => ({
-      ...prev,
-      [itemTitle]: !prev[itemTitle],
-    }));
+    setOpenItems((prev) => ({ ...prev, [itemTitle]: !prev[itemTitle] }));
   };
 
   return (
-    <div>
-      <h2>Chiny</h2>
-      <ul>
-        {Object.keys(chinaTopics).map((category) => (
-          <li
-            key={category}
-            onClick={() => toggleCategory(category)}
-            style={{ cursor: "pointer", fontWeight: "bold" }}
-          >
-            {category}
-          </li>
-        ))}
-      </ul>
+    <div className="china-wrapper">
+      <div className="china-container">
+        <h2 className="china-title">Chiny</h2>
 
-      {selectedCategory && (
-        <div style={{ marginTop: "10px" }}>
-          <h3>{selectedCategory}</h3>
-          <ul>
-            {chinaTopics[selectedCategory].map((item) => (
-              <li key={item.title}>
-                <span
-                  onClick={() => item.subitems && toggleItem(item.title)}
-                  style={{ cursor: item.subitems ? "pointer" : "default" }}
-                >
-                  {item.title}
-                </span>
-                {item.subitems && openItems[item.title] && (
-                  <ul style={{ marginLeft: "20px" }}>
-                    {item.subitems.map((sub) => (
-                      <li key={sub}>{sub}</li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+        <ul className="china-categories">
+          {Object.keys(chinaTopics).map((category) => (
+            <li
+              key={category}
+              className="china-category"
+              onClick={() => toggleCategory(category)}
+            >
+              {category}
+            </li>
+          ))}
+        </ul>
+
+        {selectedCategory && (
+          <div className="china-items-section">
+            <h3 className="china-subtitle">{selectedCategory}</h3>
+            <ul className="china-items-list">
+              {chinaTopics[selectedCategory].map((item) => (
+                <li key={item.title} className="china-item">
+                  <span
+                    className={`china-item-title ${item.subitems ? "clickable" : ""}`}
+                    onClick={() => item.subitems && toggleItem(item.title)}
+                  >
+                    {item.title}
+                  </span>
+                  {item.subitems && openItems[item.title] && (
+                    <ul className="china-subitems-list">
+                      {item.subitems.map((sub) => (
+                        <li key={sub} className="china-subitem">
+                          {sub}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

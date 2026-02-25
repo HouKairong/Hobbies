@@ -1,35 +1,77 @@
+import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 
-const Header = ({
-  onClickBooks,
-  onClickMovies,
-  onClickGames,
-  onClickSeries,
-  onClickChina,
-  onClickPhilosophy,
-}) => {
+const Header = () => {
   return (
-    <div>
-      <header>MyHobbies</header>
+    <div className="headerAndNav">
+      <header>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          MyHobbies
+        </Link>
+      </header>
+
       <nav>
         <ul>
-          <li onClick={onClickGames} style={{ cursor: "pointer" }}>
-            Gry
+          <li>
+            <NavLink
+              to="/games"
+              className={({ isActive }) =>
+                isActive ? "active-link" : undefined
+              }
+            >
+              Gry
+            </NavLink>
           </li>
-          <li onClick={onClickSeries} style={{ cursor: "pointer" }}>
-            Seriale
+          <li>
+            <NavLink
+              to="/series"
+              className={({ isActive }) =>
+                isActive ? "active-link" : undefined
+              }
+            >
+              Seriale
+            </NavLink>
           </li>
-          <li onClick={onClickMovies} style={{ cursor: "pointer" }}>
-            Filmy
+          <li>
+            <NavLink
+              to="/movies"
+              className={({ isActive }) =>
+                isActive ? "active-link" : undefined
+              }
+            >
+              Filmy
+            </NavLink>
           </li>
-          <li onClick={onClickBooks} style={{ cursor: "pointer" }}>
-            Książki
+          <li>
+            <NavLink
+              to="/books"
+              className={({ isActive }) =>
+                isActive ? "active-link" : undefined
+              }
+            >
+              Książki
+            </NavLink>
           </li>
-          <li onClick={onClickChina} style={{ cursor: "pointer" }}>
-            Chiny
+          <li>
+            <NavLink
+              to="/china"
+              className={({ isActive }) =>
+                isActive ? "active-link" : undefined
+              }
+            >
+              Chiny
+            </NavLink>
           </li>
-          <li onClick={onClickPhilosophy} style={{ cursor: "pointer" }}>
-            Filozofia
+          <li>
+            <NavLink
+              to="/philosophy"
+              className={({ isActive }) =>
+                isActive ? "active-link" : undefined
+              }
+            >
+              Filozofia
+            </NavLink>
           </li>
         </ul>
       </nav>

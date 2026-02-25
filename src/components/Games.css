@@ -1,0 +1,104 @@
+.games-wrapper {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(25, 15, 45, 0.55), rgba(25, 15, 45, 0.55)),
+    url("/images/Wizard.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* <--- to trzyma tło na miejscu */
+  padding: 30px;
+}
+/* kontener */
+.games-container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(245, 240, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* reszta Twojego CSS pozostaje bez zmian */
+
+/* nagłówek */
+.games-title {
+  text-align: center;
+  font-size: 36px;
+  color: darkblue;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* input wyszukiwania i select filtrujący - razem w jednej linii */
+.games-controls {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.games-search,
+.games-filter {
+  flex: 1 1 200px; /* rośnie, minimalnie 200px */
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid blueviolet;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.games-search:focus,
+.games-filter:hover {
+  border-color: violet;
+  transform: scale(1.02);
+}
+
+/* liczba gier */
+.games-count {
+  font-size: 16px;
+
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* lista gier w gridzie po 2 wiersze */
+.games-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  justify-items: stretch;
+}
+
+.games-item {
+  padding: 10px 15px;
+  background-color: #e5d9ff;
+  border-radius: 10px;
+  cursor: default;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.games-item:hover {
+  background-color: #d1b3ff;
+  transform: scale(1.02);
+}
+
+.games-item span {
+  font-weight: bold;
+}
+
+.games-item em {
+  font-style: italic;
+  color: gray;
+  margin-left: 8px;
+}
