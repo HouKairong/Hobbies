@@ -583,88 +583,305 @@ const Movies = () => {
       {
         title: "Wiedźmin",
         parts: [
-          "Wiedźmin (2001)",
-          "Wiedźmin: Zmora Wilka (2021)",
-          "Wiedźmin: Syreny z głębin (2025)",
-          "Szczury: Opowieści ze świata Wiedźmina (2025)",
+          {
+            title: "Wiedźmin (2001)",
+            description:
+              "Pierwszy film adaptujący sagę o Geralcie z Rivii, przedstawiający jego przygody w świecie pełnym potworów i intryg.",
+          },
+          {
+            title: "Wiedźmin: Zmora Wilka (2021)",
+            description:
+              "Animowany film koncentrujący się na młodym Wiedźminie, jego treningu i pierwszych misjach, ukazujący początki jego legendy.",
+          },
+          {
+            title: "Wiedźmin: Syreny z głębin (2025)",
+            description:
+              "Opowieść o walce Geralta z potworami morskimi i politycznych intrygach nad brzegami królestw północy.",
+          },
+          {
+            title: "Szczury: Opowieści ze świata Wiedźmina (2025)",
+            description:
+              "Zbiór krótkich historii ukazujących mroczne i brutalne życie zwykłych ludzi w świecie Wiedźmina.",
+          },
         ],
       },
       { title: "Assassin's Creed (2016)" },
       {
         title: "DOOM",
-        parts: ["DOOM (2005)", "DOOM: Anihilacja (2019)"],
+        parts: [
+          {
+            title: "DOOM (2005)",
+            description:
+              "Adaptacja kultowej gry FPS, w której żołnierze stawiają czoła demonicznym siłom na Marsie.",
+          },
+          {
+            title: "DOOM: Anihilacja (2019)",
+            description:
+              "Nowsza ekranizacja gry, koncentrująca się na brutalnej walce z demonami w stacji badawczej na Marsie.",
+          },
+        ],
       },
       {
         title: "Lara Croft",
         parts: [
-          "Tomb Raider (2001)",
-          "Kolebka życia (2003)",
-          "Tomb Raider (2018)",
+          {
+            title: "Tomb Raider (2001)",
+            description:
+              "Pierwszy film o Larze Croft, arcyprzygodowej archeolożce, która przemierza świat w poszukiwaniu starożytnych artefaktów.",
+          },
+          {
+            title: "Kolebka życia (2003)",
+            description:
+              "Druga część przygód Lary Croft, w której odkrywa tajemnicze artefakty związane z legendarnym Źródłem Życia.",
+          },
+          {
+            title: "Tomb Raider (2018)",
+            description:
+              "Reboot serii, pokazujący młodą Larę Croft w pierwszej samodzielnej misji pełnej niebezpiecznych przygód i zagadek.",
+          },
         ],
       },
       { title: "LEGO Ninjago Film (2017)" },
       {
         title: "Harry Potter",
         parts: [
-          "Kamień Filozoficzny",
-          "Komnata Tajemnic",
-          "Więzień Azkabanu",
-          "Czara Ognia",
-          "Zakon Feniksa",
-          "Książę Półkrwi",
-          "Insygnia Śmierci cz.1",
-          "Insygnia Śmierci cz.2",
+          {
+            title: "Kamień Filozoficzny",
+            description:
+              "Pierwsza część przygód Harry’ego Pottera, w której odkrywa on swoje magiczne zdolności i stawia czoła ciemnym siłom w Hogwarcie.",
+          },
+          {
+            title: "Komnata Tajemnic",
+            description:
+              "Harry i jego przyjaciele odkrywają tajemniczą komnatę w szkole, pełną zagadek i groźnych sekretów.",
+          },
+          {
+            title: "Więzień Azkabanu",
+            description:
+              "Opowieść o ucieczce groźnego więźnia, Siriusie Blacku, i nowym zagrożeniu dla Harry’ego w trzecim roku nauki.",
+          },
+          {
+            title: "Czara Ognia",
+            description:
+              "Harry bierze udział w niebezpiecznym Turnieju Trójmagiczny, pełnym wyzwań, rywalizacji i tajemnic.",
+          },
+          {
+            title: "Zakon Feniksa",
+            description:
+              "Harry zmaga się z powrotem Voldemorta i wstępuje do tajnej organizacji walczącej z ciemnymi siłami.",
+          },
+          {
+            title: "Książę Półkrwi",
+            description:
+              "Odkrywanie przeszłości Voldemorta i przygotowania do nadchodzącej wojny w magicznym świecie.",
+          },
+          {
+            title: "Insygnia Śmierci cz.1",
+            description:
+              "Pierwsza część finału serii, w której Harry, Ron i Hermiona wyruszają na misję odnalezienia horkruksów.",
+          },
+          {
+            title: "Insygnia Śmierci cz.2",
+            description:
+              "Kulminacyjna bitwa z Voldemortem i zakończenie sagi o Harrym Potterze.",
+          },
         ],
       },
       {
         title: "Jak Wytresować Smoka",
-        parts: ["Część 1", "Część 2", "Część 3", "Live Action"],
+        parts: [
+          {
+            title: "Część 1",
+            description:
+              "Pierwsza część serii, opowiadająca o przyjaźni młodego Wikinga Hiccup’a z niebezpiecznym smokiem Bezzębkiem.",
+          },
+          {
+            title: "Część 2",
+            description:
+              "Hiccup i Bezzębny kontynuują swoje przygody, odkrywając nowe krainy i wyzwania w świecie smoków.",
+          },
+          {
+            title: "Część 3",
+            description:
+              "Finałowa część serii animowanej, w której Hiccup staje przed ostatecznym wyborem dotyczącym świata ludzi i smoków.",
+          },
+          {
+            title: "Live Action",
+            description:
+              "Film aktorski oparty na popularnej serii animowanej, przenoszący historię Hiccup’a i Bezzębnego na duży ekran.",
+          },
+        ],
       },
       {
         title: "Gwiezdne wojny",
         parts: [
-          "Mroczne Widmo",
-          "Atak klonów",
-          "Zemsta Sithów",
-          "Nowa Nadzieja",
-          "Imperium kontratakuje",
-          "Powrót Jedi",
-          "Przebudzenie Mocy",
-          "Ostatni Jedi",
-          "Skywalker: Odrodzenie",
+          {
+            title: "Mroczne Widmo",
+            description:
+              "Pierwszy epizod prequeli, wprowadzający młodego Anakina Skywalkera i konflikty polityczne w galaktyce.",
+          },
+          {
+            title: "Atak klonów",
+            description:
+              "Drugi epizod prequeli, pokazujący początki wojen klonów i rozwój relacji Anakina z Padmé.",
+          },
+          {
+            title: "Zemsta Sithów",
+            description:
+              "Trzeci epizod prequeli, ukazujący upadek Anakina i przejście na ciemną stronę jako Darth Vader.",
+          },
+          {
+            title: "Nowa Nadzieja",
+            description:
+              "Pierwszy film oryginalnej trylogii, w którym Luke Skywalker zaczyna swoją drogę Jedi i walczy z Imperium.",
+          },
+          {
+            title: "Imperium kontratakuje",
+            description:
+              "Drugi film oryginalnej trylogii, w którym bohaterowie mierzą się z potężnym Imperium i tragicznymi stratami.",
+          },
+          {
+            title: "Powrót Jedi",
+            description:
+              "Finał oryginalnej trylogii, przedstawiający ostateczną bitwę z Imperium i konfrontację Luke’a z Darthem Vaderem.",
+          },
+          {
+            title: "Przebudzenie Mocy",
+            description:
+              "Pierwszy epizod nowej trylogii, wprowadzający Rey, Finna i Kylo Rena oraz powrót konfliktu w galaktyce.",
+          },
+          {
+            title: "Ostatni Jedi",
+            description:
+              "Drugi film nowej trylogii, w którym Rey trenuje jako Jedi, a konflikt z Najwyższym Porządkiem się nasila.",
+          },
+          {
+            title: "Skywalker: Odrodzenie",
+            description:
+              "Finał sagi Skywalkerów, kończący konflikt między Jedi a Ciemną Stroną oraz losy Rey i Kylo Rena.",
+          },
         ],
       },
       {
         title: "Sherlock Holmes",
-        parts: ["Sherlock Holmes", "Gra cieni"],
+        parts: [
+          {
+            title: "Sherlock Holmes",
+            description:
+              "Film wprowadzający genialnego detektywa Sherlocka Holmesa i jego pierwsze konfrontacje z przestępczym światem Londynu.",
+          },
+          {
+            title: "Gra cieni",
+            description:
+              "Kontynuacja przygód Holmesa, w której staje do walki z arcywrogiem, profesor Moriartym, w serii inteligentnych zagadek i intryg.",
+          },
+        ],
       },
       {
         title: "Persona 3 The Movie",
         parts: [
-          "#1 Spring of Birth",
-          "#2 Midsummer Knight's Dream",
-          "#3 Falling Down",
-          "#4 Winter of Rebirth",
+          {
+            title: "#1 Spring of Birth",
+            description:
+              "Pierwszy film w serii, wprowadzający bohaterów i tajemnicze wydarzenia związane z Dark Hour oraz Persona.",
+          },
+          {
+            title: "#2 Midsummer Knight's Dream",
+            description:
+              "Drugi film, w którym bohaterowie zmagają się z nowymi wrogami i pogłębiają swoje relacje w świecie Persona.",
+          },
+          {
+            title: "#3 Falling Down",
+            description:
+              "Trzeci film, pokazujący eskalację konfliktu z cieniami i dramatyczne wybory bohaterów.",
+          },
+          {
+            title: "#4 Winter of Rebirth",
+            description:
+              "Finałowa część serii, rozstrzygająca losy bohaterów i tajemnice Dark Hour.",
+          },
         ],
       },
       {
         title: "Epoka Lodowcowa",
         parts: [
-          "Część 1",
-          "Odwilż",
-          "Era Dinozaurów",
-          "Wędrówka Kontynentów",
-          "Mocne Uderzenie",
+          {
+            title: "Część 1",
+            description:
+              "Pierwsza część serii, w której Manny, Sid i Diego wyruszają w podróż, by zwrócić małe dziecko jego rodzinie.",
+          },
+          {
+            title: "Odwilż",
+            description:
+              "Druga część serii, przedstawiająca przygody bohaterów w nowym, cieplejszym klimacie oraz nowe wyzwania.",
+          },
+          {
+            title: "Era Dinozaurów",
+            description:
+              "Trzecia część, w której bohaterowie odkrywają tajemniczą krainę pełną prehistorycznych stworzeń.",
+          },
+          {
+            title: "Wędrówka Kontynentów",
+            description:
+              "Czwarta część serii, ukazująca zmagania bohaterów z przesuwającymi się kontynentami i katastrofami naturalnymi.",
+          },
+          {
+            title: "Mocne Uderzenie",
+            description:
+              "Piąta część serii, w której bohaterowie stawiają czoła wielkiemu zagrożeniu w postaci meteorytu zmieniającego świat.",
+          },
         ],
       },
       { title: "Dante's Inferno: An Animated Epic" },
       {
         title: "Madagaskar",
-        parts: ["Część 1", "Część 2", "Część 3", "Pingwiny z Madagaskaru"],
+        parts: [
+          {
+            title: "Część 1",
+            description:
+              "Pierwsza część serii, w której grupa zwierząt z nowojorskiego zoo przypadkowo trafia na wyspę Madagaskar i próbuje odnaleźć się w dzikiej przyrodzie.",
+          },
+          {
+            title: "Część 2",
+            description:
+              "Kontynuacja przygód zwierząt, które próbują wrócić do domu, napotykając nowe wyzwania i wrogów.",
+          },
+          {
+            title: "Część 3",
+            description:
+              "Bohaterowie wracają do Nowego Jorku, ale muszą stawić czoła kolejnym zabawnym i niebezpiecznym przygodom.",
+          },
+          {
+            title: "Pingwiny z Madagaskaru",
+            description:
+              "Spin-off skupiający się na zabawnych pingwinach z serii, które podejmują tajne misje pełne akcji i humoru.",
+          },
+        ],
       },
       {
         title: "Kung Fu Panda",
-        parts: ["Część 1", "Część 2", "Część 3", "Część 4"],
+        parts: [
+          {
+            title: "Część 1",
+            description:
+              "Połączenie komedii i akcji, w którym niezdarny panda Po staje się wybranym wojownikiem kung fu.",
+          },
+          {
+            title: "Część 2",
+            description:
+              "Po kontynuuje swoją podróż jako wojownik, stawiając czoła nowemu zagrożeniu dla Doliny Pokoju.",
+          },
+          {
+            title: "Część 3",
+            description:
+              "Po odkrywa swoją prawdziwą tożsamość i łączy siły z ojcem oraz nowymi przyjaciółmi, aby pokonać wroga.",
+          },
+          {
+            title: "Część 4",
+            description:
+              "Najnowsza część serii, w której Po staje przed nowymi wyzwaniami, w tym potężnym przeciwnikiem z przeszłości kung fu.",
+          },
+        ],
       },
       { title: "Herkules" },
       { title: "Aladyn" },
@@ -676,37 +893,143 @@ const Movies = () => {
       {
         title: "Wiedźmin",
         parts: [
-          "Wiedźmin (2001)",
-          "Wiedźmin: Zmora Wilka (2021)",
-          "Wiedźmin: Syreny z głębin (2025)",
-          "Szczury: Opowieści ze świata Wiedźmina (2025)",
+          {
+            title: "Wiedźmin (2001)",
+            description:
+              "Pierwszy film adaptujący sagę o Geralcie z Rivii, przedstawiający jego przygody w świecie pełnym potworów i intryg.",
+          },
+          {
+            title: "Wiedźmin: Zmora Wilka (2021)",
+            description:
+              "Animowany film koncentrujący się na młodym Wiedźminie, jego treningu i pierwszych misjach, ukazujący początki jego legendy.",
+          },
+          {
+            title: "Wiedźmin: Syreny z głębin (2025)",
+            description:
+              "Opowieść o walce Geralta z potworami morskimi i politycznych intrygach nad brzegami królestw północy.",
+          },
+          {
+            title: "Szczury: Opowieści ze świata Wiedźmina (2025)",
+            description:
+              "Zbiór krótkich historii ukazujących mroczne i brutalne życie zwykłych ludzi w świecie Wiedźmina.",
+          },
         ],
       },
       {
         title: "Jak Wytresować Smoka",
-        parts: ["Część 1", "Część 2", "Część 3", "Live Action"],
+        parts: [
+          {
+            title: "Część 1",
+            description:
+              "Pierwsza część serii, opowiadająca o przyjaźni młodego Wikinga Hiccup’a z niebezpiecznym smokiem Bezzębkiem.",
+          },
+          {
+            title: "Część 2",
+            description:
+              "Hiccup i Bezzębny kontynuują swoje przygody, odkrywając nowe krainy i wyzwania w świecie smoków.",
+          },
+          {
+            title: "Część 3",
+            description:
+              "Finałowa część serii animowanej, w której Hiccup staje przed ostatecznym wyborem dotyczącym świata ludzi i smoków.",
+          },
+          {
+            title: "Live Action",
+            description:
+              "Film aktorski oparty na popularnej serii animowanej, przenoszący historię Hiccup’a i Bezzębnego na duży ekran.",
+          },
+        ],
       },
       { title: "El Camino" },
       {
         title: "Sherlock Holmes",
-        parts: ["Sherlock Holmes", "Gra cieni"],
+        parts: [
+          {
+            title: "Sherlock Holmes",
+            description:
+              "Film wprowadzający genialnego detektywa Sherlocka Holmesa i jego pierwsze konfrontacje z przestępczym światem Londynu.",
+          },
+          {
+            title: "Gra cieni",
+            description:
+              "Kontynuacja przygód Holmesa, w której staje do walki z arcywrogiem, profesor Moriartym, w serii inteligentnych zagadek i intryg.",
+          },
+        ],
       },
       {
         title: "Persona 3 The Movie",
         parts: [
-          "#1 Spring of Birth",
-          "#2 Midsummer Knight's Dream",
-          "#3 Falling Down",
-          "#4 Winter of Rebirth",
+          {
+            title: "#1 Spring of Birth",
+            description:
+              "Pierwszy film w serii, wprowadzający bohaterów i tajemnicze wydarzenia związane z Dark Hour oraz Persona.",
+          },
+          {
+            title: "#2 Midsummer Knight's Dream",
+            description:
+              "Drugi film, w którym bohaterowie zmagają się z nowymi wrogami i pogłębiają swoje relacje w świecie Persona.",
+          },
+          {
+            title: "#3 Falling Down",
+            description:
+              "Trzeci film, pokazujący eskalację konfliktu z cieniami i dramatyczne wybory bohaterów.",
+          },
+          {
+            title: "#4 Winter of Rebirth",
+            description:
+              "Finałowa część serii, rozstrzygająca losy bohaterów i tajemnice Dark Hour.",
+          },
         ],
       },
       {
         title: "Madagaskar",
-        parts: ["Część 1", "Część 2", "Część 3", "Pingwiny z Madagaskaru"],
+        parts: [
+          {
+            title: "Część 1",
+            description:
+              "Pierwsza część serii, w której grupa zwierząt z nowojorskiego zoo przypadkowo trafia na wyspę Madagaskar i próbuje odnaleźć się w dzikiej przyrodzie.",
+          },
+          {
+            title: "Część 2",
+            description:
+              "Kontynuacja przygód zwierząt, które próbują wrócić do domu, napotykając nowe wyzwania i wrogów.",
+          },
+          {
+            title: "Część 3",
+            description:
+              "Bohaterowie wracają do Nowego Jorku, ale muszą stawić czoła kolejnym zabawnym i niebezpiecznym przygodom.",
+          },
+          {
+            title: "Pingwiny z Madagaskaru",
+            description:
+              "Spin-off skupiający się na zabawnych pingwinach z serii, które podejmują tajne misje pełne akcji i humoru.",
+          },
+        ],
       },
       {
         title: "Kung Fu Panda",
-        parts: ["Część 1", "Część 2", "Część 3", "Część 4"],
+        parts: [
+          {
+            title: "Część 1",
+            description:
+              "Połączenie komedii i akcji, w którym niezdarny panda Po staje się wybranym wojownikiem kung fu.",
+          },
+          {
+            title: "Część 2",
+            description:
+              "Po kontynuuje swoją podróż jako wojownik, stawiając czoła nowemu zagrożeniu dla Doliny Pokoju.",
+          },
+          {
+            title: "Część 3",
+            description:
+              "Po odkrywa swoją prawdziwą tożsamość i łączy siły z ojcem oraz nowymi przyjaciółmi, aby pokonać wroga.",
+          },
+          {
+            title: "Część 4",
+            description:
+              "Najnowsza część serii, w której Po staje przed nowymi wyzwaniami, w tym potężnym przeciwnikiem z przeszłości kung fu.",
+          },
+        ],
       },
       { title: "LEGO Ninjago Film (2017)" },
       { title: "Death Note" },
@@ -717,17 +1040,65 @@ const Movies = () => {
     Chiny: [
       {
         title: "Kung Fu Panda",
-        parts: ["Część 1", "Część 2", "Część 3", "Część 4"],
+        parts: [
+          {
+            title: "Część 1",
+            description:
+              "Połączenie komedii i akcji, w którym niezdarny panda Po staje się wybranym wojownikiem kung fu.",
+          },
+          {
+            title: "Część 2",
+            description:
+              "Po kontynuuje swoją podróż jako wojownik, stawiając czoła nowemu zagrożeniu dla Doliny Pokoju.",
+          },
+          {
+            title: "Część 3",
+            description:
+              "Po odkrywa swoją prawdziwą tożsamość i łączy siły z ojcem oraz nowymi przyjaciółmi, aby pokonać wroga.",
+          },
+          {
+            title: "Część 4",
+            description:
+              "Najnowsza część serii, w której Po staje przed nowymi wyzwaniami, w tym potężnym przeciwnikiem z przeszłości kung fu.",
+          },
+        ],
       },
       {
         title: "Ne Zha",
-        parts: ["Ne Zha", "Ne Zha 2"],
+        parts: [
+          {
+            title: "Ne Zha",
+            description:
+              "Chińska animacja opowiadająca o młodym Ne Zha, który musi zmierzyć się z przeznaczeniem i dowieść swojej wartości jako bohater.",
+          },
+          {
+            title: "Ne Zha 2",
+            description:
+              "Kontynuacja historii Ne Zha, w której bohater stawia czoła nowym zagrożeniom i odkrywa głębsze tajemnice swojego przeznaczenia.",
+          },
+        ],
       },
       { title: "Małpi Król" },
       { title: "Wielki Mur" },
       {
         title: "Mulan",
-        parts: ["Mulan", "Mulan 2", "Live Action"],
+        parts: [
+          {
+            title: "Mulan",
+            description:
+              "Klasyczna animacja Disneya o młodej dziewczynie, która przebiera się za mężczyznę, by wstąpić do armii i uratować ojca oraz Chiny.",
+          },
+          {
+            title: "Mulan 2",
+            description:
+              "Kontynuacja przygód Mulan, w której bohaterka stawia czoła nowym wyzwaniom wojskowym i osobistym, ucząc się odpowiedzialności i odwagi.",
+          },
+          {
+            title: "Live Action",
+            description:
+              "Aktorska wersja historii Mulan, wiernie odwzorowująca animację, ale z większym naciskiem na realistyczną akcję i dramatyzm.",
+          },
+        ],
       },
       { title: "Rower z Pekinu" },
       { title: "Spirited Away: W Krainie Bogów" },
@@ -738,8 +1109,16 @@ const Movies = () => {
       {
         title: "Przyczajony Tygrys, Ukryty Smok",
         parts: [
-          "Przyczajony Tygrys, Ukryty Smok",
-          "Przyczajony Tygrys, Ukryty Smok: Miecz Przeznaczenia",
+          {
+            title: "Przyczajony Tygrys, Ukryty Smok",
+            description:
+              "Klasyczny film wuxia opowiadający o mistrzach kung fu, skradzionym legendarnym mieczu i dramatycznych losach bohaterów.",
+          },
+          {
+            title: "Przyczajony Tygrys, Ukryty Smok: Miecz Przeznaczenia",
+            description:
+              "Kontynuacja historii, w której nowi bohaterowie podejmują walkę o odzyskanie legendarnego miecza i odkrywają swoje przeznaczenie.",
+          },
         ],
       },
       { title: "The Yinyang Master" },
@@ -747,10 +1126,26 @@ const Movies = () => {
       {
         title: "Persona 3 The Movie",
         parts: [
-          "#1 Spring of Birth",
-          "#2 Midsummer Knight's Dream",
-          "#3 Falling Down",
-          "#4 Winter of Rebirth",
+          {
+            title: "#1 Spring of Birth",
+            description:
+              "Pierwszy film w serii, wprowadzający bohaterów i tajemnicze wydarzenia związane z Dark Hour oraz Persona.",
+          },
+          {
+            title: "#2 Midsummer Knight's Dream",
+            description:
+              "Drugi film, w którym bohaterowie zmagają się z nowymi wrogami i pogłębiają swoje relacje w świecie Persona.",
+          },
+          {
+            title: "#3 Falling Down",
+            description:
+              "Trzeci film, pokazujący eskalację konfliktu z cieniami i dramatyczne wybory bohaterów.",
+          },
+          {
+            title: "#4 Winter of Rebirth",
+            description:
+              "Finałowa część serii, rozstrzygająca losy bohaterów i tajemnice Dark Hour.",
+          },
         ],
       },
       { title: "Death Note" },
@@ -762,24 +1157,82 @@ const Movies = () => {
         { title: "L'Inferno" },
         { title: "Dante's Inferno: An Animated Epic" },
         { title: "Behemoth" },
-        { title: "DOOM", parts: ["DOOM", "DOOM: Anihilacja"] },
+        {
+          title: "DOOM",
+          parts: [
+            {
+              title: "DOOM (2005)",
+              description:
+                "Adaptacja kultowej gry FPS, w której żołnierze stawiają czoła demonicznym siłom na Marsie.",
+            },
+            {
+              title: "DOOM: Anihilacja (2019)",
+              description:
+                "Nowsza ekranizacja gry, koncentrująca się na brutalnej walce z demonami w stacji badawczej na Marsie.",
+            },
+          ],
+        },
         { title: "Jako w piekle, tak i na ziemi" },
         { title: "Norymberga" },
         { title: "Czas Apokalipsy" },
         {
           title: "Hellraiser",
           parts: [
-            "Hellraiser: Wysłannik piekieł",
-            "Hellraiser: Wysłannik piekieł II",
-            "Hellraiser III: Piekło na ziemi",
-            "Hellraiser IV: Dziedzictwo krwi",
-            "Hellraiser V: Wrota piekieł",
-            "Hellraiser: Droga do piekła",
-            "Hellraiser: Sekta",
-            "Hellraiser: Hellworld.com",
-            "Hellraiser: Revelations",
-            "Hellraiser: Judgment",
-            "Hellraiser ",
+            {
+              title: "Hellraiser: Wysłannik piekieł",
+              description:
+                "Pierwszy film serii, wprowadzający Pinheada i przerażający świat cenobitów oraz ich mroczne pułapki.",
+            },
+            {
+              title: "Hellraiser: Wysłannik piekieł II",
+              description:
+                "Kontynuacja historii, w której nowi bohaterowie stawiają czoła cenobitom i konsekwencjom otwarcia puzzle boxa.",
+            },
+            {
+              title: "Hellraiser III: Piekło na ziemi",
+              description:
+                "Pinhead pojawia się w świecie ludzi, siejąc chaos i grozę w miejskim środowisku.",
+            },
+            {
+              title: "Hellraiser IV: Dziedzictwo krwi",
+              description:
+                "Film kontynuuje mroczną sagę rodziny Cotton i przerażających cenobitów.",
+            },
+            {
+              title: "Hellraiser V: Wrota piekieł",
+              description:
+                "Bohaterowie stają przed kolejnym wyzwaniem związanym z otwarciem piekielnych wrót i powrotem Pinheada.",
+            },
+            {
+              title: "Hellraiser: Droga do piekła",
+              description:
+                "Historia nowych postaci, które próbują poradzić sobie z pułapkami i okrucieństwem cenobitów.",
+            },
+            {
+              title: "Hellraiser: Sekta",
+              description:
+                "Sekta próbująca wykorzystać moce cenobitów napotyka tragiczne konsekwencje swoich działań.",
+            },
+            {
+              title: "Hellraiser: Hellworld.com",
+              description:
+                "Mroczne wydarzenia łączą się z internetową grą, przynosząc Pinheada do współczesnego świata.",
+            },
+            {
+              title: "Hellraiser: Revelations",
+              description:
+                "Nowe wcielenie koszmaru z Pinheadem, w którym bohaterowie próbują przeżyć w brutalnym świecie cenobitów.",
+            },
+            {
+              title: "Hellraiser: Judgment",
+              description:
+                "Cenobici wymierzają sprawiedliwość tym, którzy złamali prawa piekła, w kolejnym mrocznym rozdziale serii.",
+            },
+            {
+              title: "Hellraiser",
+              description:
+                "Reboot serii, wprowadzający nowe spojrzenie na Pinheada i mroczny świat puzzle boxa.",
+            },
           ],
         },
         { title: "Constantine" },
@@ -789,24 +1242,82 @@ const Movies = () => {
         { title: "L'Inferno" },
         { title: "Dante's Inferno: An Animated Epic" },
         { title: "Behemoth" },
-        { title: "DOOM", parts: ["DOOM", "DOOM: Anihilacja"] },
+        {
+          title: "DOOM",
+          parts: [
+            {
+              title: "DOOM (2005)",
+              description:
+                "Adaptacja kultowej gry FPS, w której żołnierze stawiają czoła demonicznym siłom na Marsie.",
+            },
+            {
+              title: "DOOM: Anihilacja (2019)",
+              description:
+                "Nowsza ekranizacja gry, koncentrująca się na brutalnej walce z demonami w stacji badawczej na Marsie.",
+            },
+          ],
+        },
         { title: "Jako w piekle, tak i na ziemi" },
         { title: "Minecraft: Film" },
         { title: "Trylogia Dana Browna" },
         {
           title: "Hellraiser",
           parts: [
-            "Hellraiser: Wysłannik piekieł",
-            "Hellraiser: Wysłannik piekieł II",
-            "Hellraiser III: Piekło na ziemi",
-            "Hellraiser IV: Dziedzictwo krwi",
-            "Hellraiser V: Wrota piekieł",
-            "Hellraiser: Droga do piekła",
-            "Hellraiser: Sekta",
-            "Hellraiser: Hellworld.com",
-            "Hellraiser: Revelations",
-            "Hellraiser: Judgment",
-            "Hellraiser ",
+            {
+              title: "Hellraiser: Wysłannik piekieł",
+              description:
+                "Pierwszy film serii, wprowadzający Pinheada i przerażający świat cenobitów oraz ich mroczne pułapki.",
+            },
+            {
+              title: "Hellraiser: Wysłannik piekieł II",
+              description:
+                "Kontynuacja historii, w której nowi bohaterowie stawiają czoła cenobitom i konsekwencjom otwarcia puzzle boxa.",
+            },
+            {
+              title: "Hellraiser III: Piekło na ziemi",
+              description:
+                "Pinhead pojawia się w świecie ludzi, siejąc chaos i grozę w miejskim środowisku.",
+            },
+            {
+              title: "Hellraiser IV: Dziedzictwo krwi",
+              description:
+                "Film kontynuuje mroczną sagę rodziny Cotton i przerażających cenobitów.",
+            },
+            {
+              title: "Hellraiser V: Wrota piekieł",
+              description:
+                "Bohaterowie stają przed kolejnym wyzwaniem związanym z otwarciem piekielnych wrót i powrotem Pinheada.",
+            },
+            {
+              title: "Hellraiser: Droga do piekła",
+              description:
+                "Historia nowych postaci, które próbują poradzić sobie z pułapkami i okrucieństwem cenobitów.",
+            },
+            {
+              title: "Hellraiser: Sekta",
+              description:
+                "Sekta próbująca wykorzystać moce cenobitów napotyka tragiczne konsekwencje swoich działań.",
+            },
+            {
+              title: "Hellraiser: Hellworld.com",
+              description:
+                "Mroczne wydarzenia łączą się z internetową grą, przynosząc Pinheada do współczesnego świata.",
+            },
+            {
+              title: "Hellraiser: Revelations",
+              description:
+                "Nowe wcielenie koszmaru z Pinheadem, w którym bohaterowie próbują przeżyć w brutalnym świecie cenobitów.",
+            },
+            {
+              title: "Hellraiser: Judgment",
+              description:
+                "Cenobici wymierzają sprawiedliwość tym, którzy złamali prawa piekła, w kolejnym mrocznym rozdziale serii.",
+            },
+            {
+              title: "Hellraiser",
+              description:
+                "Reboot serii, wprowadzający nowe spojrzenie na Pinheada i mroczny świat puzzle boxa.",
+            },
           ],
         },
         { title: "Constantine" },
@@ -819,13 +1330,41 @@ const Movies = () => {
         {
           title: "Śródziemie",
           parts: [
-            "Władca Pierścieni: Drużyna Pierścienia",
-            "Władca Pierścieni: Dwie Wieże",
-            "Władca Pierścieni: Powrót Króla",
-            "Hobbit: Niezwykła Podróż",
-            "Hobbit: Pustkowie Smauga",
-            "Hobbit: Bitwa Pięciu Armii",
-            "Władca Pierścieni: Wojna Rohirrimów",
+            {
+              title: "Władca Pierścieni: Drużyna Pierścienia",
+              description:
+                "Pierwsza część trylogii, w której Frodo i jego towarzysze wyruszają, by zniszczyć Jedyny Pierścień i powstrzymać Saurona.",
+            },
+            {
+              title: "Władca Pierścieni: Dwie Wieże",
+              description:
+                "Drugi film trylogii, ukazujący rozdzielenie Drużyny i narastające zagrożenie ze strony Saurona oraz Sarumana.",
+            },
+            {
+              title: "Władca Pierścieni: Powrót Króla",
+              description:
+                "Finałowa część trylogii, w której bohaterowie stają do ostatecznej bitwy o Śródziemie i losy Pierścienia zostają rozstrzygnięte.",
+            },
+            {
+              title: "Hobbit: Niezwykła Podróż",
+              description:
+                "Początek przygód Bilba Bagginsa, który wyrusza z grupą krasnoludów na wyprawę do Samotnej Góry.",
+            },
+            {
+              title: "Hobbit: Pustkowie Smauga",
+              description:
+                "Druga część przygód Bilba, koncentrująca się na starciu z potężnym smokiem Smaugiem i zagrożeniu dla królestwa krasnoludów.",
+            },
+            {
+              title: "Hobbit: Bitwa Pięciu Armii",
+              description:
+                "Kulminacyjna część trylogii, w której rozgrywa się epicka bitwa między ludźmi, elfami, krasnoludami i siłami ciemności.",
+            },
+            {
+              title: "Władca Pierścieni: Wojna Rohirrimów",
+              description:
+                "Film opowiadający o losach Rohirrimów i ich kluczowej roli w wydarzeniach trylogii Władcy Pierścieni.",
+            },
           ],
         },
         { title: "Siódma pieczęć" },
@@ -840,27 +1379,90 @@ const Movies = () => {
         { title: "Herkules" },
         {
           title: "Starcie Tytanów",
-          parts: ["Starcie Tytanów", "Zemsta Tytanów"],
+          parts: [
+            {
+              title: "Starcie Tytanów",
+              description:
+                "Film opowiadający o Perseuszu, jego walce z potworami i bogami, oraz próbie uratowania księżniczki i ludzkości.",
+            },
+            {
+              title: "Zemsta Tytanów",
+              description:
+                "Kontynuacja historii Perseusza, w której bohater stawia czoła nowym mitologicznym zagrożeniom i potężnym tytanom.",
+            },
+          ],
         },
         { title: "Pasja" },
         { title: "Noe: Wybrany przez Boga" },
         {
           title: "Avatar",
-          parts: ["Avatar", "Avatar: Istota wody", "Avatar: Ogień i popiół"],
+          parts: [
+            {
+              title: "Avatar",
+              description:
+                "Pierwszy film Jamesa Camerona, w którym Jake Sully odkrywa świat Pandory i angażuje się w konflikt między ludźmi a Na’vi.",
+            },
+            {
+              title: "Avatar: Istota wody",
+              description:
+                "Kontynuacja, w której bohaterowie zgłębiają podwodne krainy Pandory i stają przed nowymi wyzwaniami i zagrożeniami.",
+            },
+            {
+              title: "Avatar: Ogień i popiół",
+              description:
+                "Trzecia część serii, ukazująca eskalację konfliktu między ludźmi a Na’vi oraz dramatyczne wydarzenia na Pandorze.",
+            },
+          ],
         },
         { title: "Interstellar" },
         {
           title: "Gwiezdne wojny",
           parts: [
-            "Mroczne Widmo",
-            "Atak klonów",
-            "Zemsta Sithów",
-            "Nowa Nadzieja",
-            "Imperium kontratakuje",
-            "Powrót Jedi",
-            "Przebudzenie Mocy",
-            "Ostatni Jedi",
-            "Skywalker: Odrodzenie",
+            {
+              title: "Mroczne Widmo",
+              description:
+                "Pierwszy epizod prequeli, wprowadzający młodego Anakina Skywalkera i konflikty polityczne w galaktyce.",
+            },
+            {
+              title: "Atak klonów",
+              description:
+                "Drugi epizod prequeli, pokazujący początki wojen klonów i rozwój relacji Anakina z Padmé.",
+            },
+            {
+              title: "Zemsta Sithów",
+              description:
+                "Trzeci epizod prequeli, ukazujący upadek Anakina i przejście na ciemną stronę jako Darth Vader.",
+            },
+            {
+              title: "Nowa Nadzieja",
+              description:
+                "Pierwszy film oryginalnej trylogii, w którym Luke Skywalker zaczyna swoją drogę Jedi i walczy z Imperium.",
+            },
+            {
+              title: "Imperium kontratakuje",
+              description:
+                "Drugi film oryginalnej trylogii, w którym bohaterowie mierzą się z potężnym Imperium i tragicznymi stratami.",
+            },
+            {
+              title: "Powrót Jedi",
+              description:
+                "Finał oryginalnej trylogii, przedstawiający ostateczną bitwę z Imperium i konfrontację Luke’a z Darthem Vaderem.",
+            },
+            {
+              title: "Przebudzenie Mocy",
+              description:
+                "Pierwszy epizod nowej trylogii, wprowadzający Rey, Finna i Kylo Rena oraz powrót konfliktu w galaktyce.",
+            },
+            {
+              title: "Ostatni Jedi",
+              description:
+                "Drugi film nowej trylogii, w którym Rey trenuje jako Jedi, a konflikt z Najwyższym Porządkiem się nasila.",
+            },
+            {
+              title: "Skywalker: Odrodzenie",
+              description:
+                "Finał sagi Skywalkerów, kończący konflikt między Jedi a Ciemną Stroną oraz losy Rey i Kylo Rena.",
+            },
           ],
         },
       ],
@@ -870,19 +1472,38 @@ const Movies = () => {
       {
         title: "Persona 3 The Movie",
         parts: [
-          "#1 Spring of Birth",
-          "#2 Midsummer Knight's Dream",
-          "#3 Falling Down",
-          "#4 Winter of Rebirth",
+          {
+            title: "#1 Spring of Birth",
+            description:
+              "Pierwszy film w serii, wprowadzający bohaterów i tajemnicze wydarzenia związane z Dark Hour oraz Persona.",
+          },
+          {
+            title: "#2 Midsummer Knight's Dream",
+            description:
+              "Drugi film, w którym bohaterowie zmagają się z nowymi wrogami i pogłębiają swoje relacje w świecie Persona.",
+          },
+          {
+            title: "#3 Falling Down",
+            description:
+              "Trzeci film, pokazujący eskalację konfliktu z cieniami i dramatyczne wybory bohaterów.",
+          },
+          {
+            title: "#4 Winter of Rebirth",
+            description:
+              "Finałowa część serii, rozstrzygająca losy bohaterów i tajemnice Dark Hour.",
+          },
         ],
       },
       {
         title: "Wiedźmin",
         parts: [
-          "Wiedźmin (2001)",
-          "Wiedźmin: Zmora Wilka (2021)",
-          "Wiedźmin: Syreny z głębin (2025)",
-          "Szczury: Opowieści ze świata Wiedźmina (2025)",
+          { title: "Wiedźmin (2001)", description: "" },
+          { title: "Wiedźmin: Zmora Wilka (2021)", description: "" },
+          { title: "Wiedźmin: Syreny z głębin (2025)", description: "" },
+          {
+            title: "Szczury: Opowieści ze świata Wiedźmina (2025)",
+            description: "",
+          },
         ],
       },
       { title: "El Camino" },
@@ -896,8 +1517,16 @@ const Movies = () => {
       {
         title: "Przyczajony Tygrys, Ukryty Smok",
         parts: [
-          "Przyczajony Tygrys, Ukryty Smok",
-          "Przyczajony Tygrys, Ukryty Smok: Miecz Przeznaczenia",
+          {
+            title: "Przyczajony Tygrys, Ukryty Smok",
+            description:
+              "Klasyczny film wuxia opowiadający o mistrzach kung fu, skradzionym legendarnym mieczu i dramatycznych losach bohaterów.",
+          },
+          {
+            title: "Przyczajony Tygrys, Ukryty Smok: Miecz Przeznaczenia",
+            description:
+              "Kontynuacja historii, w której nowi bohaterowie podejmują walkę o odzyskanie legendarnego miecza i odkrywają swoje przeznaczenie.",
+          },
         ],
       },
       { title: "Spirited Away: W Krainie Bogów" },
@@ -905,15 +1534,51 @@ const Movies = () => {
       {
         title: "Gwiezdne wojny",
         parts: [
-          "Mroczne Widmo",
-          "Atak klonów",
-          "Zemsta Sithów",
-          "Nowa Nadzieja",
-          "Imperium kontratakuje",
-          "Powrót Jedi",
-          "Przebudzenie Mocy",
-          "Ostatni Jedi",
-          "Skywalker: Odrodzenie",
+          {
+            title: "Mroczne Widmo",
+            description:
+              "Pierwszy epizod prequeli, wprowadzający młodego Anakina Skywalkera i konflikty polityczne w galaktyce.",
+          },
+          {
+            title: "Atak klonów",
+            description:
+              "Drugi epizod prequeli, pokazujący początki wojen klonów i rozwój relacji Anakina z Padmé.",
+          },
+          {
+            title: "Zemsta Sithów",
+            description:
+              "Trzeci epizod prequeli, ukazujący upadek Anakina i przejście na ciemną stronę jako Darth Vader.",
+          },
+          {
+            title: "Nowa Nadzieja",
+            description:
+              "Pierwszy film oryginalnej trylogii, w którym Luke Skywalker zaczyna swoją drogę Jedi i walczy z Imperium.",
+          },
+          {
+            title: "Imperium kontratakuje",
+            description:
+              "Drugi film oryginalnej trylogii, w którym bohaterowie mierzą się z potężnym Imperium i tragicznymi stratami.",
+          },
+          {
+            title: "Powrót Jedi",
+            description:
+              "Finał oryginalnej trylogii, przedstawiający ostateczną bitwę z Imperium i konfrontację Luke’a z Darthem Vaderem.",
+          },
+          {
+            title: "Przebudzenie Mocy",
+            description:
+              "Pierwszy epizod nowej trylogii, wprowadzający Rey, Finna i Kylo Rena oraz powrót konfliktu w galaktyce.",
+          },
+          {
+            title: "Ostatni Jedi",
+            description:
+              "Drugi film nowej trylogii, w którym Rey trenuje jako Jedi, a konflikt z Najwyższym Porządkiem się nasila.",
+          },
+          {
+            title: "Skywalker: Odrodzenie",
+            description:
+              "Finał sagi Skywalkerów, kończący konflikt między Jedi a Ciemną Stroną oraz losy Rey i Kylo Rena.",
+          },
         ],
       },
       { title: "Między piekłem a niebem" },
@@ -922,17 +1587,61 @@ const Movies = () => {
       {
         title: "Hellraiser",
         parts: [
-          "Hellraiser: Wysłannik piekieł",
-          "Hellraiser: Wysłannik piekieł II",
-          "Hellraiser III: Piekło na ziemi",
-          "Hellraiser IV: Dziedzictwo krwi",
-          "Hellraiser V: Wrota piekieł",
-          "Hellraiser: Droga do piekła",
-          "Hellraiser: Sekta",
-          "Hellraiser: Hellworld.com",
-          "Hellraiser: Revelations",
-          "Hellraiser: Judgment",
-          "Hellraiser",
+          {
+            title: "Hellraiser: Wysłannik piekieł",
+            description:
+              "Pierwszy film serii, wprowadzający Pinheada i przerażający świat cenobitów oraz ich mroczne pułapki.",
+          },
+          {
+            title: "Hellraiser: Wysłannik piekieł II",
+            description:
+              "Kontynuacja historii, w której nowi bohaterowie stawiają czoła cenobitom i konsekwencjom otwarcia puzzle boxa.",
+          },
+          {
+            title: "Hellraiser III: Piekło na ziemi",
+            description:
+              "Pinhead pojawia się w świecie ludzi, siejąc chaos i grozę w miejskim środowisku.",
+          },
+          {
+            title: "Hellraiser IV: Dziedzictwo krwi",
+            description:
+              "Film kontynuuje mroczną sagę rodziny Cotton i przerażających cenobitów.",
+          },
+          {
+            title: "Hellraiser V: Wrota piekieł",
+            description:
+              "Bohaterowie stają przed kolejnym wyzwaniem związanym z otwarciem piekielnych wrót i powrotem Pinheada.",
+          },
+          {
+            title: "Hellraiser: Droga do piekła",
+            description:
+              "Historia nowych postaci, które próbują poradzić sobie z pułapkami i okrucieństwem cenobitów.",
+          },
+          {
+            title: "Hellraiser: Sekta",
+            description:
+              "Sekta próbująca wykorzystać moce cenobitów napotyka tragiczne konsekwencje swoich działań.",
+          },
+          {
+            title: "Hellraiser: Hellworld.com",
+            description:
+              "Mroczne wydarzenia łączą się z internetową grą, przynosząc Pinheada do współczesnego świata.",
+          },
+          {
+            title: "Hellraiser: Revelations",
+            description:
+              "Nowe wcielenie koszmaru z Pinheadem, w którym bohaterowie próbują przeżyć w brutalnym świecie cenobitów.",
+          },
+          {
+            title: "Hellraiser: Judgment",
+            description:
+              "Cenobici wymierzają sprawiedliwość tym, którzy złamali prawa piekła, w kolejnym mrocznym rozdziale serii.",
+          },
+          {
+            title: "Hellraiser",
+            description:
+              "Reboot serii, wprowadzający nowe spojrzenie na Pinheada i mroczny świat puzzle boxa.",
+          },
         ],
       },
       { title: "Konfucjusz" },
@@ -943,22 +1652,66 @@ const Movies = () => {
       {
         title: "Śródziemie",
         parts: [
-          "Władca Pierścieni: Drużyna Pierścienia",
-          "Władca Pierścieni: Dwie Wieże",
-          "Władca Pierścieni: Powrót Króla",
-          "Hobbit: Niezwykła Podróż",
-          "Hobbit: Pustkowie Smauga",
-          "Hobbit: Bitwa Pięciu Armii",
-          "Władca Pierścieni: Wojna Rohirrimów",
+          {
+            title: "Władca Pierścieni: Drużyna Pierścienia",
+            description:
+              "Pierwsza część trylogii, w której Frodo i jego towarzysze wyruszają, by zniszczyć Jedyny Pierścień i powstrzymać Saurona.",
+          },
+          {
+            title: "Władca Pierścieni: Dwie Wieże",
+            description:
+              "Drugi film trylogii, ukazujący rozdzielenie Drużyny i narastające zagrożenie ze strony Saurona oraz Sarumana.",
+          },
+          {
+            title: "Władca Pierścieni: Powrót Króla",
+            description:
+              "Finałowa część trylogii, w której bohaterowie stają do ostatecznej bitwy o Śródziemie i losy Pierścienia zostają rozstrzygnięte.",
+          },
+          {
+            title: "Hobbit: Niezwykła Podróż",
+            description:
+              "Początek przygód Bilba Bagginsa, który wyrusza z grupą krasnoludów na wyprawę do Samotnej Góry.",
+          },
+          {
+            title: "Hobbit: Pustkowie Smauga",
+            description:
+              "Druga część przygód Bilba, koncentrująca się na starciu z potężnym smokiem Smaugiem i zagrożeniu dla królestwa krasnoludów.",
+          },
+          {
+            title: "Hobbit: Bitwa Pięciu Armii",
+            description:
+              "Kulminacyjna część trylogii, w której rozgrywa się epicka bitwa między ludźmi, elfami, krasnoludami i siłami ciemności.",
+          },
+          {
+            title: "Władca Pierścieni: Wojna Rohirrimów",
+            description:
+              "Film opowiadający o losach Rohirrimów i ich kluczowej roli w wydarzeniach trylogii Władcy Pierścieni.",
+          },
         ],
       },
       {
         title: "Matrix",
         parts: [
-          "Matrix (1999)",
-          "Matrix: Reaktywacja (2003)",
-          "Matrix: Rewolucje (2003)",
-          "Matrix: Zmartwychwstanie (2021)",
+          {
+            title: "Matrix (1999)",
+            description:
+              "Pierwszy film serii, wprowadzający Neo i świat Matrixa – wirtualną rzeczywistość kontrolowaną przez maszyny.",
+          },
+          {
+            title: "Matrix: Reaktywacja (2003)",
+            description:
+              "Druga część trylogii, w której Neo kontynuuje walkę z maszynami i odkrywa kolejne tajemnice Matrixa.",
+          },
+          {
+            title: "Matrix: Rewolucje (2003)",
+            description:
+              "Finał oryginalnej trylogii, ukazujący ostateczną konfrontację Neo z maszynami i przeznaczeniem ludzkości.",
+          },
+          {
+            title: "Matrix: Zmartwychwstanie (2021)",
+            description:
+              "Reboot/kontynuacja serii, w której Neo powraca do Matrixa, stając przed nowymi zagrożeniami i pytaniami o rzeczywistość.",
+          },
         ],
       },
       { title: "Heretyk" },
@@ -973,17 +1726,65 @@ const Movies = () => {
     IPiN: [
       {
         title: "Jak Wytresować Smoka",
-        parts: ["Jak Wytresować Smoka 1", "Jak Wytresować Smoka 2"],
+        parts: [
+          {
+            title: "Jak Wytresować Smoka 1",
+            description:
+              "Pierwsza część przygód Hiccup’a i Bezzębnego, opowiadająca o ich nieoczekiwanej przyjaźni i pierwszych wspólnych wyzwaniach.",
+          },
+          {
+            title: "Jak Wytresować Smoka 2",
+            description:
+              "Druga część serii, w której bohaterowie odkrywają nowe krainy, napotykają niebezpieczeństwa i umacniają swoją więź.",
+          },
+        ],
       },
       {
         title: "Kung Fu Panda",
-        parts: ["Kung Fu Panda 1", "Kung Fu Panda 2", "Kung Fu Panda 3"],
+        parts: [
+          {
+            title: "Kung Fu Panda 1",
+            description:
+              "Pierwsza część serii, w której niezdarny panda Po zostaje wybrany jako Wybrany Wojownik Kung Fu i staje do walki ze złoczyńcą Tai Lungiem.",
+          },
+          {
+            title: "Kung Fu Panda 2",
+            description:
+              "Druga część, w której Po odkrywa tajemnice swojej przeszłości i staje do walki z nowym przeciwnikiem, Lordem Shenem.",
+          },
+          {
+            title: "Kung Fu Panda 3",
+            description:
+              "Trzecia część serii, w której Po uczy się współpracować z innymi pandami i stawia czoła potężnemu wrogowi Kai.",
+          },
+        ],
       },
       { title: "Spirited Away: W krainie bogów" },
       { title: "Dzień Świra" },
       {
         title: "Shrek",
-        parts: ["Shrek 1", "Shrek 2", "Shrek 3", "Shrek 4"],
+        parts: [
+          {
+            title: "Shrek 1",
+            description:
+              "Pierwsza część przygód zielonego ogrra Shreka, który wyrusza, by uratować księżniczkę Fionę i odkrywa prawdziwe znaczenie przyjaźni i miłości.",
+          },
+          {
+            title: "Shrek 2",
+            description:
+              "Kontynuacja, w której Shrek i Fiona odwiedzają królestwo jej rodziców, napotykając nowe wyzwania i zabawne przygody.",
+          },
+          {
+            title: "Shrek 3",
+            description:
+              "Shrek staje przed obowiązkiem zostania królem i wyrusza w podróż, by znaleźć następcę tronu, przeżywając przy tym kolejne komiczne perypetie.",
+          },
+          {
+            title: "Shrek 4",
+            description:
+              "Czwarta część serii, w której Shrek zmaga się z konsekwencjami życzenia, cofając się w czasie i poznając alternatywne wersje swojej historii.",
+          },
+        ],
       },
       { title: "Kot w butach: Ostatnie życzenie" },
       { title: "Coco" },
@@ -996,13 +1797,55 @@ const Movies = () => {
       { title: "Menu" },
     ],
     "Maraton 1": [
-      { title: "Zwierzogród", parts: ["Zwierzogród 1", "Zwierzogród 2"] },
+      {
+        title: "Zwierzogród",
+        parts: [
+          {
+            title: "Zwierzogród 1",
+            description:
+              "Pierwsza część animowanej serii o Judy Hopps i Nicku Wilde, którzy wspólnie rozwiązują zagadki kryminalne w tętniącym życiem mieście Zwierzogród.",
+          },
+          {
+            title: "Zwierzogród 2",
+            description:
+              "Kontynuacja przygód bohaterów, w której Judy i Nick stawiają czoła nowym wyzwaniom i zagrożeniom w mieście Zwierzogród.",
+          },
+        ],
+      },
       { title: "Norymberga" },
       { title: "Behemoth" },
-      { title: "Sherlock Holmes", parts: ["Sherlock Holmes", "Gra Cieni"] },
+      {
+        title: "Sherlock Holmes",
+        parts: [
+          {
+            title: "Sherlock Holmes",
+            description:
+              "Film wprowadzający genialnego detektywa Sherlocka Holmesa i jego pierwsze konfrontacje z przestępczym światem Londynu.",
+          },
+          {
+            title: "Gra cieni",
+            description:
+              "Kontynuacja przygód Holmesa, w której staje do walki z arcywrogiem, profesor Moriartym, w serii inteligentnych zagadek i intryg.",
+          },
+        ],
+      },
       { title: "Raya i Ostatni Smok" },
       { title: "Małpi Król" },
-      { title: "DOOM", parts: ["DOOM", "DOOM: Anihilacja"] },
+      {
+        title: "DOOM",
+        parts: [
+          {
+            title: "DOOM (2005)",
+            description:
+              "Adaptacja kultowej gry FPS, w której żołnierze stawiają czoła demonicznym siłom na Marsie.",
+          },
+          {
+            title: "DOOM: Anihilacja (2019)",
+            description:
+              "Nowsza ekranizacja gry, koncentrująca się na brutalnej walce z demonami w stacji badawczej na Marsie.",
+          },
+        ],
+      },
     ],
   };
 
@@ -1116,7 +1959,7 @@ const Movies = () => {
         {selectedMovie && (
           <div className="selected-movie" ref={movieRef}>
             <h3 className="selected-movie-title">{selectedMovie.title}</h3>
-            {selectedMovie.parts && (
+            {selectedMovie.parts.title && (
               <ul className="movies-sublist">
                 {selectedMovie.parts.map((part) => (
                   <li key={part} className="movies-subitem">

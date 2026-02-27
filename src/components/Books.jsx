@@ -1,43 +1,70 @@
 import "./Books.css";
 import { useState, useRef } from "react";
-
 const Books = () => {
   const [selectedSeries, setSelectedSeries] = useState(null);
   const [selectedBook, setSelectedBook] = useState(null);
   const [selectedStory, setSelectedStory] = useState(null);
-
   const seriesRefs = useRef({});
   const bookRefs = useRef({});
   const storyRefs = useRef({});
-
   const books = {
     Wiedźmin: [
       {
         title: "Ostatnie życzenie",
-        stories: [
-          "Głos rozsądku",
-          "Wiedźmin",
-          "Ziarno prawdy",
-          "Mniejsze zło",
-          "Kwestia ceny",
-          "Kraniec świata",
-          "Ostatnie życzenie",
-        ],
         description:
           "Pierwsza książka sagi o Geralcie z Rivii, pełna krótkich opowiadań wprowadzających w świat wiedźminów.",
+        stories: [
+          {
+            title: "Głos rozsądku",
+            description: "Opis historii Głos rozsądku...",
+          },
+          { title: "Wiedźmin", description: "Opis historii Wiedźmin..." },
+          {
+            title: "Ziarno prawdy",
+            description: "Opis historii Ziarno prawdy...",
+          },
+          {
+            title: "Mniejsze zło",
+            description: "Opis historii Mniejsze zło...",
+          },
+          {
+            title: "Kwestia ceny",
+            description: "Opis historii Kwestia ceny...",
+          },
+          {
+            title: "Kraniec świata",
+            description: "Opis historii Kraniec świata...",
+          },
+          {
+            title: "Ostatnie życzenie",
+            description: "Opis historii Ostatnie życzenie...",
+          },
+        ],
       },
       {
         title: "Miecz przeznaczenia",
-        stories: [
-          "Granica możliwości",
-          "Okruch lodu",
-          "Wieczny ogień",
-          "Trochę poświęcenia",
-          "Miecz przeznaczenia",
-          "Coś więcej",
-        ],
         description:
           "Zbiór opowiadań o przygodach Geralta i jego relacji z Ciri.",
+        stories: [
+          {
+            title: "Granica możliwości",
+            description: "Opis historii Granica możliwości...",
+          },
+          { title: "Okruch lodu", description: "Opis historii Okruch lodu..." },
+          {
+            title: "Wieczny ogień",
+            description: "Opis historii Wieczny ogień...",
+          },
+          {
+            title: "Trochę poświęcenia",
+            description: "Opis historii Trochę poświęcenia...",
+          },
+          {
+            title: "Miecz przeznaczenia",
+            description: "Opis historii Miecz przeznaczenia...",
+          },
+          { title: "Coś więcej", description: "Opis historii Coś więcej..." },
+        ],
       },
       {
         title: "Krew elfów",
@@ -85,7 +112,6 @@ const Books = () => {
           "Zbiór opowiadań kończących pewien etap w uniwersum Wiedźmina.",
       },
     ],
-
     "Pieśń Lodu i Ognia": [
       {
         title: "Gra o Tron",
@@ -133,7 +159,6 @@ const Books = () => {
         description: "Historia potomków dynastii Targaryen.",
       },
     ],
-
     "Sherlock Holmes": [
       {
         title: "Studium w szkarłacie",
@@ -150,18 +175,54 @@ const Books = () => {
         description:
           "Zbiór klasycznych opowiadań detektywistycznych, pokazujących genialne dedukcje Holmesa.",
         stories: [
-          "Skandal w Bohemii",
-          "Związek rudowłosych",
-          "Sprawa tożsamości",
-          "Tragedia w Boscombe Valley",
-          "Pięć pestek pomarańczy",
-          "Człowiek z wywiniętą wargą",
-          "Błękitny Karbunkuł",
-          "Nakrapiana przepaska niesie śmierć",
-          "Kciuk inżyniera",
-          "Nobliwy kawaler",
-          "Diadem z berylami",
-          "Przygoda w Copper Beeches",
+          {
+            title: "Skandal w Bohemii",
+            description: "Opis historii Skandal w Bohemii...",
+          },
+          {
+            title: "Związek rudowłosych",
+            description: "Opis historii Związek rudowłosych...",
+          },
+          {
+            title: "Sprawa tożsamości",
+            description: "Opis historii Sprawa tożsamości...",
+          },
+          {
+            title: "Tragedia w Boscombe Valley",
+            description: "Opis historii Tragedia w Boscombe Valley...",
+          },
+          {
+            title: "Pięć pestek pomarańczy",
+            description: "Opis historii Pięć pestek pomarańczy...",
+          },
+          {
+            title: "Człowiek z wywiniętą wargą",
+            description: "Opis historii Człowiek z wywiniętą wargą...",
+          },
+          {
+            title: "Błękitny Karbunkuł",
+            description: "Opis historii Błękitny Karbunkuł...",
+          },
+          {
+            title: "Nakrapiana przepaska niesie śmierć",
+            description: "Opis historii Nakrapiana przepaska niesie śmierć...",
+          },
+          {
+            title: "Kciuk inżyniera",
+            description: "Opis historii Kciuk inżyniera...",
+          },
+          {
+            title: "Nobliwy kawaler",
+            description: "Opis historii Nobliwy kawaler...",
+          },
+          {
+            title: "Diadem z berylami",
+            description: "Opis historii Diadem z berylami...",
+          },
+          {
+            title: "Przygoda w Copper Beeches",
+            description: "Opis historii Przygoda w Copper Beeches...",
+          },
         ],
       },
       {
@@ -169,18 +230,48 @@ const Books = () => {
         description:
           "Kolejny zbiór opowiadań, w którym Holmes rozwija swoje metody detektywistyczne i rozwiązuje różnorodne zagadki.",
         stories: [
-          "Srebrny Płomień",
-          "Kartonowe pudełko",
-          "Żółta twarz",
-          "Urzędnik maklerski",
-          "Gloria Scott",
-          "Rytuał Musgrave’ów",
-          "Dziedzice z Reigate",
-          "Garbus",
-          "Stały pacjent",
-          "Grecki tłumacz",
-          "Traktat morski",
-          "Ostatnia zagadka",
+          {
+            title: "Srebrny Płomień",
+            description: "Opis historii Srebrny Płomień...",
+          },
+          {
+            title: "Kartonowe pudełko",
+            description: "Opis historii Kartonowe pudełko...",
+          },
+          { title: "Żółta twarz", description: "Opis historii Żółta twarz..." },
+          {
+            title: "Urzędnik maklerski",
+            description: "Opis historii Urzędnik maklerski...",
+          },
+          {
+            title: "Gloria Scott",
+            description: "Opis historii Gloria Scott...",
+          },
+          {
+            title: "Rytuał Musgrave’ów",
+            description: "Opis historii Rytuał Musgrave’ów...",
+          },
+          {
+            title: "Dziedzice z Reigate",
+            description: "Opis historii Dziedzice z Reigate...",
+          },
+          { title: "Garbus", description: "Opis historii Garbus..." },
+          {
+            title: "Stały pacjent",
+            description: "Opis historii Stały pacjent...",
+          },
+          {
+            title: "Grecki tłumacz",
+            description: "Opis historii Grecki tłumacz...",
+          },
+          {
+            title: "Traktat morski",
+            description: "Opis historii Traktat morski...",
+          },
+          {
+            title: "Ostatnia zagadka",
+            description: "Opis historii Ostatnia zagadka...",
+          },
         ],
       },
       {
@@ -193,19 +284,52 @@ const Books = () => {
         description:
           "Zbiór opowiadań po powrocie Holmesa, pełnych zaskakujących zagadek i mistrzowskich dedukcji.",
         stories: [
-          "Pusty dom",
-          "Przedsiębiorca budowlany z Norwood",
-          "Tańczące sylwetki",
-          "Samotna cyklistka",
-          "Zniknięcie młodego lorda",
-          "Czarny Piotr",
-          "Charles Augustus Milverton",
-          "Sześć popiersi Napoleona",
-          "Trzej studenci",
-          "Złote binokle",
-          "Zaginiony sportowiec",
-          "Abbey Grange",
-          "Druga plama",
+          { title: "Pusty dom", description: "Opis historii Pusty dom..." },
+          {
+            title: "Przedsiębiorca budowlany z Norwood",
+            description: "Opis historii Przedsiębiorca budowlany z Norwood...",
+          },
+          {
+            title: "Tańczące sylwetki",
+            description: "Opis historii Tańczące sylwetki...",
+          },
+          {
+            title: "Samotna cyklistka",
+            description: "Opis historii Samotna cyklistka...",
+          },
+          {
+            title: "Zniknięcie młodego lorda",
+            description: "Opis historii Zniknięcie młodego lorda...",
+          },
+          {
+            title: "Czarny Piotr",
+            description: "Opis historii Czarny Piotr...",
+          },
+          {
+            title: "Charles Augustus Milverton",
+            description: "Opis historii Charles Augustus Milverton...",
+          },
+          {
+            title: "Sześć popiersi Napoleona",
+            description: "Opis historii Sześć popiersi Napoleona...",
+          },
+          {
+            title: "Trzej studenci",
+            description: "Opis historii Trzej studenci...",
+          },
+          {
+            title: "Złote binokle",
+            description: "Opis historii Złote binokle...",
+          },
+          {
+            title: "Zaginiony sportowiec",
+            description: "Opis historii Zaginiony sportowiec...",
+          },
+          {
+            title: "Abbey Grange",
+            description: "Opis historii Abbey Grange...",
+          },
+          { title: "Druga plama", description: "Opis historii Druga plama..." },
         ],
       },
       {
@@ -218,14 +342,38 @@ const Books = () => {
         description:
           "Zbiór ostatnich opowiadań, w których Holmes mierzy się z różnorodnymi zagadkami detektywistycznymi.",
         stories: [
-          "Tajemnica Wisteria Lodge",
-          "Kartonowe pudełko",
-          "Sprawa Czerwonego Kręgu",
-          "Plany Bruce-Partington",
-          "Umierający detektyw",
-          "Zniknięcie Lady Frances Carfax",
-          "Sprawa diabelskiej stopy",
-          "Pożegnalny ukłon",
+          {
+            title: "Tajemnica Wisteria Lodge",
+            description: "Opis historii Tajemnica Wisteria Lodge...",
+          },
+          {
+            title: "Kartonowe pudełko",
+            description: "Opis historii Kartonowe pudełko...",
+          },
+          {
+            title: "Sprawa Czerwonego Kręgu",
+            description: "Opis historii Sprawa Czerwonego Kręgu...",
+          },
+          {
+            title: "Plany Bruce-Partington",
+            description: "Opis historii Plany Bruce-Partington...",
+          },
+          {
+            title: "Umierający detektyw",
+            description: "Opis historii Umierający detektyw...",
+          },
+          {
+            title: "Zniknięcie Lady Frances Carfax",
+            description: "Opis historii Zniknięcie Lady Frances Carfax...",
+          },
+          {
+            title: "Sprawa diabelskiej stopy",
+            description: "Opis historii Sprawa diabelskiej stopy...",
+          },
+          {
+            title: "Pożegnalny ukłon",
+            description: "Opis historii Pożegnalny ukłon...",
+          },
         ],
       },
       {
@@ -233,22 +381,55 @@ const Books = () => {
         description:
           "Zbiór mniej znanych, ale ciekawych opowiadań, które pokazują pełne spektrum zdolności Holmesa.",
         stories: [
-          "Znamienity klient",
-          "Żołnierz o bladym obliczu",
-          "Klejnot z kolekcji kardynała Mazariniego",
-          "Dom pod trzema daszkami",
-          "Wampirzyca z hrabstwa Sussex",
-          "O trzech panach Garrideb",
-          "Zabójstwo przy moście",
-          "Przypadek szalonego profesora",
-          "Lwia grzywa",
-          "Tajemnicza lokatorka",
-          "Stary dwór Shoscombe",
-          "Emerytowany sprzedawca farb",
+          {
+            title: "Znamienity klient",
+            description: "Opis historii Znamienity klient...",
+          },
+          {
+            title: "Żołnierz o bladym obliczu",
+            description: "Opis historii Żołnierz o bladym obliczu...",
+          },
+          {
+            title: "Klejnot z kolekcji kardynała Mazariniego",
+            description:
+              "Opis historii Klejnot z kolekcji kardynała Mazariniego...",
+          },
+          {
+            title: "Dom pod trzema daszkami",
+            description: "Opis historii Dom pod trzema daszkami...",
+          },
+          {
+            title: "Wampirzyca z hrabstwa Sussex",
+            description: "Opis historii Wampirzyca z hrabstwa Sussex...",
+          },
+          {
+            title: "O trzech panach Garrideb",
+            description: "Opis historii O trzech panach Garrideb...",
+          },
+          {
+            title: "Zabójstwo przy moście",
+            description: "Opis historii Zabójstwo przy moście...",
+          },
+          {
+            title: "Przypadek szalonego profesora",
+            description: "Opis historii Przypadek szalonego profesora...",
+          },
+          { title: "Lwia grzywa", description: "Opis historii Lwia grzywa..." },
+          {
+            title: "Tajemnicza lokatorka",
+            description: "Opis historii Tajemnicza lokatorka...",
+          },
+          {
+            title: "Stary dwór Shoscombe",
+            description: "Opis historii Stary dwór Shoscombe...",
+          },
+          {
+            title: "Emerytowany sprzedawca farb",
+            description: "Opis historii Emerytowany sprzedawca farb...",
+          },
         ],
       },
     ],
-
     "Książki o Chinach": [
       {
         title: "Chiny bez makijażu",
@@ -322,10 +503,14 @@ const Books = () => {
         title: "Assassin's Creed Miecz Shao Jun",
         description:
           "Komiksowa/książkowa adaptacja gry, opowiadająca o przygodach Shao Jun w Chinach.",
-        stories: ["Tom 1", "Tom 2", "Tom 3", "Tom 4"],
+        stories: [
+          { title: "Tom 1", description: "Opis Tom 1..." },
+          { title: "Tom 2", description: "Opis Tom 2..." },
+          { title: "Tom 3", description: "Opis Tom 3..." },
+          { title: "Tom 4", description: "Opis Tom 4..." },
+        ],
       },
     ],
-
     "Boska Komedia": [
       {
         title: "Inferno",
@@ -343,12 +528,9 @@ const Books = () => {
           "Ostatnia część, w której Dante doświadcza Raju, poznaje boską miłość i ostateczne szczęście duszy.",
       },
     ],
-
     "Mitologia Nordycka": [],
-
     "Obrona Sokratesa": [],
   };
-
   const seriesWorlds = {
     Wiedźmin: "Wizard City , Grizzleheim",
     "Pieśń Lodu i Ognia": "Krokotopia, Grizzleheim",
@@ -358,7 +540,6 @@ const Books = () => {
     "Mitologia Nordycka": "Grizzleheim",
     "Obrona Sokratesa": "Aquila",
   };
-
   const seriesDescriptions = {
     Wiedźmin: {
       world: "Wizard City, Grizzleheim",
@@ -419,22 +600,19 @@ const Books = () => {
         "Zbiór sag i mitów opowiadających o bogach, gigantach i ludziach. Pokazuje walkę dobra ze złem, znaczenie honoru, odwagi i losu. To także źródło inspiracji dla literatury, gier i kultury popularnej.",
     },
   };
-
   const toggleSeries = (series) => {
     setSelectedSeries(selectedSeries === series ? null : series);
     setSelectedBook(null);
-
     if (!seriesRefs.current[series]) return;
     seriesRefs.current[series].scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
   };
-
   const toggleBook = (book) => {
     const isSameBook = selectedBook?.title === book.title;
     setSelectedBook(isSameBook ? null : book);
-
+    setSelectedStory(null); // <--- dodaj to
     if (!isSameBook && bookRefs.current[book.title]) {
       setTimeout(() => {
         bookRefs.current[book.title].scrollIntoView({
@@ -444,12 +622,22 @@ const Books = () => {
       }, 50);
     }
   };
-
+  const toggleStory = (story) => {
+    const isSameStory = selectedStory?.title === story.title;
+    setSelectedStory(isSameStory ? null : story);
+    if (!isSameStory && storyRefs.current[story.title]) {
+      setTimeout(() => {
+        storyRefs.current[story.title].scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 50);
+    }
+  };
   return (
     <div className="books-wrapper">
       <div className="books-container">
         <h2 className="books-title">Książki</h2>
-
         <ul className="books-list">
           {Object.keys(books).map((series) => (
             <li
@@ -457,12 +645,11 @@ const Books = () => {
               className="books-series-item"
               onClick={() => toggleSeries(series)}
             >
-              {series}{" "}
+              {series}
               <span className="books-world">({seriesWorlds[series]})</span>
             </li>
           ))}
         </ul>
-
         {Object.keys(books).map((series) => (
           <div
             key={series}
@@ -471,32 +658,31 @@ const Books = () => {
           >
             {selectedSeries === series && (
               <>
-                <h3 className="books-series-title">{series}</h3>
-
+                <h3 className="books-series-title">{series}</h3>{" "}
                 {seriesDescriptions[series] && (
                   <div className="books-description">
                     <p>
-                      <strong>Świat:</strong> {seriesDescriptions[series].world}
+                      <strong>Świat: </strong>
+                      {seriesDescriptions[series].world}
                     </p>
                     <p>
-                      <strong>Protagoniści:</strong>{" "}
+                      <strong>Protagoniści: </strong>
                       {seriesDescriptions[series].protagonist}
                     </p>
                     <p>
-                      <strong>Antagoniści:</strong>{" "}
+                      <strong>Antagoniści: </strong>
                       {seriesDescriptions[series].antagonist}
                     </p>
                     <p>
-                      <strong>Dlaczego tu jest:</strong>{" "}
+                      <strong>Dlaczego tu jest: </strong>
                       {seriesDescriptions[series].why}
                     </p>
                     <p>
-                      <strong>Opis:</strong>{" "}
+                      <strong>Opis: </strong>
                       {seriesDescriptions[series].description}
                     </p>
                   </div>
                 )}
-
                 <ul className="books-item-list">
                   {books[series].map((book) => (
                     <li
@@ -509,21 +695,34 @@ const Books = () => {
                     </li>
                   ))}
                 </ul>
-
                 {selectedBook && selectedSeries === series && (
                   <div className="books-book-description">
                     <h4>{selectedBook.title}</h4>
                     <p>{selectedBook.description}</p>
-
                     {selectedBook.stories && (
                       <ul className="books-sublist">
                         {selectedBook.stories.map((story) => (
-                          <li key={story} className="books-subitem">
-                            {story}
+                          <li
+                            key={story.title}
+                            className="books-subitem"
+                            ref={(el) => (storyRefs.current[story.title] = el)}
+                            onClick={() => toggleStory(story)}
+                          >
+                            {story.title}
                           </li>
                         ))}
                       </ul>
                     )}
+                    {/* Tutaj pokazujemy opis klikniętego subitemu */}
+                    {selectedStory &&
+                      selectedBook.stories?.some(
+                        (s) => s.title === selectedStory.title,
+                      ) && (
+                        <div className="books-subitem-description">
+                          <h5>{selectedStory.title}</h5>
+                          <p>{selectedStory.description}</p>
+                        </div>
+                      )}
                   </div>
                 )}
               </>
@@ -534,5 +733,4 @@ const Books = () => {
     </div>
   );
 };
-
 export default Books;
