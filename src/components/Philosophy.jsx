@@ -957,7 +957,6 @@ const Philosophy = () => {
       ],
     },
   ];
-
   const filozofiaPoProstuEpisodes = [
     "Czym w ogóle jest filozofia? /PODCAST #1",
     "Utylitaryzm – kiedy ważymy ludzkie życie /PODCAST #2",
@@ -987,7 +986,6 @@ const Philosophy = () => {
     "Rozmowy po prostu: o wartościach mówi dr Paulina Seidler",
     "Czy płeć to iluzja? Filozofia płci i idee Judith Butler",
   ];
-
   const podcastEpisodes = [
     "Episode 1 ... Presocratic Philosophy - Ionian",
     "Episode 2 ... Presocratic Philosophy - Italian",
@@ -1236,10 +1234,10 @@ const Philosophy = () => {
 
   const mediaOptions = ["Gry", "Seriale", "Filmy", "Książki"];
 
-  const [openMainSection, setOpenMainSection] = useState(null); // "media" lub "podcasty"
-  const [openSection, setOpenSection] = useState(null); // rozwinięty temat
-  const [selectedMedia, setSelectedMedia] = useState([...mediaOptions]); // filtr media
-  const [openSeries, setOpenSeries] = useState(null); // rozwijanie serii
+  const [openMainSection, setOpenMainSection] = useState(null);
+  const [openSection, setOpenSection] = useState(null);
+  const [selectedMedia, setSelectedMedia] = useState([...mediaOptions]);
+  const [openSeries, setOpenSeries] = useState(null);
 
   const toggleSection = (section) => {
     setOpenSection(openSection === section ? null : section);
@@ -1257,263 +1255,249 @@ const Philosophy = () => {
     setOpenSeries(openSeries === key ? null : key);
   };
 
-  // wszystkie unikalne tematy
   const allThemes = [...new Set(works.flatMap((w) => w.themes || []))].sort();
 
   const renderWorkItem = (w) => {
     if (w.isSeries && w.children) {
       const key = w.title + w.media;
       return (
-        <div key={key}>
+        <div className="philosophy-series-wrapper" key={key}>
           <div
+            className="philosophy-series-title clickable"
             onClick={() => toggleSeries(key)}
-            style={{ cursor: "pointer", fontWeight: "bold" }}
           >
-            {openSeries === key ? "▼" : "▶"} {w.title}{" "}
-            <span style={{ fontStyle: "italic", color: "gray" }}>
-              ({w.media})
-            </span>
+            {openSeries === key ? "▼" : "▶"} {w.title}
+            <span className="philosophy-media">({w.media})</span>
           </div>
+
           {openSeries === key && (
-            <ul style={{ marginLeft: "20px" }}>
+            <ul className="philosophy-sublist">
               {w.children.map((child, i) => (
-                <li key={i}>{child.title}</li>
+                <li key={i} className="philosophy-subitem">
+                  {child.title}
+                </li>
               ))}
             </ul>
           )}
         </div>
       );
-    } else {
-      return (
-        <div key={w.title + w.media}>
-          {w.title}{" "}
-          <span style={{ fontStyle: "italic", color: "gray" }}>
-            ({w.media})
-          </span>
-        </div>
-      );
     }
+
+    return (
+      <div className="philosophy-item">
+        {w.title}
+        <span className="philosophy-media">({w.media})</span>
+      </div>
+    );
   };
 
   return (
-    <div className="philosophy">
-      {/* Główne przyciski */}
-      <div style={{ marginBottom: "20px" }}>
-        <button
-          onClick={() =>
-            setOpenMainSection(openMainSection === "media" ? null : "media")
-          }
-          style={{ cursor: "pointer", marginRight: "10px" }}
-        >
-          Media
-        </button>
-        <button
-          onClick={() =>
-            setOpenMainSection(
-              openMainSection === "podcasty" ? null : "podcasty",
-            )
-          }
-          style={{ cursor: "pointer" }}
-        >
-          Podcasty
-        </button>{" "}
-        <button
-          onClick={() =>
-            setOpenMainSection(
-              openMainSection === "filozofowie" ? null : "filozofowie",
-            )
-          }
-          style={{ cursor: "pointer" }}
-        >
-          Ważni filozofowie
-        </button>
-        <button
-          onClick={() =>
-            setOpenMainSection(
-              openMainSection === "mojaFilozofia" ? null : "mojaFilozofia",
-            )
-          }
-          style={{ cursor: "pointer", marginLeft: "10px" }}
-        >
-          Moja filozofia
-        </button>
-      </div>
-      {/* Sekcja Media */}
-      {openMainSection === "media" && (
-        <>
-          {/* Checkboxy filtrujące media */}
-          <div style={{ marginBottom: "20px" }}>
-            {mediaOptions.map((media) => (
-              <label key={media} style={{ marginRight: "15px" }}>
-                <input
-                  type="checkbox"
-                  checked={selectedMedia.includes(media)}
-                  onChange={() => toggleMediaOption(media)}
-                />{" "}
-                {media}
-              </label>
-            ))}
-          </div>
+    <div className="philosophy-wrapper">
+      <div className="philosophy-container">
+        <h2 className="philosophy-title">Filozofia</h2>
+        <div className="philosophy-main-buttons">
+          <button
+            onClick={() =>
+              setOpenMainSection(openMainSection === "media" ? null : "media")
+            }
+          >
+            Media
+          </button>
+          <button
+            onClick={() =>
+              setOpenMainSection(
+                openMainSection === "podcasty" ? null : "podcasty",
+              )
+            }
+          >
+            Podcasty
+          </button>
+          <button
+            onClick={() =>
+              setOpenMainSection(
+                openMainSection === "filozofowie" ? null : "filozofowie",
+              )
+            }
+          >
+            Ważni filozofowie
+          </button>
+          <button
+            onClick={() =>
+              setOpenMainSection(
+                openMainSection === "mojaFilozofia" ? null : "mojaFilozofia",
+              )
+            }
+          >
+            Moja filozofia
+          </button>
+        </div>
+        {openMainSection === "media" && (
+          <>
+            <div className="philosophy-filters">
+              {mediaOptions.map((media) => (
+                <label key={media}>
+                  <input
+                    type="checkbox"
+                    checked={selectedMedia.includes(media)}
+                    onChange={() => toggleMediaOption(media)}
+                  />
+                  {media}
+                </label>
+              ))}
+            </div>
 
-          {/* Sekcje motywów */}
-          {allThemes.map((theme) => {
-            const filteredWorks = works.filter(
-              (w) =>
-                w.themes?.includes(theme) && selectedMedia.includes(w.media),
-            );
-            if (filteredWorks.length === 0) return null;
+            {allThemes.map((theme) => {
+              const filteredWorks = works.filter(
+                (w) =>
+                  w.themes?.includes(theme) && selectedMedia.includes(w.media),
+              );
 
-            return (
-              <div key={theme}>
-                <h3
-                  onClick={() => toggleSection(theme)}
-                  style={{ cursor: "pointer" }}
-                >
-                  {theme}
-                </h3>
-                {openSection === theme && (
-                  <ul>
-                    {filteredWorks.map((w) => (
-                      <li key={w.title + w.media}>{renderWorkItem(w)}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            );
-          })}
-        </>
-      )}
-      {/* Sekcja Podcasty */}
-      {openMainSection === "podcasty" && (
-        <div>
-          {" "}
-          <div>
+              if (!filteredWorks.length) return null;
+
+              return (
+                <div key={theme} className="philosophy-section">
+                  <h3
+                    className="philosophy-section-title clickable"
+                    onClick={() => toggleSection(theme)}
+                  >
+                    {theme}
+                  </h3>
+
+                  {openSection === theme && (
+                    <ul className="philosophy-list">
+                      {filteredWorks.map((w) => (
+                        <li key={w.title + w.media}>{renderWorkItem(w)}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              );
+            })}
+          </>
+        )}
+        {openMainSection === "podcasty" && (
+          <div className="philosophy-section">
             <h3
+              className="philosophy-section-title clickable"
               onClick={() => toggleSeries("filozofiaPoProstu")}
-              style={{ cursor: "pointer" }}
             >
-              {openSeries === "filozofiaPoProstu" ? "▼" : "▶"} Filozofia po
-              prostu
+              Filozofia po prostu
             </h3>
 
             {openSeries === "filozofiaPoProstu" && (
-              <ul style={{ marginLeft: "20px" }}>
+              <ul className="philosophy-sublist">
                 {filozofiaPoProstuEpisodes.map((ep, i) => (
-                  <li key={i}>{ep}</li>
+                  <li key={i} className="philosophy-subitem">
+                    {ep}
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            <h3
+              className="philosophy-section-title clickable"
+              onClick={() => toggleSeries("podcasty")}
+            >
+              Philosophize This!
+            </h3>
+
+            {openSeries === "podcasty" && (
+              <ul className="philosophy-sublist">
+                {podcastEpisodes.map((ep, i) => (
+                  <li key={i} className="philosophy-subitem">
+                    {ep}
+                  </li>
                 ))}
               </ul>
             )}
           </div>
-          <h3
-            onClick={() => toggleSeries("podcasty")}
-            style={{ cursor: "pointer" }}
-          >
-            {openSeries === "podcasty" ? "▼" : "▶"} Philosophize This!
-          </h3>
-          {openSeries === "podcasty" && (
-            <ul style={{ marginLeft: "20px" }}>
-              {podcastEpisodes.map((ep, i) => (
-                <li key={i}>{ep}</li>
-              ))}
-            </ul>
-          )}
-        </div>
-      )}
-      {openMainSection === "filozofowie" && (
-        <div>
-          {/* Sekcja Zachodni i Wschodni */}
-          {["Zachodni", "Wschodni"].map((region) => {
-            const philosophers =
-              region === "Zachodni"
-                ? [
-                    "Sokrates",
-                    "Platon",
-                    "Arystoteles",
-                    "Machiavelli",
-                    "Nietzsche",
-                    "Kant",
-                    "Camus",
-                    "Sartre",
-                    "Seneka",
-                    "Epiktet",
-                    "Marek Aureliusz",
-                    "Kartezjusz",
-                    "Freud",
-                  ]
-                : [
-                    "Konfucjusz",
-                    "Laozi",
-                    "Zhuangzi",
-                    "Bodhidharma",
-                    "Sun Zi",
-                    "Mozi",
-                  ];
+        )}
+        {openMainSection === "filozofowie" && (
+          <div>
+            {["Zachodni", "Wschodni"].map((region) => {
+              const philosophers =
+                region === "Zachodni"
+                  ? [
+                      "Sokrates",
+                      "Platon",
+                      "Arystoteles",
+                      "Machiavelli",
+                      "Nietzsche",
+                      "Kant",
+                      "Camus",
+                      "Sartre",
+                      "Seneka",
+                      "Epiktet",
+                      "Marek Aureliusz",
+                      "Kartezjusz",
+                      "Freud",
+                    ]
+                  : [
+                      "Konfucjusz",
+                      "Laozi",
+                      "Zhuangzi",
+                      "Bodhidharma",
+                      "Sun Zi",
+                      "Mozi",
+                    ];
 
-            const isOpen = openSection === region;
+              const isOpen = openSection === region;
 
-            return (
-              <div key={region}>
-                <h3
-                  onClick={() => toggleSection(region)}
-                  style={{ cursor: "pointer" }}
-                >
-                  {isOpen ? "▼" : "▶"} {region}
-                </h3>
-                {isOpen && (
-                  <ul style={{ marginLeft: "20px" }}>
-                    {philosophers.map((p) => (
-                      <li key={p}>{p}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      )}
-      ,
-      {openMainSection === "mojaFilozofia" && (
-        <div>
-          {[
-            {
-              title: "Refleksje z Taizé",
-              content:
-                "Moje doświadczenia duchowe i filozoficzne podczas pobytu w Taizé.",
-            },
-            {
-              title: "Bycie puppygirl / doggirl",
-              content:
-                "Rozważania nad tożsamością, rolami i akceptacją samej siebie.",
-            },
-            {
-              title: "Inspiracje z Boskiej Komedii",
-              content:
-                "Analiza symboliki, metafizyki i egzystencjalnych motywów z Dantego.",
-            },
-            {
-              title: "Moje ulubione cytaty",
-              content:
-                "Cytaty z Nietzschego, Camusa, Sartre’a, które rezonują z moim spojrzeniem na życie.",
-            },
-          ].map((entry, i) => {
-            const key = "mojaFilozofia_" + i;
-            const isOpen = openSection === key;
-            return (
-              <div key={key}>
-                <h3
-                  onClick={() => toggleSection(key)}
-                  style={{ cursor: "pointer" }}
-                >
-                  {isOpen ? "▼" : "▶"} {entry.title}
-                </h3>
-                {isOpen && (
-                  <p style={{ marginLeft: "20px" }}>{entry.content}</p>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      )}
+              return (
+                <div key={region}>
+                  <h3 onClick={() => toggleSection(region)}>
+                    {isOpen ? "▼" : "▶"} {region}
+                  </h3>
+                  {isOpen && (
+                    <ul>
+                      {philosophers.map((p) => (
+                        <li key={p}>{p}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
+        {openMainSection === "mojaFilozofia" && (
+          <div>
+            {[
+              {
+                title: "Refleksje z Taizé",
+                content:
+                  "Moje doświadczenia duchowe i filozoficzne podczas pobytu w Taizé.",
+              },
+              {
+                title: "Bycie puppygirl / doggirl",
+                content:
+                  "Rozważania nad tożsamością, rolami i akceptacją samej siebie.",
+              },
+              {
+                title: "Inspiracje z Boskiej Komedii",
+                content:
+                  "Analiza symboliki, metafizyki i egzystencjalnych motywów z Dantego.",
+              },
+              {
+                title: "Moje ulubione cytaty",
+                content:
+                  "Cytaty z Nietzschego, Camusa, Sartre’a, które rezonują z moim spojrzeniem na życie.",
+              },
+            ].map((entry, i) => {
+              const key = "mojaFilozofia_" + i;
+              const isOpen = openSection === key;
+              return (
+                <div key={key}>
+                  <h3 onClick={() => toggleSection(key)}>
+                    {isOpen ? "▼" : "▶"} {entry.title}
+                  </h3>
+                  {isOpen && <p>{entry.content}</p>}
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
