@@ -121,6 +121,10 @@
     transform 0.2s ease,
     background-color 0.2s ease;
 }
+.movies-subitem:hover {
+  background-color: #d1b3ff;
+  transform: scale(1.01);
+}
 
 .movies-group {
   margin-bottom: 20px;

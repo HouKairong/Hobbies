@@ -384,13 +384,29 @@ const Philosophy = () => {
       ],
     },
     {
-      title: "Dzień Świra",
+      title: "Seria o Adamie Miauczyńskim",
       media: "Filmy",
+      isSeries: true,
       themes: [
         "Egzystencjalizm",
         "Nihilizm / Absurd",
         "Tożsamość i świadomość",
         "Śmierć / Przemijanie",
+        "Etyka i moralność",
+      ],
+      children: [
+        { title: "Dzień Świra (2002)" },
+        { title: "Wszyscy jesteśmy Chrystusami (2006)" },
+      ],
+    },
+    {
+      title: "Idiokracja",
+      media: "Filmy",
+      themes: [
+        "Władza i polityka",
+        "Nihilizm / Absurd",
+        "Tożsamość i świadomość",
+        "Etyka i moralność",
       ],
     },
     {
@@ -1259,7 +1275,7 @@ const Philosophy = () => {
 
   const renderWorkItem = (w) => {
     if (w.isSeries && w.children) {
-      const key = w.title + w.media;
+      const key = w.title + (w.media || "");
       return (
         <div className="philosophy-series-wrapper" key={key}>
           <div
@@ -1267,14 +1283,17 @@ const Philosophy = () => {
             onClick={() => toggleSeries(key)}
           >
             {openSeries === key ? "▼" : "▶"} {w.title}
-            <span className="philosophy-media">({w.media})</span>
+            {w.media && <span className="philosophy-media"> ({w.media})</span>}
           </div>
 
           {openSeries === key && (
-            <ul className="philosophy-sublist">
+            <ul className="philosophy-list">
               {w.children.map((child, i) => (
-                <li key={i} className="philosophy-subitem">
+                <li key={i} className="philosophy-item">
                   {child.title}
+                  {child.media && (
+                    <span className="philosophy-media"> ({child.media})</span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -1286,7 +1305,7 @@ const Philosophy = () => {
     return (
       <div className="philosophy-item">
         {w.title}
-        <span className="philosophy-media">({w.media})</span>
+        {w.media && <span className="philosophy-media"> ({w.media})</span>}
       </div>
     );
   };
@@ -1331,6 +1350,8 @@ const Philosophy = () => {
             Moja filozofia
           </button>
         </div>
+
+        {/* MEDIA */}
         {openMainSection === "media" && (
           <>
             <div className="philosophy-filters">
@@ -1375,43 +1396,41 @@ const Philosophy = () => {
             })}
           </>
         )}
+
+        {/* PODCASTY */}
         {openMainSection === "podcasty" && (
           <div className="philosophy-section">
-            <h3
-              className="philosophy-section-title clickable"
-              onClick={() => toggleSeries("filozofiaPoProstu")}
-            >
-              Filozofia po prostu
-            </h3>
-
-            {openSeries === "filozofiaPoProstu" && (
-              <ul className="philosophy-sublist">
-                {filozofiaPoProstuEpisodes.map((ep, i) => (
-                  <li key={i} className="philosophy-subitem">
-                    {ep}
-                  </li>
-                ))}
-              </ul>
-            )}
-
-            <h3
-              className="philosophy-section-title clickable"
-              onClick={() => toggleSeries("podcasty")}
-            >
-              Philosophize This!
-            </h3>
-
-            {openSeries === "podcasty" && (
-              <ul className="philosophy-sublist">
-                {podcastEpisodes.map((ep, i) => (
-                  <li key={i} className="philosophy-subitem">
-                    {ep}
-                  </li>
-                ))}
-              </ul>
-            )}
+            {[
+              {
+                title: "Filozofia po prostu",
+                episodes: filozofiaPoProstuEpisodes,
+              },
+              { title: "Philosophize This!", episodes: podcastEpisodes },
+            ].map((podcast) => {
+              const key = podcast.title;
+              const isOpen = openSeries === key;
+              return (
+                <div key={key}>
+                  <h3
+                    className="philosophy-section-title clickable"
+                    onClick={() => toggleSeries(key)}
+                  >
+                    {isOpen ? "▼" : "▶"} {podcast.title}
+                  </h3>
+                  {isOpen && (
+                    <ul className="philosophy-list">
+                      {podcast.episodes.map((ep, i) => (
+                        <li key={ep + i}>{renderWorkItem({ title: ep })}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              );
+            })}
           </div>
         )}
+
+        {/* FILOZOFOWIE */}
         {openMainSection === "filozofowie" && (
           <div>
             {["Zachodni", "Wschodni"].map((region) => {
@@ -1445,13 +1464,18 @@ const Philosophy = () => {
 
               return (
                 <div key={region}>
-                  <h3 onClick={() => toggleSection(region)}>
+                  <h3
+                    className="philosophy-section-title clickable"
+                    onClick={() => toggleSection(region)}
+                  >
                     {isOpen ? "▼" : "▶"} {region}
                   </h3>
                   {isOpen && (
-                    <ul>
+                    <ul className="philosophy-list">
                       {philosophers.map((p) => (
-                        <li key={p}>{p}</li>
+                        <li key={p} className="philosophy-item">
+                          {p}
+                        </li>
                       ))}
                     </ul>
                   )}
@@ -1460,6 +1484,8 @@ const Philosophy = () => {
             })}
           </div>
         )}
+
+        {/* MOJA FILOZOFIA */}
         {openMainSection === "mojaFilozofia" && (
           <div>
             {[
@@ -1488,10 +1514,17 @@ const Philosophy = () => {
               const isOpen = openSection === key;
               return (
                 <div key={key}>
-                  <h3 onClick={() => toggleSection(key)}>
+                  <h3
+                    className="philosophy-section-title clickable"
+                    onClick={() => toggleSection(key)}
+                  >
                     {isOpen ? "▼" : "▶"} {entry.title}
                   </h3>
-                  {isOpen && <p>{entry.content}</p>}
+                  {isOpen && (
+                    <ul className="philosophy-list">
+                      <li className="philosophy-item">{entry.content}</li>
+                    </ul>
+                  )}
                 </div>
               );
             })}

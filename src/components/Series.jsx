@@ -235,38 +235,38 @@ const seriesDescriptions = {
     description: "Klasyczne przygody genialnego detektywa w XXI wieku.",
   },
   "Persona Trinity Soul": {
-    dimension: "Overworld/End",
+    dimension: "Overworld, End",
     protagonist: "Hajime, Ryo",
     antagonist: "Cienie i tajemnicze zjawiska",
     description: "Anime o walce z nadprzyrodzonymi istotami w mieście.",
   },
   "Persona 4 The Animation": {
-    dimension: "Overworld/End",
+    dimension: "Overworld, End",
     protagonist: "Yu Narukami",
     antagonist: "Shadow Yuu",
     description: "Młodzi bohaterowie walczą z cieniem w świecie alternatywnym.",
   },
   "Persona 4 Golden The Animation": {
-    dimension: "Overworld/End",
+    dimension: "Overworld, End",
     protagonist: "Yu Narukami",
     antagonist: "Shadow Yuu",
     description: "Kontynuacja Persona 4, rozbudowana wersja anime.",
   },
   "Persona 5 The Animation": {
-    dimension: "Overworld/End",
+    dimension: "Overworld, End",
     protagonist: "Joker",
     antagonist: "Złe serca korporacji i skorumpowanych ludzi",
     description: "Grupa nastolatków walczy ze złymi intencjami dorosłych.",
   },
   Arcane: {
-    dimension: "Overworld/End",
+    dimension: "Overworld, End",
     protagonist: "Vi i Jinx",
     antagonist: "Silco",
     description:
       "Historia w uniwersum League of Legends, konflikty w Piltover i Zaun.",
   },
   Ragnarok: {
-    dimension: "Overworld/End",
+    dimension: "Overworld, End",
     protagonist: "Magnus",
     antagonist: "Loki i giganci",
     description: "Współczesna wersja mitologii nordyckiej.",
@@ -302,7 +302,7 @@ const seriesDescriptions = {
     description: "Młody chłopak trafia do alternatywnego świata pełnego gier.",
   },
   "Seven Deadly Sins": {
-    dimension: "Overworld/Nether",
+    dimension: "Overworld, Nether",
     protagonist: "Meliodas i grupa Siedmiu Grzechów",
     antagonist: "Demony i Złe Królestwo",
     description: "Anime fantasy o wojownikach walczących ze złem.",
@@ -314,7 +314,7 @@ const seriesDescriptions = {
     description: "Thriller o zagrożeniach terrorystycznych w Europie.",
   },
   "Stranger Things": {
-    dimension: "Overworld/Nether",
+    dimension: "Overworld, Nether",
     protagonist: "Eleven i przyjaciele",
     antagonist: "Demogorgon i władze",
     description: "Tajemnicze wydarzenia w miasteczku Hawkins.",
@@ -350,13 +350,13 @@ const seriesDescriptions = {
     description: "Kolejne przygody Po w świecie kung-fu.",
   },
   Ninjago: {
-    dimension: "Overworld/Nether/End",
+    dimension: "Overworld, Nether, End",
     protagonist: "Lloyd i ninja",
     antagonist: "Złe siły Lorda Garmadona",
     description: "Drużyna ninja walczy z wrogami w świecie Ninjago.",
   },
   Herkules: {
-    dimension: "Overworld/End",
+    dimension: "Overworld, End",
     protagonist: "Herkules",
     antagonist: "Hades",
     description: "Mitologiczne przygody Herkulesa w walce z bogami.",
@@ -411,7 +411,7 @@ const seriesDescriptions = {
     description: "Świat po globalnej awarii elektrycznej.",
   },
   "Wheel of time": {
-    dimension: "Overworld/End",
+    dimension: "Overworld, End",
     protagonist: "Rand al'Thor",
     antagonist: "Dark One",
     description: "Epicka historia fantasy w świecie Magii i Przeznaczenia.",
@@ -423,7 +423,7 @@ const seriesDescriptions = {
     description: "Thriller o zdradzie i zemście.",
   },
   Supernatural: {
-    dimension: "Overworld/End/Nether",
+    dimension: "Overworld, End, Nether",
     protagonist: "Sam i Dean Winchester",
     antagonist: "Demony, duchy, potwory",
     description: "Bracia walczą z nadprzyrodzonymi zagrożeniami.",
@@ -565,13 +565,13 @@ const seriesDescriptions = {
     description: "Opowieść o miłości i przeznaczeniu w świecie fantasy.",
   },
   "The untamed": {
-    dimension: "Overworld/End",
+    dimension: "Overworld, End",
     protagonist: "Wei Wuxian i Lan Wangji",
     antagonist: "Nieuczciwe klany i złe moce",
     description: "Przygody w świecie magicznych klanów i tajemniczych mocy.",
   },
   "Wu Xin the monster killer": {
-    dimension: "Overworld/End",
+    dimension: "Overworld, End",
     protagonist: "Wu Xin",
     antagonist: "Potwory i złe duchy",
     description:
@@ -675,7 +675,10 @@ const Series = () => {
 
           <select
             value={selectedDimension}
-            onChange={(e) => setSelectedDimension(e.target.value)}
+            onChange={(e) => {
+              setSelectedDimension(e.target.value);
+              setSelectedSeries(null);
+            }}
             className="series-filter"
           >
             {dimensionsList.map((dimension) => (

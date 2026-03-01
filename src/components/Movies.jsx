@@ -474,14 +474,6 @@ const seriesDescriptions = {
     description:
       "Historia życia Sokratesa, jego nauk i procesu sądowego w Atenach.",
   },
-  "Dzień Świra": {
-    licence: "Filozofia, IPiN",
-    protagonist: "Adaś Miauczyński",
-    antagonist: "Codzienność i frustracje",
-    why: "Komedia / dramat społeczny",
-    description:
-      "Historia nauczyciela zmaga się z absurdami życia codziennego w Polsce.",
-  },
   Menu: {
     licence: "Filozofia, IPiN",
     protagonist: "Goście luksusowej restauracji",
@@ -569,6 +561,40 @@ const seriesDescriptions = {
     why: "Popularna animacja dla dzieci i młodzieży z przesłaniem o tolerancji",
     description:
       "Młoda królika Judy zostaje pierwszą policjantką w Zwierzogrodzie i razem z lisem Nickiem Wilde rozwiązuje zagadkę kryminalną.",
+  },
+  Idiokracja: {
+    licence: "Filozofia, IPiN",
+    protagonist: "Joe Bauers",
+    antagonist: "Zdegenerowane, antyintelektualne społeczeństwo przyszłości",
+    why: "Satyra na upadek inteligencji i kultury masowej",
+    description:
+      "Przeciętny mężczyzna budzi się w przyszłości, w której jest najinteligentniejszym człowiekiem na świecie i musi uratować cywilizację przed całkowitym upadkiem.",
+  },
+
+  TED: {
+    licence: "IPiN",
+    protagonist: "John Bennett, Ted",
+    antagonist: "Dorosłość i konsekwencje niedojrzałości",
+    why: "Niepoprawna komedia o dorastaniu",
+    description:
+      "Adam Miauczyński to inteligent, który nie potrafi odnaleźć się w świecie — rozdarty między potrzebą miłości, akceptacji i sensu a własnymi słabościami. Jego życie to nieustanna walka z samotnością, nerwicą, uzależnieniem i poczuciem niespełnienia. W kolejnych etapach swojego życia mierzy się z relacjami rodzinnymi, alkoholizmem i egzystencjalnym kryzysem, stając się symboliczną figurą człowieka uwikłanego w samego siebie.",
+  },
+
+  "Milion sposobów, jak zginąć na Zachodzie": {
+    licence: "IPiN",
+    protagonist: "Albert Stark",
+    antagonist: "Bezwzględny rewolwerowiec Clinch Leatherwood",
+    why: "Parodia westernu z czarnym humorem",
+    description:
+      "Nieporadny farmer próbuje przetrwać na Dzikim Zachodzie, gdzie niemal wszystko może go zabić.",
+  },
+  "Adam Miauczyński": {
+    licence: "Filozofia, IPiN",
+    protagonist: "Adam Miauczyński",
+    antagonist: "Własne lęki, frustracje, uzależnienia i polska codzienność",
+    why: "Studium neurotycznej jednostki w zderzeniu z rzeczywistością",
+    description:
+      "Adam Miauczyński to inteligent, który nie potrafi odnaleźć się w świecie — rozdarty między potrzebą miłości, akceptacji i sensu a własnymi słabościami. Jego życie to nieustanna walka z samotnością, nerwicą, uzależnieniem i poczuciem niespełnienia. W kolejnych etapach swojego życia mierzy się z relacjami rodzinnymi, alkoholizmem i egzystencjalnym kryzysem, stając się symboliczną figurą człowieka uwikłanego w samego siebie.",
   },
 };
 
@@ -1800,10 +1826,25 @@ const Movies = () => {
       { title: "Jojo Rabbit" },
       { title: "Sokrates" },
       { title: "Assassin's Creed" },
-      { title: "Dzień Świra" },
+      {
+        title: "Adam Miauczyński",
+        parts: [
+          {
+            title: "Dzień Świra",
+            description:
+              "Nauczyciel zmagający się z frustracją, samotnością i absurdami dnia codziennego stopniowo popada w coraz większą irytację.",
+          },
+          {
+            title: "Wszyscy jesteśmy Chrystusami",
+            description:
+              "Historia walki z alkoholizmem i prób naprawy relacji między ojcem a synem.",
+          },
+        ],
+      },
       { title: "Menu" },
       { title: "Kot w butach: Ostatnie życzenie" },
       { title: "Coco" },
+      { title: "Idiokracja" },
     ],
     IPiN: [
       {
@@ -1842,7 +1883,21 @@ const Movies = () => {
         ],
       },
       { title: "Spirited Away: W krainie bogów" },
-      { title: "Dzień Świra" },
+      {
+        title: "Adam Miauczyński",
+        parts: [
+          {
+            title: "Dzień Świra",
+            description:
+              "Nauczyciel zmagający się z frustracją, samotnością i absurdami dnia codziennego stopniowo popada w coraz większą irytację.",
+          },
+          {
+            title: "Wszyscy jesteśmy Chrystusami",
+            description:
+              "Historia walki z alkoholizmem i prób naprawy relacji między ojcem a synem.",
+          },
+        ],
+      },
       {
         title: "Shrek",
         parts: [
@@ -1877,6 +1932,22 @@ const Movies = () => {
       { title: "Sierota: Narodziny zła" },
       { title: "Uśmiechnij się" },
       { title: "Menu" },
+      {
+        title: "TED",
+        parts: [
+          {
+            title: "TED ",
+            description:
+              "Ted walczy w sądzie o uznanie go za osobę, udowadniając, że nawet pluszowy miś może mieć prawa.",
+          },
+          {
+            title: "TED 2",
+            description:
+              "Ted walczy w sądzie o uznanie go za osobę, udowadniając, że nawet pluszowy miś może mieć prawa.",
+          },
+        ],
+      },
+      { title: "Milion sposobów, jak zginąć na Zachodzie" },
     ],
     "Maraton 1": [
       {
@@ -2057,23 +2128,23 @@ const Movies = () => {
             {seriesDescriptions[selectedSeries.title] && (
               <div className="series-description">
                 <p>
-                  <strong>Licencja:</strong>{" "}
+                  <strong>Licencja: </strong>
                   {seriesDescriptions[selectedSeries.title].licence}
                 </p>
                 <p>
-                  <strong>Protagonista:</strong>{" "}
+                  <strong>Główni Protagoniści: </strong>
                   {seriesDescriptions[selectedSeries.title].protagonist}
                 </p>
                 <p>
-                  <strong>Antagonista:</strong>{" "}
+                  <strong>Główni Antagoniści: </strong>
                   {seriesDescriptions[selectedSeries.title].antagonist}
                 </p>
                 <p>
-                  <strong>Dlaczego tu jest:</strong>{" "}
+                  <strong>Dlaczego tu jest: </strong>
                   {seriesDescriptions[selectedSeries.title].why}
                 </p>
                 <p>
-                  <strong>Opis:</strong>{" "}
+                  <strong>Opis: </strong>
                   {seriesDescriptions[selectedSeries.title].description}
                 </p>
               </div>
