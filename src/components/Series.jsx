@@ -13,6 +13,7 @@ const seriesData = [
   { title: "Gra o tron", dimensions: ["Overworld"] },
   { title: "Ród smoka", dimensions: ["Overworld"] },
   { title: "Rycerz Siedmiu Królestw", dimensions: ["Overworld"] },
+  { title: "Assassin's Creed: Rodowód", dimensions: ["Overworld"] },
   { title: "Jeźdźcy smoków", dimensions: ["Overworld"] },
   { title: "Jeźdźcy smoków 9 światów", dimensions: ["End"] },
   { title: "Centaurworld", dimensions: ["End"] },
@@ -102,6 +103,29 @@ const seriesData = [
     title: "Shiboyugi: Playing Death Games to Put Food on the Table",
     dimensions: ["Nether"],
   },
+  {
+    title: "Gwiezdne Wojny: The Mandalorian",
+    dimensions: ["Overworld", "Nether"],
+  },
+  { title: "Gwiezdne Wojny: Andor", dimensions: ["Overworld"] },
+  { title: "Gwiezdne Wojny: Ahsoka", dimensions: ["Overworld", "End"] },
+  {
+    title: "Gwiezdne Wojny: Obi-Wan Kenobi",
+    dimensions: ["Overworld", "Nether"],
+  },
+  { title: "Gwiezdne Wojny: Księga Boby Fetta", dimensions: ["Overworld"] },
+  { title: "Gwiezdne Wojny: Akolita", dimensions: ["End", "Nether"] },
+  {
+    title: "Gwiezdne Wojny: Wojny Klonów",
+    dimensions: ["Overworld", "Nether"],
+  },
+  { title: "Gwiezdne Wojny: Rebelianci", dimensions: ["Overworld", "End"] },
+  { title: "Gwiezdne Wojny: Parszywa Zgraja", dimensions: ["Overworld"] },
+  {
+    title: "Gwiezdne Wojny: Opowieści z Imperium",
+    dimensions: ["Overworld", "Nether"],
+  },
+  { title: "Gwiezdne Wojny: Opowieści Jedi", dimensions: ["Overworld", "End"] },
 ];
 
 const seriesDescriptions = {
@@ -200,6 +224,16 @@ const seriesDescriptions = {
     location: "Westeros, akcja zaczyna się w 209 roku o.P (Od Podboju Aegona)",
     description:
       "Historia wędrownego rycerza Duncana Wysokiego i jego giermka, przyszłego króla Aegona V. Serial pokazuje Westeros z perspektywy zwykłych ludzi, turniejów i lokalnych konfliktów. To bardziej kameralna opowieść o honorze, przyjaźni i dojrzewaniu.",
+  },
+
+  "Assassin's Creed: Rodowód": {
+    dimension: "Overworld",
+    why: "To Overworld w wersji polityczno-historycznej – świat realny, bez magii, gdzie zamiast smoków i potworów zagrożeniem są ambicje, zdrady i walka o władzę.",
+    protagonist: "Giovanni Auditore da Firenze",
+    antagonist: "Rodrigo Borgia",
+    location: "Włochy (Florencja i okolice), koniec XV wieku",
+    description:
+      "Miniserial będący prequelem Assassin’s Creed II. Skupia się na Giovannim Auditore, ojcu Ezio, który jako członek Bractwa Asasynów odkrywa rosnące wpływy rodu Borgiów i ich powiązania z Templariuszami. Historia pokazuje polityczne intrygi renesansowych Włoch oraz stopniowe osaczanie Giovanniego przez spisek, który doprowadzi do tragicznych wydarzeń znanych z początku Assassin’s Creed II. To opowieść o lojalności, zdradzie i cenie walki o wolność.",
   },
 
   "Jeźdźcy smoków": {
@@ -999,6 +1033,115 @@ const seriesDescriptions = {
     location: "Cztery Narody: Powietrza, Wody, Ziemi i Ognia",
     description:
       "Epoka wojny dobiega końca, gdy młody Avatar uczy się panowania nad wszystkimi żywiołami. Historia o przyjaźni, odpowiedzialności i dojrzewaniu.",
+  },
+  "Gwiezdne Wojny: The Mandalorian": {
+    dimension: "Overworld, Nether",
+    why: "Zewnętrzne Rubieże to surowy Overworld – pustynie, miasta, przetrwanie. Resztki Imperium i mroczne eksperymenty z Mocą mają klimat Netheru – ukryte zagrożenie czające się pod powierzchnią.",
+    protagonist: "Din Djarin, Grogu",
+    antagonist: "Moff Gideon",
+    location: "Zewnętrzne Rubieże galaktyki, około 9 BBY (po Bitwie o Yavin)",
+    description:
+      "Samotny łowca nagród Din Djarin podejmuje zlecenie, które prowadzi go do dziecka obdarzonego Mocą – Grogu. Z czasem jego misja zmienia się w osobistą podróż przez galaktykę pełną przemytników, Mandalorian i resztek Imperium. Serial łączy westernową stylistykę z mitologią Mocy.",
+  },
+
+  "Gwiezdne Wojny: Andor": {
+    dimension: "Overworld",
+    why: "To realistyczny, polityczny Overworld – bez mistycyzmu Jedi, za to z opresyjnym systemem i rodzącą się rebelią jako walką o przetrwanie.",
+    protagonist: "Cassian Andor",
+    antagonist: "Imperium Galaktyczne, Dedra Meero, Syril Karn",
+    location: "Różne planety galaktyki, 5–0 BBY",
+    description:
+      "Historia Cassiana Andora i narodzin Rebelii przeciwko Imperium. Serial skupia się na politycznych intrygach, radykalizacji i cenie oporu. To dojrzalsza, szpiegowska opowieść o zwykłych ludziach walczących z totalitarnym systemem.",
+  },
+
+  "Gwiezdne Wojny: Ahsoka": {
+    dimension: "Overworld, End",
+    why: "Klasyczna galaktyczna przygoda to Overworld, ale wątki związane z pradawną Mocą i odległymi galaktykami mają aurę Endu – tajemniczego, odizolowanego wymiaru.",
+    protagonist: "Ahsoka Tano, Sabine Wren",
+    antagonist: "Wielki Admirał Thrawn, Baylan Skoll",
+    location: "Nowa Republika i odległa galaktyka, około 9 BBY",
+    description:
+      "Ahsoka Tano prowadzi śledztwo w sprawie powrotu Wielkiego Admirała Thrawna. Serial kontynuuje wątki z Rebeliantów, eksplorując dziedzictwo Jedi, upadek Imperium i nowe zagrożenia z odległych zakątków kosmosu.",
+  },
+
+  "Gwiezdne Wojny: Obi-Wan Kenobi": {
+    dimension: "Overworld, Nether",
+    why: "Pustynny Tatooine to surowy Overworld, ale cień Dartha Vadera i Inkwizytorów nadaje historii netherowy klimat prześladowania i ognia zemsty.",
+    protagonist: "Obi-Wan Kenobi",
+    antagonist: "Darth Vader, Wielki Inkwizytor",
+    location: "Tatooine i inne planety, około 10 BBY",
+    description:
+      "Dziesięć lat po upadku Zakonu Jedi Obi-Wan żyje w ukryciu. Gdy młoda Leia zostaje porwana, mistrz Jedi musi ponownie stanąć do walki, mierząc się z własną przeszłością i dawnym uczniem – Anakinem Skywalkerem.",
+  },
+
+  "Gwiezdne Wojny: Księga Boby Fetta": {
+    dimension: "Overworld",
+    why: "To kryminalny Overworld – walka o wpływy w półświatku Tatooine zamiast kosmicznej apokalipsy czy mistycznych wymiarów.",
+    protagonist: "Boba Fett, Fennec Shand",
+    antagonist: "Syndykat Pyke",
+    location: "Tatooine, około 9 BBY",
+    description:
+      "Boba Fett przejmuje pałac Jabby i próbuje rządzić światem przestępczym Tatooine na własnych zasadach. Serial pokazuje jego przeszłość po ucieczce z paszczy sarlacca oraz próbę zbudowania nowego porządku wśród gangów.",
+  },
+
+  "Gwiezdne Wojny: Akolita": {
+    dimension: "End, Nether",
+    why: "Okres schyłku Wysokiej Republiki skrywa mroczne tajemnice Mocy – jak End, gdzie rośnie coś pradawnego. Narodziny Sithów nadają historii czysty, netherowy klimat.",
+    protagonist: "Osha",
+    antagonist: "Mroczny użytkownik Mocy",
+    location: "Galaktyka, około 100 BBY (schyłek ery Wysokiej Republiki)",
+    description:
+      "Thriller osadzony w czasach Wysokiej Republiki, skupiający się na serii zbrodni powiązanych z tajemniczą adeptką Mocy. Serial bada początki odradzającej się ciemnej strony i podważa pozorną stabilność Zakonu Jedi.",
+  },
+
+  "Gwiezdne Wojny: Wojny Klonów": {
+    dimension: "Overworld, Nether",
+    why: "Galaktyczna wojna to Overworld w trybie totalnym, ale manipulacje Palpatine’a i wzrost potęgi Sithów to czysty Nether – ogień wojny podsycany z ukrycia.",
+    protagonist: "Anakin Skywalker, Obi-Wan Kenobi, Ahsoka Tano",
+    antagonist: "Hrabia Dooku, Generał Grievous, Darth Sidious",
+    location: "Galaktyka podczas Wojen Klonów, 22–19 BBY",
+    description:
+      "Animowany serial rozwijający wydarzenia między Atakiem Klonów a Zemstą Sithów. Ukazuje dramatyczne bitwy, rozwój Anakina i Ahsoki oraz polityczne machinacje prowadzące do upadku Republiki.",
+  },
+
+  "Gwiezdne Wojny: Rebelianci": {
+    dimension: "Overworld, End",
+    why: "Walcząca komórka Rebelii to Overworld partyzancki, ale mistyczne ścieżki Mocy i Świat Między Światami mają aurę Endu – przestrzeni poza czasem.",
+    protagonist: "Ezra Bridger",
+    antagonist: "Wielki Admirał Thrawn, Inkwizytorzy",
+    location: "Planeta Lothal i inne systemy, 5–0 BBY",
+    description:
+      "Grupa rebeliantów na pokładzie Ghosta stawia opór Imperium. Serial łączy przygodę z duchową eksploracją Mocy, wprowadzając nowe koncepcje związane z jej naturą.",
+  },
+
+  "Gwiezdne Wojny: Parszywa Zgraja": {
+    dimension: "Overworld",
+    why: "Upadek Republiki widziany oczami klonów – surowy, militarny Overworld pełen chaosu po Rozkazie 66.",
+    protagonist: "Hunter i członkowie Parszywej Zgrai",
+    antagonist: "Imperium Galaktyczne",
+    location: "Galaktyka tuż po Rozkazie 66, około 19 BBY",
+    description:
+      "Elitarna grupa genetycznie zmodyfikowanych klonów próbuje odnaleźć się w nowej rzeczywistości po powstaniu Imperium. Serial pokazuje transformację galaktyki i moralne dylematy żołnierzy.",
+  },
+
+  "Gwiezdne Wojny: Opowieści z Imperium": {
+    dimension: "Overworld, Nether",
+    why: "Historie jednostek w służbie Imperium to Overworld polityczny, ale ich związki z ciemną stroną Mocy mają netherowy ciężar.",
+    protagonist: "Morgan Elsbeth, Barriss Offee",
+    antagonist: "Imperium i własne wybory",
+    location: "Różne okresy ery imperialnej",
+    description:
+      "Antologia skupiona na postaciach związanych z Imperium. Serial bada motywacje, upadek i moralne kompromisy bohaterów funkcjonujących w cieniu ciemnej strony.",
+  },
+
+  "Gwiezdne Wojny: Opowieści Jedi": {
+    dimension: "Overworld, End",
+    why: "Ścieżka Jedi to harmonijny Overworld, ale indywidualne upadki i wizje przyszłości mają wymiar Endu – osobistej konfrontacji z przeznaczeniem.",
+    protagonist: "Ahsoka Tano, Hrabia Dooku",
+    antagonist: "Darth Sidious i konsekwencje wyborów",
+    location: "Różne okresy od czasów Republiki po erę Imperium",
+    description:
+      "Krótkometrażowa antologia ukazująca kluczowe momenty z życia Ahsoki i Dooku. Serial koncentruje się na moralnych wyborach, które prowadzą do światła lub upadku w ciemność.",
   },
 };
 

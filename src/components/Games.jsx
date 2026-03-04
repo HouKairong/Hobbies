@@ -26,6 +26,10 @@ const worldsList = [
 const gamesData = [
   { title: "Wizard101", worlds: ["Wizard101"] },
   { title: "Minecraft", worlds: ["Minecraft"] },
+  {
+    title: "Pirate101",
+    worlds: ["Marleybone", "Mooshu", "Aquila", "Avalon", "Azteca", "Wizard101"],
+  },
   { title: "Wiedźmin", worlds: ["Avalon"] },
   { title: "Wiedźmin 2", worlds: ["Avalon"] },
   { title: "Wiedźmin 3", worlds: ["Avalon", "Grizzleheim", "Darkmoor"] },
@@ -2042,6 +2046,16 @@ const gameDescriptions = {
     description:
       "Sandbox stworzony przez Mojang Studios, w którym świat generowany jest proceduralnie i zbudowany z bloków. Gracz zbiera surowce, craftuje przedmioty i rozwija się według własnego stylu gry – od spokojnego budowniczego po technicznego geniusza redstone lub pogromcę potworów. Ostatecznym celem trybu Survival może być pokonanie Smoka Kresu, ale prawdziwą esencją gry jest kreatywność i wolność działania. A mówimy tu o samym trybie Survival, podczas gdy Minecraft ma olbrzymią rzeszę modów, customowych map i serwerów z minigrami (np. Hypixel)",
   },
+
+  Pirate101: {
+    world: "Marleybone, Mooshu, Aquila, Avalon, Azteca, Wizard101",
+    why: "Marleybone, Mooshu i Aquila pojawiają się we własnej osobie, Avalon jest podobny do Monquisty pod względem średniowiecznych motywów europejskich, jest też obecny teren Aztecozaurów, chociaż nie jest to Azteca sama w sobie. Jest to ten sam świat co Wizard101.",
+    protagonist: "Młody Pirat",
+    antagonist: "Kane",
+    location: "Świat Spirali",
+    description:
+      "Pirackie MMO osadzone w tym samym uniwersum Spiral co Wizard101, stworzone przez KingsIsle Entertainment. Wcielasz się w młodego pirata przemierzającego Skyways – podniebne szlaki między unoszącymi się wyspami – w poszukiwaniu legendarnego skarbu El Dorado. Gra łączy turowy, taktyczny system walki na siatce z eksploracją, zarządzaniem załogą i bitwami powietrznych okrętów. Historia stopniowo odsłania większy konflikt polityczny i tajemnice starożytnych cywilizacji, nadając przygodzie bardziej epicki i dojrzalszy ton niż w Wizard101.",
+  },
 };
 
 const Games = () => {
@@ -2201,7 +2215,7 @@ const Games = () => {
                 {gameDescriptions[selectedGame].location}
               </p>
               <p>
-                <strong>Opis:</strong>
+                <strong>Opis: </strong>
                 {gameDescriptions[selectedGame].description}
               </p>
             </div>

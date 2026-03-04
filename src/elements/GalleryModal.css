@@ -1,0 +1,61 @@
+/* całe przyciemnione tło */
+.galleryModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* kontener obrazków */
+.galleryModalContent {
+  display: grid;
+  grid-template-columns: repeat(3, 200px); /* 3 kolumny po 2 rzędy = 6 zdjęć */
+  gap: 20px;
+  padding: 30px;
+  background: transparent; /* przezroczyste, same zdjęcia będą "w powietrzu" */
+  position: relative;
+}
+
+/* każdy obrazek */
+.galleryModalContent img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.galleryModalContent img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+}
+
+/* przycisk zamknięcia */
+.closeButton {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: darkblue;
+  color: white;
+  border: none;
+  font-size: 22px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 0 10px black;
+}
+
+.closeButton:hover {
+  background: crimson;
+}

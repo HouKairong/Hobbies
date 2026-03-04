@@ -53,9 +53,15 @@ const China = () => {
         title: "Kung Fu Panda Filmy",
         subitems: [
           "Kung Fu Panda 1",
+          "Sekrety Potężnej Piątki",
+          "Święta, święta i Po",
           "Kung Fu Panda 2",
+          "Sekrety Mistrzów",
+          "Tajemnice Zwoju",
           "Kung Fu Panda 3",
+          "Panda Paws",
           "Kung Fu Panda 4",
+          "Dueling Dumplings",
         ],
       },
       { title: "Mulan", subitems: ["Mulan 1", "Mulan 2", "Mulan Live Action"] },
@@ -97,6 +103,10 @@ const China = () => {
       { title: "Historia Kościoła w Chinach" },
       { title: "Daodejing" },
       { title: "Ocalała z chińskiego gułagu" },
+      {
+        title: "Assassin's Creed: Miecz Shao Jun",
+        subitems: ["Tom 1", "Tom 2", "Tom 3", "Tom 4"],
+      },
     ],
     Filozofia: [
       { title: "Konfucjanizm" },

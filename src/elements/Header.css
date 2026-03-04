@@ -88,3 +88,22 @@ nav li a:hover {
   border-radius: 10px;
   font-weight: bold;
 }
+
+.galleryButton {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 22px;
+  background: violet;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px black;
+  transition: 0.2s ease;
+}
+
+.galleryButton:hover {
+  transform: scale(1.1);
+  background-color: rgb(211, 105, 211);
+}

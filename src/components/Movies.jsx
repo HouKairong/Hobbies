@@ -12,12 +12,13 @@ const seriesDescriptions = {
     description:
       "Geralt walczy z potworami i mierzy się z moralnymi dylematami w brutalnym świecie.",
   },
-  "Assassin's Creed (2016)": {
-    licence: "Gry, Filozofia",
+  "Assassin's Creed": {
+    licence: "Gry, Seriale, Filozofia",
     protagonist: "Callum Lynch / Aguilar",
     antagonist: "Templariusze",
     why: "Film na podstawie kultowej gry",
-    location: "",
+    location:
+      "XV-wieczna i współczesna Hiszpania oraz Włochy (Toskania, Florencja) w 1524 roku",
     description:
       "Historia konfliktu między Asasynami a Templariuszami, wciągająca akcja i podróże w czasie.",
   },
@@ -48,7 +49,7 @@ const seriesDescriptions = {
     description:
       "Grupa ninja broni miasta przed złoczyńcami w pełnej humoru i akcji przygodzie.",
   },
-  "Harry Potter": {
+  "Wizarding World": {
     licence: "Gry",
     protagonist: "Harry Potter",
     antagonist: "Lord Voldemort",
@@ -693,6 +694,11 @@ const Movies = () => {
               "Pierwszy film adaptujący sagę o Geralcie z Rivii, przedstawiający jego przygody w świecie pełnym potworów i intryg.",
           },
           {
+            title: "Pół Wieku Poezji Później",
+            description:
+              "Niezależny film fanowski osadzony w uniwersum Wiedźmina, skupiający się na losach Jaskra po wydarzeniach znanych z sagi. Historia opowiada o próbie odbicia porwanej czarodziejki oraz o tym, jak legenda Geralta z Rivii wciąż wpływa na świat i ludzi wiele lat później. Produkcja łączy przygodę, humor i melancholię, będąc jednocześnie hołdem dla twórczości Andrzeja Sapkowskiego.",
+          },
+          {
             title: "Wiedźmin: Zmora Wilka (2021)",
             description:
               "Animowany film koncentrujący się na młodym Wiedźminie, jego treningu i pierwszych misjach, ukazujący początki jego legendy.",
@@ -709,7 +715,21 @@ const Movies = () => {
           },
         ],
       },
-      { title: "Assassin's Creed (2016)" },
+      {
+        title: "Assassin's Creed",
+        parts: [
+          {
+            title: "Assassin's Creed (2016)",
+            description:
+              "Film aktorski osadzony w uniwersum Assassin’s Creed, w którym Callum Lynch zostaje zmuszony do korzystania z technologii Animusa, by przeżyć wspomnienia swojego przodka, Aguilara de Nerhy. Akcja przenosi widza do XV-wiecznej Hiszpanii, gdzie Asasyni walczą z Templariuszami o kontrolę nad Jabłkiem Edenu. Produkcja łączy współczesny wątek sci-fi z historycznym konfliktem o wolność i kontrolę nad ludzkością.",
+          },
+          {
+            title: "Assassin's Creed: Embers",
+            description:
+              "Krótkometrażowa animacja będąca epilogiem historii Ezio Auditore. Ukazuje jego spokojne życie na wsi we Włoszech po zakończeniu wieloletniej walki jako Mistrz Asasynów. Gdy pojawia się tajemnicza chińska asasynka Shao Jun, Ezio musi po raz ostatni zmierzyć się z cieniem swojej przeszłości. To melancholijna opowieść o przemijaniu, dziedzictwie i tym, że nawet legendy są tylko ludźmi.",
+          },
+        ],
+      },
       {
         title: "DOOM",
         parts: [
@@ -747,7 +767,7 @@ const Movies = () => {
       },
       { title: "LEGO Ninjago Film (2017)" },
       {
-        title: "Harry Potter",
+        title: "Wizarding World",
         parts: [
           {
             title: "Kamień Filozoficzny",
@@ -789,6 +809,21 @@ const Movies = () => {
             description:
               "Kulminacyjna bitwa z Voldemortem i zakończenie sagi o Harrym Potterze.",
           },
+          {
+            title: "Fantastyczne zwierzęta i jak je znaleźć",
+            description:
+              "Historia magizoologa Newta Scamandera, który przybywa do Nowego Jorku z walizką pełną magicznych stworzeń. Gdy część z nich ucieka, wydarzenia te splatają się z narastającym konfliktem w świecie czarodziejów oraz działalnością mrocznego czarnoksiężnika Grindelwalda. Film ukazuje amerykańską społeczność magiczną i początki większego zagrożenia dla równowagi między światem magii a niemagicznym.",
+          },
+          {
+            title: "Fantastyczne zwierzęta: Zbrodnie Grindelwalda",
+            description:
+              "Grindelwald ucieka z niewoli i zaczyna otwarcie gromadzić zwolenników, głosząc ideę dominacji czarodziejów nad niemagicznymi. Albus Dumbledore, nie mogąc bezpośrednio wystąpić przeciw dawnemu przyjacielowi, powierza Newtowi misję powstrzymania jego planów. Film pogłębia polityczne napięcia w świecie magii oraz odsłania tajemnice związane z rodem Lestrange i przeszłością Dumbledore’a.",
+          },
+          {
+            title: "Fantastyczne zwierzęta: Tajemnice Dumbledore’a",
+            description:
+              "Dumbledore organizuje grupę czarodziejów i czarownic, by przeciwstawić się rosnącej potędze Grindelwalda. W obliczu manipulacji politycznych i walki o władzę nad międzynarodową społecznością magiczną bohaterowie muszą podjąć decyzje, które zaważą na przyszłości świata czarodziejów. Film skupia się na relacji Dumbledore’a i Grindelwalda oraz konsekwencjach ich przeszłości.",
+          },
         ],
       },
       {
@@ -800,6 +835,26 @@ const Movies = () => {
               "Pierwsza część serii, opowiadająca o przyjaźni młodego Wikinga Hiccup’a z niebezpiecznym smokiem Bezzębkiem.",
           },
           {
+            title: "Prezent Nocnej Furii",
+            description:
+              "Krótkometrażowa świąteczna opowieść osadzona po wydarzeniach pierwszego filmu. Podczas wikińskiego święta smoków wszystkie stworzenia niespodziewanie odlatują, a Czkawka i Astrid próbują odkryć powód ich tajemniczego zniknięcia. To ciepła historia o więzi między ludźmi i smokami oraz o tym, że czasem trzeba pozwolić komuś odejść.",
+          },
+          {
+            title: "Legenda o Smoku Gnatochrupie",
+            description:
+              "Humorystyczna krótka animacja skupiająca się na Pyskaczu i jego obsesji na punkcie legendarnego Smoka Gnatochrupa. Gdy tajemnicze wydarzenia zaczynają przypominać starą opowieść, bohaterowie muszą zmierzyć się z własnymi lękami i wyobraźnią. Lekka, komediowa historia bawiąca się smokowymi mitami.",
+          },
+          {
+            title: "Księga Smoków",
+            description:
+              "Specjalny odcinek stylizowany na dokument, w którym Czkawka, Astrid i ich przyjaciele prezentują znane gatunki smoków z Berk. To rozszerzenie wiedzy o świecie serii – pełne ciekawostek, humoru i charakterystycznych komentarzy bohaterów.",
+          },
+          {
+            title: "Świt Jeźdźców Smoków",
+            description:
+              "Krótki film będący pomostem między pierwszą a drugą częścią serii. Pokazuje początki organizacji Jeźdźców Smoków i pierwsze wspólne misje Czkawki oraz jego przyjaciół, gdy uczą się współpracować ze swoimi smokami w nowych, niebezpiecznych sytuacjach.",
+          },
+          {
             title: "Część 2",
             description:
               "Hiccup i Bezzębny kontynuują swoje przygody, odkrywając nowe krainy i wyzwania w świecie smoków.",
@@ -809,10 +864,11 @@ const Movies = () => {
             description:
               "Finałowa część serii animowanej, w której Hiccup staje przed ostatecznym wyborem dotyczącym świata ludzi i smoków.",
           },
+
           {
-            title: "Live Action",
+            title: "Święta w Domu",
             description:
-              "Film aktorski oparty na popularnej serii animowanej, przenoszący historię Hiccup’a i Bezzębnego na duży ekran.",
+              "Świąteczna krótkometrażowa animacja rozgrywająca się po wydarzeniach trzeciego filmu. Mieszkańcy Berk próbują odnaleźć ducha dawnych tradycji, a Czkawka zastanawia się, jak podtrzymać pamięć o smokach w świecie, w którym już ich nie ma. Ciepła i nostalgiczna historia o rodzinie i tęsknocie.",
           },
         ],
       },
@@ -830,9 +886,25 @@ const Movies = () => {
               "Drugi epizod prequeli, pokazujący początki wojen klonów i rozwój relacji Anakina z Padmé.",
           },
           {
+            title: "Wojny klonów",
+            description:
+              "Animowany film kinowy będący wprowadzeniem do serialu „Wojny klonów”. Akcja rozgrywa się podczas konfliktu między Republiką a Separatystami. Obi-Wan Kenobi i Anakin Skywalker otrzymują misję uratowania porwanego syna Jabby Hutta, co ma kluczowe znaczenie dla strategicznych szlaków w galaktyce. Film przedstawia także Ahsokę Tano, młodą padawankę Anakina, i ukazuje jego rolę jako mentora w czasie trwającej wojny.",
+          },
+
+          {
             title: "Zemsta Sithów",
             description:
               "Trzeci epizod prequeli, ukazujący upadek Anakina i przejście na ciemną stronę jako Darth Vader.",
+          },
+          {
+            title: "Han Solo",
+            description:
+              "Film przedstawiający młodość Hana Solo i jego drogę od ulicznego kombinatora do jednego z najbardziej znanych przemytników galaktyki. Historia ukazuje jego pierwsze spotkanie z Chewbaccą, zdobycie Sokoła Millennium oraz relację z Lando Calrissianem. To przygodowa opowieść o ryzyku, lojalności i narodzinach legendy.",
+          },
+          {
+            title: "Łotr 1",
+            description:
+              "Samodzielna historia osadzona tuż przed wydarzeniami „Nowej Nadziei”. Grupa rebeliantów pod dowództwem Jyn Erso podejmuje desperacką misję wykradzenia planów Gwiazdy Śmierci, potężnej broni Imperium. Film pokazuje bardziej wojenny i dramatyczny ton uniwersum, skupiając się na poświęceniu i cenie nadziei w walce z tyranią.",
           },
           {
             title: "Nowa Nadzieja",
@@ -925,9 +997,19 @@ const Movies = () => {
               "Trzecia część, w której bohaterowie odkrywają tajemniczą krainę pełną prehistorycznych stworzeń.",
           },
           {
+            title: "Mamucia Gwiazdka",
+            description:
+              "Świąteczny film krótkometrażowy, w którym Sid przypadkowo niszczy ulubiony kamień Manny’ego i trafia na listę niegrzecznych Mikołaja. Chcąc naprawić sytuację, wyrusza na Biegun Północny, gdzie jego dobre intencje szybko zamieniają się w kolejną lawinę chaosu. Ciepła, humorystyczna opowieść o przyjaźni i odpowiedzialności.",
+          },
+          {
             title: "Wędrówka Kontynentów",
             description:
               "Czwarta część serii, ukazująca zmagania bohaterów z przesuwającymi się kontynentami i katastrofami naturalnymi.",
+          },
+          {
+            title: "Wielkanocne niespodzianki",
+            description:
+              "Krótkometrażowy specjal świąteczny skupiający się na Squincie, który przejmuje rolę Zajączka Wielkanocnego. Próba kontrolowania dostaw jajek szybko wymyka się spod kontroli, a Manny, Sid i Diego muszą uratować święta przed totalnym bałaganem.",
           },
           {
             title: "Mocne Uderzenie",
@@ -941,14 +1023,29 @@ const Movies = () => {
         title: "Madagaskar",
         parts: [
           {
+            title: "Pingwiny z Madagaskaru: Misja świąteczna",
+            description:
+              "Krótkometrażowa animacja, w której pingwiny odkrywają, że jeden z niedźwiedzi polarnych w zoo nie otrzymał prezentu. Postanawiają wyruszyć na tajną misję ratunkową do centrum handlowego, co kończy się typowym dla nich chaosem i komedią sytuacyjną.",
+          },
+          {
             title: "Część 1",
             description:
               "Pierwsza część serii, w której grupa zwierząt z nowojorskiego zoo przypadkowo trafia na wyspę Madagaskar i próbuje odnaleźć się w dzikiej przyrodzie.",
           },
           {
+            title: "Madagwiazdka",
+            description:
+              "Świąteczny specjal, w którym zwierzęta z Madagaskaru próbują przywrócić Mikołajowi pamięć po wypadku sani. Alex, Marty, Gloria i Melman przejmują obowiązki świątecznej dostawy prezentów, zamieniając Wigilię w serię absurdalnych przygód.",
+          },
+          {
             title: "Część 2",
             description:
               "Kontynuacja przygód zwierząt, które próbują wrócić do domu, napotykając nowe wyzwania i wrogów.",
+          },
+          {
+            title: "Zakochany Madagaskar",
+            description:
+              "Walentynkowy odcinek specjalny, w którym bohaterowie mierzą się z tematyką miłości. Od romantycznych nieporozumień po zabawne próby zdobycia serca wybranki – każdy z bohaterów przeżywa własną, komiczną historię uczuciową.",
           },
           {
             title: "Część 3",
@@ -971,9 +1068,29 @@ const Movies = () => {
               "Połączenie komedii i akcji, w którym niezdarny panda Po staje się wybranym wojownikiem kung fu.",
           },
           {
+            title: "Sekrety Potężnej Piątki",
+            description:
+              "Krótkometrażowy film animowany, w którym Mistrz Shifu opowiada Po historie o młodości Tygrysicy, Małpy, Żurawia, Modliszki i Żmii. Każde z nich musiało pokonać własne słabości, zanim stało się legendarnym wojownikiem kung fu. Opowieść podkreśla, że prawdziwa siła rodzi się z charakteru, nie z talentu.",
+          },
+          {
+            title: "Święta, święta i Po",
+            description:
+              "Świąteczny specjal, w którym Po musi pogodzić obowiązki Smoczego Wojownika z rodzinną tradycją przygotowywania świątecznej uczty w restauracji pana Pinga. Ciepła historia o równowadze między obowiązkiem a rodziną.",
+          },
+          {
             title: "Część 2",
             description:
               "Po kontynuuje swoją podróż jako wojownik, stawiając czoła nowemu zagrożeniu dla Doliny Pokoju.",
+          },
+          {
+            title: "Kung Fu Panda: Sekrety Mistrzów",
+            description:
+              "Krótka animacja przedstawiająca historię trzech legendarnych mistrzów kung fu: Thundering Rhino, Storming Ox i Croc. Młody Shifu uczy się od nich, czym jest prawdziwe bohaterstwo i odpowiedzialność wojownika.",
+          },
+          {
+            title: "Kung Fu Panda: Tajemnice zwoju",
+            description:
+              "Specjalny odcinek ukazujący alternatywną wersję wydarzeń, w której to nie Po zostaje Smoczym Wojownikiem. Historia w humorystyczny sposób pokazuje, że przeznaczenie może wyglądać inaczej, ale odwaga i determinacja są kluczowe.",
           },
           {
             title: "Część 3",
@@ -981,9 +1098,19 @@ const Movies = () => {
               "Po odkrywa swoją prawdziwą tożsamość i łączy siły z ojcem oraz nowymi przyjaciółmi, aby pokonać wroga.",
           },
           {
+            title: "Panda Paws",
+            description:
+              "Krótkometrażowa animacja skupiająca się na Po i jego codziennych, często komicznych zmaganiach jako Smoczy Wojownik. Pokazuje lżejszą stronę jego treningu i życia w Dolinie Pokoju.",
+          },
+          {
             title: "Część 4",
             description:
               "Najnowsza część serii, w której Po staje przed nowymi wyzwaniami, w tym potężnym przeciwnikiem z przeszłości kung fu.",
+          },
+          {
+            title: "Dueling Dumplings",
+            description:
+              "Krótki film przedstawiający młodego Po i jego relację z panem Pingiem. Historia skupia się na ich przyjacielskiej rywalizacji przy gotowaniu klusek, ukazując początki marzeń Po i jego miłość do jedzenia oraz kung fu.",
           },
         ],
       },
@@ -1003,6 +1130,11 @@ const Movies = () => {
               "Pierwszy film adaptujący sagę o Geralcie z Rivii, przedstawiający jego przygody w świecie pełnym potworów i intryg.",
           },
           {
+            title: "Pół Wieku Poezji Później",
+            description:
+              "Niezależny film fanowski osadzony w uniwersum Wiedźmina, skupiający się na losach Jaskra po wydarzeniach znanych z sagi. Historia opowiada o próbie odbicia porwanej czarodziejki oraz o tym, jak legenda Geralta z Rivii wciąż wpływa na świat i ludzi wiele lat później. Produkcja łączy przygodę, humor i melancholię, będąc jednocześnie hołdem dla twórczości Andrzeja Sapkowskiego.",
+          },
+          {
             title: "Wiedźmin: Zmora Wilka (2021)",
             description:
               "Animowany film koncentrujący się na młodym Wiedźminie, jego treningu i pierwszych misjach, ukazujący początki jego legendy.",
@@ -1020,12 +1152,47 @@ const Movies = () => {
         ],
       },
       {
+        title: "Assassin's Creed",
+        parts: [
+          {
+            title: "Assassin's Creed (2016)",
+            description:
+              "Film aktorski osadzony w uniwersum Assassin’s Creed, w którym Callum Lynch zostaje zmuszony do korzystania z technologii Animusa, by przeżyć wspomnienia swojego przodka, Aguilara de Nerhy. Akcja przenosi widza do XV-wiecznej Hiszpanii, gdzie Asasyni walczą z Templariuszami o kontrolę nad Jabłkiem Edenu. Produkcja łączy współczesny wątek sci-fi z historycznym konfliktem o wolność i kontrolę nad ludzkością.",
+          },
+          {
+            title: "Assassin's Creed: Embers",
+            description:
+              "Krótkometrażowa animacja będąca epilogiem historii Ezio Auditore. Ukazuje jego spokojne życie na wsi we Włoszech po zakończeniu wieloletniej walki jako Mistrz Asasynów. Gdy pojawia się tajemnicza chińska asasynka Shao Jun, Ezio musi po raz ostatni zmierzyć się z cieniem swojej przeszłości. To melancholijna opowieść o przemijaniu, dziedzictwie i tym, że nawet legendy są tylko ludźmi.",
+          },
+        ],
+      },
+      {
         title: "Jak Wytresować Smoka",
         parts: [
           {
             title: "Część 1",
             description:
               "Pierwsza część serii, opowiadająca o przyjaźni młodego Wikinga Hiccup’a z niebezpiecznym smokiem Bezzębkiem.",
+          },
+          {
+            title: "Prezent Nocnej Furii",
+            description:
+              "Krótkometrażowa świąteczna opowieść osadzona po wydarzeniach pierwszego filmu. Podczas wikińskiego święta smoków wszystkie stworzenia niespodziewanie odlatują, a Czkawka i Astrid próbują odkryć powód ich tajemniczego zniknięcia. To ciepła historia o więzi między ludźmi i smokami oraz o tym, że czasem trzeba pozwolić komuś odejść.",
+          },
+          {
+            title: "Legenda o Smoku Gnatochrupie",
+            description:
+              "Humorystyczna krótka animacja skupiająca się na Pyskaczu i jego obsesji na punkcie legendarnego Smoka Gnatochrupa. Gdy tajemnicze wydarzenia zaczynają przypominać starą opowieść, bohaterowie muszą zmierzyć się z własnymi lękami i wyobraźnią. Lekka, komediowa historia bawiąca się smokowymi mitami.",
+          },
+          {
+            title: "Księga Smoków",
+            description:
+              "Specjalny odcinek stylizowany na dokument, w którym Czkawka, Astrid i ich przyjaciele prezentują znane gatunki smoków z Berk. To rozszerzenie wiedzy o świecie serii – pełne ciekawostek, humoru i charakterystycznych komentarzy bohaterów.",
+          },
+          {
+            title: "Świt Jeźdźców Smoków",
+            description:
+              "Krótki film będący pomostem między pierwszą a drugą częścią serii. Pokazuje początki organizacji Jeźdźców Smoków i pierwsze wspólne misje Czkawki oraz jego przyjaciół, gdy uczą się współpracować ze swoimi smokami w nowych, niebezpiecznych sytuacjach.",
           },
           {
             title: "Część 2",
@@ -1037,13 +1204,15 @@ const Movies = () => {
             description:
               "Finałowa część serii animowanej, w której Hiccup staje przed ostatecznym wyborem dotyczącym świata ludzi i smoków.",
           },
+          { title: "Święta w Domu" },
           {
-            title: "Live Action",
+            title: "Święta w Domu",
             description:
-              "Film aktorski oparty na popularnej serii animowanej, przenoszący historię Hiccup’a i Bezzębnego na duży ekran.",
+              "Świąteczna krótkometrażowa animacja rozgrywająca się po wydarzeniach trzeciego filmu. Mieszkańcy Berk próbują odnaleźć ducha dawnych tradycji, a Czkawka zastanawia się, jak podtrzymać pamięć o smokach w świecie, w którym już ich nie ma. Ciepła i nostalgiczna historia o rodzinie i tęsknocie.",
           },
         ],
       },
+
       { title: "El Camino" },
       {
         title: "Sherlock Holmes",
@@ -1089,14 +1258,29 @@ const Movies = () => {
         title: "Madagaskar",
         parts: [
           {
+            title: "Pingwiny z Madagaskaru: Misja świąteczna",
+            description:
+              "Krótkometrażowa animacja, w której pingwiny odkrywają, że jeden z niedźwiedzi polarnych w zoo nie otrzymał prezentu. Postanawiają wyruszyć na tajną misję ratunkową do centrum handlowego, co kończy się typowym dla nich chaosem i komedią sytuacyjną.",
+          },
+          {
             title: "Część 1",
             description:
               "Pierwsza część serii, w której grupa zwierząt z nowojorskiego zoo przypadkowo trafia na wyspę Madagaskar i próbuje odnaleźć się w dzikiej przyrodzie.",
           },
           {
+            title: "Madagwiazdka",
+            description:
+              "Świąteczny specjal, w którym zwierzęta z Madagaskaru próbują przywrócić Mikołajowi pamięć po wypadku sani. Alex, Marty, Gloria i Melman przejmują obowiązki świątecznej dostawy prezentów, zamieniając Wigilię w serię absurdalnych przygód.",
+          },
+          {
             title: "Część 2",
             description:
               "Kontynuacja przygód zwierząt, które próbują wrócić do domu, napotykając nowe wyzwania i wrogów.",
+          },
+          {
+            title: "Zakochany Madagaskar",
+            description:
+              "Walentynkowy odcinek specjalny, w którym bohaterowie mierzą się z tematyką miłości. Od romantycznych nieporozumień po zabawne próby zdobycia serca wybranki – każdy z bohaterów przeżywa własną, komiczną historię uczuciową.",
           },
           {
             title: "Część 3",
@@ -1119,9 +1303,29 @@ const Movies = () => {
               "Połączenie komedii i akcji, w którym niezdarny panda Po staje się wybranym wojownikiem kung fu.",
           },
           {
+            title: "Sekrety Potężnej Piątki",
+            description:
+              "Krótkometrażowy film animowany, w którym Mistrz Shifu opowiada Po historie o młodości Tygrysicy, Małpy, Żurawia, Modliszki i Żmii. Każde z nich musiało pokonać własne słabości, zanim stało się legendarnym wojownikiem kung fu. Opowieść podkreśla, że prawdziwa siła rodzi się z charakteru, nie z talentu.",
+          },
+          {
+            title: "Święta, święta i Po",
+            description:
+              "Świąteczny specjal, w którym Po musi pogodzić obowiązki Smoczego Wojownika z rodzinną tradycją przygotowywania świątecznej uczty w restauracji pana Pinga. Ciepła historia o równowadze między obowiązkiem a rodziną.",
+          },
+          {
             title: "Część 2",
             description:
               "Po kontynuuje swoją podróż jako wojownik, stawiając czoła nowemu zagrożeniu dla Doliny Pokoju.",
+          },
+          {
+            title: "Kung Fu Panda: Sekrety Mistrzów",
+            description:
+              "Krótka animacja przedstawiająca historię trzech legendarnych mistrzów kung fu: Thundering Rhino, Storming Ox i Croc. Młody Shifu uczy się od nich, czym jest prawdziwe bohaterstwo i odpowiedzialność wojownika.",
+          },
+          {
+            title: "Kung Fu Panda: Tajemnice zwoju",
+            description:
+              "Specjalny odcinek ukazujący alternatywną wersję wydarzeń, w której to nie Po zostaje Smoczym Wojownikiem. Historia w humorystyczny sposób pokazuje, że przeznaczenie może wyglądać inaczej, ale odwaga i determinacja są kluczowe.",
           },
           {
             title: "Część 3",
@@ -1129,9 +1333,19 @@ const Movies = () => {
               "Po odkrywa swoją prawdziwą tożsamość i łączy siły z ojcem oraz nowymi przyjaciółmi, aby pokonać wroga.",
           },
           {
+            title: "Panda Paws",
+            description:
+              "Krótkometrażowa animacja skupiająca się na Po i jego codziennych, często komicznych zmaganiach jako Smoczy Wojownik. Pokazuje lżejszą stronę jego treningu i życia w Dolinie Pokoju.",
+          },
+          {
             title: "Część 4",
             description:
               "Najnowsza część serii, w której Po staje przed nowymi wyzwaniami, w tym potężnym przeciwnikiem z przeszłości kung fu.",
+          },
+          {
+            title: "Dueling Dumplings",
+            description:
+              "Krótki film przedstawiający młodego Po i jego relację z panem Pingiem. Historia skupia się na ich przyjacielskiej rywalizacji przy gotowaniu klusek, ukazując początki marzeń Po i jego miłość do jedzenia oraz kung fu.",
           },
         ],
       },
@@ -1140,7 +1354,7 @@ const Movies = () => {
       { title: "Avatar: Ostatni Władca Wiatru" },
       { title: "Herkules" },
       {
-        title: "Gwiezdne Wojny",
+        title: "Gwiezdne wojny",
         parts: [
           {
             title: "Mroczne Widmo",
@@ -1153,9 +1367,24 @@ const Movies = () => {
               "Drugi epizod prequeli, pokazujący początki wojen klonów i rozwój relacji Anakina z Padmé.",
           },
           {
+            title: "Wojny klonów",
+            description:
+              "Animowany film kinowy będący wprowadzeniem do serialu „Wojny klonów”. Akcja rozgrywa się podczas konfliktu między Republiką a Separatystami. Obi-Wan Kenobi i Anakin Skywalker otrzymują misję uratowania porwanego syna Jabby Hutta, co ma kluczowe znaczenie dla strategicznych szlaków w galaktyce. Film przedstawia także Ahsokę Tano, młodą padawankę Anakina, i ukazuje jego rolę jako mentora w czasie trwającej wojny.",
+          },
+          {
             title: "Zemsta Sithów",
             description:
               "Trzeci epizod prequeli, ukazujący upadek Anakina i przejście na ciemną stronę jako Darth Vader.",
+          },
+          {
+            title: "Han Solo",
+            description:
+              "Film przedstawiający młodość Hana Solo i jego drogę od ulicznego kombinatora do jednego z najbardziej znanych przemytników galaktyki. Historia ukazuje jego pierwsze spotkanie z Chewbaccą, zdobycie Sokoła Millennium oraz relację z Lando Calrissianem. To przygodowa opowieść o ryzyku, lojalności i narodzinach legendy.",
+          },
+          {
+            title: "Łotr 1",
+            description:
+              "Samodzielna historia osadzona tuż przed wydarzeniami „Nowej Nadziei”. Grupa rebeliantów pod dowództwem Jyn Erso podejmuje desperacką misję wykradzenia planów Gwiazdy Śmierci, potężnej broni Imperium. Film pokazuje bardziej wojenny i dramatyczny ton uniwersum, skupiając się na poświęceniu i cenie nadziei w walce z tyranią.",
           },
           {
             title: "Nowa Nadzieja",
@@ -1201,9 +1430,29 @@ const Movies = () => {
               "Połączenie komedii i akcji, w którym niezdarny panda Po staje się wybranym wojownikiem kung fu.",
           },
           {
+            title: "Sekrety Potężnej Piątki",
+            description:
+              "Krótkometrażowy film animowany, w którym Mistrz Shifu opowiada Po historie o młodości Tygrysicy, Małpy, Żurawia, Modliszki i Żmii. Każde z nich musiało pokonać własne słabości, zanim stało się legendarnym wojownikiem kung fu. Opowieść podkreśla, że prawdziwa siła rodzi się z charakteru, nie z talentu.",
+          },
+          {
+            title: "Święta, święta i Po",
+            description:
+              "Świąteczny specjal, w którym Po musi pogodzić obowiązki Smoczego Wojownika z rodzinną tradycją przygotowywania świątecznej uczty w restauracji pana Pinga. Ciepła historia o równowadze między obowiązkiem a rodziną.",
+          },
+          {
             title: "Część 2",
             description:
               "Po kontynuuje swoją podróż jako wojownik, stawiając czoła nowemu zagrożeniu dla Doliny Pokoju.",
+          },
+          {
+            title: "Kung Fu Panda: Sekrety Mistrzów",
+            description:
+              "Krótka animacja przedstawiająca historię trzech legendarnych mistrzów kung fu: Thundering Rhino, Storming Ox i Croc. Młody Shifu uczy się od nich, czym jest prawdziwe bohaterstwo i odpowiedzialność wojownika.",
+          },
+          {
+            title: "Kung Fu Panda: Tajemnice zwoju",
+            description:
+              "Specjalny odcinek ukazujący alternatywną wersję wydarzeń, w której to nie Po zostaje Smoczym Wojownikiem. Historia w humorystyczny sposób pokazuje, że przeznaczenie może wyglądać inaczej, ale odwaga i determinacja są kluczowe.",
           },
           {
             title: "Część 3",
@@ -1211,9 +1460,19 @@ const Movies = () => {
               "Po odkrywa swoją prawdziwą tożsamość i łączy siły z ojcem oraz nowymi przyjaciółmi, aby pokonać wroga.",
           },
           {
+            title: "Panda Paws",
+            description:
+              "Krótkometrażowa animacja skupiająca się na Po i jego codziennych, często komicznych zmaganiach jako Smoczy Wojownik. Pokazuje lżejszą stronę jego treningu i życia w Dolinie Pokoju.",
+          },
+          {
             title: "Część 4",
             description:
               "Najnowsza część serii, w której Po staje przed nowymi wyzwaniami, w tym potężnym przeciwnikiem z przeszłości kung fu.",
+          },
+          {
+            title: "Dueling Dumplings",
+            description:
+              "Krótki film przedstawiający młodego Po i jego relację z panem Pingiem. Historia skupia się na ich przyjacielskiej rywalizacji przy gotowaniu klusek, ukazując początki marzeń Po i jego miłość do jedzenia oraz kung fu.",
           },
         ],
       },
@@ -1487,6 +1746,11 @@ const Movies = () => {
                 "Pierwszy film adaptujący sagę o Geralcie z Rivii, przedstawiający jego przygody w świecie pełnym potworów i intryg.",
             },
             {
+              title: "Pół Wieku Poezji Później",
+              description:
+                "Niezależny film fanowski osadzony w uniwersum Wiedźmina, skupiający się na losach Jaskra po wydarzeniach znanych z sagi. Historia opowiada o próbie odbicia porwanej czarodziejki oraz o tym, jak legenda Geralta z Rivii wciąż wpływa na świat i ludzi wiele lat później. Produkcja łączy przygodę, humor i melancholię, będąc jednocześnie hołdem dla twórczości Andrzeja Sapkowskiego.",
+            },
+            {
               title: "Wiedźmin: Zmora Wilka (2021)",
               description:
                 "Animowany film koncentrujący się na młodym Wiedźminie, jego treningu i pierwszych misjach, ukazujący początki jego legendy.",
@@ -1607,9 +1871,24 @@ const Movies = () => {
                 "Drugi epizod prequeli, pokazujący początki wojen klonów i rozwój relacji Anakina z Padmé.",
             },
             {
+              title: "Wojny klonów",
+              description:
+                "Animowany film kinowy będący wprowadzeniem do serialu „Wojny klonów”. Akcja rozgrywa się podczas konfliktu między Republiką a Separatystami. Obi-Wan Kenobi i Anakin Skywalker otrzymują misję uratowania porwanego syna Jabby Hutta, co ma kluczowe znaczenie dla strategicznych szlaków w galaktyce. Film przedstawia także Ahsokę Tano, młodą padawankę Anakina, i ukazuje jego rolę jako mentora w czasie trwającej wojny.",
+            },
+            {
               title: "Zemsta Sithów",
               description:
                 "Trzeci epizod prequeli, ukazujący upadek Anakina i przejście na ciemną stronę jako Darth Vader.",
+            },
+            {
+              title: "Han Solo",
+              description:
+                "Film przedstawiający młodość Hana Solo i jego drogę od ulicznego kombinatora do jednego z najbardziej znanych przemytników galaktyki. Historia ukazuje jego pierwsze spotkanie z Chewbaccą, zdobycie Sokoła Millennium oraz relację z Lando Calrissianem. To przygodowa opowieść o ryzyku, lojalności i narodzinach legendy.",
+            },
+            {
+              title: "Łotr 1",
+              description:
+                "Samodzielna historia osadzona tuż przed wydarzeniami „Nowej Nadziei”. Grupa rebeliantów pod dowództwem Jyn Erso podejmuje desperacką misję wykradzenia planów Gwiazdy Śmierci, potężnej broni Imperium. Film pokazuje bardziej wojenny i dramatyczny ton uniwersum, skupiając się na poświęceniu i cenie nadziei w walce z tyranią.",
             },
             {
               title: "Nowa Nadzieja",
@@ -1681,6 +1960,11 @@ const Movies = () => {
               "Pierwszy film adaptujący sagę o Geralcie z Rivii, przedstawiający jego przygody w świecie pełnym potworów i intryg.",
           },
           {
+            title: "Pół Wieku Poezji Później",
+            description:
+              "Niezależny film fanowski osadzony w uniwersum Wiedźmina, skupiający się na losach Jaskra po wydarzeniach znanych z sagi. Historia opowiada o próbie odbicia porwanej czarodziejki oraz o tym, jak legenda Geralta z Rivii wciąż wpływa na świat i ludzi wiele lat później. Produkcja łączy przygodę, humor i melancholię, będąc jednocześnie hołdem dla twórczości Andrzeja Sapkowskiego.",
+          },
+          {
             title: "Wiedźmin: Zmora Wilka (2021)",
             description:
               "Animowany film koncentrujący się na młodym Wiedźminie, jego treningu i pierwszych misjach, ukazujący początki jego legendy.",
@@ -1694,6 +1978,21 @@ const Movies = () => {
             title: "Szczury: Opowieści ze świata Wiedźmina (2025)",
             description:
               "Zbiór krótkich historii ukazujących mroczne i brutalne życie zwykłych ludzi w świecie Wiedźmina.",
+          },
+        ],
+      },
+      {
+        title: "Assassin's Creed",
+        parts: [
+          {
+            title: "Assassin's Creed (2016)",
+            description:
+              "Film aktorski osadzony w uniwersum Assassin’s Creed, w którym Callum Lynch zostaje zmuszony do korzystania z technologii Animusa, by przeżyć wspomnienia swojego przodka, Aguilara de Nerhy. Akcja przenosi widza do XV-wiecznej Hiszpanii, gdzie Asasyni walczą z Templariuszami o kontrolę nad Jabłkiem Edenu. Produkcja łączy współczesny wątek sci-fi z historycznym konfliktem o wolność i kontrolę nad ludzkością.",
+          },
+          {
+            title: "Assassin's Creed: Embers",
+            description:
+              "Krótkometrażowa animacja będąca epilogiem historii Ezio Auditore. Ukazuje jego spokojne życie na wsi we Włoszech po zakończeniu wieloletniej walki jako Mistrz Asasynów. Gdy pojawia się tajemnicza chińska asasynka Shao Jun, Ezio musi po raz ostatni zmierzyć się z cieniem swojej przeszłości. To melancholijna opowieść o przemijaniu, dziedzictwie i tym, że nawet legendy są tylko ludźmi.",
           },
         ],
       },
@@ -1728,9 +2027,24 @@ const Movies = () => {
               "Drugi epizod prequeli, pokazujący początki wojen klonów i rozwój relacji Anakina z Padmé.",
           },
           {
+            title: "Wojny klonów",
+            description:
+              "Animowany film kinowy będący wprowadzeniem do serialu „Wojny klonów”. Akcja rozgrywa się podczas konfliktu między Republiką a Separatystami. Obi-Wan Kenobi i Anakin Skywalker otrzymują misję uratowania porwanego syna Jabby Hutta, co ma kluczowe znaczenie dla strategicznych szlaków w galaktyce. Film przedstawia także Ahsokę Tano, młodą padawankę Anakina, i ukazuje jego rolę jako mentora w czasie trwającej wojny.",
+          },
+          {
             title: "Zemsta Sithów",
             description:
               "Trzeci epizod prequeli, ukazujący upadek Anakina i przejście na ciemną stronę jako Darth Vader.",
+          },
+          {
+            title: "Han Solo",
+            description:
+              "Film przedstawiający młodość Hana Solo i jego drogę od ulicznego kombinatora do jednego z najbardziej znanych przemytników galaktyki. Historia ukazuje jego pierwsze spotkanie z Chewbaccą, zdobycie Sokoła Millennium oraz relację z Lando Calrissianem. To przygodowa opowieść o ryzyku, lojalności i narodzinach legendy.",
+          },
+          {
+            title: "Łotr 1",
+            description:
+              "Samodzielna historia osadzona tuż przed wydarzeniami „Nowej Nadziei”. Grupa rebeliantów pod dowództwem Jyn Erso podejmuje desperacką misję wykradzenia planów Gwiazdy Śmierci, potężnej broni Imperium. Film pokazuje bardziej wojenny i dramatyczny ton uniwersum, skupiając się na poświęceniu i cenie nadziei w walce z tyranią.",
           },
           {
             title: "Nowa Nadzieja",
@@ -2085,6 +2399,26 @@ const Movies = () => {
               "Pierwsza część serii, opowiadająca o przyjaźni młodego Wikinga Hiccup’a z niebezpiecznym smokiem Bezzębkiem.",
           },
           {
+            title: "Prezent Nocnej Furii",
+            description:
+              "Krótkometrażowa świąteczna opowieść osadzona po wydarzeniach pierwszego filmu. Podczas wikińskiego święta smoków wszystkie stworzenia niespodziewanie odlatują, a Czkawka i Astrid próbują odkryć powód ich tajemniczego zniknięcia. To ciepła historia o więzi między ludźmi i smokami oraz o tym, że czasem trzeba pozwolić komuś odejść.",
+          },
+          {
+            title: "Legenda o Smoku Gnatochrupie",
+            description:
+              "Humorystyczna krótka animacja skupiająca się na Pyskaczu i jego obsesji na punkcie legendarnego Smoka Gnatochrupa. Gdy tajemnicze wydarzenia zaczynają przypominać starą opowieść, bohaterowie muszą zmierzyć się z własnymi lękami i wyobraźnią. Lekka, komediowa historia bawiąca się smokowymi mitami.",
+          },
+          {
+            title: "Księga Smoków",
+            description:
+              "Specjalny odcinek stylizowany na dokument, w którym Czkawka, Astrid i ich przyjaciele prezentują znane gatunki smoków z Berk. To rozszerzenie wiedzy o świecie serii – pełne ciekawostek, humoru i charakterystycznych komentarzy bohaterów.",
+          },
+          {
+            title: "Świt Jeźdźców Smoków",
+            description:
+              "Krótki film będący pomostem między pierwszą a drugą częścią serii. Pokazuje początki organizacji Jeźdźców Smoków i pierwsze wspólne misje Czkawki oraz jego przyjaciół, gdy uczą się współpracować ze swoimi smokami w nowych, niebezpiecznych sytuacjach.",
+          },
+          {
             title: "Część 2",
             description:
               "Hiccup i Bezzębny kontynuują swoje przygody, odkrywając nowe krainy i wyzwania w świecie smoków.",
@@ -2094,10 +2428,11 @@ const Movies = () => {
             description:
               "Finałowa część serii animowanej, w której Hiccup staje przed ostatecznym wyborem dotyczącym świata ludzi i smoków.",
           },
+
           {
-            title: "Live Action",
+            title: "Święta w Domu",
             description:
-              "Film aktorski oparty na popularnej serii animowanej, przenoszący historię Hiccup’a i Bezzębnego na duży ekran.",
+              "Świąteczna krótkometrażowa animacja rozgrywająca się po wydarzeniach trzeciego filmu. Mieszkańcy Berk próbują odnaleźć ducha dawnych tradycji, a Czkawka zastanawia się, jak podtrzymać pamięć o smokach w świecie, w którym już ich nie ma. Ciepła i nostalgiczna historia o rodzinie i tęsknocie.",
           },
         ],
       },

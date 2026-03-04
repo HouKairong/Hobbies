@@ -159,6 +159,7 @@ const Philosophy = () => {
       ],
       children: [
         { title: "Wiedźmin (2001)" },
+        { title: "Pół Wieku Poezji Później" },
         { title: "Wiedźmin: Zmora Wilka (2021)" },
         { title: "Wiedźmin: Syreny z głębin (2025)" },
         { title: "Szczury: Opowieści ze świata Wiedźmina (2025)" },
@@ -228,7 +229,10 @@ const Philosophy = () => {
       children: [
         { title: "Mroczne Widmo" },
         { title: "Atak klonów" },
+        { title: "Wojny klonów" },
         { title: "Zemsta Sithów" },
+        { title: "Han Solo" },
+        { title: "Łotr 1" },
         { title: "Nowa Nadzieja" },
         { title: "Imperium kontratakuje" },
         { title: "Powrót Jedi" },
@@ -363,6 +367,7 @@ const Philosophy = () => {
     {
       title: "Assassin's Creed",
       media: "Filmy",
+      isSeries: true,
       themes: [
         "Wolna wola i determinizm",
         "Władza i polityka",
@@ -370,6 +375,10 @@ const Philosophy = () => {
         "Metafizyka / Symulacja",
         "Etyka i moralność",
         "Religia",
+      ],
+      children: [
+        { title: "Assassin's Creed (2016" },
+        { title: "Assassin's Creed Embers" },
       ],
     },
     {
@@ -523,6 +532,16 @@ const Philosophy = () => {
         "Etyka i moralność",
         "Tożsamość i świadomość",
         "Wolna wola i determinizm",
+      ],
+    },
+    {
+      title: "Assassin's Creed: Embers",
+      media: "Seriale",
+      themes: [
+        "Wolna wola i determinizm",
+        "Tożsamość i świadomość",
+        "Etyka i moralność",
+        "Religia",
       ],
     },
     {
@@ -746,6 +765,25 @@ const Philosophy = () => {
       title: "Wikingowie: Walhalla",
       media: "Seriale",
       themes: ["Religia", "Władza i polityka", "Śmierć / Przemijanie"],
+    },
+    {
+      title: "Gwiezdne wojny",
+      media: "Seriale",
+      isSeries: true,
+      themes: ["Wolna wola i determinizm", "Egzystencjalizm"],
+      children: [
+        { title: "Gwiezdne Wojny: The Mandalorian" },
+        { title: "Gwiezdne Wojny: Andor" },
+        { title: "Gwiezdne Wojny: Ahsoka" },
+        { title: "Gwiezdne Wojny: Obi-Wan Kenobi" },
+        { title: "Gwiezdne Wojny: Księga Boby Fetta" },
+        { title: "Gwiezdne Wojny: Akolita" },
+        { title: "Gwiezdne Wojny: Wojny Klonów" },
+        { title: "Gwiezdne Wojny: Rebelianci" },
+        { title: "Gwiezdne Wojny: Parszywa Zgraja" },
+        { title: "Gwiezdne Wojny: Opowieści z Imperium" },
+        { title: "Gwiezdne Wojny: Opowieści Jedi" },
+      ],
     },
     {
       title: "Wiedźmin",
