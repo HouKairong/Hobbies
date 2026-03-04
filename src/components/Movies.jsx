@@ -1,11 +1,13 @@
 import "./Movies.css";
 import { useState, useRef, useEffect } from "react";
+import HTTYD from "../../public/images/HTTYD.jpg";
 
 const seriesDescriptions = {
   Wiedźmin: {
     licence: "Gry, Seriale, Boska Komedia, Filozofia",
     protagonist: "Geralt z Rivii",
     antagonist: "Dziki Gon, czarodzieje",
+    location: "Kontynent, głównie XIII wiek",
     why: "Klasyczna seria fantasy",
     description:
       "Geralt walczy z potworami i mierzy się z moralnymi dylematami w brutalnym świecie.",
@@ -15,6 +17,7 @@ const seriesDescriptions = {
     protagonist: "Callum Lynch / Aguilar",
     antagonist: "Templariusze",
     why: "Film na podstawie kultowej gry",
+    location: "",
     description:
       "Historia konfliktu między Asasynami a Templariuszami, wciągająca akcja i podróże w czasie.",
   },
@@ -23,6 +26,7 @@ const seriesDescriptions = {
     protagonist: "Doom Slayer",
     antagonist: "Demony",
     why: "Ikona strzelanek",
+    location: "",
     description:
       "Doom Slayer walczy z hordami demonów próbujących opanować Marsa i Ziemię.",
   },
@@ -31,6 +35,7 @@ const seriesDescriptions = {
     protagonist: "Lara Croft",
     antagonist: "Złoczyńcy i tajemnicze organizacje",
     why: "Seria filmowa oparta na grze",
+    location: "",
     description:
       "Lara Croft przemierza świat, odkrywając starożytne artefakty i stawiając czoła niebezpieczeństwom.",
   },
@@ -39,6 +44,7 @@ const seriesDescriptions = {
     protagonist: "Lloyd i Ninja",
     antagonist: "Lord Garmadon",
     why: "Film animowany dla młodszych widzów",
+    location: "",
     description:
       "Grupa ninja broni miasta przed złoczyńcami w pełnej humoru i akcji przygodzie.",
   },
@@ -47,14 +53,16 @@ const seriesDescriptions = {
     protagonist: "Harry Potter",
     antagonist: "Lord Voldemort",
     why: "Klasyczna seria fantasy",
+    location: "",
     description:
       "Historia młodego czarodzieja i jego przyjaciół w walce ze złem w magicznym świecie.",
   },
   "Jak Wytresować Smoka": {
-    licence: "Gry, Seriale, IPiN",
+    licence: "Gry, Seriale, IPiN, HTTYD",
     protagonist: "Czkawka i Szczerbatek",
-    antagonist: "Smoki (na początku) i drapieżne zagrożenia",
+    antagonist: "Czerwona Śmierć, Drago Krwawdoń, Grimmel Gnębiciel",
     why: "Animowana seria o przyjaźni i dorastaniu",
+    location: "",
     description:
       "Młody Wiking zaprzyjaźnia się ze smokiem, odkrywając wartość przyjaźni i odwagi.",
   },
@@ -63,6 +71,7 @@ const seriesDescriptions = {
     protagonist: "Luke Skywalker, Rey",
     antagonist: "Darth Vader, Imperium, Kylo Ren",
     why: "Kultowa saga sci-fi",
+    location: "",
     description:
       "Epicka walka między Ciemną i Jasną stroną Mocy w całej galaktyce.",
   },
@@ -71,6 +80,7 @@ const seriesDescriptions = {
     protagonist: "Sherlock Holmes",
     antagonist: "Profesor Moriarty i inni przestępcy",
     why: "Kultowa postać literacka w filmowej adaptacji",
+    location: "",
     description:
       "Błyskotliwy detektyw rozwiązuje zagadki kryminalne w pełnym napięcia świecie.",
   },
@@ -79,6 +89,7 @@ const seriesDescriptions = {
     protagonist: "Makoto Yuki i drużyna SEES",
     antagonist: "Shadows",
     why: "Adaptacja gry Persona 3",
+    location: "",
     description:
       "Grupa uczniów walczy z tajemniczymi istotami w nocy, odkrywając własne przeznaczenie.",
   },
@@ -87,6 +98,7 @@ const seriesDescriptions = {
     protagonist: "Maniek, Sid, Diego",
     antagonist: "Naturalne zagrożenia, piraci epoki lodowcowej",
     why: "Animowana seria przygodowa",
+    location: "",
     description:
       "Grupa zwierząt przemierza epokę lodowcową, przeżywając przygody i ucząc się współpracy.",
   },
@@ -95,6 +107,7 @@ const seriesDescriptions = {
     protagonist: "Dante",
     antagonist: "Grzech i demony",
     why: "Adaptacja Boskiej Komedii",
+    location: "",
     description:
       "Dante przemierza kręgi piekielne, konfrontując się z własnymi grzechami i demonami.",
   },
@@ -103,6 +116,7 @@ const seriesDescriptions = {
     protagonist: "Alex, Marty, Melman, Gloria",
     antagonist: "Król Julien i natura",
     why: "Animowana komedia",
+    location: "",
     description:
       "Grupa zwierząt z zoo trafia na wolność w Madagaskarze, przeżywając zabawne przygody.",
   },
@@ -111,6 +125,7 @@ const seriesDescriptions = {
     protagonist: "Po",
     antagonist: "Tai Lung, Kai i inni",
     why: "Animacja o kung-fu i przyjaźni",
+    location: "",
     description:
       "Niezdarny panda Po staje się bohaterem, ucząc się sztuki kung-fu i odwagi.",
   },
@@ -119,6 +134,7 @@ const seriesDescriptions = {
     protagonist: "Herkules",
     antagonist: "Hades",
     why: "Animacja Disney’a",
+    location: "",
     description:
       "Herkules, syn Zeusa, walczy ze złem i odkrywa swoją prawdziwą moc.",
   },
@@ -127,6 +143,7 @@ const seriesDescriptions = {
     protagonist: "Aladyn",
     antagonist: "Dżafar",
     why: "Klasyczna opowieść baśniowa",
+    location: "",
     description:
       "Aladyn odkrywa magiczną lampę i przeżywa przygody pełne magii i miłości.",
   },
@@ -135,6 +152,7 @@ const seriesDescriptions = {
     protagonist: "Simba",
     antagonist: "Skaza",
     why: "Klasyczna animacja Disney’a",
+    location: "",
     description:
       "Młody lew Simba musi odzyskać tron i odkryć swoje przeznaczenie.",
   },
@@ -143,6 +161,7 @@ const seriesDescriptions = {
     protagonist: "Mario i Luigi",
     antagonist: "Bowser",
     why: "Filmowa adaptacja gry",
+    location: "",
     description:
       "Bracia Mario wyruszają na misję ratunkową, pokonując przeszkody w magicznym świecie.",
   },
@@ -151,6 +170,7 @@ const seriesDescriptions = {
     protagonist: "Jesse Pinkman",
     antagonist: "Przestępczy świat i dawni współpracownicy",
     why: "Kontynuacja historii Jesse'ego z Breaking Bad",
+    location: "",
     description:
       "Po wydarzeniach z Breaking Bad, Jesse ucieka przed prawem i próbuje zacząć nowe życie.",
   },
@@ -159,6 +179,7 @@ const seriesDescriptions = {
     protagonist: "Light Yagami",
     antagonist: "L (detektyw), prawo i moralność",
     why: "Kultowa seria o walce inteligencji i moralności",
+    location: "",
     description:
       "Light zdobywa notes, który zabija każdego wpisanego w niego człowieka, co prowadzi do gry psychologicznej z detektywem L.",
   },
@@ -167,6 +188,7 @@ const seriesDescriptions = {
     protagonist: "Aang",
     antagonist: "Lord Ozai i Naród Ognia",
     why: "Klasyczna animacja przygodowa",
+    location: "",
     description:
       "Młody Avatar Aang musi opanować wszystkie żywioły, by przywrócić równowagę w świecie.",
   },
@@ -175,6 +197,7 @@ const seriesDescriptions = {
     protagonist: "Ne Zha",
     antagonist: "Shen Gongbao i inne demoniczne siły",
     why: "Popularna animacja fantasy z Chin",
+    location: "",
     description:
       "Opowieść o młodym bohaterze, który musi pokonać przeznaczenie i ochronić ludzi przed złymi mocami.",
   },
@@ -183,6 +206,7 @@ const seriesDescriptions = {
     protagonist: "Sun Wukong",
     antagonist: "Demony i bóstwa próbujące go powstrzymać",
     why: "Klasyczna historia przygodowa",
+    location: "",
     description:
       "Małpi Król używa swojej siły i sprytu, by bronić przyjaciół i walczyć ze złem.",
   },
@@ -191,6 +215,7 @@ const seriesDescriptions = {
     protagonist: "William / Chen",
     antagonist: "Potwory atakujące Chiny",
     why: "Film akcji z elementami fantasy",
+    location: "",
     description:
       "Grupa wojowników broni wielkiego muru przed nadprzyrodzonymi potworami.",
   },
@@ -199,6 +224,7 @@ const seriesDescriptions = {
     protagonist: "Mulan",
     antagonist: "Najazd Hunów / Shan Yu",
     why: "Klasyczna historia odwagi i poświęcenia",
+    location: "",
     description:
       "Młoda kobieta przebiera się za mężczyznę, by walczyć za ojczyznę i udowodnić swoją wartość.",
   },
@@ -207,6 +233,7 @@ const seriesDescriptions = {
     protagonist: "Ma i Xiaojun",
     antagonist: "Przeciwności losu i konflikt społeczny",
     why: "Film poruszający tematy społeczne",
+    location: "",
     description:
       "Para zakochanych walczy o swoje marzenia i miłość w realiach współczesnego Pekinu.",
   },
@@ -215,6 +242,7 @@ const seriesDescriptions = {
     protagonist: "Chihiro",
     antagonist: "Yubaba i jej pułapki",
     why: "Kultowa animacja studia Ghibli",
+    location: "",
     description:
       "Dziewczynka odkrywa magiczny świat duchów, ucząc się odwagi i dojrzałości.",
   },
@@ -223,6 +251,7 @@ const seriesDescriptions = {
     protagonist: "Grupa łowczyń demonów",
     antagonist: "Demony atakujące świat ludzi",
     why: "Nowatorska animacja / film akcji",
+    location: "",
     description:
       "Grupa młodych kobiet walczy z demonami, łącząc muzykę K-Pop i sztuki walki.",
   },
@@ -231,6 +260,7 @@ const seriesDescriptions = {
     protagonist: "Raya",
     antagonist: "Drużyna złych smoków i konflikty między królestwami",
     why: "Animacja przygodowa o jedności i zaufaniu",
+    location: "",
     description:
       "Raya wyrusza na misję odnalezienia ostatniego smoka, by ocalić swoje królestwo.",
   },
@@ -239,6 +269,7 @@ const seriesDescriptions = {
     protagonist: "Nieokreślony bohater",
     antagonist: "Potwory i chaos",
     why: "Animacja / film akcji",
+    location: "",
     description:
       "Opowieść o walce z ogromnymi, niszczycielskimi bestiami w mrocznym świecie.",
   },
@@ -247,6 +278,7 @@ const seriesDescriptions = {
     protagonist: "Li Mu Bai i Yu Shu Lien",
     antagonist: "Jen Yu i złodzieje",
     why: "Kultowy film wuxia",
+    location: "",
     description:
       "Historia honoru, miłości i sztuk walki w świecie legendarnych wojowników.",
   },
@@ -255,6 +287,7 @@ const seriesDescriptions = {
     protagonist: "Zhou Ming / Yin Yang Master",
     antagonist: "Demony i złe moce",
     why: "Film akcji fantasy",
+    location: "",
     description:
       "Mistrz Yin Yang walczy z nadprzyrodzonymi zagrożeniami, chroniąc równowagę świata.",
   },
@@ -263,6 +296,7 @@ const seriesDescriptions = {
     protagonist: "Konfucjusz",
     antagonist: "Przeciwności polityczne i społeczne",
     why: "Biograficzny dramat historyczny",
+    location: "",
     description:
       "Film opowiada o życiu i filozofii Konfucjusza oraz jego wpływie na chińskie społeczeństwo.",
   },
@@ -271,6 +305,7 @@ const seriesDescriptions = {
     protagonist: "Dante",
     antagonist: "Grzech i potępienie",
     why: "Animowana adaptacja Boskiej Komedii",
+    location: "",
     description:
       "Dante podróżuje przez piekło, poznając cierpienia grzeszników i reflektując nad moralnością.",
   },
@@ -279,6 +314,7 @@ const seriesDescriptions = {
     protagonist: "Różne postacie",
     antagonist: "Zło i chaos w ludzkim świecie",
     why: "Film ilustrujący analogie piekła w realnym świecie",
+    location: "",
     description:
       "Historia ukazuje ludzkie dramaty i moralne wybory, przedstawione w kontekście metaforycznego piekła.",
   },
@@ -287,6 +323,7 @@ const seriesDescriptions = {
     protagonist: "Sędziowie i prokuratorzy",
     antagonist: "Nazistowscy zbrodniarze",
     why: "Historyczny dramat sądowy",
+    location: "",
     description:
       "Procesy norymberskie pokazują rozliczenie zbrodni wojennych i sprawiedliwość po II wojnie światowej.",
   },
@@ -295,6 +332,7 @@ const seriesDescriptions = {
     protagonist: "Kapitan Willard",
     antagonist: "Pułkownik Kurtz",
     why: "Klasyczny film wojenny",
+    location: "",
     description:
       "Opowieść o misji ratunkowej w chaosie wojny, ukazująca moralne i psychologiczne skutki konfliktu.",
   },
@@ -303,6 +341,7 @@ const seriesDescriptions = {
     protagonist: "Kirsty Cotton",
     antagonist: "Pinhead i Cenobici",
     why: "Kultowa seria horroru",
+    location: "",
     description:
       "Mroczna historia o tajemniczej skrzynce, która sprowadza na świat cierpienie i piekielne moce.",
   },
@@ -311,6 +350,7 @@ const seriesDescriptions = {
     protagonist: "John Constantine",
     antagonist: "Demony i siły zła",
     why: "Film fantasy / horror",
+    location: "",
     description:
       "Łowca demonów John Constantine walczy z nadprzyrodzonymi siłami, próbując uratować ludzkość.",
   },
@@ -319,6 +359,7 @@ const seriesDescriptions = {
     protagonist: "Steve",
     antagonist: "Ender Dragon i inne zagrożenia",
     why: "Adaptacja popularnej gry wideo",
+    location: "",
     description:
       "Steve wyrusza w przygodę po świecie bloków, stawiając czoła potworom i odkrywając tajemnice Minecrafta.",
   },
@@ -327,6 +368,7 @@ const seriesDescriptions = {
     protagonist: "Robert Langdon",
     antagonist: "Sekretne stowarzyszenia i przeciwnicy historyczni",
     why: "Adaptacja bestsellerowych powieści",
+    location: "",
     description:
       "Profesor Langdon rozwiązuje zagadki związane z religią, historią i sztuką, aby odkryć prawdę i powstrzymać zło.",
   },
@@ -335,6 +377,7 @@ const seriesDescriptions = {
     protagonist: "Quasimodo",
     antagonist: "Frollo",
     why: "Adaptacja klasycznej powieści Victora Hugo",
+    location: "",
     description:
       "Quasimodo, dzwonnik katedry Notre Dame, zmaga się z uprzedzeniami społecznymi i miłością do Esmeraldy.",
   },
@@ -343,6 +386,7 @@ const seriesDescriptions = {
     protagonist: "Jean de Carrouges",
     antagonist: "Jacques Le Gris",
     why: "Historyczny dramat oparty na prawdziwych wydarzeniach",
+    location: "",
     description:
       "Historia konfliktu i honoru, który prowadzi do ostatniego pojedynku między dwoma rycerzami.",
   },
@@ -351,6 +395,7 @@ const seriesDescriptions = {
     protagonist: "Frodo, Bilbo, Aragorn i inni",
     antagonist: "Sauron i jego armie",
     why: "Adaptacja legendarnych książek Tolkiena",
+    location: "",
     description:
       "Bohaterowie wyruszają na epicką podróż, by zniszczyć Pierścień i pokonać zło w Śródziemiu.",
   },
@@ -359,6 +404,7 @@ const seriesDescriptions = {
     protagonist: "Rycerz Antonius Block",
     antagonist: "Śmierć",
     why: "Klasyczny film Bergmana",
+    location: "",
     description:
       "Rycerz wraca z krucjaty i staje w obliczu Śmierci, grając z nią w szachy, szukając sensu życia i wiary.",
   },
@@ -367,6 +413,7 @@ const seriesDescriptions = {
     protagonist: "Ragnar Lothbrok / bohaterowie",
     antagonist: "Wrogowie i los",
     why: "Epicka historia wikingów",
+    location: "",
     description:
       "Opowieść o wikingach, ich podróżach, bitwach i próbach przetrwania w brutalnym świecie.",
   },
@@ -375,6 +422,7 @@ const seriesDescriptions = {
     protagonist: "Thomasin / rodzina",
     antagonist: "Zła natura i społeczność",
     why: "Horror inspirowany folklorem",
+    location: "",
     description:
       "Rodzina zmaga się z nadprzyrodzonymi zjawiskami i przesądami w kolonialnej Nowej Anglii.",
   },
@@ -383,6 +431,7 @@ const seriesDescriptions = {
     protagonist: "Różne postacie",
     antagonist: "Zło, grzech",
     why: "Film refleksyjny o granicach życia i śmierci",
+    location: "",
     description:
       "Eksploracja ludzkich doświadczeń i decyzji między cierpieniem a zbawieniem.",
   },
@@ -391,6 +440,7 @@ const seriesDescriptions = {
     protagonist: "Colton Burpo i jego rodzina",
     antagonist: "Niepewność i wątpliwości",
     why: "Film oparty na bestsellerowej książce",
+    location: "",
     description:
       "Historie chłopca, który twierdzi, że odwiedził niebo, pokazujące cuda i wiarę.",
   },
@@ -399,6 +449,7 @@ const seriesDescriptions = {
     protagonist: "Charlie B. Barkin",
     antagonist: "Skomplikowane losy i własne błędy",
     why: "Animowany film familijny",
+    location: "",
     description:
       "Charlie B. Barkin powraca do życia po śmierci i uczy się wartości przyjaźni, miłości i odkupienia.",
   },
@@ -407,6 +458,7 @@ const seriesDescriptions = {
     protagonist: "Perseusz",
     antagonist: "Potwory i Hades",
     why: "Film fantasy / mitologiczny",
+    location: "",
     description:
       "Perseusz wyrusza, by uratować królestwo przed potężnymi siłami bogów i potworów.",
   },
@@ -415,6 +467,7 @@ const seriesDescriptions = {
     protagonist: "Jezus Chrystus",
     antagonist: "Rzymskie władze i arcykapłani",
     why: "Historyczny dramat religijny",
+    location: "",
     description:
       "Opowieść o ostatnich godzinach życia Jezusa, jego cierpieniu i poświęceniu.",
   },
@@ -423,6 +476,7 @@ const seriesDescriptions = {
     protagonist: "Noe",
     antagonist: "Ludzkość i nadchodzący potop",
     why: "Biblia w wersji filmowej",
+    location: "",
     description:
       "Noe otrzymuje boskie polecenie zbudowania arki i uratowania życia przed potopem.",
   },
@@ -431,6 +485,7 @@ const seriesDescriptions = {
     protagonist: "Cooper i zespół astronautów",
     antagonist: "Czas, grawitacja i zagrożenia kosmiczne",
     why: "Sci-fi z głęboką refleksją",
+    location: "",
     description:
       "Misja kosmiczna w poszukiwaniu nowego domu dla ludzkości, pełna dramatycznych wyborów i odkryć.",
   },
@@ -439,6 +494,7 @@ const seriesDescriptions = {
     protagonist: "Jake Sully",
     antagonist: "Colonel Quaritch i korporacja RDA",
     why: "Kultowy film sci-fi z przełomową animacją i ekologicznym przesłaniem",
+    location: "",
     description:
       "Jake Sully, sparaliżowany były żołnierz, zostaje awatarem i pomaga mieszkańcom Pandory w walce z ludzkimi kolonizatorami.",
   },
@@ -447,6 +503,7 @@ const seriesDescriptions = {
     protagonist: "Neo",
     antagonist: "Agent Smith i maszyny",
     why: "Klasyka sci-fi i filozofii w kinie akcji",
+    location: "",
     description:
       "Neo odkrywa, że żyje w sztucznie stworzonej rzeczywistości, i staje do walki z systemem kontrolującym ludzkość.",
   },
@@ -455,6 +512,7 @@ const seriesDescriptions = {
     protagonist: "Heretycy i inkwizytorzy",
     antagonist: "Kościół i społeczne prześladowania",
     why: "Historyczny dramat religijny",
+    location: "",
     description:
       "Historia walki jednostki z systemem religijnym i społecznym w średniowieczu.",
   },
@@ -463,6 +521,7 @@ const seriesDescriptions = {
     protagonist: "Jojo",
     antagonist: "Ideologia nazistowska",
     why: "Satyrystyczny dramat wojenny",
+    location: "",
     description:
       "Chłopiec w hitlerowskich Niemczech konfrontuje się z absurdem wojny i swoimi przekonaniami.",
   },
@@ -471,6 +530,7 @@ const seriesDescriptions = {
     protagonist: "Sokrates",
     antagonist: "Społeczeństwo i władze",
     why: "Film biograficzny / filozoficzny",
+    location: "",
     description:
       "Historia życia Sokratesa, jego nauk i procesu sądowego w Atenach.",
   },
@@ -479,6 +539,7 @@ const seriesDescriptions = {
     protagonist: "Goście luksusowej restauracji",
     antagonist: "Szef kuchni i sytuacje ekstremalne",
     why: "Satyrystyczny thriller / komedia",
+    location: "",
     description:
       "Luksusowa kolacja zamienia się w dramatyczną walkę o przetrwanie i moralność.",
   },
@@ -487,6 +548,7 @@ const seriesDescriptions = {
     protagonist: "Kot w Butach",
     antagonist: "Niebezpieczeństwa i złoczyńcy",
     why: "Animowany film familijny",
+    location: "",
     description:
       "Kot w Butach wyrusza na misję, aby spełnić swoje ostatnie życzenie i stawić czoła przygodom.",
   },
@@ -495,6 +557,7 @@ const seriesDescriptions = {
     protagonist: "Miguel",
     antagonist: "Tradycje i rodzinna tajemnica",
     why: "Animacja Pixar o kulturze i muzyce",
+    location: "",
     description:
       "Chłopiec odkrywa tajemnice swojej rodziny i kultury podczas święta Dnia Zmarłych.",
   },
@@ -503,6 +566,7 @@ const seriesDescriptions = {
     protagonist: "Shrek",
     antagonist: "Lord Farquaad, Rumpelstiltskin",
     why: "Kultowa seria animowana parodiująca baśnie",
+    location: "",
     description:
       "Ogre Shrek wyrusza w podróż, aby odzyskać swoją ziemię i odnajduje przyjaźń oraz miłość.",
   },
@@ -511,6 +575,7 @@ const seriesDescriptions = {
     protagonist: "Barry B. Benson",
     antagonist: "Ludzie niszczący środowisko",
     why: "Animacja edukacyjna i humorystyczna",
+    location: "",
     description:
       "Barry B. Benson ucieka od pracy w ulu i odkrywa świat ludzi, broniąc pszczół przed zagładą.",
   },
@@ -519,6 +584,7 @@ const seriesDescriptions = {
     protagonist: "Główny bohater",
     antagonist: "System i współwięźniowie",
     why: "Dramat psychologiczny",
+    location: "",
     description:
       "Historia uwięzionego bohatera, który walczy o przetrwanie i zachowanie człowieczeństwa w więziennej rzeczywistości.",
   },
@@ -527,6 +593,7 @@ const seriesDescriptions = {
     protagonist: "Dzieci bawiące się w grę",
     antagonist: "Niebezpieczeństwa kryjące się w lesie",
     why: "Thriller/horror o grze, która wymyka się spod kontroli",
+    location: "",
     description:
       "Grupa dzieci bawi się w zabawę w chowanego, która staje się śmiertelnie niebezpieczna.",
   },
@@ -535,6 +602,7 @@ const seriesDescriptions = {
     protagonist: "Para głównych bohaterów",
     antagonist: "Miłosne komplikacje i intrygi",
     why: "Lekka komedia romantyczna",
+    location: "",
     description:
       "Para udaje się na rajską wyspę, gdzie wplątują się w zabawne i romantyczne sytuacje.",
   },
@@ -543,6 +611,7 @@ const seriesDescriptions = {
     protagonist: "Esther",
     antagonist: "Rodzina adoptująca",
     why: "Horror psychologiczny z twistem",
+    location: "",
     description:
       "Młoda dziewczynka zostaje adoptowana, ale skrywa mroczny sekret, który grozi rodzinie.",
   },
@@ -551,6 +620,7 @@ const seriesDescriptions = {
     protagonist: "Główny bohater",
     antagonist: "Przeciwności losu",
     why: "Lekka komedia/dramat",
+    location: "",
     description:
       "Bohater uczy się, jak odnaleźć radość życia mimo codziennych trudności.",
   },
@@ -559,6 +629,7 @@ const seriesDescriptions = {
     protagonist: "Judy Hopps",
     antagonist: "Duke Weaselton / tajemniczy przestępcy",
     why: "Popularna animacja dla dzieci i młodzieży z przesłaniem o tolerancji",
+    location: "",
     description:
       "Młoda królika Judy zostaje pierwszą policjantką w Zwierzogrodzie i razem z lisem Nickiem Wilde rozwiązuje zagadkę kryminalną.",
   },
@@ -567,6 +638,7 @@ const seriesDescriptions = {
     protagonist: "Joe Bauers",
     antagonist: "Zdegenerowane, antyintelektualne społeczeństwo przyszłości",
     why: "Satyra na upadek inteligencji i kultury masowej",
+    location: "",
     description:
       "Przeciętny mężczyzna budzi się w przyszłości, w której jest najinteligentniejszym człowiekiem na świecie i musi uratować cywilizację przed całkowitym upadkiem.",
   },
@@ -575,6 +647,7 @@ const seriesDescriptions = {
     licence: "IPiN",
     protagonist: "John Bennett, Ted",
     antagonist: "Dorosłość i konsekwencje niedojrzałości",
+    location: "",
     why: "Niepoprawna komedia o dorastaniu",
     description:
       "Adam Miauczyński to inteligent, który nie potrafi odnaleźć się w świecie — rozdarty między potrzebą miłości, akceptacji i sensu a własnymi słabościami. Jego życie to nieustanna walka z samotnością, nerwicą, uzależnieniem i poczuciem niespełnienia. W kolejnych etapach swojego życia mierzy się z relacjami rodzinnymi, alkoholizmem i egzystencjalnym kryzysem, stając się symboliczną figurą człowieka uwikłanego w samego siebie.",
@@ -585,6 +658,7 @@ const seriesDescriptions = {
     protagonist: "Albert Stark",
     antagonist: "Bezwzględny rewolwerowiec Clinch Leatherwood",
     why: "Parodia westernu z czarnym humorem",
+    location: "",
     description:
       "Nieporadny farmer próbuje przetrwać na Dzikim Zachodzie, gdzie niemal wszystko może go zabić.",
   },
@@ -593,6 +667,7 @@ const seriesDescriptions = {
     protagonist: "Adam Miauczyński",
     antagonist: "Własne lęki, frustracje, uzależnienia i polska codzienność",
     why: "Studium neurotycznej jednostki w zderzeniu z rzeczywistością",
+    location: "",
     description:
       "Adam Miauczyński to inteligent, który nie potrafi odnaleźć się w świecie — rozdarty między potrzebą miłości, akceptacji i sensu a własnymi słabościami. Jego życie to nieustanna walka z samotnością, nerwicą, uzależnieniem i poczuciem niespełnienia. W kolejnych etapach swojego życia mierzy się z relacjami rodzinnymi, alkoholizmem i egzystencjalnym kryzysem, stając się symboliczną figurą człowieka uwikłanego w samego siebie.",
   },
@@ -2000,6 +2075,33 @@ const Movies = () => {
         ],
       },
     ],
+    HTTYD: [
+      {
+        title: "Jak Wytresować Smoka",
+        parts: [
+          {
+            title: "Część 1",
+            description:
+              "Pierwsza część serii, opowiadająca o przyjaźni młodego Wikinga Hiccup’a z niebezpiecznym smokiem Bezzębkiem.",
+          },
+          {
+            title: "Część 2",
+            description:
+              "Hiccup i Bezzębny kontynuują swoje przygody, odkrywając nowe krainy i wyzwania w świecie smoków.",
+          },
+          {
+            title: "Część 3",
+            description:
+              "Finałowa część serii animowanej, w której Hiccup staje przed ostatecznym wyborem dotyczącym świata ludzi i smoków.",
+          },
+          {
+            title: "Live Action",
+            description:
+              "Film aktorski oparty na popularnej serii animowanej, przenoszący historię Hiccup’a i Bezzębnego na duży ekran.",
+          },
+        ],
+      },
+    ],
   };
 
   const handleCategoryChange = (value) => {
@@ -2021,12 +2123,7 @@ const Movies = () => {
 
   const handlePartClick = (e, part) => {
     e.stopPropagation();
-
-    if (selectedPart?.title === part.title) {
-      setSelectedPart(null);
-    } else {
-      setSelectedPart(part);
-    }
+    setSelectedPart(selectedPart?.title === part.title ? null : part);
   };
 
   const toggleSubgroup = (group) => {
@@ -2034,8 +2131,8 @@ const Movies = () => {
   };
 
   const isBoskaKomedia = selectedCategory === "Boska Komedia";
+  const isHTTYD = selectedSeries?.title === "Jak Wytresować Smoka";
 
-  // Scroll do serii
   useEffect(() => {
     if (selectedSeries && seriesRef.current) {
       seriesRef.current.scrollIntoView({
@@ -2045,7 +2142,6 @@ const Movies = () => {
     }
   }, [selectedSeries]);
 
-  // Scroll do części
   useEffect(() => {
     if (selectedPart && partRef.current) {
       partRef.current.scrollIntoView({
@@ -2132,6 +2228,10 @@ const Movies = () => {
                   {seriesDescriptions[selectedSeries.title].licence}
                 </p>
                 <p>
+                  <strong>Dlaczego tu jest: </strong>
+                  {seriesDescriptions[selectedSeries.title].why}
+                </p>
+                <p>
                   <strong>Główni Protagoniści: </strong>
                   {seriesDescriptions[selectedSeries.title].protagonist}
                 </p>
@@ -2140,8 +2240,8 @@ const Movies = () => {
                   {seriesDescriptions[selectedSeries.title].antagonist}
                 </p>
                 <p>
-                  <strong>Dlaczego tu jest: </strong>
-                  {seriesDescriptions[selectedSeries.title].why}
+                  <strong>Miejsce Akcji: </strong>
+                  {seriesDescriptions[selectedSeries.title].location}
                 </p>
                 <p>
                   <strong>Opis: </strong>
@@ -2163,11 +2263,24 @@ const Movies = () => {
                 ))}
               </ul>
             )}
+
+            {/* 🔥 Jeśli to HTTYD — pokaż część NAD obrazem */}
+            {isHTTYD && selectedPart && (
+              <div className="part-details" ref={partRef}>
+                <h4>{selectedPart.title}</h4>
+                <p>{selectedPart.description}</p>
+              </div>
+            )}
+
+            {/* 🔥 Obraz tylko dla HTTYD */}
+            {isHTTYD && (
+              <img src={HTTYD} className="image-of-media" alt="HTTYD" />
+            )}
           </div>
         )}
 
-        {/* Szczegóły części */}
-        {selectedPart && (
+        {/* 🔥 Szczegóły części dla innych serii */}
+        {selectedPart && !isHTTYD && (
           <div className="part-details" ref={partRef}>
             <h4>{selectedPart.title}</h4>
             <p>{selectedPart.description}</p>

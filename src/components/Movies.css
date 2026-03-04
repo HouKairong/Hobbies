@@ -158,3 +158,7 @@
   color: #007acc;
   transform: translateX(4px);
 }
+
+.image-of-media {
+  width: 100%;
+}
