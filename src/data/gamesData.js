@@ -324,6 +324,19 @@ const gamesData = [
   { title: "Gujian 3", worlds: ["Mooshu"] },
   { title: "Where Winds Meet", worlds: ["Mooshu"] },
   { title: "Wuchang Fallen Feathers", worlds: ["Mooshu"] },
+  {
+    title: "Genshin Impact",
+    worlds: [
+      "Avalon",
+      "Mooshu",
+      "Zafaria",
+      "Krokotopia",
+      "Celestia",
+      "Azteca",
+      "Polaris",
+    ],
+  },
+  { title: "Fortnite", worlds: ["Aquila", "Zafaria", "Wysteria"] },
 ];
 
 export default gamesData;

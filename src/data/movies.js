@@ -433,6 +433,7 @@ const movies = {
     { title: "Aladyn" },
     { title: "Król Lew" },
     { title: "Super Mario Bros" },
+    { title: "Minecraft: Film" },
   ],
 
   Seriale: [
@@ -1132,7 +1133,21 @@ const movies = {
     Niebo: [
       { title: "Między piekłem a niebem" },
       { title: "Niebo istnieje... naprawdę" },
-      { title: "Wszystkie psy idą do Nieba" },
+      {
+        title: "Wszystkie psy idą do Nieba",
+        parts: [
+          {
+            title: "Część 1",
+            description:
+              "Pełna ciepła i wzruszeń animacja opowiada historię psa o imieniu Charlie, który po śmierci trafia do psiego nieba. Nie potrafi jednak pogodzić się z tym, że jego życie się skończyło, więc postanawia wrócić na Ziemię. Tam chce zemścić się na dawnym wspólniku, który doprowadził do jego śmierci. Na swojej drodze Charlie spotyka małą dziewczynkę Anne-Marie, która potrafi rozmawiać ze zwierzętami. Dzięki niej zaczyna patrzeć na świat inaczej i uczy się, czym są przyjaźń, poświęcenie i dobroć. Film pokazuje, że nawet ktoś, kto popełnia błędy, może się zmienić i zrobić coś dobrego dla innych.",
+          },
+          {
+            title: "Część 2",
+            description:
+              "W drugiej części Charlie mieszka już w psim niebie razem ze swoim przyjacielem Itchym. Spokojne życie zostaje jednak przerwane, gdy z nieba znika magiczny róg archanioła Gabriela. Kradnie go pies o imieniu Carface, który ucieka na Ziemię i planuje wykorzystać jego moc. Charlie i Itchy schodzą więc na Ziemię, aby odzyskać róg. Podczas swojej misji poznają chłopca Davida, który marzy o znalezieniu prawdziwej rodziny. Charlie pomaga mu uwierzyć w siebie i odkrywa, że przyjaźń oraz pomaganie innym są ważniejsze niż własne pragnienia.",
+          },
+        ],
+      },
       { title: "Herkules" },
       {
         title: "Starcie Tytanów",
@@ -1319,6 +1334,7 @@ const movies = {
     { title: "L'Inferno" },
     { title: "Dante's Inferno: An Animated Epic" },
     { title: "Behemoth" },
+    { title: "Siódma pieczęć" },
     {
       title: "Przyczajony Tygrys, Ukryty Smok",
       parts: [

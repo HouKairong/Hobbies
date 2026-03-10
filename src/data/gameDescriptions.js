@@ -1711,6 +1711,24 @@ const gameDescriptions = {
     description:
       "Mroczne action RPG typu soulslike, osadzone w alternatywnej wersji późnej dynastii Ming, gdzie wojny, choroby i chaos zniszczyły krainę Shu. Gracz wciela się w Bai Wuchang – wojowniczkę‑piratkę, która budzi się z amnezją i zostaje dotknięta tajemniczą plagą zwaną Feathering, przemieniającą ludzi w potworne istoty. W trakcie podróży przez opuszczone świątynie, zrujnowane miasta i mroczne dzikie tereny, Wuchang musi doskonalić umiejętności walki, eksperymentować z różnymi stylami broni i stawić czoła potężnym przeciwnikom. Historia jest nie tylko brutalną próbą przetrwania, ale też tragicznym studium walki o odzyskanie pamięci i sensu własnej tożsamości w świecie ogarniętym plaga i konfliktem.",
   },
+  "Genshin Impact": {
+    world: "Avalon, Mooshu, Zafaria, Krokotopia, Celestia, Azteca, Polaris",
+    why: "Teyvat przypomina mozaikę odmiennych kultur i filozofii – podobnie jak wiele światów Wizard101. Avalon oddaje legendarny i rycerski charakter Mondstadt, Mooshu harmonijną duchowość Inazumy i Liyue, Zafaria i Krokotopia różnorodność natury i cywilizacji Sumeru, Celestia boską hierarchię Archonów i samej Celestii, Azteca motyw dawnej cywilizacji i katastrofy Khaenri'ah, a Polaris reprezentuje zimną potęgę i militarną strukturę Snezhnayi. Razem tworzą strukturę świata, w którym każda kraina reprezentuje inną ideę władzy, wiary i kultury.",
+    protagonist: "Podróżnik (Aether/Lumine)",
+    antagonist: "Abyss Order, Fatui, Celestia",
+    location: "Teyvat – siedem narodów rządzonych przez Archonów",
+    description:
+      "Rozległe RPG akcji z otwartym światem, w którym gracz wciela się w Podróżnika poszukującego swojego zaginionego bliźniaka. Podczas podróży przez siedem narodów Teyvatu spotyka dziesiątki bohaterów, odkrywa starożytne sekrety i powoli odsłania prawdę o konflikcie między Archonami, Celestią i Abyss Order. System walki opiera się na reakcjach żywiołów i łączeniu umiejętności różnych postaci, a eksploracja świata pełna jest zagadek, historii i mitologii. Historia Genshin Impact to opowieść o wolności, władzy bogów i miejscu człowieka w świecie rządzonym przez przeznaczenie.",
+  },
+  Fortnite: {
+    world: "Aquila, Wysteria, Zafaria",
+    why: "Grałam w czasie kiedy był event mitologii greckiej i zaraz po nim. Lokacje w tym evencie nawiązywały do mitologii greckiej (Aquila) i były ogólnie śródziemnomorskie (Wysteria), później doszła kraina przypominająca sawannę (Zafaria)",
+    protagonist: "Gracz",
+    antagonist: "Przeciwnicy",
+    location: "Wyspa",
+    description:
+      "Fortnite to popularna gra wideo stworzona przez firmę Epic Games, która łączy dynamiczną akcję, elementy strzelanki oraz budowanie konstrukcji. Gra została wydana w 2017 roku i szybko stała się jednym z największych hitów w świecie gier online. Najbardziej znanym trybem jest Battle Royale, w którym do 100 graczy trafia na jedną wyspę i walczy ze sobą, dopóki nie zostanie tylko jedna osoba lub drużyna. W trakcie rozgrywki gracze zbierają broń, przedmioty oraz materiały, z których mogą budować ściany, schody i platformy, aby bronić się przed przeciwnikami lub zdobywać przewagę taktyczną. Fortnite wyróżnia się kolorową, kreskówkową grafiką, częstymi aktualizacjami oraz wydarzeniami specjalnymi. W grze regularnie pojawiają się nowe sezony, mapy, skórki postaci i współprace z popularnymi filmami, komiksami czy muzykami. Oprócz trybu Battle Royale gra oferuje także inne formy zabawy, takie jak kreatywny tryb budowania własnych map oraz różne tryby drużynowe, które pozwalają grać ze znajomymi.",
+  },
 
   Wizard101: {
     why: "Wizard101 to jedna z dwóch gier, które mnie ukształtowały. Może nie jest to gra wybitna ale mam do niej olbrzymi szacunek. Jest to pierwsza gra, w której spędziłam tak dużo czasu i w którą się aż tak zaangażowałąm. Zasługuje na tło sekcji o grach. Nie będę przypisywać jej osobnych kategorii dla każdego świata, bo spełniałaby wszystkie kryteria, a Wizard101 to kryterium samo w sobie.",
