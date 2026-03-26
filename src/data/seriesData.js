@@ -22,6 +22,8 @@ const seriesData = [
   { title: "Breaking bad", dimensions: ["Overworld"] },
   { title: "Better call Saul", dimensions: ["Overworld"] },
   { title: "Sherlock", dimensions: ["Overworld"] },
+  { title: "Moriarty the Patriot", dimensions: ["Overworld"] },
+  { title: "Sherlock Holmes", dimensions: ["Overworld"] },
   { title: "Persona Trinity Soul", dimensions: ["Overworld", "End"] },
   { title: "Persona 4 The Animation", dimensions: ["Overworld", "End"] },
   { title: "Persona 4 Golden The Animation", dimensions: ["Overworld", "End"] },

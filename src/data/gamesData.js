@@ -183,6 +183,7 @@ const gamesData = [
   { title: "GTA 5 Online", worlds: ["Marleybone", "Wizard City"] },
   { title: "Ark Survival Evolved", worlds: ["Azteca"] },
   { title: "Don't Starve", worlds: ["Zafaria", "Darkmoor"] },
+  { title: "Don't Starve Together", worlds: ["Zafaria", "Darkmoor"] },
   { title: "Phasmophobia", worlds: ["Darkmoor"] },
   { title: "Among Us", worlds: ["Celestia"] },
   { title: "Diablo Immortal", worlds: ["Dragonspyre"] },

@@ -230,10 +230,27 @@ const seriesDescriptions = {
     dimension: "Overworld",
     why: "Overworld to świat logicznych zasad i eksploracji. Sherlock analizuje rzeczywistość jak mapę seedów – dostrzega struktury tam, gdzie inni widzą chaos.",
     protagonist: "Sherlock Holmes, John Watson",
-    antagonist: "Profesor Moriarty, inni przestępcy",
+    antagonist:
+      "Profesor James Moriarty, Charles Augustus Magnussen, Eurus Holmes, inni przestępcy",
     location: "Współczesny Londyn",
     description:
       "Nowoczesna adaptacja przygód Sherlocka Holmesa. Genialny, ale ekscentryczny detektyw rozwiązuje skomplikowane zagadki kryminalne, wspierany przez doktora Watsona. Serial łączy klasyczną dedukcję z dynamiczną narracją i współczesną technologią.",
+  },
+
+  "Moriarty the Patriot": {
+    dimension: "Overworld",
+    why: "Overworld jest jak świat realny i trzymający się zasad, zupełnie jak wiktoriański Londyn.",
+    protagonist: "Profesor James Moriarty",
+    antagonist: "Charles Augustus Milverton",
+    location: "Wielka Brytania (Londyn), koniec XIX wieku",
+    description: "",
+  },
+  "Sherlock Holmes": {
+    dimension: "Overworld",
+    why: "Świat wiktoriańskiego Londynu to świat zwyczajny jak Overworld",
+    protagonist: "Sherlock Holmes, John Watson",
+    antagonist: "Profesor James Moriarty, inni przestępcy",
+    location: "Wielka Brytania (Londyn), koniec XIX wieku",
   },
 
   "Persona Trinity Soul": {

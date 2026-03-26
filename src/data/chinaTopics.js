@@ -72,6 +72,11 @@ const chinaTopics = {
       description:
         "Gra RPG w świecie inspirowanym wuxia i historią średniowiecznych Chin.",
     },
+    {
+      title: "Genshin Impact",
+      description:
+        "Jedna z najpopularniejszych gier chińskich wzorowana na anime",
+    },
   ],
 
   Seriale: [
@@ -665,6 +670,10 @@ const chinaTopics = {
           description:
             "Animowany serial o wojownikach ninja walczących ze złem w świecie inspirowanym kulturą Azji.",
         },
+        {
+          title: "Avatar: Ostatni władca wiatru",
+          description: "Serial na podstawie najbardziej znanego amenime",
+        },
       ],
     },
     {
@@ -826,6 +835,22 @@ const chinaTopics = {
           description:
             "Słynny film anime o dziewczynce trafiającej do świata duchów.",
         },
+        {
+          title: "Moriarty the Patriot",
+          description: "Anime o nemezis Sherlocka Holmesa",
+        },
+        {
+          title: "Cyberpunk Edgerunners",
+          description: "Anime na podstawie znanej gry",
+        },
+        {
+          title: "Avatar: Legenda Aanga",
+          description: "Najbardziej znane amenime",
+        },
+        {
+          title: "Legenda Korry",
+          description: "Kontynuacja najbardziej znanego amenime",
+        },
       ],
     },
     {
@@ -846,6 +871,10 @@ const chinaTopics = {
           title: "Raya i Ostatni Smok",
           description:
             "Animowany film Disneya inspirowany kulturami Azji Południowo-Wschodniej.",
+        },
+        {
+          title: "Ostatni władca wiatru",
+          description: "Film na podstawie najbardziej znanego amenime",
         },
       ],
     },

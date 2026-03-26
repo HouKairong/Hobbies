@@ -1545,7 +1545,6 @@ const movies = {
     { title: "Heretyk" },
     { title: "Jojo Rabbit" },
     { title: "Sokrates" },
-    { title: "Assassin's Creed" },
     {
       title: "Adam Miauczyński",
       parts: [
@@ -1767,6 +1766,50 @@ const movies = {
           description:
             "Świąteczna krótkometrażowa animacja rozgrywająca się po wydarzeniach trzeciego filmu. Mieszkańcy Berk próbują odnaleźć ducha dawnych tradycji, a Czkawka zastanawia się, jak podtrzymać pamięć o smokach w świecie, w którym już ich nie ma. Ciepła i nostalgiczna historia o rodzinie i tęsknocie.",
         },
+      ],
+    },
+  ],
+  Polskie: [
+    {
+      title: "Wiedźmin",
+      parts: [
+        {
+          title: "Wiedźmin (2001)",
+          description:
+            "Pierwszy film adaptujący sagę o Geralcie z Rivii, przedstawiający jego przygody w świecie pełnym potworów i intryg.",
+        },
+      ],
+    },
+    {
+      title: "Adam Miauczyński",
+      parts: [
+        {
+          title: "Dzień Świra",
+          description:
+            "Nauczyciel zmagający się z frustracją, samotnością i absurdami dnia codziennego stopniowo popada w coraz większą irytację.",
+        },
+        {
+          title: "Wszyscy jesteśmy Chrystusami",
+          description:
+            "Historia walki z alkoholizmem i prób naprawy relacji między ojcem a synem.",
+        },
+      ],
+    },
+    {
+      title: "Pieprzyć Mickiewicza",
+      parts: [
+        { title: "Część 1", description: "" },
+        { title: "Część 2", description: "" },
+        { title: "Część 3", description: "" },
+      ],
+    },
+    {
+      title: "U Pana Boga",
+      parts: [
+        { title: "U Pana Boga za piecem ", description: "" },
+        { title: "U Pana Boga w ogródku", description: "" },
+        { title: "U Pana Boga za miedzą", description: "" },
+        { title: "U Pana Boga w Królowym Moście", description: "" },
       ],
     },
   ],

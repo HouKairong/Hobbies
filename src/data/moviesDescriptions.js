@@ -1,11 +1,11 @@
 const moviesDescriptions = {
   Wiedźmin: {
-    licence: "Gry, Seriale, Boska Komedia, Filozofia",
+    licence: "Gry, Seriale, Boska Komedia, Filozofia, Polskie",
     protagonist: "Geralt z Rivii, Vesemir",
     antagonist:
       "Falwick, Ornella, Melusina, Deglan, Tetra Gilcrest, Leo Bonhart",
     location: "Kontynent, głównie XIII wiek",
-    why: "Filmy o Wiedźminie powstały równolegle z grami i serialami. Są częścią mojego zbioru filmów nawiązującego do Boskiej Komedii (Czyśćca). Mają też głęboką wartość filozoficzną. Wszystko jest na podstawie książek, które są jednymi z niewielu jakie przeczytałam.",
+    why: "Filmy o Wiedźminie powstały równolegle z grami i serialami. Są częścią mojego zbioru filmów nawiązującego do Boskiej Komedii (Czyśćca). Mają też głęboką wartość filozoficzną. Wszystko jest na podstawie książek, które są jednymi z niewielu jakie przeczytałam. Jedna część jest produkcji polskiej.",
     description: "",
   },
   "Assassin's Creed": {
@@ -444,92 +444,87 @@ const moviesDescriptions = {
   Matrix: {
     licence: "Filozofia",
     protagonist: "Neo",
-    antagonist: "Agent Smith i maszyny",
-    why: "Klasyka sci-fi i filozofii w kinie akcji",
-    location: "",
-    description:
-      "Neo odkrywa, że żyje w sztucznie stworzonej rzeczywistości, i staje do walki z systemem kontrolującym ludzkość.",
+    antagonist: "Agent Smith",
+    why: "Matrix zadaje pytanie na temat realności świata.",
+    location:
+      "Mega City, koniec XX Wieku (w Matrixie), w rzeczywistości Nebukadnesar, koniec XXII albo XXVI wieku",
+    description: "",
   },
   Heretyk: {
     licence: "Filozofia",
-    protagonist: "Heretycy i inkwizytorzy",
-    antagonist: "Kościół i społeczne prześladowania",
-    why: "Historyczny dramat religijny",
-    location: "",
-    description:
-      "Historia walki jednostki z systemem religijnym i społecznym w średniowieczu.",
+    protagonist: "Siostra Barnes i Siostra Paxton",
+    antagonist: "Pan Reed",
+    why: "Film stawia wiele pytań na temat prawdziwości i sensu religii",
+    location: "Dom Pana Reeda",
+    description: "",
   },
   "Jojo Rabbit": {
     licence: "Filozofia",
-    protagonist: "Jojo",
-    antagonist: "Ideologia nazistowska",
-    why: "Satyrystyczny dramat wojenny",
-    location: "",
-    description:
-      "Chłopiec w hitlerowskich Niemczech konfrontuje się z absurdem wojny i swoimi przekonaniami.",
+    protagonist: "Johannes „Jojo” Betzler",
+    antagonist: "Wymyślony Adolf Hitler",
+    why: "Dilm przedstawia absurd wojny i działania propagandy na ludzi",
+    location: "Nazistowskie Niemcy (Falkenheim) w 1945 roku",
+    description: "",
   },
   Sokrates: {
     licence: "Filozofia",
     protagonist: "Sokrates",
-    antagonist: "Społeczeństwo i władze",
-    why: "Film biograficzny / filozoficzny",
-    location: "",
-    description:
-      "Historia życia Sokratesa, jego nauk i procesu sądowego w Atenach.",
+    antagonist: "Meletos",
+    why: "Film o najważniejszym filozofie w dziejach świata",
+    location: "Starożytna Grecja (Ateny), V wiek p.n.e.",
+    description: "",
   },
   Menu: {
     licence: "Filozofia, IPiN",
-    protagonist: "Goście luksusowej restauracji",
-    antagonist: "Szef kuchni i sytuacje ekstremalne",
-    why: "Satyrystyczny thriller / komedia",
-    location: "",
-    description:
-      "Luksusowa kolacja zamienia się w dramatyczną walkę o przetrwanie i moralność.",
+    protagonist: "Margot Mills",
+    antagonist: "Szef kuchni Julian Slowik",
+    why: "Satyryczne ukazanie filozofii jedzenia i szaleńśtwo można powiedzieć sekciarskiego fanatyzmu. Obejrzane w IPiNie",
+    location: "Restauracja Hawthorne na odizolowanej wyspie",
+    description: "",
   },
   "Kot w butach: Ostatnie życzenie": {
     licence: "Filozofia, IPiN",
     protagonist: "Kot w Butach",
-    antagonist: "Niebezpieczeństwa i złoczyńcy",
-    why: "Animowany film familijny",
-    location: "",
+    antagonist: "Jacek Placek, Śmierć, Złotowłosa i Trzy Niedźwiadki",
+    why: "Zadziwiająco głęboki film o lęku przed śmiercią. Obejrzane w IPiNie 3 razy",
+    location: "Świat Shreka",
     description:
       "Kot w Butach wyrusza na misję, aby spełnić swoje ostatnie życzenie i stawić czoła przygodom.",
   },
   Coco: {
     licence: "Filozofia, IPiN",
-    protagonist: "Miguel",
-    antagonist: "Tradycje i rodzinna tajemnica",
-    why: "Animacja Pixar o kulturze i muzyce",
-    location: "",
+    protagonist: "Miguel Rivera",
+    antagonist: "Ernesto de la Cruz",
+    why: "Zadziwiająco głęboki film o wadze śmierci, muzyki i tradycji. Obejrzne w IPiNie.",
+    location: "Meksyk (Santa Cecilia), Zaświaty, współcześnie",
     description:
       "Chłopiec odkrywa tajemnice swojej rodziny i kultury podczas święta Dnia Zmarłych.",
   },
   Shrek: {
     licence: "IPiN",
     protagonist: "Shrek",
-    antagonist: "Lord Farquaad, Rumpelstiltskin",
-    why: "Kultowa seria animowana parodiująca baśnie",
-    location: "",
-    description:
-      "Ogre Shrek wyrusza w podróż, aby odzyskać swoją ziemię i odnajduje przyjaźń oraz miłość.",
+    antagonist:
+      "Lord Farquaad, Wróżka Chrzestna, Książę z Bajki, Rumpelstiltskin",
+    why: "Obejrzane w IPiNie",
+    location: "Świat Shreka (Zasiedmiogórogród)",
+    description: "",
   },
   "Film o pszczołach": {
     licence: "IPiN",
     protagonist: "Barry B. Benson",
     antagonist: "Ludzie niszczący środowisko",
-    why: "Animacja edukacyjna i humorystyczna",
-    location: "",
+    why: "Obejrzane w IPiNie",
+    location: "Nowy Jork, współcześnie",
     description:
       "Barry B. Benson ucieka od pracy w ulu i odkrywa świat ludzi, broniąc pszczół przed zagładą.",
   },
   Klatka: {
     licence: "IPiN",
-    protagonist: "Główny bohater",
-    antagonist: "System i współwięźniowie",
-    why: "Dramat psychologiczny",
-    location: "",
-    description:
-      "Historia uwięzionego bohatera, który walczy o przetrwanie i zachowanie człowieczeństwa w więziennej rzeczywistości.",
+    protagonist: "Paula",
+    antagonist: "Juanma",
+    why: "Obejrzane w IPiNie",
+    location: "Hiszpania, współcześnie",
+    description: "",
   },
   "Zabawa w Pochowanego": {
     licence: "IPiN",
@@ -606,7 +601,7 @@ const moviesDescriptions = {
       "Nieporadny farmer próbuje przetrwać na Dzikim Zachodzie, gdzie niemal wszystko może go zabić.",
   },
   "Adam Miauczyński": {
-    licence: "Filozofia, IPiN",
+    licence: "Filozofia, IPiN, Polskie",
     protagonist: "Adam Miauczyński",
     antagonist: "Własne lęki, frustracje, uzależnienia i polska codzienność",
     why: "Studium neurotycznej jednostki w zderzeniu z rzeczywistością",
@@ -633,6 +628,24 @@ const moviesDescriptions = {
     location: "Dziki Zachód w Ameryce Północnej",
     description:
       "Dziki mustang Spirit walczy o wolność swoją i innych koni, ucząc się zaufania i przyjaźni w świecie pełnym niebezpieczeństw.",
+  },
+
+  "Pieprzyć Mickiewicza": {
+    licence: "Filozofia, Polskie",
+    protagonist: "Dante, Korek",
+    antagonist: "Różni",
+    why: "Film poruszający wątki filozoficzne dotyczące dojrzewania i młodości. Polski.",
+    location: "Polska (Warszawa)",
+    description: "",
+  },
+
+  "U Pana Boga": {
+    licence: "Polskie",
+    protagonist: "",
+    antagonist: "",
+    why: "",
+    location: "Polska (Królowy Most)",
+    description: "",
   },
 };
 
