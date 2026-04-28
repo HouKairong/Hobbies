@@ -15,11 +15,13 @@ const Books = () => {
   const seriesWorlds = {
     Wiedźmin: "Wizard City , Grizzleheim",
     "Pieśń Lodu i Ognia": "Krokotopia, Grizzleheim",
-    "Sherlock Holmes": "Marleybone",
+    "Sherlock Holmes": "Marleybone, Dragonspyre",
     "Książki o Chinach": "Mooshu",
     "Boska Komedia": "Dragonspyre",
     "Mitologia Nordycka": "Grizzleheim",
+    "Jak Wytresować Smoka": "Grizzleheim, Aquila",
     "Obrona Sokratesa": "Aquila",
+    "Death Note": "Wysteria, Dragonspyre",
   };
 
   const toggleSeries = (series) => {

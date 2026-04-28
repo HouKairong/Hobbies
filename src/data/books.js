@@ -630,6 +630,16 @@ const books = {
         },
       ],
     },
+    {
+      title: "Studium w szmaragdzie",
+      description:
+        "Narrator, weteran z wojny w Afganistanie opowiada o dochodzeniu, które prowadzi jego współlokator, detektyw doradca z Baker Street, wspomagający pracę inspektora Lestrade ze Scotland Yardu. Przedmiotem jest brutalne morderstwo dokonane na członku jednego z rodów panujących Europy w slumsach londyńskiej dzielnicy Whitechapel. Ofiara nie jest jednak człowiekiem, a obcym, na co wskazuje jego nieludzki wygląd, liczba kończyn i zielona krew na ścianach. Detektyw i narrator zostają przyjęci w pałacu przez Królową Wiktorię, jedną z Wielkich Przedwiecznych, którzy pokonali ludzkość 700 lat temu, a teraz rządzą światem. Detektyw odkrywa, że za morderstwem stoi grupa restauracjonistów, osób, które sprzeciwiają się rządom obcych. Nowela łączy w sobie realia dwóch cykli literackich: powieści i opowiadań kryminalnych o Sherlocku Holmesie Arthura Conana Doyle’a i opowiadań o mitologii Cthulhu H.P. Lovecrafta. Oryginalność tekstu polega na odwróceniu schematu, znanego z opowiadań Doyle’a. Czytelnik na początku, śledząc fabułę podobną do akcji Studium w szkarłacie, uznaje, że narratorem jest doktor Watson, zaś detektywem Sherlock Holmes. W trakcie utworu okazuje się, że Holmes (występujący tu pod fałszywym nazwiskiem Sherry Vernet i pseudonimem Rache) i Watson są ściganymi restauracjonistami, którzy mordują obcych uzurpatorów. Tropy pozostawione przez autora wskazują, że detektywem jest tu profesor Moriarty, zaś narrator to jego współpracownik, pułkownik Sebastian Moran, najwięksi wrogowie Holmesa w cyklu Conan Doyle’a.",
+    },
+    {
+      title: "Sherlock Holmes and The Servants of Hell",
+      description:
+        "Sherlock Holmes and The Servants of Hell to mroczna, utrzymana w klimacie grozy opowieść łącząca klasyczny styl przygód Sherlocka Holmesa z elementami horroru inspirowanego światem Clive’a Barkera, w której słynny detektyw oraz dr Watson mierzą się z przerażającą, nadprzyrodzoną zagadką związaną z tajemniczą konfiguracją i piekielnymi istotami z innego wymiaru, prowadząc śledztwo pełne niepokoju, brutalności i stopniowego odkrywania, że granica między racjonalnym światem a koszmarem jest znacznie cieńsza, niż kiedykolwiek przypuszczali.",
+    },
   ],
   "Książki o Chinach": [
     {
@@ -825,6 +835,94 @@ const books = {
         "Epicka wizja końca świata: wojny bogów z olbrzymami, śmierci wielu postaci i odrodzenia świata, symbolizująca cykl zniszczenia i odnowy w nordyckiej mitologii.",
     },
   ],
+
+  "Jak Wytresować Smoka": [
+    {
+      title: "Jak wytresować smoka",
+      description:
+        "Hiccup próbuje zdać test inicjacyjny w plemieniu Wikingów, łapiąc i szkoląc smoka – choć jego własny smok jest najmniej imponujący ze wszystkich.",
+    },
+    {
+      title: "Jak zostać piratem",
+      description:
+        "Hiccup uczy się życia pirata i odkrywa tajemniczy skarb, mierząc się z rywalami i niebezpiecznymi smokami.",
+    },
+    {
+      title: "Jak mówić po smoczemu",
+      description:
+        "Bohater trafia do niewoli i musi użyć swojej zdolności rozumienia smoków, by przetrwać i pomóc przyjaciołom.",
+    },
+    {
+      title: "Jak złamać smoczą klątwę",
+      description:
+        "Hiccup zostaje otruty i musi znaleźć rzadkie lekarstwo, zanim będzie za późno.",
+    },
+    {
+      title: "Jak odwrócić smoka ogonem",
+      description:
+        "Podczas wyprawy ratunkowej Hiccup mierzy się z mroźną dziczą i potężnymi przeciwnikami.",
+    },
+    {
+      title: "Drapieżne smoki dla początkujących",
+      description:
+        "Bohater poznaje sekrety smoków i staje naprzeciw niebezpieczeństw, które testują jego odwagę.",
+    },
+    {
+      title: "How to Ride a Dragon's Storm",
+      description:
+        "Wikingowie zostają uwięzieni na wyspie pełnej pułapek, a Hiccup musi ich ocalić.",
+    },
+    {
+      title: "How to Break a Dragon's Heart",
+      description:
+        "Hiccup szuka zaginionego skarbu i odkrywa ważne tajemnice swojej przeszłości.",
+    },
+    {
+      title: "How to Steal a Dragon's Sword ",
+      description:
+        "Historia przenosi się w przeszłość, ujawniając wydarzenia, które wpłynęły na losy bohatera.",
+    },
+    {
+      title: "How to Seize a Dragon's Jewel",
+      description:
+        "Hiccup zostaje oskarżony o kradzież i musi oczyścić swoje imię.",
+    },
+    {
+      title: "How to Betray a Dragon's Hero",
+      description:
+        "Bohater staje przed zdradą i trudnymi wyborami, które zadecydują o losie świata.",
+    },
+    {
+      title: "How to Fight a Dragon's Fury",
+      description:
+        "Epicki finał serii – ostateczna walka ludzi i smoków oraz spełnienie przeznaczenia Hiccupa.",
+    },
+    {
+      title: "How to Train Your Viking",
+      description:
+        "Krótki, humorystyczny poradnik o tym, jak wygląda życie młodego Wikinga i jego szkolenie.",
+    },
+    {
+      title: "Hiccup: The Viking Who Was Seasick",
+      description:
+        "Opowieść o dzieciństwie Hiccupa i jego problemach z chorobą morską – nietypową cechą jak na Wikinga.",
+    },
+    {
+      title: "The Day of the Dreader",
+      description:
+        "Historia o straszliwym potworze morskim i próbie odwagi Hiccupa w obliczu zagrożenia.",
+    },
+    {
+      title: "The Serpent's Heir",
+      description:
+        "Hiccup i jego przyjaciele mierzą się z nowym wrogiem oraz starożytną tajemnicą związaną ze smokami.",
+    },
+    {
+      title: "Dragonvine",
+      description:
+        "Bohaterowie odkrywają niebezpieczną roślinę powiązaną ze smokami, która może zagrozić całemu światu.",
+    },
+  ],
   "Obrona Sokratesa": [
     {
       title: "Część pierwsza",
@@ -840,6 +938,28 @@ const books = {
       title: "Część trzecia",
       description:
         "Sokrates zwraca się teraz tylko do tych sędziów, którzy skazali go na śmierć i zapowiada, że skazanie jego, starca, któremu i tak niewiele pozostało lat życia, na śmierć już niedługo ściągnie na miasto hańbę. Twierdzi, że przegrał nie dlatego, że zabrakło mu argumentów, lecz dlatego, że nie chciał zniżać się do sztuczek i grania na emocjach sądu, płaczów i jęków, do których zwykle uciekali się podsądni. Powtarza, że ani w sądzie, ani na wojnie, ani ja, ani ktokolwiek inny nie powinien o tym przemyśliwać, aby śmierci ujść (39a). Jeszcze raz zapowiada swoim sędziom, że kara jaka ich spotka po śmierci Sokratesa, będzie znacznie cięższa niż śmierć – potępienie innych, młodszych od niego. Następnie kieruje słowa pocieszenia do tych sędziów, którzy głosowali za jego uniewinnieniem. Twierdzi, że jego dobry duch, który zwykle zawsze przestrzegał go przed niebezpieczeństwem, tym razem nie sprzeciwiał się, kiedy wychodził z domu i szedł do sądu. Można to uznać za znak, że śmierć jest czymś dobrym dla niego. Śmierć jest albo całkowitym unicestwieniem ciała i duszy, w którym człowiek nie odczuwa już żadnych wrażeń, i tym samym uwolnieniem od wszelkich trosk, albo jakimś przeobrażeniem i przeniesieniem się duszy w inne miejsce – do Hadesu, gdzie Sokrates będzie mógł spotkać dawnych bohaterów i poetów i dalej prowadzić z nimi swoje dysputy. Na koniec Sokrates mówi, że nie chowa wielkiej urazy do oskarżycieli i sędziów, którzy go skazali, i prosi o opiekę nad swoimi synami, aby ci wartości moralne przedkładali nad dobra materialne i egoizm.",
+    },
+  ],
+  "Death Note": [
+    {
+      title: "Death Note All in One Collection",
+      description:
+        "Jedna książka zawierająca wszystkie 12 tomów Death Note'a oraz bonusowy epilog",
+    },
+    {
+      title: "Death Note Short Stories",
+      description:
+        "Książka zawierająca prolog, chaptera a-kira, c-kira i inne bonusy",
+    },
+    {
+      title: "Death Note Another Note: The Los Angeles BB Murder Cases",
+      description:
+        "Powieść będąca prequelem Death Note'a opisująca sprawę L w Los Angeles",
+    },
+    {
+      title: "Death Note L Save The World",
+      description:
+        "Powieść będąca adaptacją filmu o tym samym tytule. Dzieje się w uniwersum filmowym, nie mangowym",
     },
   ],
 };
