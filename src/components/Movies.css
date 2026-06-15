@@ -159,6 +159,102 @@
   transform: translateX(4px);
 }
 
+.movies-series {
+  margin-top: 20px;
+}
+
+.movies-description,
+.part-details,
+.series-details {
+  padding: 16px;
+  margin-top: 20px;
+  background-color: #f5f0ff;
+  border-radius: 12px;
+}
+
+.movies-description h3,
+.part-details h4 {
+  margin-top: 0;
+  color: #2c2c2c;
+}
+
+.movies-description p,
+.part-details p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .movies-wrapper {
+    background-attachment: scroll;
+    padding: 20px 12px 30px;
+  }
+
+  .movies-container {
+    margin: 0;
+    padding: 16px;
+  }
+
+  .movies-title {
+    font-size: 30px;
+    margin-bottom: 18px;
+  }
+
+  .movies-select-label {
+    width: 100%;
+    display: block;
+    text-align: left;
+    font-size: 0.98rem;
+  }
+
+  .movies-select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .movies-list {
+    grid-template-columns: 1fr;
+  }
+
+  .movies-item,
+  .movies-subitem,
+  .movies-group,
+  .movies-description,
+  .part-details {
+    padding: 14px 16px;
+  }
+
+  .movies-group-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .movies-wrapper {
+    padding: 16px 10px 24px;
+  }
+
+  .movies-container {
+    padding: 14px;
+  }
+
+  .movies-title {
+    font-size: 26px;
+  }
+
+  .movies-select,
+  .movies-item,
+  .movies-subitem {
+    font-size: 15px;
+  }
+
+  .movies-description p,
+  .part-details p {
+    font-size: 0.95rem;
+  }
+}
+
 .image-of-media {
   width: 100%;
 }

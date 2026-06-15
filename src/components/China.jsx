@@ -1,11 +1,31 @@
 import "./China.css";
 import { useState, useRef, useEffect } from "react";
 import chinaTopics from "../data/chinaTopics";
+import booksManga from "../data/booksManga";
 
 const China = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedSubitem, setSelectedSubitem] = useState(null);
+
+  const chinaTopicsWithManga = {
+    ...chinaTopics,
+    "Inne Azjatyckie": [
+      ...chinaTopics["Inne Azjatyckie"],
+      {
+        title: "Manga",
+        description: "Wybrane mangi z kolekcji książek.",
+        subitems: Object.keys(booksManga).map((title) => ({
+          title,
+          description:
+            (booksManga[title].description || "") ||
+            (booksManga[title].stories && booksManga[title].stories.length
+              ? `Zawiera ${booksManga[title].stories.length} tomów.`
+              : ""),
+        })),
+      },
+    ],
+  };
 
   const itemsRef = useRef(null);
   const itemDescriptionRef = useRef(null);
@@ -63,7 +83,7 @@ const China = () => {
 
         {/* Kategorie */}
         <ul className="china-categories">
-          {Object.keys(chinaTopics).map((category) => (
+          {Object.keys(chinaTopicsWithManga).map((category) => (
             <li
               key={category}
               className="china-category"
@@ -80,7 +100,7 @@ const China = () => {
             <h3 className="china-subtitle">{selectedCategory}</h3>
 
             <ul className="china-items-list">
-              {chinaTopics[selectedCategory].map((item) => (
+              {chinaTopicsWithManga[selectedCategory].map((item) => (
                 <li
                   key={item.title}
                   className="china-item"

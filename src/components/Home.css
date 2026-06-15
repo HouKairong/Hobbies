@@ -11,7 +11,7 @@ body {
 /* --- full screen background --- */
 .home-background {
   position: relative;
-  height: calc(100vh - 140px); /* odejmujemy header + padding */
+  min-height: calc(100vh - 140px); /* odejmujemy header + padding */
   width: 100vw;
   background-size: cover;
   background-position: center;
@@ -19,7 +19,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: visible;
+  padding: 2rem 0;
 }
 
 /* filtr kolorystyczny */
@@ -33,10 +34,7 @@ body {
 
 /* --- overlay wycentrowany --- */
 .home-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   z-index: 1;
 
   background: rgba(0, 0, 0, 0.45);
@@ -44,7 +42,7 @@ body {
   padding: 2rem 1.5rem;
   border-radius: 24px;
   color: white;
-  width: 90%;
+  width: min(95%, 900px);
   max-width: 900px;
   text-align: center;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
@@ -64,17 +62,19 @@ body {
 .home-intro {
   font-size: 1rem;
   margin-bottom: 2rem;
-  width: 600px;
+  width: min(100%, 600px);
   opacity: 0.9;
 }
 
 /* --- sekcja kart --- */
 .home-sections {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 karty w rzędzie */
-  gap: 20px;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 24px;
   justify-items: center;
+  justify-content: center;
   width: 100%;
+  grid-auto-rows: minmax(min-content, max-content);
 }
 
 /* --- karty --- */
@@ -82,28 +82,52 @@ body {
   background: linear-gradient(135deg, #a855f7, #6366f1);
   color: white;
   padding: 1.2rem;
-  width: 250px;
+  width: 100%;
+  max-width: 320px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  transition: 0.25s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .home-card:hover {
-  transform: translateY(-6px) scale(1.03);
+  transform: translateY(-2px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
 }
 
 /* --- responsywność na mniejszych ekranach --- */
 @media (max-width: 1024px) {
   .home-sections {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
   }
 }
 
 @media (max-width: 700px) {
+  .home-overlay {
+    padding: 1.5rem 1rem;
+  }
+
+  .home-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .home-intro {
+    margin-bottom: 1.5rem;
+  }
+
   .home-sections {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-overlay {
+    padding: 1.25rem 0.85rem;
+  }
+
+  .home-card {
+    padding: 1rem;
   }
 }
 

@@ -35,6 +35,7 @@
 /* input wyszukiwania i select filtrujący - razem w jednej linii */
 .games-controls {
   display: flex;
+  width: 100%;
   gap: 15px;
   flex-wrap: wrap;
   justify-content: center;
@@ -44,6 +45,8 @@
 .games-search,
 .games-filter {
   flex: 1 1 200px; /* rośnie, minimalnie 200px */
+  min-width: 0;
+  box-sizing: border-box;
   padding: 10px 15px;
   font-size: 16px;
   border-radius: 10px;
@@ -137,4 +140,93 @@
 
 .dogs-purpose-button:active {
   transform: scale(0.98);
+}
+
+@media (max-width: 900px) {
+  .games-wrapper {
+    background-attachment: scroll;
+    padding: 20px 12px 30px;
+  }
+
+  .games-container {
+    margin: 0;
+    padding: 16px;
+  }
+
+  .games-title {
+    font-size: 30px;
+    margin-bottom: 18px;
+  }
+
+  .games-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .games-search,
+  .games-filter {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .games-count {
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .games-list {
+    grid-template-columns: 1fr;
+  }
+
+  .games-item {
+    padding: 14px 16px;
+  }
+
+  .game-description {
+    padding: 16px;
+  }
+
+  .game-description h3 {
+    font-size: 24px;
+  }
+
+  .dogs-purpose-section {
+    padding-top: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .games-wrapper {
+    padding: 16px 10px 24px;
+  }
+
+  .games-container {
+    padding: 14px;
+  }
+
+  .games-title {
+    font-size: 26px;
+  }
+
+  .games-search,
+  .games-filter {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  .games-item {
+    font-size: 16px;
+  }
+
+  .game-description p {
+    font-size: 0.96rem;
+    line-height: 1.6;
+  }
+
+  .image-of-media {
+    max-width: 100%;
+    height: auto;
+  }
 }

@@ -86,7 +86,7 @@
 
 .books-series-item:hover {
   background-color: #d1b3ff;
-  transform: scale(1.02);
+  transform: translateY(-1px);
 }
 
 /* lista książek */
@@ -119,7 +119,7 @@
 
 .books-item:hover {
   background-color: #d1b3ff;
-  transform: scale(1.01);
+  transform: translateY(-1px);
 }
 
 .books-title-item.clickable {
@@ -155,4 +155,160 @@
 
 .image-of-media {
   width: 100%;
+}
+
+.books-book-description,
+.books-story-description {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #f5f0ff;
+  border-radius: 12px;
+}
+
+.books-book-description h4,
+.books-story-description h5 {
+  margin-top: 0;
+  color: #2c2c2c;
+}
+
+.books-book-description p,
+.books-story-description p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.books-story-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 12px;
+}
+
+.books-story-item {
+  padding: 10px 14px;
+  background-color: #e5d9ff;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.books-story-item:hover {
+  background-color: #d1b3ff;
+  transform: translateY(-1px);
+}
+
+.dogs-purpose-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.dogs-purpose-button {
+  padding: 12px 24px;
+  background-color: #e5d9ff;
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: darkblue;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.dogs-purpose-button:hover {
+  background-color: #d1b3ff;
+  border-color: violet;
+  transform: scale(1.02);
+}
+
+.dogs-purpose-button:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 900px) {
+  .books-wrapper {
+    background-attachment: scroll;
+    padding: 20px 12px 30px;
+  }
+
+  .books-container {
+    margin: 0;
+    padding: 16px;
+  }
+
+  .books-title {
+    font-size: 30px;
+    margin-bottom: 18px;
+  }
+
+  .books-canon-switch {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .books-canon-switch button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .books-list {
+    grid-template-columns: 1fr;
+  }
+
+  .books-series {
+    margin-top: 18px;
+  }
+
+  .books-series-title {
+    font-size: 22px;
+  }
+
+  .books-item {
+    padding: 14px 16px;
+  }
+
+  .books-book-description,
+  .books-story-description {
+    padding: 14px;
+  }
+
+  .books-story-item {
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .books-wrapper {
+    padding: 16px 10px 24px;
+  }
+
+  .books-container {
+    padding: 14px;
+  }
+
+  .books-title {
+    font-size: 26px;
+  }
+
+  .books-canon-switch button,
+  .books-item,
+  .books-story-item,
+  .dogs-purpose-button {
+    font-size: 15px;
+  }
+
+  .books-book-description p,
+  .books-story-description p {
+    font-size: 0.95rem;
+  }
+
+  .image-of-media {
+    height: auto;
+    max-width: 100%;
+  }
 }

@@ -110,18 +110,84 @@
   transform: scale(1.01);
 }
 
-.china-category {
-  padding: 10px 15px;
-  background-color: #e5d9ff;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease;
+.china-description-section {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: rgba(240, 235, 255, 0.92);
+  border-radius: 12px;
 }
 
-.china-category:hover {
-  background-color: #d1b3ff;
-  transform: scale(1.02);
+.china-description-section h3 {
+  margin-top: 0;
+  color: #2c2c2c;
+}
+
+.china-description-section p {
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+@media (max-width: 900px) {
+  .china-wrapper {
+    background-attachment: scroll;
+    padding: 20px 12px 30px;
+  }
+
+  .china-container {
+    margin: 0;
+    padding: 16px;
+  }
+
+  .china-title {
+    font-size: 30px;
+    margin-bottom: 18px;
+  }
+
+  .china-categories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .china-category {
+    padding: 12px 14px;
+  }
+
+  .china-items-list {
+    grid-template-columns: 1fr;
+  }
+
+  .china-item {
+    padding: 14px 16px;
+  }
+
+  .china-subtitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .china-wrapper {
+    padding: 16px 10px 24px;
+  }
+
+  .china-container {
+    padding: 14px;
+  }
+
+  .china-title {
+    font-size: 26px;
+  }
+
+  .china-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .china-item,
+  .china-category {
+    font-size: 15px;
+  }
+
+  .china-description-section {
+    padding: 14px;
+  }
 }
