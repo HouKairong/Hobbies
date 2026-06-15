@@ -945,11 +945,88 @@ const books = {
       title: "Death Note All in One Collection",
       description:
         "Jedna książka zawierająca wszystkie 12 tomów Death Note'a oraz bonusowy epilog",
+      stories: [
+        {
+          title: "Tom 1: Boredom (Nuda)",
+          description:
+            "Początek historii Lighta Yagamiego i odnalezienie Death Note.",
+        },
+        {
+          title: "Tom 2: Confluence (Spotkanie)",
+          description: "Pierwsze działania Kiry i wejście L do śledztwa.",
+        },
+        {
+          title: "Tom 3: Hard Run (Pościg)",
+          description: "Nasilenie konfliktu L vs Kira.",
+        },
+        {
+          title: "Tom 4: Love (Miłość)",
+          description: "Relacje i manipulacje w śledztwie.",
+        },
+        {
+          title: "Tom 5: White Space (Pustka)",
+          description: "Nowe strategie i zmiana dynamiki gry.",
+        },
+        {
+          title: "Tom 6: Give-and-Take (Wymiana)",
+          description: "Wprowadzenie nowych postaci i układów sił.",
+        },
+        {
+          title: "Tom 7: Zero (Zero)",
+          description: "Przygotowanie do kluczowej konfrontacji.",
+        },
+        {
+          title: "Tom 8: Target (Cel)",
+          description: "Zacieśnianie pętli wokół Kiry.",
+        },
+        {
+          title: "Tom 9: Contact (Kontakt)",
+          description: "Bezpośrednie starcie inteligencji L i Lighta.",
+        },
+        {
+          title: "Tom 10: Deletion (Usunięcie)",
+          description: "Przełomowe wydarzenia w śledztwie.",
+        },
+        {
+          title: "Tom 11: Kindred (Pokrewieństwo)",
+          description: "Wprowadzenie Neara i Mellona.",
+        },
+        {
+          title: "Tom 12: Finis (Koniec)",
+          description: "Finał historii Kiry i zakończenie głównej fabuły.",
+        },
+        { title: "Epilog", description: "" },
+      ],
     },
     {
       title: "Death Note Short Stories",
       description:
         "Książka zawierająca prolog, chaptera a-kira, c-kira i inne bonusy",
+      stories: [
+        {
+          title: "Pilot Chapter (Taro Kagami)",
+          description:
+            "Wczesna wersja konceptu Death Note, przed Lightem Yagamim.",
+        },
+        {
+          title: "C-Kira",
+          description:
+            "Historia dziejąca się po oryginalnym finale – nowy użytkownik Death Note.",
+        },
+        {
+          title: "A-Kira",
+          description:
+            "Świat po erze Kiry – pojawia się kolejny posiadacz notatnika.",
+        },
+        {
+          title: "L: One Day",
+          description: "Fragment dnia z życia L.",
+        },
+        {
+          title: "L: The Wammy’s House",
+          description: "Historia dzieciństwa L i Wammy’s House.",
+        },
+      ],
     },
     {
       title: "Death Note Another Note: The Los Angeles BB Murder Cases",
@@ -957,7 +1034,7 @@ const books = {
         "Powieść będąca prequelem Death Note'a opisująca sprawę L w Los Angeles",
     },
     {
-      title: "Death Note L Save The World",
+      title: "Death Note L Change The World",
       description:
         "Powieść będąca adaptacją filmu o tym samym tytule. Dzieje się w uniwersum filmowym, nie mangowym",
     },

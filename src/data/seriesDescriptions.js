@@ -921,6 +921,9 @@ const seriesDescriptions = {
     description:
       "Epoka wojny dobiega końca, gdy młody Avatar uczy się panowania nad wszystkimi żywiołami. Historia o przyjaźni, odpowiedzialności i dojrzewaniu.",
   },
+
+  "How NOT to summon a Demon Lord": {},
+
   "Gwiezdne Wojny: The Mandalorian": {
     dimension: "Overworld, Nether",
     why: "Zewnętrzne Rubieże to surowy Overworld – pustynie, miasta, przetrwanie. Resztki Imperium i mroczne eksperymenty z Mocą mają klimat Netheru – ukryte zagrożenie czające się pod powierzchnią.",

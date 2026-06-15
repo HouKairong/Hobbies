@@ -1651,6 +1651,9 @@ const gameDescriptions = {
     description:
       "Przygodowa gra eksploracyjna z nutą tajemnicy i surrealizmu, w której gracz wciela się w członków Ekspedycji 33 prowadzonych przez Gustave’a. Świat Clair Obscur to mozaika fragmentów rzeczywistości pełnych zagadek, iluzji i odniesień do sztuki. Malarka – enigmatyczna postać – wprowadza element niepokoju i prowokuje pytania o naturę tworzenia, pamięci i postrzegania. To opowieść, która prowadzi przez labirynt symboli, pamięci i własnych interpretacji.",
   },
+  Painkiller: {},
+  Witchfire: {},
+  "Rayman Legends": {},
 
   "Slay The Princess": {
     world: "Darkmoor",

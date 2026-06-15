@@ -2,12 +2,15 @@ import "./Books.css";
 import { useState, useRef } from "react";
 import komedia from "../../public/images/komedia.jpg";
 import books from "../data/books";
+import booksManga from "../data/booksManga";
 import booksDescriptions from "../data/booksDescriptions";
 
 const Books = () => {
   const [selectedSeries, setSelectedSeries] = useState(null);
   const [selectedBook, setSelectedBook] = useState(null);
   const [selectedStory, setSelectedStory] = useState(null);
+  const [selectedCanon, setSelectedCanon] = useState("main");
+
   const seriesRefs = useRef({});
   const bookRefs = useRef({});
   const storyRefs = useRef({});
@@ -23,6 +26,8 @@ const Books = () => {
     "Obrona Sokratesa": "Aquila",
     "Death Note": "Wysteria, Dragonspyre",
   };
+
+  const currentBooks = selectedCanon === "main" ? books : booksManga;
 
   const toggleSeries = (series) => {
     setSelectedSeries(selectedSeries === series ? null : series);
@@ -75,8 +80,36 @@ const Books = () => {
       <div className="books-container">
         <h2 className="books-title">Książki</h2>
 
+        {/* SWITCH KANONU */}
+        <div className="books-canon-switch">
+          <button
+            className={selectedCanon === "main" ? "active" : ""}
+            onClick={() => {
+              setSelectedCanon("main");
+              setSelectedSeries(null);
+              setSelectedBook(null);
+              setSelectedStory(null);
+            }}
+          >
+            Główny kanon
+          </button>
+
+          <button
+            className={selectedCanon === "manga" ? "active" : ""}
+            onClick={() => {
+              setSelectedCanon("manga");
+              setSelectedSeries(null);
+              setSelectedBook(null);
+              setSelectedStory(null);
+            }}
+          >
+            Kanon mang
+          </button>
+        </div>
+
+        {/* LISTA SERII */}
         <ul className="books-list">
-          {Object.keys(books).map((series) => (
+          {Object.keys(currentBooks).map((series) => (
             <li
               key={series}
               className="books-series-item"
@@ -88,7 +121,8 @@ const Books = () => {
           ))}
         </ul>
 
-        {Object.keys(books).map((series) => (
+        {/* SERIE */}
+        {Object.keys(currentBooks).map((series) => (
           <div
             key={series}
             ref={(el) => (seriesRefs.current[series] = el)}
@@ -133,7 +167,7 @@ const Books = () => {
                   )}
 
                   <ul className="books-item-list">
-                    {books[series]?.map((book) => (
+                    {currentBooks[series]?.map((book) => (
                       <li
                         key={book.title}
                         className="books-item"
@@ -218,7 +252,7 @@ const Books = () => {
                   )}
 
                   <ul className="books-item-list">
-                    {books[series]?.map((book) => (
+                    {currentBooks[series]?.map((book) => (
                       <li
                         key={book.title}
                         className="books-item"

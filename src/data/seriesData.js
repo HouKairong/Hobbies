@@ -100,6 +100,7 @@ const seriesData = [
     title: "Shiboyugi: Playing Death Games to Put Food on the Table",
     dimensions: ["Nether"],
   },
+  { title: "How NOT to summon a Demon Lord", dimensions: ["Overworld"] },
   {
     title: "Gwiezdne Wojny: The Mandalorian",
     dimensions: ["Overworld", "Nether"],
