@@ -4,12 +4,14 @@ import komedia from "../../public/images/komedia.jpg";
 import books from "../data/books";
 import booksManga from "../data/booksManga";
 import booksDescriptions from "../data/booksDescriptions";
+import GalleryModal from "../elements/GalleryModal";
 
 const Books = () => {
   const [selectedSeries, setSelectedSeries] = useState(null);
   const [selectedBook, setSelectedBook] = useState(null);
   const [selectedStory, setSelectedStory] = useState(null);
   const [selectedCanon, setSelectedCanon] = useState("main");
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
   const seriesRefs = useRef({});
   const bookRefs = useRef({});
@@ -79,7 +81,6 @@ const Books = () => {
     <div className="books-wrapper">
       <div className="books-container">
         <h2 className="books-title">Książki</h2>
-
         {/* SWITCH KANONU */}
         <div className="books-canon-switch">
           <button
@@ -106,7 +107,6 @@ const Books = () => {
             Kanon mang
           </button>
         </div>
-
         {/* LISTA SERII */}
         <ul className="books-list">
           {Object.keys(currentBooks).map((series) => (
@@ -120,7 +120,6 @@ const Books = () => {
             </li>
           ))}
         </ul>
-
         {/* SERIE */}
         {Object.keys(currentBooks).map((series) => (
           <div
@@ -297,7 +296,21 @@ const Books = () => {
                 </div>
               ))}
           </div>
-        ))}
+        ))}{" "}
+        <div className="dogs-purpose-section">
+          <button
+            className="dogs-purpose-button"
+            onClick={() => setIsGalleryOpen(true)}
+          >
+            A Dog's Purpose
+          </button>
+        </div>
+        {isGalleryOpen && (
+          <GalleryModal
+            galleryType={selectedCanon === "main" ? "books" : "manga"}
+            onClose={() => setIsGalleryOpen(false)}
+          />
+        )}
       </div>
     </div>
   );

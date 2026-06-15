@@ -107,3 +107,34 @@
 .image-of-media {
   width: 100%;
 }
+
+.dogs-purpose-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.dogs-purpose-button {
+  padding: 12px 24px;
+  background-color: #e5d9ff;
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: darkblue;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.dogs-purpose-button:hover {
+  background-color: #d1b3ff;
+  border-color: violet;
+  transform: scale(1.02);
+}
+
+.dogs-purpose-button:active {
+  transform: scale(0.98);
+}

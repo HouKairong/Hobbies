@@ -4,6 +4,7 @@ import Wizard from "../../public/images/Wizard.jpg";
 import Minecraft from "../../public/images/Minecraft.jpg";
 import gamesData from "../data/gamesData";
 import gameDescriptions from "../data/gameDescriptions";
+import GalleryModal from "../elements/GalleryModal";
 
 const worldsList = [
   "Wizard City",
@@ -29,6 +30,7 @@ const Games = () => {
   const [selectedWorld, setSelectedWorld] = useState("Wszystkie");
   const [search, setSearch] = useState("");
   const [selectedGame, setSelectedGame] = useState(null);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
   const descriptionRef = useRef(null);
 
@@ -44,7 +46,6 @@ const Games = () => {
       );
   }, [selectedWorld, search]);
 
-  // scroll do opisu po zmianie selectedGame
   useEffect(() => {
     if (selectedGame && descriptionRef.current) {
       descriptionRef.current.scrollIntoView({
@@ -58,6 +59,7 @@ const Games = () => {
     <div className="games-wrapper">
       <div className="games-container">
         <h2 className="games-title">Gry</h2>
+
         <div className="games-controls">
           <input
             type="text"
@@ -76,6 +78,7 @@ const Games = () => {
             className="games-filter"
           >
             <option value="Wszystkie">Wszystkie</option>
+
             {worldsList.map((world) => (
               <option key={world} value={world}>
                 {world}
@@ -83,14 +86,16 @@ const Games = () => {
             ))}
           </select>
         </div>
+
         <p className="games-count">Liczba gier: {filteredGames.length}</p>
+
         <ul className="games-list">
           {filteredGames.map((game, index) => (
             <li
+              key={index}
               className={`games-item ${
                 selectedGame === game.title ? "active" : ""
               }`}
-              key={index}
               onClick={() =>
                 setSelectedGame(selectedGame === game.title ? null : game.title)
               }
@@ -99,29 +104,36 @@ const Games = () => {
             </li>
           ))}
         </ul>
+
         {selectedGame === "Wizard101" && gameDescriptions[selectedGame] && (
           <div className="game-description" ref={descriptionRef}>
             <h3>{selectedGame}</h3>
+
             <p>
               <strong>Dlaczego jest wyjątkowa: </strong>
               {gameDescriptions[selectedGame].why}
             </p>
+
             <p>
               <strong>Główni Protagoniści: </strong>
               {gameDescriptions[selectedGame].protagonist}
             </p>
+
             <p>
               <strong>Główni Antagoniści: </strong>
               {gameDescriptions[selectedGame].antagonist}
             </p>
+
             <p>
               <strong>Miejsce Akcji: </strong>
               {gameDescriptions[selectedGame].location}
             </p>
+
             <p>
               <strong>Opis: </strong>
               {gameDescriptions[selectedGame].description}
             </p>
+
             <img src={Wizard} className="image-of-media" />
           </div>
         )}
@@ -129,29 +141,36 @@ const Games = () => {
         {selectedGame === "Minecraft" && gameDescriptions[selectedGame] && (
           <div className="game-description" ref={descriptionRef}>
             <h3>{selectedGame}</h3>
+
             <p>
               <strong>Dlaczego jest wyjątkowa: </strong>
               {gameDescriptions[selectedGame].why}
             </p>
+
             <p>
               <strong>Główni Protagoniści: </strong>
               {gameDescriptions[selectedGame].protagonist}
             </p>
+
             <p>
               <strong>Główni Antagoniści: </strong>
               {gameDescriptions[selectedGame].antagonist}
             </p>
+
             <p>
               <strong>Miejsce Akcji: </strong>
               {gameDescriptions[selectedGame].location}
             </p>
+
             <p>
               <strong>Opis: </strong>
               {gameDescriptions[selectedGame].description}
             </p>
+
             <img src={Minecraft} className="image-of-media" />
           </div>
         )}
+
         {selectedGame !== "Wizard101" &&
           selectedGame !== "Minecraft" &&
           gameDescriptions[selectedGame] && (
@@ -177,16 +196,36 @@ const Games = () => {
                 <strong>Główni Antagoniści: </strong>
                 {gameDescriptions[selectedGame].antagonist}
               </p>
+
               <p>
                 <strong>Miejsce Akcji: </strong>
                 {gameDescriptions[selectedGame].location}
               </p>
+
               <p>
                 <strong>Opis: </strong>
                 {gameDescriptions[selectedGame].description}
               </p>
             </div>
           )}
+
+        {/* Przycisk na samym dole */}
+        <div className="dogs-purpose-section">
+          <button
+            className="dogs-purpose-button"
+            onClick={() => setIsGalleryOpen(true)}
+          >
+            A Dog's Purpose
+          </button>
+        </div>
+
+        {/* Modal galerii */}
+        {isGalleryOpen && (
+          <GalleryModal
+            galleryType="games"
+            onClose={() => setIsGalleryOpen(false)}
+          />
+        )}
       </div>
     </div>
   );

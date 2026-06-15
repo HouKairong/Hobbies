@@ -2,6 +2,7 @@ import "./Series.css";
 import { useState, useMemo, useEffect, useRef } from "react";
 import seriesData from "../data/seriesData";
 import seriesDescriptions from "../data/seriesDescriptions";
+import GalleryModal from "../elements/GalleryModal";
 
 const dimensionsList = ["Wszystkie", "Overworld", "Nether", "End"];
 
@@ -9,6 +10,7 @@ const Series = () => {
   const [selectedDimension, setSelectedDimension] = useState("Wszystkie");
   const [search, setSearch] = useState("");
   const [selectedSeries, setSelectedSeries] = useState(null);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
   const descriptionRef = useRef(null);
 
@@ -38,7 +40,6 @@ const Series = () => {
     <div className="series-wrapper">
       <div className="series-container">
         <h2>Seriale</h2>
-
         <div className="series-controls">
           <input
             type="text"
@@ -63,9 +64,7 @@ const Series = () => {
             ))}
           </select>
         </div>
-
         <p className="series-count">Liczba seriali: {filteredSeries.length}</p>
-
         <ul className="series-list">
           {filteredSeries.map((serie, index) => (
             <li
@@ -81,7 +80,6 @@ const Series = () => {
             </li>
           ))}
         </ul>
-
         {selectedSeries && seriesDescriptions[selectedSeries] && (
           <div className="series-description" ref={descriptionRef}>
             <h3>{selectedSeries}</h3>
@@ -114,6 +112,20 @@ const Series = () => {
               {seriesDescriptions[selectedSeries].description}
             </p>
           </div>
+        )}
+        <div className="dogs-purpose-section">
+          <button
+            className="dogs-purpose-button"
+            onClick={() => setIsGalleryOpen(true)}
+          >
+            A Dog's Purpose
+          </button>
+        </div>
+        {isGalleryOpen && (
+          <GalleryModal
+            galleryType="series"
+            onClose={() => setIsGalleryOpen(false)}
+          />
         )}
       </div>
     </div>
