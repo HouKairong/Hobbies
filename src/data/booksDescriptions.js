@@ -89,6 +89,105 @@ const booksDescriptions = {
     description:
       "Death Note opowiada historię genialnego licealisty imieniem Light Yagami, który znajduje tajemniczy notes upuszczony przez shinigamiego Ryūka. Notes ten posiada niesamowite właściwości: jego użytkownik, wpisując do niego imię oraz nazwisko osoby, której twarz zna, powoduje śmierć tej osoby w określonych okolicznościach w ciągu 40 sekund. Jeśli w ciągu tych 40 sekund od zapisania imienia ofiary nie zostanie wpisana przyczyna śmierci, osoba umrze na zawał serca. Light dostrzega w tym szansę oczyszczenia świata ze wszelkiego zła. Pod pseudonimem Kira (od angielskiego killer), który to nadali mu jego zwolennicy, zaczyna wprowadzać swój plan w życie. Na drodze staje mu jednak tajemniczy L – legendarny detektyw, geniusz, postrzegający działania Kiry jako zwykłe morderstwa.",
   },
+  "Wiedźmin Ronin": {
+    world: "Wizard City, Japonia (stylizowana)",
+    protagonist: "Geralt (ronin), wędrowni wojownicy",
+    antagonist: "Yokai, miejscowe rody",
+    location: "Feudalna, alternatywna Japonia",
+    why: "Manga łączy motywy wiedźmińskie z estetyką samurajską — pasuje jako uzupełnienie kanonu głównego",
+    description:
+      "Mroczna reinterpretacja opowieści wiedźmińskich w klimatach samurajskich: samotny łowca potworów funkcjonuje jako ronin, stając przed yokai, klanowymi intrygami i dylematami honoru.",
+  },
+  "Assassin's Creed: Miecz Shao Jun": {
+    world: "Historyczne Chiny / Aquila",
+    protagonist: "Shao Jun",
+    antagonist: "Tajni przeciwnicy Asasynów i Templariusze",
+    location: "Chiny (okres dynastii Ming)",
+    why: "Adaptacja uniwersum Assassin's Creed z perspektywy chińskiej bohaterki — ciekawy most między historią a fikcją",
+    description:
+      "Komiksowa/mangowa adaptacja losów Shao Jun, członkini Zakonu Asasynów, której przygody splatają się z polityką, zemstą i umiejętnościami skrytobójczymi.",
+  },
+  "Persona 5": {
+    world: "Wysteria / współczesne Tokio",
+    protagonist: "Joker (Ren Amamiya) i Phantom Thieves",
+    antagonist: "Kaneshiro, korporacyjne i polityczne siły",
+    location: "Współczesne Tokio",
+    why: "Manga adaptuje popularną grę, łącząc elementy psikologiczne, heist i nadprzyrodzone światy",
+    description:
+      "Opowieść o grupie licealistów prowadzących podwójne życie: w dzień uczniowie, w nocy złodzieje serc, którzy wkraczają do metafizycznych pałaców, by obnażać korupcję i zło.",
+  },
+  "Królestwo Kwarcu": {
+    world: "Fantastyczny świat kryształów",
+    protagonist: "Młody bohater/ka",
+    antagonist: "Władcy Kwarcu, potwory",
+    location: "Królestwo złożone z krystalicznych krain",
+    why: "Fantasy oparte na motywach magii kryształów — pasuje do reszty kolekcji",
+    description:
+      "Przygodowa seria fantasy oparta na mitologii kryształów, politycznych intrygach i turniejach mocy.",
+  },
+  "Inkwizytor Wiedźm": {
+    world: "Mroczne krainy / Aquila",
+    protagonist: "Inkwizytor",
+    antagonist: "Czarownice, herezje",
+    location: "Średniowieczne, mroczne krainy",
+    why: "Ciemniejsza, bardziej religijna kontrapunkcja do klasycznych opowieści o wiedźminach",
+    description:
+      "Seria przedstawia inkwizytora tropiącego i osądzającego praktyki magiczne — granica między prawnym porządkiem a barbarzyństwem zostaje wystawiona na próbę.",
+  },
+  "Alice in Borderland": {
+    world: "Postapokaliptyczne Tokio / Wysteria",
+    protagonist: "Arisu i jego towarzysze",
+    antagonist: "Game Masters, brutalne zasady gier",
+    location: "Alternatywne Tokio opanowane przez śmiertelne gry",
+    why: "Survivalowe wyzwania, psychologiczne gry i dystopijny klimat — dobrze pasuje do kolekcji",
+    description:
+      "Grupa młodych ludzi przenosi się do opustoszałego miasta, gdzie zmuszeni są rozwiązywać śmiertelne gry, aby przetrwać. Historia bada granice ludzkiej moralności i woli przetrwania.",
+  },
+  "How NOT to Summon a Demon Lord": {
+    world: "Wirtualne MMORPG / Aquila",
+    protagonist: "Takuma Sakamoto (Diaboł Lord)",
+    antagonist: "Demony, gracze przeciwne",
+    location: "Świat gry oraz elementy realnego świata",
+    why: "Isekai i komedia z elementami fantasy — popularny tytuł mangowy",
+    description:
+      "Komediowo-eroiczna seria isekai, gdzie gracz uwięziony w ciele potężnego awatara próbuje odnaleźć drogę powrotną, mierząc się z demonami, society i własnym ego.",
+  },
+  "Dumb Mutt Girlfriend": {
+    world: "Współczesne, slice-of-life",
+    protagonist: "Para protagonistów",
+    antagonist: "Codzienne przeszkody",
+    location: "Współczesne miasto",
+    why: "Lekka manga slice-of-life o relacjach i perypetiach",
+    description:
+      "Komiks opowiadający zabawne i ciepłe historie pary, skupiając się na relacjach, nieporozumieniach i humorze codziennego życia.",
+  },
+  "Księga smoków świata": {
+    world: "Grizzleheim, Dragonspyre",
+    protagonist: "Badacze i kronikarze",
+    antagonist: "Przeciwnicy poznania, drapieżne gatunki",
+    location: "Różne krainy świata",
+    why: "Rozszerza wiedzę o smokach i ich roli w świecie — naturalne uzupełnienie kanonu",
+    description:
+      "Ilustrowany przewodnik po smokach: ich taksonomia, historia, zwyczaje i wpływ na kulturę oraz magię świata.",
+  },
+  "Myśl jak filozof": {
+    world: "Aquila / intelektualne kręgi",
+    protagonist: "Filozofowie i myśliciele",
+    antagonist: "Ignorancja, błędne rozumowanie",
+    location: "Uniwersytety i dialogi",
+    why: "Wprowadzenie do sposobu myślenia filozoficznego — przydatne dla zainteresowań autora",
+    description:
+      "Książka popularnonaukowa wyjaśniająca podstawowe techniki rozumowania filozoficznego oraz klasyczne problemy etyki, epistemologii i metafizyki.",
+  },
+  "Historia Piekła": {
+    world: "Dragonspyre / mityczne zaświaty",
+    protagonist: "Kronikarze, reinterpretacje postaci",
+    antagonist: "Demony, upadłe byty",
+    location: "Piekło w różnych tradycjach kulturowych",
+    why: "Analiza mitologii piekła i jej wpływu na kulturę — zgodne z zainteresowaniem Boską Komedią",
+    description:
+      "Kompendium historii i interpretacji piekła w literaturze, religii i sztuce — od starożytności po współczesne interpretacje.",
+  },
 };
 
 export default booksDescriptions;

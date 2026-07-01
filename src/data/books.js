@@ -640,6 +640,36 @@ const books = {
       description:
         "Sherlock Holmes and The Servants of Hell to mroczna, utrzymana w klimacie grozy opowieść łącząca klasyczny styl przygód Sherlocka Holmesa z elementami horroru inspirowanego światem Clive’a Barkera, w której słynny detektyw oraz dr Watson mierzą się z przerażającą, nadprzyrodzoną zagadką związaną z tajemniczą konfiguracją i piekielnymi istotami z innego wymiaru, prowadząc śledztwo pełne niepokoju, brutalności i stopniowego odkrywania, że granica między racjonalnym światem a koszmarem jest znacznie cieńsza, niż kiedykolwiek przypuszczali.",
     },
+    {
+      title: "Moriarty the Patriot",
+      description:
+        "Manga 'Moriarty the Patriot' (憂国のモリアーティ) – reinterpretacja postaci Profesora Moriarty'ego w duchu kryminału i intrygi społecznej. Poniżej lista tomów (stan na podstawie źródeł: 23 tomy).",
+      stories: [
+        { title: "Tom 1", description: "" },
+        { title: "Tom 2", description: "" },
+        { title: "Tom 3", description: "" },
+        { title: "Tom 4", description: "" },
+        { title: "Tom 5", description: "" },
+        { title: "Tom 6", description: "" },
+        { title: "Tom 7", description: "" },
+        { title: "Tom 8", description: "" },
+        { title: "Tom 9", description: "" },
+        { title: "Tom 10", description: "" },
+        { title: "Tom 11", description: "" },
+        { title: "Tom 12", description: "" },
+        { title: "Tom 13", description: "" },
+        { title: "Tom 14", description: "" },
+        { title: "Tom 15", description: "" },
+        { title: "Tom 16", description: "" },
+        { title: "Tom 17", description: "" },
+        { title: "Tom 18", description: "" },
+        { title: "Tom 19", description: "" },
+        { title: "Tom 20", description: "" },
+        { title: "Tom 21", description: "" },
+        { title: "Tom 22", description: "" },
+        { title: "Tom 23", description: "" },
+      ],
+    },
   ],
   "Książki o Chinach": [
     {

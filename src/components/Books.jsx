@@ -3,6 +3,7 @@ import { useState, useRef } from "react";
 import komedia from "../../public/images/komedia.jpg";
 import books from "../data/books";
 import booksManga from "../data/booksManga";
+import booksIntroduction from "../data/booksIntroduction";
 import booksDescriptions from "../data/booksDescriptions";
 import GalleryModal from "../elements/GalleryModal";
 
@@ -29,7 +30,12 @@ const Books = () => {
     "Death Note": "Wysteria, Dragonspyre",
   };
 
-  const currentBooks = selectedCanon === "main" ? books : booksManga;
+  const currentBooks =
+    selectedCanon === "manga"
+      ? booksManga
+      : selectedCanon === "introduction"
+        ? booksIntroduction
+        : books;
 
   const toggleSeries = (series) => {
     setSelectedSeries(selectedSeries === series ? null : series);
@@ -83,6 +89,18 @@ const Books = () => {
         <h2 className="books-title">Książki</h2>
         {/* SWITCH KANONU */}
         <div className="books-canon-switch">
+          <button
+            className={selectedCanon === "introduction" ? "active" : ""}
+            onClick={() => {
+              setSelectedCanon("introduction");
+              setSelectedSeries(null);
+              setSelectedBook(null);
+              setSelectedStory(null);
+            }}
+          >
+            Wprowadzenie
+          </button>
+
           <button
             className={selectedCanon === "main" ? "active" : ""}
             onClick={() => {
@@ -307,7 +325,7 @@ const Books = () => {
         </div>
         {isGalleryOpen && (
           <GalleryModal
-            galleryType={selectedCanon === "main" ? "books" : "manga"}
+            galleryType={selectedCanon === "manga" ? "manga" : "books"}
             onClose={() => setIsGalleryOpen(false)}
           />
         )}

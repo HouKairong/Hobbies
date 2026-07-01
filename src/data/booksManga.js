@@ -37,6 +37,39 @@ const booksManga = {
     },
   ],
 
+  "Moriarty the Patriot": [
+    {
+      title: "Główna seria",
+      description:
+        "Manga 'Moriarty the Patriot' — kryminał / thriller (lista tomów poniżej).",
+      stories: [
+        { title: "Tom 1", description: "" },
+        { title: "Tom 2", description: "" },
+        { title: "Tom 3", description: "" },
+        { title: "Tom 4", description: "" },
+        { title: "Tom 5", description: "" },
+        { title: "Tom 6", description: "" },
+        { title: "Tom 7", description: "" },
+        { title: "Tom 8", description: "" },
+        { title: "Tom 9", description: "" },
+        { title: "Tom 10", description: "" },
+        { title: "Tom 11", description: "" },
+        { title: "Tom 12", description: "" },
+        { title: "Tom 13", description: "" },
+        { title: "Tom 14", description: "" },
+        { title: "Tom 15", description: "" },
+        { title: "Tom 16", description: "" },
+        { title: "Tom 17", description: "" },
+        { title: "Tom 18", description: "" },
+        { title: "Tom 19", description: "" },
+        { title: "Tom 20", description: "" },
+        { title: "Tom 21", description: "" },
+        { title: "Tom 22", description: "" },
+        { title: "Tom 23", description: "" },
+      ],
+    },
+  ],
+
   "Assassin's Creed: Miecz Shao Jun": [
     { title: "Tom 1", description: "" },
     { title: "Tom 2", description: "" },
@@ -267,6 +300,42 @@ const booksManga = {
         { title: "Rozdział 4", description: "" },
         { title: "Rozdział 5", description: "" },
         { title: "Rozdział 6", description: "" },
+      ],
+    },
+  ],
+  "Oko Horusa": [
+    {
+      title: "Oko Horusa",
+      description: "",
+      stories: [
+        { title: "Tom 1", description: "" },
+        { title: "Tom 2", description: "" },
+        { title: "Tom 3", description: "" },
+        { title: "Tom 4", description: "" },
+        { title: "Tom 5", description: "" },
+        { title: "Tom 6", description: "" },
+        { title: "Tom 7", description: "" },
+        { title: "Tom 8", description: "" },
+        { title: "Tom 9", description: "" },
+      ],
+    },
+  ],
+
+  "Elden Ring": [
+    {
+      title: "Elden Ring",
+      description: "",
+      stories: [
+        { title: "Tom 1", description: "" },
+        { title: "Tom 2", description: "" },
+        { title: "Tom 3", description: "" },
+        { title: "Tom 4", description: "" },
+        { title: "Tom 5", description: "" },
+        { title: "Tom 6", description: "" },
+        { title: "Tom 7", description: "" },
+        { title: "Tom 8", description: "" },
+        { title: "Tom 9", description: "" },
+        { title: "Tom 10", description: "" },
       ],
     },
   ],
