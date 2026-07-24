@@ -1,38 +1,125 @@
 const booksManga = {
-  "Wiedźmin Ronin": [
+  "Królestwo Kwarcu": [
+    { title: "Tom 1", description: "" },
+    { title: "Tom 2", description: "" },
+    { title: "Tom 3", description: "" },
+    { title: "Tom 4", description: "" },
+    { title: "Tom 5", description: "" },
+  ],
+
+  "How NOT to Summon a Demon Lord": [
+    { title: "Tom 1", description: "" },
+    { title: "Tom 2", description: "" },
+    { title: "Tom 3", description: "" },
+    { title: "Tom 4", description: "" },
+    { title: "Tom 5", description: "" },
+    { title: "Tom 6", description: "" },
+    { title: "Tom 7", description: "" },
+    { title: "Tom 8", description: "" },
+    { title: "Tom 9", description: "" },
+    { title: "Tom 10", description: "" },
+    { title: "Tom 11", description: "" },
+    { title: "Tom 12", description: "" },
+    { title: "Tom 13", description: "" },
+    { title: "Tom 14", description: "" },
+  ],
+
+  "Dumb Mutt Girlfriend": [
     {
-      title: "Sekcja 1: Przebudzenie w nowym świecie",
+      title: "Rozdziały",
       description: "",
       stories: [
-        { title: "Pierwsze zlecenie", description: "" },
-        { title: "Miasto obcych zasad", description: "" },
+        { title: "Rozdział 1", description: "" },
+        { title: "Rozdział 2", description: "" },
+        { title: "Rozdział 3", description: "" },
+        { title: "Rozdział 4", description: "" },
+        { title: "Rozdział 5", description: "" },
+        { title: "Rozdział 6", description: "" },
+      ],
+    },
+  ],
+
+  Wiedźmin: [
+    {
+      title: "Komiksy Macieja Parowskiego i Bogusława Polcha",
+      description: "Pierwsze komiksy osadzone w świecie Wiedźmina",
+      stories: [
+        { title: "Droga Bez Powrotu", description: "" },
+        { title: "Zdrada", description: "" },
+        { title: "Geralt", description: "" },
+        { title: "Mniejsze Zło", description: "" },
+        { title: "Ostatnie Życzenie", description: "" },
+        { title: "Granica Możliwości", description: "" },
       ],
     },
 
     {
-      title: "Sekcja 2: Trop Yuki-onna",
-      description: "",
+      title: "Oryginalne komiksy CD Projekt RED",
+      description: "Komiksy w świecie gier Wiedźmin",
       stories: [
-        { title: "Plotki i duchy", description: "" },
-        { title: "Ślad w śniegu", description: "" },
+        { title: "Racja Stanu", description: "" },
+        { title: "Dom ze szkła", description: "" },
+        { title: "Dzieci lisicy", description: "" },
+        { title: "Jak zabijać potwory", description: "" },
+        { title: "Klątwa kruków", description: "" },
+        { title: "Córka płomienia", description: "" },
+        { title: "Zatarte wspomnienia", description: "" },
+        { title: "Once Upon a Time in the Woods", description: "" },
+        { title: "Wiedźmi Lament", description: "" },
+        { title: "Frog Kiss", description: "" },
+        { title: "Ballada o dwóch wilkach", description: "" },
+        { title: "Dzikie zwierzęta", description: "" },
+        { title: "Corvo Bianco", description: "" },
       ],
     },
 
     {
-      title: "Sekcja 3: Yokai i polowania",
+      title: "Komiksowe adaptacje opowiadań CD Projekt RED",
+      description: "Jak w tytule",
+      stories: [
+        { title: "Ziarno prawdy", description: "" },
+        { title: "Mniejsze zło", description: "" },
+        { title: "Kraniec świata[", description: "" },
+        { title: "Kwestia ceny", description: "" },
+        { title: "Wiedźmin", description: "" },
+        { title: "Ostatnie życzenie", description: "" },
+      ],
+    },
+
+    { title: "Komiks Wiedźmineczka", description: "" },
+  ],
+
+  "Persona 5": [
+    {
+      title: "Główna seria (Manga adaptation)",
       description: "",
       stories: [
-        { title: "Kappa w rzece", description: "" },
-        { title: "Tengu nad górami", description: "" },
+        { title: "Tom 1", description: "" },
+        { title: "Tom 2", description: "" },
+        { title: "Tom 3", description: "" },
+        { title: "Tom 4", description: "" },
+        { title: "Tom 5", description: "" },
+        { title: "Tom 6", description: "" },
+        { title: "Tom 7", description: "" },
+        { title: "Tom 8", description: "" },
+        { title: "Tom 9", description: "" },
+        { title: "Tom 10", description: "" },
+        { title: "Tom 11", description: "" },
+        { title: "Tom 12", description: "" },
+        { title: "Tom 13", description: "" },
+        { title: "Tom 14", description: "" },
+        { title: "Tom 15", description: "" },
+        { title: "Tom 16", description: "" },
       ],
     },
 
     {
-      title: "Sekcja 4: Prawda o Pani Śniegu",
+      title: "Mementos Mission",
       description: "",
       stories: [
-        { title: "Spotkanie", description: "" },
-        { title: "Wybór ronina", description: "" },
+        { title: "Tom 1", description: "" },
+        { title: "Tom 2", description: "" },
+        { title: "Tom 3", description: "" },
       ],
     },
   ],
@@ -70,11 +157,51 @@ const booksManga = {
     },
   ],
 
+  "Inkwizytor Wiedźm": [
+    {
+      title: "Tom 1",
+      description: "",
+    },
+    {
+      title: "Tom 2",
+      description: "",
+    },
+  ],
+
   "Assassin's Creed: Miecz Shao Jun": [
     { title: "Tom 1", description: "" },
     { title: "Tom 2", description: "" },
     { title: "Tom 3", description: "" },
     { title: "Tom 4", description: "" },
+  ],
+
+  "Assassin's Creed: Dynasty": [
+    { title: "Tom 1", description: "" },
+    { title: "Tom 2", description: "" },
+    { title: "Tom 3", description: "" },
+    { title: "Tom 4", description: "" },
+    { title: "Tom 5", description: "" },
+  ],
+
+  "Wiedźmin Ronin": [{ title: "Komiks Wiedźmin Ronin", description: "" }],
+
+  "Wojny i smoki": [
+    { title: "Tom 1", description: "" },
+    { title: "Tom 2", description: "" },
+    { title: "Tom 3", description: "" },
+    { title: "Tom 4", description: "" },
+  ],
+
+  "Elden Ring": [
+    { title: "Tom 1", description: "" },
+    { title: "Tom 2", description: "" },
+    { title: "Tom 3", description: "" },
+    { title: "Tom 4", description: "" },
+    { title: "Tom 5", description: "" },
+    { title: "Tom 6", description: "" },
+    { title: "Tom 7", description: "" },
+    { title: "Tom 8", description: "" },
+    { title: "Tom 9", description: "" },
   ],
 
   "Death Note": [
@@ -167,60 +294,6 @@ const booksManga = {
     },
   ],
 
-  "Persona 5": [
-    {
-      title: "Główna seria (Manga adaptation)",
-      description: "",
-      stories: [
-        { title: "Tom 1", description: "" },
-        { title: "Tom 2", description: "" },
-        { title: "Tom 3", description: "" },
-        { title: "Tom 4", description: "" },
-        { title: "Tom 5", description: "" },
-        { title: "Tom 6", description: "" },
-        { title: "Tom 7", description: "" },
-        { title: "Tom 8", description: "" },
-        { title: "Tom 9", description: "" },
-        { title: "Tom 10", description: "" },
-        { title: "Tom 11", description: "" },
-        { title: "Tom 12", description: "" },
-        { title: "Tom 13", description: "" },
-        { title: "Tom 14", description: "" },
-        { title: "Tom 15", description: "" },
-        { title: "Tom 16", description: "" },
-      ],
-    },
-
-    {
-      title: "Mementos Mission",
-      description: "",
-      stories: [
-        { title: "Tom 1", description: "" },
-        { title: "Tom 2", description: "" },
-        { title: "Tom 3", description: "" },
-      ],
-    },
-  ],
-
-  "Królestwo Kwarcu": [
-    { title: "Tom 1", description: "" },
-    { title: "Tom 2", description: "" },
-    { title: "Tom 3", description: "" },
-    { title: "Tom 4", description: "" },
-    { title: "Tom 5", description: "" },
-  ],
-
-  "Inkwizytor Wiedźm": [
-    {
-      title: "Tom 1",
-      description: "",
-    },
-    {
-      title: "Tom 2",
-      description: "",
-    },
-  ],
-
   "Alice in Borderland": [
     {
       title: "Główna seria",
@@ -272,37 +345,46 @@ const booksManga = {
     },
   ],
 
-  "How NOT to Summon a Demon Lord": [
-    { title: "Tom 1", description: "" },
-    { title: "Tom 2", description: "" },
-    { title: "Tom 3", description: "" },
-    { title: "Tom 4", description: "" },
-    { title: "Tom 5", description: "" },
-    { title: "Tom 6", description: "" },
-    { title: "Tom 7", description: "" },
-    { title: "Tom 8", description: "" },
-    { title: "Tom 9", description: "" },
-    { title: "Tom 10", description: "" },
-    { title: "Tom 11", description: "" },
-    { title: "Tom 12", description: "" },
-    { title: "Tom 13", description: "" },
-    { title: "Tom 14", description: "" },
+  "Jak wytresować smoka": [
+    { title: "The Serpent's Heir", description: "" },
+    { title: "Dragonvine", description: "" },
   ],
 
-  "Dumb Mutt Girlfriend": [
+  "God of War": [
     {
-      title: "Rozdziały",
+      title: "Komiks DC",
       description: "",
       stories: [
-        { title: "Rozdział 1", description: "" },
-        { title: "Rozdział 2", description: "" },
-        { title: "Rozdział 3", description: "" },
-        { title: "Rozdział 4", description: "" },
-        { title: "Rozdział 5", description: "" },
-        { title: "Rozdział 6", description: "" },
+        { title: "Tom 1", description: "" },
+        { title: "Tom 2", description: "" },
+        { title: "Tom 3", description: "" },
+        { title: "Tom 4", description: "" },
+        { title: "Tom 5", description: "" },
+        { title: "Tom 6", description: "" },
+      ],
+    },
+    {
+      title: "Komiks Dark Horse",
+      description: "",
+      stories: [
+        { title: "Tom 1", description: "" },
+        { title: "Tom 2", description: "" },
+        { title: "Tom 3", description: "" },
+        { title: "Tom 4", description: "" },
+      ],
+    },
+    {
+      title: "Fallen God",
+      description: "",
+      stories: [
+        { title: "Tom 1", description: "" },
+        { title: "Tom 2", description: "" },
+        { title: "Tom 3", description: "" },
+        { title: "Tom 4", description: "" },
       ],
     },
   ],
+
   "Oko Horusa": [
     {
       title: "Oko Horusa",
@@ -317,25 +399,6 @@ const booksManga = {
         { title: "Tom 7", description: "" },
         { title: "Tom 8", description: "" },
         { title: "Tom 9", description: "" },
-      ],
-    },
-  ],
-
-  "Elden Ring": [
-    {
-      title: "Elden Ring",
-      description: "",
-      stories: [
-        { title: "Tom 1", description: "" },
-        { title: "Tom 2", description: "" },
-        { title: "Tom 3", description: "" },
-        { title: "Tom 4", description: "" },
-        { title: "Tom 5", description: "" },
-        { title: "Tom 6", description: "" },
-        { title: "Tom 7", description: "" },
-        { title: "Tom 8", description: "" },
-        { title: "Tom 9", description: "" },
-        { title: "Tom 10", description: "" },
       ],
     },
   ],

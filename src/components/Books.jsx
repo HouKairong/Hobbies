@@ -19,7 +19,7 @@ const Books = () => {
   const storyRefs = useRef({});
 
   const seriesWorlds = {
-    Wiedźmin: "Wizard City , Grizzleheim",
+    Wiedźmin: "Wizard City , Grizzleheim, Krokotopia",
     "Pieśń Lodu i Ognia": "Krokotopia, Grizzleheim",
     "Sherlock Holmes": "Marleybone, Dragonspyre",
     "Książki o Chinach": "Mooshu",
@@ -28,6 +28,7 @@ const Books = () => {
     "Jak Wytresować Smoka": "Grizzleheim, Aquila",
     "Obrona Sokratesa": "Aquila",
     "Death Note": "Wysteria, Dragonspyre",
+    "Królestwo Kwarcu": "Wizard City, Dragonspyre",
   };
 
   const currentBooks =
@@ -122,7 +123,7 @@ const Books = () => {
               setSelectedStory(null);
             }}
           >
-            Kanon mang
+            Kanon komiksowy
           </button>
         </div>
         {/* LISTA SERII */}

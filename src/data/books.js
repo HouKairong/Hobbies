@@ -760,6 +760,7 @@ const books = {
         },
       ],
     },
+    { title: "Komiks Wiedźmin Ronin", description: "" },
   ],
   "Boska Komedia": [
     {

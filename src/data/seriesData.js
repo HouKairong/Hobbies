@@ -105,25 +105,25 @@ const seriesData = [
     title: "Gwiezdne Wojny: The Mandalorian",
     dimensions: ["Overworld", "Nether"],
   },
-  { title: "Gwiezdne Wojny: Andor", dimensions: ["Overworld"] },
-  { title: "Gwiezdne Wojny: Ahsoka", dimensions: ["Overworld", "End"] },
-  {
-    title: "Gwiezdne Wojny: Obi-Wan Kenobi",
-    dimensions: ["Overworld", "Nether"],
-  },
-  { title: "Gwiezdne Wojny: Księga Boby Fetta", dimensions: ["Overworld"] },
-  { title: "Gwiezdne Wojny: Akolita", dimensions: ["End", "Nether"] },
-  {
-    title: "Gwiezdne Wojny: Wojny Klonów",
-    dimensions: ["Overworld", "Nether"],
-  },
-  { title: "Gwiezdne Wojny: Rebelianci", dimensions: ["Overworld", "End"] },
-  { title: "Gwiezdne Wojny: Parszywa Zgraja", dimensions: ["Overworld"] },
-  {
-    title: "Gwiezdne Wojny: Opowieści z Imperium",
-    dimensions: ["Overworld", "Nether"],
-  },
-  { title: "Gwiezdne Wojny: Opowieści Jedi", dimensions: ["Overworld", "End"] },
+  // { title: "Gwiezdne Wojny: Andor", dimensions: ["Overworld"] },
+  // { title: "Gwiezdne Wojny: Ahsoka", dimensions: ["Overworld", "End"] },
+  // {
+  //   title: "Gwiezdne Wojny: Obi-Wan Kenobi",
+  //   dimensions: ["Overworld", "Nether"],
+  // },
+  // { title: "Gwiezdne Wojny: Księga Boby Fetta", dimensions: ["Overworld"] },
+  // { title: "Gwiezdne Wojny: Akolita", dimensions: ["End", "Nether"] },
+  // {
+  //   title: "Gwiezdne Wojny: Wojny Klonów",
+  //   dimensions: ["Overworld", "Nether"],
+  // },
+  // { title: "Gwiezdne Wojny: Rebelianci", dimensions: ["Overworld", "End"] },
+  // { title: "Gwiezdne Wojny: Parszywa Zgraja", dimensions: ["Overworld"] },
+  // {
+  //   title: "Gwiezdne Wojny: Opowieści z Imperium",
+  //   dimensions: ["Overworld", "Nether"],
+  // },
+  // { title: "Gwiezdne Wojny: Opowieści Jedi", dimensions: ["Overworld", "End"] },
 ];
 
 export default seriesData;

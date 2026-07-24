@@ -227,7 +227,7 @@ const gamesData = [
     title: "Persona 5 Tactica",
     worlds: ["Wysteria", "Polaris", "Mooshu", "Dragonspyre", "Marleybone"],
   },
-  { title: "Persona 5 The Phantom X", worlds: ["Wysteria"] },
+
   { title: "Persona 5 Dancing in The Starlight", worlds: ["Wysteria"] },
   { title: "Persona Q", worlds: ["Wysteria"] },
   { title: "Persona Q2", worlds: ["Wysteria"] },
@@ -336,7 +336,7 @@ const gamesData = [
   { title: "Gujian", worlds: ["Mooshu"] },
   { title: "Gujian 2", worlds: ["Mooshu"] },
   { title: "Gujian 3", worlds: ["Mooshu"] },
-  { title: "Where Winds Meet", worlds: ["Mooshu"] },
+
   { title: "Wuchang Fallen Feathers", worlds: ["Mooshu"] },
   {
     title: "Genshin Impact",

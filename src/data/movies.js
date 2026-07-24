@@ -185,6 +185,11 @@ const movies = {
           description:
             "Świąteczna krótkometrażowa animacja rozgrywająca się po wydarzeniach trzeciego filmu. Mieszkańcy Berk próbują odnaleźć ducha dawnych tradycji, a Czkawka zastanawia się, jak podtrzymać pamięć o smokach w świecie, w którym już ich nie ma. Ciepła i nostalgiczna historia o rodzinie i tęsknocie.",
         },
+        {
+          title: "Remake",
+          description:
+            "Nowa wersja pierwszego filmu, zaktualizowana pod względem animacji i efektów wizualnych.",
+        },
       ],
     },
     {
@@ -265,6 +270,26 @@ const movies = {
           title: "Gra cieni",
           description:
             "Kontynuacja przygód Holmesa, w której staje do walki z arcywrogiem, profesor Moriartym, w serii inteligentnych zagadek i intryg.",
+        },
+        {
+          title: "Holmes i Watson",
+          description:
+            "Komediowa interpretacja przygód Sherlocka Holmesa i doktora Watsona, pełna humoru i absurdalnych sytuacji.",
+        },
+        {
+          title: "Enola Holmes",
+          description:
+            "Film skupiający się na młodszej siostrze Sherlocka, Enoli, która wyrusza na własną przygodę detektywistyczną, odkrywając tajemnice rodziny i Londynu.",
+        },
+        {
+          title: "Enola Holmes 2",
+          description:
+            "Kontynuacja przygód Enoli, w której młoda detektyw staje przed nowymi wyzwaniami i zagadkami, rozwijając swoje umiejętności i odkrywając kolejne sekrety Londynu.",
+        },
+        {
+          title: "Enola Holmes 3",
+          description:
+            "Trzecia część przygód Enoli, w której młoda detektyw mierzy się z jeszcze bardziej skomplikowanymi zagadkami i niebezpieczeństwami, rozwijając swoją niezależność i zdolności detektywistyczne.",
         },
       ],
     },
@@ -526,6 +551,11 @@ const movies = {
           description:
             "Świąteczna krótkometrażowa animacja rozgrywająca się po wydarzeniach trzeciego filmu. Mieszkańcy Berk próbują odnaleźć ducha dawnych tradycji, a Czkawka zastanawia się, jak podtrzymać pamięć o smokach w świecie, w którym już ich nie ma. Ciepła i nostalgiczna historia o rodzinie i tęsknocie.",
         },
+        {
+          title: "Remake",
+          description:
+            "Nowa wersja pierwszego filmu, zaktualizowana pod względem animacji i efektów wizualnych.",
+        },
       ],
     },
 
@@ -542,6 +572,26 @@ const movies = {
           title: "Gra cieni",
           description:
             "Kontynuacja przygód Holmesa, w której staje do walki z arcywrogiem, profesor Moriartym, w serii inteligentnych zagadek i intryg.",
+        },
+        {
+          title: "Holmes i Watson",
+          description:
+            "Komediowa interpretacja przygód Sherlocka Holmesa i doktora Watsona, pełna humoru i absurdalnych sytuacji.",
+        },
+        {
+          title: "Enola Holmes",
+          description:
+            "Film skupiający się na młodszej siostrze Sherlocka, Enoli, która wyrusza na własną przygodę detektywistyczną, odkrywając tajemnice rodziny i Londynu.",
+        },
+        {
+          title: "Enola Holmes 2",
+          description:
+            "Kontynuacja przygód Enoli, w której młoda detektyw staje przed nowymi wyzwaniami i zagadkami, rozwijając swoje umiejętności i odkrywając kolejne sekrety Londynu.",
+        },
+        {
+          title: "Enola Holmes 3",
+          description:
+            "Trzecia część przygód Enoli, w której młoda detektyw mierzy się z jeszcze bardziej skomplikowanymi zagadkami i niebezpieczeństwami, rozwijając swoją niezależność i zdolności detektywistyczne.",
         },
       ],
     },
@@ -886,91 +936,18 @@ const movies = {
       { title: "L'Inferno" },
       { title: "Dante's Inferno: An Animated Epic" },
       { title: "Behemoth" },
-      {
-        title: "DOOM",
-        parts: [
-          {
-            title: "DOOM (2005)",
-            description:
-              "Adaptacja kultowej gry FPS, w której żołnierze stawiają czoła demonicznym siłom na Marsie.",
-          },
-          {
-            title: "DOOM: Anihilacja (2019)",
-            description:
-              "Nowsza ekranizacja gry, koncentrująca się na brutalnej walce z demonami w stacji badawczej na Marsie.",
-          },
-        ],
-      },
-      { title: "Jako w piekle, tak i na ziemi" },
+      { title: "Heretyk" },
+      { title: "Trylogia Dana Browna" },
       { title: "Norymberga" },
       { title: "Czas Apokalipsy" },
-      {
-        title: "Hellraiser",
-        parts: [
-          {
-            title: "Hellraiser: Wysłannik piekieł",
-            description:
-              "Pierwszy film serii, wprowadzający Pinheada i przerażający świat cenobitów oraz ich mroczne pułapki.",
-          },
-          {
-            title: "Hellraiser: Wysłannik piekieł II",
-            description:
-              "Kontynuacja historii, w której nowi bohaterowie stawiają czoła cenobitom i konsekwencjom otwarcia puzzle boxa.",
-          },
-          {
-            title: "Hellraiser III: Piekło na ziemi",
-            description:
-              "Pinhead pojawia się w świecie ludzi, siejąc chaos i grozę w miejskim środowisku.",
-          },
-          {
-            title: "Hellraiser IV: Dziedzictwo krwi",
-            description:
-              "Film kontynuuje mroczną sagę rodziny Cotton i przerażających cenobitów.",
-          },
-          {
-            title: "Hellraiser V: Wrota piekieł",
-            description:
-              "Bohaterowie stają przed kolejnym wyzwaniem związanym z otwarciem piekielnych wrót i powrotem Pinheada.",
-          },
-          {
-            title: "Hellraiser: Droga do piekła",
-            description:
-              "Historia nowych postaci, które próbują poradzić sobie z pułapkami i okrucieństwem cenobitów.",
-          },
-          {
-            title: "Hellraiser: Sekta",
-            description:
-              "Sekta próbująca wykorzystać moce cenobitów napotyka tragiczne konsekwencje swoich działań.",
-          },
-          {
-            title: "Hellraiser: Hellworld.com",
-            description:
-              "Mroczne wydarzenia łączą się z internetową grą, przynosząc Pinheada do współczesnego świata.",
-          },
-          {
-            title: "Hellraiser: Revelations",
-            description:
-              "Nowe wcielenie koszmaru z Pinheadem, w którym bohaterowie próbują przeżyć w brutalnym świecie cenobitów.",
-          },
-          {
-            title: "Hellraiser: Judgment",
-            description:
-              "Cenobici wymierzają sprawiedliwość tym, którzy złamali prawa piekła, w kolejnym mrocznym rozdziale serii.",
-          },
-          {
-            title: "Hellraiser",
-            description:
-              "Reboot serii, wprowadzający nowe spojrzenie na Pinheada i mroczny świat puzzle boxa.",
-          },
-        ],
-      },
+      { title: "Ręką Dantego" },
       { title: "Constantine" },
     ],
 
     "Piekło Lista B": [
       { title: "L'Inferno" },
       { title: "Dante's Inferno: An Animated Epic" },
-      { title: "Behemoth" },
+      { title: "Backrooms: Bez wyjścia" },
       {
         title: "DOOM",
         parts: [
@@ -988,7 +965,7 @@ const movies = {
       },
       { title: "Jako w piekle, tak i na ziemi" },
       { title: "Minecraft: Film" },
-      { title: "Trylogia Dana Browna" },
+      { title: "Death Note" },
       {
         title: "Hellraiser",
         parts: [
@@ -1083,8 +1060,92 @@ const movies = {
           },
         ],
       },
-      { title: "Dzwonnik z Notre Dame", parts: ["Część 1", "Część 2"] },
-      { title: "Ostatni Pojedynek" },
+      {
+        title: "Jak Wytresować Smoka",
+        parts: [
+          {
+            title: "Część 1",
+            description:
+              "Pierwsza część serii, opowiadająca o przyjaźni młodego Wikinga Hiccup’a z niebezpiecznym smokiem Bezzębkiem.",
+          },
+          {
+            title: "Prezent Nocnej Furii",
+            description:
+              "Krótkometrażowa świąteczna opowieść osadzona po wydarzeniach pierwszego filmu. Podczas wikińskiego święta smoków wszystkie stworzenia niespodziewanie odlatują, a Czkawka i Astrid próbują odkryć powód ich tajemniczego zniknięcia. To ciepła historia o więzi między ludźmi i smokami oraz o tym, że czasem trzeba pozwolić komuś odejść.",
+          },
+          {
+            title: "Legenda o Smoku Gnatochrupie",
+            description:
+              "Humorystyczna krótka animacja skupiająca się na Pyskaczu i jego obsesji na punkcie legendarnego Smoka Gnatochrupa. Gdy tajemnicze wydarzenia zaczynają przypominać starą opowieść, bohaterowie muszą zmierzyć się z własnymi lękami i wyobraźnią. Lekka, komediowa historia bawiąca się smokowymi mitami.",
+          },
+          {
+            title: "Księga Smoków",
+            description:
+              "Specjalny odcinek stylizowany na dokument, w którym Czkawka, Astrid i ich przyjaciele prezentują znane gatunki smoków z Berk. To rozszerzenie wiedzy o świecie serii – pełne ciekawostek, humoru i charakterystycznych komentarzy bohaterów.",
+          },
+          {
+            title: "Świt Jeźdźców Smoków",
+            description:
+              "Krótki film będący pomostem między pierwszą a drugą częścią serii. Pokazuje początki organizacji Jeźdźców Smoków i pierwsze wspólne misje Czkawki oraz jego przyjaciół, gdy uczą się współpracować ze swoimi smokami w nowych, niebezpiecznych sytuacjach.",
+          },
+          {
+            title: "Część 2",
+            description:
+              "Hiccup i Bezzębny kontynuują swoje przygody, odkrywając nowe krainy i wyzwania w świecie smoków.",
+          },
+          {
+            title: "Część 3",
+            description:
+              "Finałowa część serii animowanej, w której Hiccup staje przed ostatecznym wyborem dotyczącym świata ludzi i smoków.",
+          },
+
+          {
+            title: "Święta w Domu",
+            description:
+              "Świąteczna krótkometrażowa animacja rozgrywająca się po wydarzeniach trzeciego filmu. Mieszkańcy Berk próbują odnaleźć ducha dawnych tradycji, a Czkawka zastanawia się, jak podtrzymać pamięć o smokach w świecie, w którym już ich nie ma. Ciepła i nostalgiczna historia o rodzinie i tęsknocie.",
+          },
+          {
+            title: "Remake",
+            description:
+              "Nowa wersja pierwszego filmu, zaktualizowana pod względem animacji i efektów wizualnych.",
+          },
+        ],
+      },
+      {
+        title: "Sherlock Holmes",
+        parts: [
+          {
+            title: "Sherlock Holmes",
+            description:
+              "Film wprowadzający genialnego detektywa Sherlocka Holmesa i jego pierwsze konfrontacje z przestępczym światem Londynu.",
+          },
+          {
+            title: "Gra cieni",
+            description:
+              "Kontynuacja przygód Holmesa, w której staje do walki z arcywrogiem, profesor Moriartym, w serii inteligentnych zagadek i intryg.",
+          },
+          {
+            title: "Holmes i Watson",
+            description:
+              "Komediowa interpretacja przygód Sherlocka Holmesa i doktora Watsona, pełna humoru i absurdalnych sytuacji.",
+          },
+          {
+            title: "Enola Holmes",
+            description:
+              "Film skupiający się na młodszej siostrze Sherlocka, Enoli, która wyrusza na własną przygodę detektywistyczną, odkrywając tajemnice rodziny i Londynu.",
+          },
+          {
+            title: "Enola Holmes 2",
+            description:
+              "Kontynuacja przygód Enoli, w której młoda detektyw staje przed nowymi wyzwaniami i zagadkami, rozwijając swoje umiejętności i odkrywając kolejne sekrety Londynu.",
+          },
+          {
+            title: "Enola Holmes 3",
+            description:
+              "Trzecia część przygód Enoli, w której młoda detektyw mierzy się z jeszcze bardziej skomplikowanymi zagadkami i niebezpieczeństwami, rozwijając swoją niezależność i zdolności detektywistyczne.",
+          },
+        ],
+      },
       {
         title: "Śródziemie",
         parts: [
@@ -1125,29 +1186,29 @@ const movies = {
           },
         ],
       },
-      { title: "Siódma pieczęć" },
+      { title: "Imię róży" },
       { title: "Wiking" },
-      { title: "Czarownica: Bajka ludowa z Nowej Anglii" },
+      {
+        title: "Assassin's Creed",
+        parts: [
+          {
+            title: "Assassin's Creed (2016)",
+            description:
+              "Film aktorski osadzony w uniwersum Assassin’s Creed, w którym Callum Lynch zostaje zmuszony do korzystania z technologii Animusa, by przeżyć wspomnienia swojego przodka, Aguilara de Nerhy. Akcja przenosi widza do XV-wiecznej Hiszpanii, gdzie Asasyni walczą z Templariuszami o kontrolę nad Jabłkiem Edenu. Produkcja łączy współczesny wątek sci-fi z historycznym konfliktem o wolność i kontrolę nad ludzkością.",
+          },
+          {
+            title: "Assassin's Creed: Embers",
+            description:
+              "Krótkometrażowa animacja będąca epilogiem historii Ezio Auditore. Ukazuje jego spokojne życie na wsi we Włoszech po zakończeniu wieloletniej walki jako Mistrz Asasynów. Gdy pojawia się tajemnicza chińska asasynka Shao Jun, Ezio musi po raz ostatni zmierzyć się z cieniem swojej przeszłości. To melancholijna opowieść o przemijaniu, dziedzictwie i tym, że nawet legendy są tylko ludźmi.",
+          },
+        ],
+      },
     ],
 
     Niebo: [
       { title: "Między piekłem a niebem" },
       { title: "Niebo istnieje... naprawdę" },
-      {
-        title: "Wszystkie psy idą do Nieba",
-        parts: [
-          {
-            title: "Część 1",
-            description:
-              "Pełna ciepła i wzruszeń animacja opowiada historię psa o imieniu Charlie, który po śmierci trafia do psiego nieba. Nie potrafi jednak pogodzić się z tym, że jego życie się skończyło, więc postanawia wrócić na Ziemię. Tam chce zemścić się na dawnym wspólniku, który doprowadził do jego śmierci. Na swojej drodze Charlie spotyka małą dziewczynkę Anne-Marie, która potrafi rozmawiać ze zwierzętami. Dzięki niej zaczyna patrzeć na świat inaczej i uczy się, czym są przyjaźń, poświęcenie i dobroć. Film pokazuje, że nawet ktoś, kto popełnia błędy, może się zmienić i zrobić coś dobrego dla innych.",
-          },
-          {
-            title: "Część 2",
-            description:
-              "W drugiej części Charlie mieszka już w psim niebie razem ze swoim przyjacielem Itchym. Spokojne życie zostaje jednak przerwane, gdy z nieba znika magiczny róg archanioła Gabriela. Kradnie go pies o imieniu Carface, który ucieka na Ziemię i planuje wykorzystać jego moc. Charlie i Itchy schodzą więc na Ziemię, aby odzyskać róg. Podczas swojej misji poznają chłopca Davida, który marzy o znalezieniu prawdziwej rodziny. Charlie pomaga mu uwierzyć w siebie i odkrywa, że przyjaźń oraz pomaganie innym są ważniejsze niż własne pragnienia.",
-          },
-        ],
-      },
+      { title: "Małpi Król" },
       { title: "Herkules" },
       {
         title: "Starcie Tytanów",
@@ -1164,8 +1225,9 @@ const movies = {
           },
         ],
       },
+      { title: "Odyseja" },
       { title: "Pasja" },
-      { title: "Noe: Wybrany przez Boga" },
+
       {
         title: "Avatar",
         parts: [
@@ -1564,6 +1626,7 @@ const movies = {
     { title: "Kot w butach: Ostatnie życzenie" },
     { title: "Coco" },
     { title: "Idiokracja" },
+    { title: "Backrooms: Bez wyjścia" },
   ],
   IPiN: [
     {
@@ -1765,6 +1828,11 @@ const movies = {
           title: "Święta w Domu",
           description:
             "Świąteczna krótkometrażowa animacja rozgrywająca się po wydarzeniach trzeciego filmu. Mieszkańcy Berk próbują odnaleźć ducha dawnych tradycji, a Czkawka zastanawia się, jak podtrzymać pamięć o smokach w świecie, w którym już ich nie ma. Ciepła i nostalgiczna historia o rodzinie i tęsknocie.",
+        },
+        {
+          title: "Remake",
+          description:
+            "Nowa wersja pierwszego filmu, zaktualizowana pod względem animacji i efektów wizualnych.",
         },
       ],
     },
