@@ -929,6 +929,14 @@ const movies = {
     },
     { title: "Death Note" },
     { title: "Avatar: Ostatni Władca Wiatru" },
+    {
+      title: "White Snake",
+      description: "",
+      parts: [{ title: "White Snake" }, { title: "Green Snake" }],
+    },
+    { title: "Creation of the Gods I: Kingdom of Storms" },
+    { title: "Painted Skin" },
+    { title: "The Wandering Earth" },
   ],
 
   "Boska Komedia": {

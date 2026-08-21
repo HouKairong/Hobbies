@@ -25,6 +25,46 @@ const chinaTopics = {
     },
   ],
 
+  Kanony: [
+    {
+      title: "Książki",
+      subitems: [
+        { title: "Wiedźmin → Wu Xin Monster Killer" },
+        { title: "Pieśń Lodu i Ognia → Nirvana in Fire" },
+        { title: "Sherlock Holmes → Young Sherlock" },
+        {
+          title:
+            "Książki o Chinach → Crouching Tiger, Hidden Dragon + Crouching Tiger, Hidden Dragon: Sword of Destiny",
+        },
+        { title: "Boska Komedia → Behemoth" },
+        { title: "Mitologia nordycka → Eternal Love" },
+        { title: "Jak wytresować smoka → Ne Zha + Ne Zha 2" },
+        { title: "Obrona Sokratesa → Confucius" },
+        { title: "Death Note → Under the Skin" },
+      ],
+    },
+    {
+      title: "Wizard101",
+      subitems: [
+        { title: "Wizard City → Eternal Love of Dream" },
+        { title: "Krokotopia → Love in The Dessert" },
+        { title: "Marleybone → Towards the Republic" },
+        { title: "Mooshu → The Yin-Yang Master" },
+        { title: "Dragonspyre → Arsenal Military Academy" },
+        { title: "Grizzleheim → Ice Fantasy" },
+        { title: "Wysteria → White Snake + Green Snake" },
+        { title: "Aquila → Genshin Impact" },
+        { title: "Celestia → Reset" },
+        { title: "Zafaria → Black Myth: Wukong" },
+        { title: "Avalon → The Untamed" },
+        { title: "Azteca → Creation of the Gods I: Kingdom of Storms" },
+        { title: "Khrysalis → Wuchang: Fallen Feathers" },
+        { title: "Darkmoor → Painted Skin" },
+        { title: "Polaris → The Wandering Earth" },
+      ],
+    },
+  ],
+
   Gry: [
     {
       title: "Black Myth: Wukong",

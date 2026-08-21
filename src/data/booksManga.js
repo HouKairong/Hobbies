@@ -87,6 +87,7 @@ const booksManga = {
     },
 
     { title: "Komiks Wiedźmineczka", description: "" },
+    { title: "Komiks Wiedźmin Ronin", description: "" },
   ],
 
   "Persona 5": [
@@ -182,8 +183,6 @@ const booksManga = {
     { title: "Tom 4", description: "" },
     { title: "Tom 5", description: "" },
   ],
-
-  "Wiedźmin Ronin": [{ title: "Komiks Wiedźmin Ronin", description: "" }],
 
   "Wojny i smoki": [
     { title: "Tom 1", description: "" },
@@ -401,6 +400,15 @@ const booksManga = {
         { title: "Tom 9", description: "" },
       ],
     },
+  ],
+
+  "Zapiski Zielarki": [
+    { title: "Tom 1", description: "" },
+    { title: "Tom 2", description: "" },
+    { title: "Tom 3", description: "" },
+    { title: "Tom 4", description: "" },
+    { title: "Tom 5", description: "" },
+    { title: "Tom 6", description: "" },
   ],
 };
 

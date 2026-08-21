@@ -1,6 +1,6 @@
 const booksDescriptions = {
   Wiedźmin: {
-    world: "Wizard City, Grizzleheim",
+    world: "Wizard City, Grizzleheim, Krokotopia, Mooshu",
     protagonist: "Geralt z Rivii, Ciri",
     antagonist:
       "Vilgefortz z Roggeveen, Leo Bonhart, Emhyr var Emreis, potwory",
@@ -22,7 +22,7 @@ const booksDescriptions = {
       "Seria powieści fantasy autorstwa amerykańskiego pisarza George’a R.R. Martina, zaplanowana na siedem tomów, z których jak na razie wydanych zostało pięć: Gra o tron, Starcie królów, Nawałnica mieczy, Uczta dla wron oraz Taniec ze smokami. Trwają prace nad kolejnymi tomami sagi: The Winds of Winter i A Dream of Spring.",
   },
   "Sherlock Holmes": {
-    world: "Marleybone, Dragonspyre",
+    world: "Marleybone, Mooshu, Dragonspyre",
     protagonist: "Sherlock Holmes, John Watson",
     antagonist: "Profesor Moriarty, inni przestępcy",
     location: "Wiktoriańska Anglia (Londyn), lata 1881-1914",
@@ -40,7 +40,7 @@ const booksDescriptions = {
       "Zbiór książek o Chinach to wielowymiarowa podróż przez tysiące lat historii, filozofii, polityki i kultury Państwa Środka. Od klasycznej myśli taoistycznej zawartej w „Daodejing”, przez baśnie i mitologię budującą duchowy fundament cywilizacji, aż po dramatyczne relacje z czasów Mao Zedonga i współczesnych rządów Xi Jinpinga – lektury te ukazują Chiny jako przestrzeń napięcia między tradycją a nowoczesnością. To opowieść o imperium, które wielokrotnie upadało i odradzało się w nowej formie; o społeczeństwie balansującym między kolektywizmem a indywidualnym doświadczeniem; o duchowości, która współistnieje z bezwzględną realpolitik. Zestawienie reportaży, biografii, analiz historycznych i tekstów filozoficznych pozwala spojrzeć na Chiny zarówno z perspektywy elit władzy, jak i zwykłych ludzi, odsłaniając złożoność kraju, który jednocześnie fascynuje, przeraża i inspiruje.",
   },
   "Boska Komedia": {
-    world: "Dragonspyre",
+    world: "Dragonspyre, Wizard City",
     protagonist: "Dante Alighieri",
     antagonist: "Lucyfer, demony",
     location: "Piekło, Czyściec, Niebo, 1300 rok",

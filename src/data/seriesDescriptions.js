@@ -1033,6 +1033,16 @@ const seriesDescriptions = {
     description:
       "Krótkometrażowa antologia ukazująca kluczowe momenty z życia Ahsoki i Dooku. Serial koncentruje się na moralnych wyborach, które prowadzą do światła lub upadku w ciemność.",
   },
+
+  "Zapiski Zielarki": {
+    dimension: "Overworld",
+    why: "Overworld to wymiar eksploracji, odkrywania i budowania wiedzy. Historia zielarki to podróż przez świat przyrody, zbieranie doświadczenia i połączenie tradycji z nowymi odkryciami.",
+    protagonist: "Zielarka",
+    antagonist: "Uprzedzenia, nieznajomość i zagrożenia z natury",
+    location: "Świat pełen przyrody, wioski i zakamarki natury",
+    description:
+      "Serial opowiadający o życiu i przygodach zielarki – kobiety, która poświęca się studiowaniu roślin, ich właściwości i leczniczych zastosowań. Zielarka wędruje po świecie, zbierając wiedzę, rozwiązując problemy społeczności poprzez naturalne środki. To historia o niezależności, mądrości przekazywanej z pokolenia na pokolenie i harmonii z przyrodą.",
+  },
 };
 
 export default seriesDescriptions;

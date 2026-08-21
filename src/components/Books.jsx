@@ -19,11 +19,11 @@ const Books = () => {
   const storyRefs = useRef({});
 
   const seriesWorlds = {
-    Wiedźmin: "Wizard City , Grizzleheim, Krokotopia",
+    Wiedźmin: "Wizard City, Grizzleheim, Krokotopia, Mooshu",
     "Pieśń Lodu i Ognia": "Krokotopia, Grizzleheim",
-    "Sherlock Holmes": "Marleybone, Dragonspyre",
+    "Sherlock Holmes": "Marleybone, Mooshu, Dragonspyre",
     "Książki o Chinach": "Mooshu",
-    "Boska Komedia": "Dragonspyre",
+    "Boska Komedia": "Dragonspyre, Wizard City",
     "Mitologia Nordycka": "Grizzleheim",
     "Jak Wytresować Smoka": "Grizzleheim, Aquila",
     "Obrona Sokratesa": "Aquila",

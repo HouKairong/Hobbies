@@ -631,15 +631,27 @@ const books = {
       ],
     },
     {
-      title: "Studium w szmaragdzie",
+      title: "The Seven-Per-Cent Solution",
+      description:
+        "A novel by Nicholas Meyer, in which Sherlock Holmes confronts his cocaine addiction and teams up with Sigmund Freud to solve a mystery involving a kidnapping and a secret society.",
+    },
+    {
+      title: "Studium w Szmaragdzie",
       description:
         "Narrator, weteran z wojny w Afganistanie opowiada o dochodzeniu, które prowadzi jego współlokator, detektyw doradca z Baker Street, wspomagający pracę inspektora Lestrade ze Scotland Yardu. Przedmiotem jest brutalne morderstwo dokonane na członku jednego z rodów panujących Europy w slumsach londyńskiej dzielnicy Whitechapel. Ofiara nie jest jednak człowiekiem, a obcym, na co wskazuje jego nieludzki wygląd, liczba kończyn i zielona krew na ścianach. Detektyw i narrator zostają przyjęci w pałacu przez Królową Wiktorię, jedną z Wielkich Przedwiecznych, którzy pokonali ludzkość 700 lat temu, a teraz rządzą światem. Detektyw odkrywa, że za morderstwem stoi grupa restauracjonistów, osób, które sprzeciwiają się rządom obcych. Nowela łączy w sobie realia dwóch cykli literackich: powieści i opowiadań kryminalnych o Sherlocku Holmesie Arthura Conana Doyle’a i opowiadań o mitologii Cthulhu H.P. Lovecrafta. Oryginalność tekstu polega na odwróceniu schematu, znanego z opowiadań Doyle’a. Czytelnik na początku, śledząc fabułę podobną do akcji Studium w szkarłacie, uznaje, że narratorem jest doktor Watson, zaś detektywem Sherlock Holmes. W trakcie utworu okazuje się, że Holmes (występujący tu pod fałszywym nazwiskiem Sherry Vernet i pseudonimem Rache) i Watson są ściganymi restauracjonistami, którzy mordują obcych uzurpatorów. Tropy pozostawione przez autora wskazują, że detektywem jest tu profesor Moriarty, zaś narrator to jego współpracownik, pułkownik Sebastian Moran, najwięksi wrogowie Holmesa w cyklu Conan Doyle’a.",
     },
+    {
+      title: "A Case of Death and Honey",
+      description:
+        "A Case of Death and Honey is a Sherlock Holmes pastiche novel by British author Neil Gaiman, published in 2018. The story is set in 1889 and follows Holmes and Dr. Watson as they investigate a series of murders that seem to be connected to the infamous Jack the Ripper. The novel explores themes of identity, morality, and the nature of evil, while also paying homage to the original works of Arthur Conan Doyle.",
+    },
+    { title: "Sherlock Holmes and the Nine-Dragon Sigil", description: "" },
     {
       title: "Sherlock Holmes and The Servants of Hell",
       description:
         "Sherlock Holmes and The Servants of Hell to mroczna, utrzymana w klimacie grozy opowieść łącząca klasyczny styl przygód Sherlocka Holmesa z elementami horroru inspirowanego światem Clive’a Barkera, w której słynny detektyw oraz dr Watson mierzą się z przerażającą, nadprzyrodzoną zagadką związaną z tajemniczą konfiguracją i piekielnymi istotami z innego wymiaru, prowadząc śledztwo pełne niepokoju, brutalności i stopniowego odkrywania, że granica między racjonalnym światem a koszmarem jest znacznie cieńsza, niż kiedykolwiek przypuszczali.",
     },
+    { title: "The Return of the Pharaoh", description: "" },
     {
       title: "Moriarty the Patriot",
       description:
@@ -733,6 +745,8 @@ const books = {
       description:
         "Wstrząsająca autobiografia o doświadczeniach życia w chińskich obozach pracy i represjach politycznych. Książka napisana przez Gulbahara Haitiwaji i Rozenn Morgat ukazuje cierpienie jednostki, przetrwanie, odporność psychiczną oraz znaczenie pamięci historycznej.",
     },
+    { title: "Sherlock Holmes and the Nine-Dragon Sigil", description: "" },
+    { title: "Bestiariusz chiński", description: "" },
     {
       title: "Assassin's Creed Miecz Shao Jun",
       description:
@@ -758,6 +772,29 @@ const books = {
           description:
             "Kulminacja przygód Shao Jun – wielka bitwa, rozstrzygnięcie konfliktów i pełne uświadomienie roli Asasynów w historii Chin.",
         },
+      ],
+    },
+    {
+      title: "Assassin's Creed: Dynasty",
+      description: "shenme",
+      stories: [
+        { title: "Tom 1", description: "" },
+        { title: "Tom 2", description: "" },
+        { title: "Tom 3", description: "" },
+        { title: "Tom 4", description: "" },
+        { title: "Tom 5", description: "" },
+      ],
+    },
+    {
+      title: "Zapiski Zielarki",
+      description: "",
+      stories: [
+        { title: "Tom 1", description: "" },
+        { title: "Tom 2", description: "" },
+        { title: "Tom 3", description: "" },
+        { title: "Tom 4", description: "" },
+        { title: "Tom 5", description: "" },
+        { title: "Tom 6", description: "" },
       ],
     },
     { title: "Komiks Wiedźmin Ronin", description: "" },
