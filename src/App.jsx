@@ -6,6 +6,7 @@ import Games from "./components/Games.jsx";
 import Series from "./components/Series.jsx";
 import China from "./components/China.jsx";
 import Philosophy from "./components/Philosophy.jsx";
+import Warhammer from "./components/Warhammer.jsx";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/series" element={<Series />} />
         <Route path="/china" element={<China />} />
         <Route path="/philosophy" element={<Philosophy />} />
+        <Route path="/warhammer" element={<Warhammer />} />
       </Routes>
     </div>
   );

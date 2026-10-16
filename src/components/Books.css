@@ -2,7 +2,7 @@
 .books-wrapper {
   min-height: 100vh;
   background:
-    linear-gradient(rgba(25, 15, 45, 0.55), rgba(25, 15, 45, 0.55)),
+    linear-gradient(rgba(88, 63, 128, 0.32), rgba(88, 63, 128, 0.32)),
     url("../../public/images/komedia.jpg");
   background-size: cover;
   background-position: center;
@@ -11,28 +11,27 @@
   padding: 30px;
 }
 
-/* kontener */
 .books-container {
   position: relative;
   max-width: 1200px;
   margin: auto;
-  padding: 20px;
-  background-color: rgba(245, 240, 255, 0.9);
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  padding: 22px;
+  background: rgba(16, 19, 26, 0.82);
+  border: 1px solid rgba(188, 168, 255, 0.22);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.32);
   z-index: 1;
 }
 
-/* nagłówek */
 .books-title {
   text-align: center;
   font-size: 36px;
-  color: darkblue;
+  color: #d9ccff;
   margin-bottom: 20px;
   font-style: italic;
+  letter-spacing: 0.04em;
 }
 
-/* przełącznik kanonu */
 .books-canon-switch {
   display: flex;
   justify-content: center;
@@ -42,28 +41,26 @@
 
 .books-canon-switch button {
   padding: 10px 18px;
-  border: none;
+  border: 1px solid rgba(188, 168, 255, 0.4);
   border-radius: 12px;
-  background-color: #e5d9ff;
+  background: rgba(34, 39, 48, 0.9);
+  color: #edf2ff;
   cursor: pointer;
   font-weight: bold;
   transition: all 0.2s ease;
-  color: #333;
 }
 
 .books-canon-switch button:hover {
-  background-color: #d1b3ff;
+  background: rgba(38, 31, 52, 0.9);
   transform: scale(1.03);
 }
 
-/* aktywny przycisk */
 .books-canon-switch button.active {
-  background-color: #7b4dff;
-  color: white;
-  box-shadow: 0 0 10px rgba(123, 77, 255, 0.4);
+  background: rgba(188, 168, 255, 0.2);
+  color: #f1eaff;
+  box-shadow: 0 0 10px rgba(188, 168, 255, 0.2);
 }
 
-/* lista serii */
 .books-list {
   list-style: none;
   padding-left: 0;
@@ -74,22 +71,25 @@
 }
 
 .books-series-item {
-  padding: 10px 15px;
-  background-color: #e5d9ff;
-  border-radius: 10px;
+  padding: 12px 16px;
+  background: rgba(34, 39, 48, 0.9);
+  border: 1px solid rgba(188, 168, 255, 0.18);
+  border-radius: 12px;
   cursor: pointer;
   font-weight: bold;
+  color: #edf2ff;
   transition:
     transform 0.2s ease,
-    background-color 0.2s ease;
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .books-series-item:hover {
-  background-color: #d1b3ff;
+  background: rgba(38, 31, 52, 0.9);
+  border-color: rgba(188, 168, 255, 0.45);
   transform: translateY(-1px);
 }
 
-/* lista książek */
 .books-series {
   margin-top: 20px;
 }
@@ -97,8 +97,33 @@
 .books-series-title {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #2c2c2c;
+  color: #d9ccff;
   font-weight: 600;
+}
+
+.books-description,
+.books-book-description,
+.books-story-description {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(34, 39, 48, 0.9);
+  border: 1px solid rgba(188, 168, 255, 0.18);
+  border-radius: 12px;
+  color: #edf2ff;
+}
+
+.books-description h3,
+.books-book-description h4,
+.books-story-description h5 {
+  margin-top: 0;
+  color: #d9ccff;
+}
+
+.books-description p,
+.books-book-description p,
+.books-story-description p {
+  margin: 10px 0;
+  line-height: 1.6;
 }
 
 .books-item-list {
@@ -108,32 +133,35 @@
 
 .books-item {
   padding: 10px 15px;
-  background-color: #f0ebff;
+  background: rgba(39, 46, 58, 0.9);
+  border: 1px solid rgba(188, 168, 255, 0.12);
   border-radius: 10px;
   margin-bottom: 8px;
   transition:
     transform 0.2s ease,
-    background-color 0.2s ease;
+    background-color 0.2s ease,
+    border-color 0.2s ease;
   cursor: pointer;
+  color: #edf2ff;
 }
 
 .books-item:hover {
-  background-color: #d1b3ff;
+  background: rgba(38, 31, 52, 0.9);
+  border-color: rgba(188, 168, 255, 0.4);
   transform: translateY(-1px);
 }
 
 .books-title-item.clickable {
   cursor: pointer;
   font-weight: bold;
-  color: #333;
+  color: #edf2ff;
   transition: color 0.2s ease;
 }
 
 .books-title-item.clickable:hover {
-  color: #007acc;
+  color: #d9ccff;
 }
 
-/* podlisty */
 .books-sublist {
   list-style: none;
   padding-left: 20px;
@@ -143,38 +171,18 @@
 .books-subitem {
   margin-bottom: 4px;
   font-size: 0.95em;
-  color: #555;
+  color: #dfe6f3;
   cursor: pointer;
 }
 
 .books-world {
   font-style: italic;
-  color: gray;
+  color: #c7cedd;
   font-size: 0.9em;
 }
 
 .image-of-media {
   width: 100%;
-}
-
-.books-book-description,
-.books-story-description {
-  margin-top: 20px;
-  padding: 16px;
-  background-color: #f5f0ff;
-  border-radius: 12px;
-}
-
-.books-book-description h4,
-.books-story-description h5 {
-  margin-top: 0;
-  color: #2c2c2c;
-}
-
-.books-book-description p,
-.books-story-description p {
-  margin: 10px 0;
-  line-height: 1.6;
 }
 
 .books-story-list {
@@ -185,17 +193,21 @@
 
 .books-story-item {
   padding: 10px 14px;
-  background-color: #e5d9ff;
+  background: rgba(21, 25, 34, 0.9);
+  border: 1px solid rgba(188, 168, 255, 0.25);
   border-radius: 10px;
   margin-bottom: 8px;
   cursor: pointer;
+  color: #edf2ff;
   transition:
     transform 0.2s ease,
+    border-color 0.2s ease,
     background-color 0.2s ease;
 }
 
 .books-story-item:hover {
-  background-color: #d1b3ff;
+  background: rgba(38, 31, 52, 0.9);
+  border-color: rgba(188, 168, 255, 0.5);
   transform: translateY(-1px);
 }
 

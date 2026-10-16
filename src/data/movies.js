@@ -456,7 +456,21 @@ const movies = {
     },
     { title: "Herkules" },
     { title: "Aladyn" },
-    { title: "Król Lew" },
+    {
+      title: "Król Lew",
+      parts: [
+        {
+          title: "Król Lew (2019)",
+          description:
+            "Przemieniona wersja klasycznej opowieści o Simbie, która zachowuje emocjonalny ciężar pierwowzoru, ale przenosi go w nowoczesną, rozbudowaną oprawę wizualną i muzyczną.",
+        },
+        {
+          title: "Mufasa: Król Lew",
+          description:
+            "Prequel pokazujący pochodzenie Mufasy i historię jego drogi do mocy, przyjaźni i odpowiedzialności, z emocjonalnym spojrzeniem na legendę Królestwa Zwierząt.",
+        },
+      ],
+    },
     { title: "Super Mario Bros" },
     { title: "Minecraft: Film" },
   ],
@@ -1890,5 +1904,24 @@ const movies = {
     },
   ],
 };
+
+const alphabeticalMovieCategories = [
+  "Gry",
+  "Seriale",
+  "Chiny",
+  "Filosofia",
+  "IPiN",
+  "Polskie",
+];
+
+alphabeticalMovieCategories.forEach((category) => {
+  if (Array.isArray(movies[category])) {
+    movies[category].sort((a, b) => {
+      const aTitle = a?.title ?? "";
+      const bTitle = b?.title ?? "";
+      return aTitle.localeCompare(bTitle, "pl", { sensitivity: "base" });
+    });
+  }
+});
 
 export default movies;

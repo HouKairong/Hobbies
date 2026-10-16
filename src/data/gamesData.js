@@ -239,6 +239,19 @@ const gamesData = [
   { title: "Metal Gear Rising Revengeance", worlds: ["Celestia"] },
   { title: "Sphinx and The Cursed Mummy", worlds: ["Krokotopia"] },
   { title: "Buckshot Roulette", worlds: ["Darkmoor"] },
+  { title: "Super Smash Bros", worlds: ["Celestia", "Polaris", "Wysteria"] },
+  {
+    title: "LEGO Władca Pierścieni",
+    worlds: ["Wysteria", "Avalon", "Grizzleheim"],
+  },
+  {
+    title: "Shadow of Mordor",
+    worlds: ["Darkmoor", "Azteca", "Grizzleheim"],
+  },
+  {
+    title: "Shadow of War",
+    worlds: ["Darkmoor", "Azteca", "Grizzleheim"],
+  },
   { title: "Raft", worlds: ["Celestia"] },
   { title: "Kung Fu Panda", worlds: ["Mooshu"] },
   {
@@ -332,7 +345,6 @@ const gamesData = [
     ],
   },
   { title: "Slay The Princess", worlds: ["Darkmoor"] },
-  { title: "Buckshot Roulette", worlds: ["Darkmoor"] },
   { title: "Gujian", worlds: ["Mooshu"] },
   { title: "Gujian 2", worlds: ["Mooshu"] },
   { title: "Gujian 3", worlds: ["Mooshu"] },

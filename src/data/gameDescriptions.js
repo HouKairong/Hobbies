@@ -29,6 +29,18 @@ const gameDescriptions = {
       "Kontynent (Biały Sad, Velen, Novigrad, Oxenfurt, Skellige, Kaer Morhen, Toussaint) 1272 rok",
     description:
       "Epicka, otwarta opowieść o poszukiwaniu Ciri w świecie wyniszczonym wojną i nadciągającą katastrofą. Geralt przemierza ogromne krainy, mierząc się z Dzikim Gonem, potworami, polityką i własną przeszłością. Każde zadanie – nawet pozornie błahe – ma swój ciężar moralny i konsekwencje. To historia o ojcostwie, przeznaczeniu i próbie zatrzymania nieuniknionego końca świata.",
+    dlc: [
+      {
+        title: "Hearts of Stone",
+        description:
+          "Dodatkowa historia o czułym i niebezpiecznym paktach z tajemniczym, niepokojącym bohaterem — mocno skupiona na moralnych dylematach i jednej z najważniejszych fabuł gry.",
+      },
+      {
+        title: "Blood and Wine",
+        description:
+          "Najbardziej rozbudowany dodatek, który zamienia Toussaint w przepiękną, bajkową krainę i wnosi epicką, emocjonalną sagę o przeznaczeniu i rodzinnych tajemnicach.",
+      },
+    ],
   },
 
   "Wiedźmin: Pożegnanie Białego Wilka": {
@@ -59,6 +71,18 @@ const gameDescriptions = {
     location: "Tamriel (Cyrodill), Otchłań, 433 rok Trzeciej Ery",
     description:
       "Rozległe RPG osadzone w prowincji Cyrodiil, gdzie bramy Otchłani otwierają się, wpuszczając na świat demony Mehrunesa Dagona. Gracz wciela się w anonimowego bohatera, który z czasem staje się kluczową postacią w walce o przetrwanie cesarstwa. Otwarty świat, gildie, zadania poboczne i swoboda rozwoju postaci tworzą klasyczne doświadczenie fantasy pełne magii, polityki i starożytnych proroctw.",
+    dlc: [
+      {
+        title: "Knights of the Nine",
+        description:
+          "Dodatek dodający nową, ciężką ścieżkę rycerskiego mistycyzmu, świątynne zmagania i epicką kampanię związana z zasadą sprawiedliwości i świętego dziedzictwa.",
+      },
+      {
+        title: "Shivering Isles",
+        description:
+          "Najważniejsze rozszerzenie, które przekształca świat w surrealistyczne królestwo podzielone między chaos i obłęd, oferując zupełnie nowy klimat i wyjątkową fabułę.",
+      },
+    ],
   },
 
   "TES V Skyrim": {
@@ -69,6 +93,23 @@ const gameDescriptions = {
     location: "Tamriel (Skyrim), 201 rok Czwartej Ery",
     description:
       "W mroźnej prowincji Skyrim powraca pradawne zagrożenie – Alduin, Pożeracz Światów. Gracz jako Smocze Dziecię odkrywa swoje dziedzictwo i zdolność posługiwania się smoczymi krzykami. To opowieść o przeznaczeniu, wojnie domowej i starciu z mitologicznym końcem świata. Swoboda eksploracji i ogrom zawartości sprawiają, że każdy może stworzyć własną legendę.",
+    dlc: [
+      {
+        title: "Dawnguard",
+        description:
+          "Dodatek wprowadzający wampiry, łowców wampirów i głębszy konflikt między ludźmi a zjawiskami nadprzyrodzonymi, z mocnym gotyckim klimatem i nowym budownictwem questowym.",
+      },
+      {
+        title: "Hearthfire",
+        description:
+          "Dodatkowy rozwój osadnictwa i domu, który pozwala graczowi zbudować własne miejsce na północy i stworzyć bardziej osobistą, spokojniejszą sferę gry.",
+      },
+      {
+        title: "Dragonborn",
+        description:
+          "Najważniejszy dodatek, który wywozi bohatera do Solstheim i odsłania mroczną tajemnicę przodków oraz wielką walkę z władzą znad mgławic.",
+      },
+    ],
   },
 
   "Dark Souls 3": {
@@ -79,6 +120,18 @@ const gameDescriptions = {
     location: "Kraina Lothric",
     description:
       "Mroczna podróż przez umierający świat, w którym Pierwszy Płomień dogasa, a dawni bohaterowie odmawiają podtrzymania cyklu. Nierozpalony wyrusza, by sprowadzić Władców Popiołów i zdecydować o losie rzeczywistości. Gra łączy wymagającą walkę, oszczędną narrację i symbolikę przemijania, tworząc ponurą medytację nad końcem ery bogów i nieuchronnością rozkładu.",
+    dlc: [
+      {
+        title: "Ashes of the Ariandel",
+        description:
+          "Dodatkowa historia, która wywozi bohatera do śnieżnego, niezwykle klimatycznego regionu, oferując nowe bossy, niebezpieczne lochy i jeszcze bardziej melancholijny ton górujący nad światem ognia i rozkładu.",
+      },
+      {
+        title: "The Ringed City",
+        description:
+          "Końcowe, epickie rozszerzenie rozbudowujące ostatnie chwile świata Lothric, z dużo mocniejszą, mistyczną i apokaliptyczną atmosferą finału.",
+      },
+    ],
   },
 
   Bloodborne: {
@@ -89,6 +142,13 @@ const gameDescriptions = {
     location: "Yharnam",
     description:
       "Gotycki koszmar w mieście Yharnam, gdzie tajemnicza plaga przemienia mieszkańców w bestie. Łowca wyrusza na krwawą noc, odkrywając, że źródło horroru sięga znacznie głębiej – ku kosmicznym istotom i zakazanej wiedzy. Dynamiczna, agresywna walka i atmosfera inspirowana twórczością Lovecrafta tworzą opowieść o szaleństwie, transcendencji i cienkiej granicy między człowiekiem a potworem.",
+    dlc: [
+      {
+        title: "The Old Hunters",
+        description:
+          "Najważniejsze dodatku do Bloodborne, które wprowadza nowe, jeszcze bardziej złożone lokacje, potężnych bossów i gęściejszą, bardziej kosmiczną historię o przygodzie w samym sercu mroku.",
+      },
+    ],
   },
 
   "Elden Ring": {
@@ -99,6 +159,13 @@ const gameDescriptions = {
     location: "Ziemie Pomiędzy",
     description:
       "Rozległa podróż przez Ziemie Pomiędzy po rozpadzie Elden Ring. Tarnished powraca z wygnania, by zebrać Wielkie Runy, pokonać półbogów i zdecydować o nowym porządku świata. Monumentalne krajobrazy, ukryte lochy i fragmentaryczna narracja budują epicką sagę o ambicji, boskości i władzy, w której każdy wybór prowadzi do innego oblicza przyszłości.",
+    dlc: [
+      {
+        title: "Shadow of the Erdtree",
+        description:
+          "Największy dodatek do Elden Ring, który rozciąga świat w nowe, mroczniejsze i bardziej tajemnicze rejony, z nowymi bossami, nowymi lokacjami i bardzo mocnym motywem mistycznego rozkładu i przeznaczenia.",
+      },
+    ],
   },
   "Sekiro: Shadows Die Twice": {
     world: "Mooshu",
@@ -108,6 +175,26 @@ const gameDescriptions = {
     location: "Japonia (Ashina) w okresie Sengoku",
     description:
       "Brutalna, precyzyjna opowieść o honorze i obsesji w realiach fantastycznej, feudalnej Japonii. Sekiro, jednooki shinobi zwany Wilkiem, przysięga chronić swojego młodego pana obdarzonego tajemniczą mocą nieśmiertelności. Po klęsce i utracie ręki powraca silniejszy, wyposażony w mechaniczną protezę pełną narzędzi śmierci. Walka opiera się na rytmie, kontrach i łamaniu postawy przeciwnika, a każdy pojedynek jest starciem woli. To historia o lojalności, przekraczaniu granic człowieczeństwa i cenie, jaką płaci się za życie wieczne.",
+  },
+
+  "Sinner: Sacrifice for Redemption": {
+    world: "Dragonspyre",
+    why: "Dragonspyre to świat ruin, cierpienia i pokutnych, długich ścieżek ku odkupieniu. Gra łączy w sobie mroczny klimat, silne emocje i motyw pokuty, a to wszystko ma sens w świecie, w którym każda decyzja zostawia trwałe ślady. To przygoda o własnym cierpieniu i woli, by poradzić sobie z własnym losem.",
+    protagonist: "Sinner",
+    antagonist: "Sinner / własne demony",
+    location: "Ruiny i zapomniane krainy",
+    description:
+      "Sinner: Sacrifice for Redemption to mroczna, emocjonalna opowieść o żalu, winie i odkupieniu. Bohater wyrusza przez rozpadłe krainy, walcząc z duchami przeszłości i własnym cierpieniem. Gra łączy wytrzymałą, agresywną walkę z melancholijną narracją, która podkreśla, że najcięższy wróg nie zawsze jest zewnętrzny. To historia o dawaniu siebie, by uratować to, co zostało po stracie.",
+  },
+
+  "Ghost of a Tale": {
+    world: "Khrysalis, Avalon",
+    why: "Khrysalis daje klimat tajemnicy, melancholii i duchowego niepokoju, a Avalon dodaje warstwę legendy i mistycznego, emocjonalnego przekazania. Ghost of a Tale opowiada historię o samotności i przygodzie w świecie, który nie jest czysty ani bezpieczny, ale pełen historii, których nie da się łatwo zapomnieć.",
+    protagonist: "Wędrowiec",
+    antagonist: "Ostrze nieznanego i morski los",
+    location: "Morska kraina i ukryte wybrzeża",
+    description:
+      "Ghost of a Tale to spokojna, a zarazem emocjonalna przygoda w świecie pełnym tajemnic, legend i niebezpiecznych stworzeń. Gracz przemierza morskie wybrzeża, poznaje mieszkańców i odkrywa historię, w której samotność, odwaga i ciekawość są równie ważne co walka. Gra stawia na atmosferę, eksplorację i subtelność emocji, budując opowieść o tęsknocie za domem i odwadze wobec nieznanego.",
   },
 
   "Dragon's Dogma: Dark Arisen": {
@@ -128,6 +215,13 @@ const gameDescriptions = {
     location: "Vermund, Battahl, Agamen",
     description:
       "Kontynuacja rozwija koncepcję pierwszej części, oferując jeszcze bardziej dynamiczny świat reagujący na działania gracza. Powstały ponownie staje w obliczu smoka i politycznych napięć między królestwami, odkrywając, że legenda o wybrańcu może być jedynie elementem większej manipulacji. Rozbudowany system walki, swoboda eksploracji i emergentne zdarzenia sprawiają, że każda podróż wygląda inaczej. To refleksja nad naturą władzy i powtarzalnością historii.",
+    dlc: [
+      {
+        title: "Dark Arisen",
+        description:
+          "Rozszerzenie, które dodaje nowe wyzwania, większy nacisk na emocjonalną narrację i jeszcze bardziej wymagające starcia z potworami, wzmacniając klimat epickiej, wyczerpującej wyprawy.",
+      },
+    ],
   },
 
   "Assassin's Creed": {
@@ -148,6 +242,18 @@ const gameDescriptions = {
     location: "XV-wieczne Włochy",
     description:
       "Renesansowe Włochy stają się sceną osobistej historii zemsty młodego Ezio Auditore. Po zdradzie i egzekucji rodziny Ezio wstępuje na ścieżkę Asasyna, ucząc się sztuki walki, skradania i politycznej manipulacji. Florencja, Wenecja i Rzym tworzą barwne tło dla opowieści o dorastaniu, stracie i odkrywaniu prawdy o własnym dziedzictwie. To jedna z najbardziej emocjonalnych historii w serii.",
+    dlc: [
+      {
+        title: "Bonfire of the Vanities",
+        description:
+          "Dodatkowa misja, która rozwija motyw przejścia Ezio przez włoską politykę, konflikt i personalną zemstę w stylu bardziej kameralnym i mniej wielkopłytowym.",
+      },
+      {
+        title: "Battle of Forlì",
+        description:
+          "Dodatkowa kampania wojskowa prezentująca duże, strategiczne starcia przy okazji powrotu Ezio do centrum intryg i rozgrywek politycznych.",
+      },
+    ],
   },
 
   "Assassin's Creed Brotherhood": {
@@ -158,6 +264,18 @@ const gameDescriptions = {
     location: "XVI-wieczny Rzym",
     description:
       "Ezio kontynuuje swoją misję w Rzymie, budując Bractwo Asasynów i rekrutując nowych członków do walki z tyranią Borgiów. Gra rozwija system zarządzania bractwem i pozwala wzywać sojuszników w trakcie misji. To opowieść o przywództwie, odpowiedzialności i próbie odbudowy wolności w mieście pogrążonym w korupcji.",
+    dlc: [
+      {
+        title: "The Da Vinci Disappearance",
+        description:
+          "Rozszerzenie wprowadza bardziej tajemniczą, artystyczną i intrygującą misję wokół dziedzictwa Leonarda da Vinci oraz nowych wyzwań strategicznych dla Bractwa.",
+      },
+      {
+        title: "The Last Descendants",
+        description:
+          "Dodatkowa historia wrzucająca Ezio w kolejny, mroczny etap konfliktu z rzymskim złem i wątkami infiltracji, cherubina i nowych sojuszników.",
+      },
+    ],
   },
 
   "Assassin's Creed Revelations": {
@@ -168,6 +286,18 @@ const gameDescriptions = {
     location: "XVI-wieczny Konstantynopol",
     description:
       "Starszy, bardziej doświadczony Ezio wyrusza do Konstantynopola, by odkryć sekrety pozostawione przez Altaïra. Historia splata losy dwóch Asasynów z różnych epok, stając się refleksją nad przemijaniem i dziedzictwem. Egzotyczne miasto, nowe narzędzia i melancholijny ton tworzą symboliczne zamknięcie trylogii Ezia.",
+    dlc: [
+      {
+        title: "The Lost Archive",
+        description:
+          "Dodatkowa przygoda, która odsłania tajemnice starożytnego archiwum i pogłębia wątki związane z podziemnymi secretum oraz dawną, nieodkrytą wiedzą Asasynów.",
+      },
+      {
+        title: "The Ancestors Tale",
+        description:
+          "Mniej klasyczna, bardziej symboliczna warstwa dodatku, która skupia się na odtwarzaniu historii rodziny i dziedzictwa w odniesieniu do kolejnych pokoleń Asasynów.",
+      },
+    ],
   },
 
   "Assassin's Creed 4 Black Flag": {
@@ -177,7 +307,14 @@ const gameDescriptions = {
     antagonist: "Laureano Torres",
     location: "XVIII-wieczne Karaiby",
     description:
-      "Piracka przygoda na Karaibach łączy otwarty świat z morskimi bitwami i swobodą eksploracji. Edward Kenway, początkowo kierowany chciwością, stopniowo wplątuje się w konflikt Asasynów i Templariuszy. Polowanie na statki, szukanie skarbów i budowanie załogi nadają grze unikalny charakter. To opowieść o wolności, ambicji i cenie życia poza prawem.",
+      "Piracka przygoda na Karaibach łączy otwarty świat z morskymi bitwami i swobodą eksploracji. Edward Kenway, początkowo kierowany chciwością, stopniowo wplątuje się w konflikt Asasynów i Templariuszy. Polowanie na statki, szukanie skarbów i budowanie załogi nadają grze unikalny charakter. To opowieść o wolności, ambicji i cenie życia poza prawem.",
+    dlc: [
+      {
+        title: "Freedom Cry",
+        description:
+          "Samodzielna, mroczniejsza historia o Edwardzie Kenwayie i jego walce z niewolnictwem na Karaibach, z nowym fragmentem mapy i wyraźnie bardziej emocjonalnym przesłaniem.",
+      },
+    ],
   },
 
   "Assassin's Creed Syndicate": {
@@ -188,6 +325,18 @@ const gameDescriptions = {
     location: "XIX-wieczna Anglia (Londyn)",
     description:
       "Wiktoriański Londyn pod panowaniem templariuszy staje się polem działania rodzeństwa Frye. Jacob stawia na otwartą walkę i chaos, Evie – na precyzję i dyskrecję. Industrialna sceneria, gangi uliczne i dynamiczne pościgi nadają grze energii. To historia o rewolucji, postępie i walce o kontrolę nad rozwijającym się imperium.",
+    dlc: [
+      {
+        title: "The Dreadful Circus",
+        description:
+          "Dodatkowa kampania, która rozsadza atmosferę Londynu w stronę bardziej groteskowego i psychologicznego klimatu, z własnym schematem tajemnic i walk z bossami.",
+      },
+      {
+        title: "A Long Night",
+        description:
+          "Dodatkowa, bardziej agresywna i napięciowa misja rozwijająca motyw przemocy, wyczerpania i coraz większej nieuchronności upadku miejskiego porządku.",
+      },
+    ],
   },
 
   "Assassin's Creed Origins": {
@@ -198,6 +347,18 @@ const gameDescriptions = {
     location: "Starożytny Egipt i Zaświaty",
     description:
       "W starożytnym Egipcie Bayek, medżaj i obrońca ludu, wyrusza w osobistą podróż zemsty, która doprowadzi do narodzin Bractwa Asasynów. Monumentalne piramidy, pustynie i tętniąca życiem Aleksandria tworzą imponujące tło dla opowieści o stracie i sprawiedliwości. Gra wprowadza system RPG, rozwój poziomów i bardziej rozbudowaną walkę, nadając serii nowy kierunek.",
+    dlc: [
+      {
+        title: "The Hidden Ones",
+        description:
+          "Dodatek rozszerzający historię o pierwsze lata powstania Bractwa, z większym naciskiem na tajne operacje i coraz bardziej bezwzględne działania Asasynów.",
+      },
+      {
+        title: "The Curse of the Pharaohs",
+        description:
+          "Najważniejsze rozszerzenie opowiada o podróży do starożytnego Egiptu z mrocznymi, mitologicznymi bossami i tajemnicami zagrzebanych królestw.",
+      },
+    ],
   },
 
   "Assassin's Creed Odyssey": {
@@ -208,6 +369,13 @@ const gameDescriptions = {
     location: "Starożytna Grecja i Zaświaty",
     description:
       "Najbardziej rozmachowa odsłona serii przenosi gracza do świata wojny peloponeskiej w starożytnej Grecji. Jako Kassandra lub Alexios – najemnik z krwią Leonidasa – przemierzasz wyspy Morza Egejskiego, angażując się w polityczne konflikty Aten i Sparty. Wątek rodzinny splata się z walką przeciwko Kultowi Kosmosa, tajemniczej organizacji manipulującej losem Hellady. Mitologiczne bestie, morskie bitwy i rozbudowany system wyborów nadają historii epicki, niemal homerowy wymiar.",
+    dlc: [
+      {
+        title: "The Fate of Atlantis",
+        description:
+          "Dodatkowa kampania wprowadzająca bohatera do świata mitologii greckiej i tajemniczych, kosmicznych korzeni kultu kosmosu, z nowymi bossami i bardziej onirycznym klimatem.",
+      },
+    ],
   },
 
   "Assassin's Creed Valhalla": {
@@ -219,6 +387,18 @@ const gameDescriptions = {
       "Średniowieczna Anglia i Norwegia (a także 9 światów mitologii nordyckiej)",
     description:
       "Saga osadzona w IX-wiecznej Anglii opowiada o wikingach szukających nowego domu. Eivor prowadzi swój klan przez surowe ziemie, zawierając sojusze i podbijając królestwa Sasów. Brutalne najazdy przeplatają się z budowaniem osady i odkrywaniem tajemnic Zakonu Starożytnych. To historia o przeznaczeniu, wierze w nordyckich bogów i powolnym narodzinach legendy Asasynów w świecie pełnym krwi i ambicji.",
+    dlc: [
+      {
+        title: "Wrath of the Druids",
+        description:
+          "Rozszerzenie przenosi Eivora do Irlandii, gdzie musi stawić czoła dawnym rywalom, lokalnym klanom i skomplikowanej polityce opartej na mroku, ambicji i dawnych wierzeniach.",
+      },
+      {
+        title: "The Siege of Paris",
+        description:
+          "Dodatkowa kampania osadzona w Paryżu, z większym naciskiem na dyplomację, polityczne intrygi i brutalny konflikt między wikingami a zachodnioeuropejską armią.",
+      },
+    ],
   },
 
   "Assassin's Creed Mirage": {
@@ -249,6 +429,13 @@ const gameDescriptions = {
     location: "Postapokaliptyczne USA, 2033-2034 rok",
     description:
       "W świecie zniszczonym przez grzybiczą pandemię przemytnik Joel otrzymuje zadanie eskortowania nastoletniej Ellie przez niebezpieczne terytoria Stanów Zjednoczonych. Podróż szybko zmienia się w emocjonalną historię o stracie i zastępczym ojcostwie. Brutalna walka o przetrwanie przeplata się z cichymi momentami bliskości, tworząc opowieść o tym, jak daleko można się posunąć w imię miłości.",
+    dlc: [
+      {
+        title: "Left Behind",
+        description:
+          "Dodatkowy rozdział skupiający się na relacji Ellie z Riley, który pogłębia emocjonalny wymiar całej gry i dodaje jedną z najbardziej wzruszających historii w serii.",
+      },
+    ],
   },
 
   "The Last of Us Part 2": {
@@ -350,6 +537,18 @@ const gameDescriptions = {
     location: "Mars, Piekło, 2149 rok",
     description:
       "Triumfalny powrót legendy do korzeni. Doom Slayer budzi się w chwili, gdy korporacyjne eksperymenty znów wymykają się spod kontroli. Rozgrywka stawia na agresję, mobilność i tzw. glory kills, które nagradzają ofensywny styl walki. To bezkompromisowa symfonia przemocy i metalu – szybka, brutalna i świadomie przerysowana.",
+    dlc: [
+      {
+        title: "Unto the Evil",
+        description:
+          "Dodatek dopełniający klasyczną formułę o nowe poziomy, potężniejsze wyzwania i dodatkowe warianty strzelania na ścianach chaosu.",
+      },
+      {
+        title: "Hell Followed",
+        description:
+          "Rozszerzenie wprowadza jeszcze bardziej rozpaczliwy, bogatszy i bardziej piekielny zestaw misji, z naciskiem na szybkie tempo i brutalne walki.",
+      },
+    ],
   },
 
   "DOOM Eternal": {
@@ -360,6 +559,18 @@ const gameDescriptions = {
     location: "Ziemia, Mars, Piekło, Argent D'Nur, Urdak, 2163 rok",
     description:
       "Jeszcze szybsza i bardziej wymagająca kontynuacja. Ziemia pada ofiarą piekielnej inwazji, a Slayer staje się niemal mityczną figurą gniewu wymierzonego w demoniczne siły. Rozbudowany system walki wymaga strategicznego zarządzania zasobami i ciągłego ruchu. Historia rozszerza mitologię serii, ukazując konflikt o kosmicznej skali między Piekłem a wyższymi bytami.",
+    dlc: [
+      {
+        title: "The Ancient Gods – Part One",
+        description:
+          "Pierwsza część epickiego dodatku rozszerzającego mitologię serii o pełnowymiarowe, jeszcze bardziej apokaliptyczne starcia z demonami.",
+      },
+      {
+        title: "The Ancient Gods – Part Two",
+        description:
+          "Finalna część wielkiej piekielnej kampanii, która zamyka historię Slayera na poziomie kosmicznej katastrofy i ostatecznego zderzenia z siłami zła.",
+      },
+    ],
   },
 
   "DOOM The Dark Ages": {
@@ -370,6 +581,13 @@ const gameDescriptions = {
     location: "Argent D'Nur, odległa przeszłość",
     description:
       "Prequel ukazujący Slayera w brutalnej, quasi-średniowiecznej scenerii. Zamiast futurystycznych baz pojawiają się twierdze, zbroje i monumentalne pola bitew. Walka pozostaje bezlitosna, ale nabiera bardziej surowego, pierwotnego charakteru. To opowieść o narodzinach legendy – o wojowniku, który stał się postrachem samego Piekła.",
+    dlc: [
+      {
+        title: "Revelations",
+        description:
+          "Dodatkowe rozszerzenie, które pogłębia wątek twierdzy, odwiecznej wojny z piekielnym rodem oraz jeszcze większego chaosu, jaki niesie ze sobą mroczna legenda Slayera.",
+      },
+    ],
   },
 
   "Ori and The Blind Forest": {
@@ -403,6 +621,18 @@ const gameDescriptions = {
       "Kontynent Antagarich (Królestwo Erathii, Nighon, Eofol, Tatalia, Krewlod, AvLee)",
     description:
       "Klasyczna strategia turowa osadzona w świecie Enroth, w której gracze prowadzą bohaterów i armie fantastycznych stworzeń w walce o kontrolę nad królestwami Antagarichu. Kampanie opowiadają o wojnach między potęgami takimi jak Erathia, Nighon czy Eofol, a także o intrygach, zdradach i ambicjach bohaterów pokroju Sandro czy Mutare. Rozgrywka łączy zarządzanie miastami, eksplorację mapy i taktyczne bitwy, tworząc jedną z najbardziej kultowych strategii fantasy.",
+    dlc: [
+      {
+        title: "Armageddon's Blade",
+        description:
+          "Rozszerzenie dodające nowe kampanie, frakcje, bohaterów i wyraźnie bardziej zaawansowane scenariusze wojenne, które pogłębiają świat Enroth.",
+      },
+      {
+        title: "Shadow of Death",
+        description:
+          "Bardziej mroczne rozszerzenie, w którym sobowtóry, nowe jednostki i dopracowane kampanie dają grze jeszcze większy ciężar fabularny i taktyczny.",
+      },
+    ],
   },
 
   "Might and Magic: Heroes 6": {
@@ -414,6 +644,13 @@ const gameDescriptions = {
     location: "Ashan (Thallan, Sheog), 564 roku YSD (Year of the Sage Descent)",
     description:
       "Turn‑based RPG osadzone w uniwersum Might and Magic, w którym gracze kierują losami bohaterów takich jak Sławoj, Anton, Anatastazja czy Crag Hack. Każda postać posiada unikalne zdolności i możliwości rozwoju, a gracz buduje swoje armie, eksploruje różnorodne krainy i zdobywa potężne artefakty. Konflikty obejmują zarówno epickie starcia z demonami i aniołami, jak i strategiczne potyczki o kontrolę nad zamkami i zasobami. Gra łączy klasyczną taktykę, rozwój bohaterów i elementy narracyjne, tworząc świat, w którym każda decyzja może zmienić losy całego królestwa.",
+    dlc: [
+      {
+        title: "Pirates of the Savage Sea",
+        description:
+          "Dodatkowa kampania z bardziej strategicznym i śmiałym charakterem, która rozbudowuje świat Ashan o nowe konflikty i nieprzewidywalne sojusze.",
+      },
+    ],
   },
 
   "Warhammer 40k Dawn of War": {
@@ -424,6 +661,23 @@ const gameDescriptions = {
     location: "Tartarus, Lorn V, Kronus, Kaurava, 41 milenium",
     description:
       "Strategia czasu rzeczywistego osadzona w brutalnym uniwersum Warhammer 40,000. Gracz dowodzi armiami Imperium, Orków, Eldarów czy sił Chaosu, tocząc bezwzględne bitwy o kontrolę nad planetami. System walki stawia na agresję i taktyczne wykorzystanie oddziałów. To ponura wizja przyszłości, w której istnieje tylko wojna.",
+    dlc: [
+      {
+        title: "Winter Assault",
+        description:
+          "Rozszerzenie wprowadzające nową frakcję, nowe mapy i bardziej złożone rytuały wojenne, które podbijają skalę konfliktu między Imperium a Chaos.",
+      },
+      {
+        title: "Dark Crusade",
+        description:
+          "Największe rozszerzenie znacznie rozbudowuje kampanię i dodaje sporo nowych jednostek, z większym naciskiem na polityczną i militarną eksplorację świata.",
+      },
+      {
+        title: "Soulstorm",
+        description:
+          "Ostatnie większe rozszerzenie, które wzmacnia tempo gry, dodaje nowe frakcje i jeszcze bardziej eskalacyjny konflikt między światami oraz siłami Chaosu.",
+      },
+    ],
   },
 
   "Warhammer 40k Space Marine": {
@@ -434,6 +688,13 @@ const gameDescriptions = {
     location: "Graia, 41 milenium",
     description:
       "Dynamiczna gra akcji pozwala wcielić się w Kapitana Titusa z Zakonu Ultramarines. Połączenie walki wręcz i strzelania oddaje brutalność starć w 41. tysiącleciu. Titus musi stawić czoła zarówno hordom Orków, jak i zdradzieckim siłom Chaosu. To historia o honorze, lojalności i cienkiej granicy między obowiązkiem a herezją.",
+    dlc: [
+      {
+        title: "Damnation of Ashes",
+        description:
+          "Dodatkowa misja fabularna, która pogłębia heroiczny klimat i daje jeszcze bardziej brutalne starcia z fanatycznymi siłami Chaosu.",
+      },
+    ],
   },
 
   "Warhammer 40k Space Marine 2": {
@@ -464,6 +725,18 @@ const gameDescriptions = {
     location: "Sektor Koprulu, 2504-2508 rok",
     description:
       "Epicka trylogia RTS opowiadająca o losach trzech ras walczących o dominację w sektorze Koprulu. Jim Raynor próbuje ocalić Kerrigan przed jej przeznaczeniem jako Królowej Ostrzy, podczas gdy Protossi pod wodzą Artanisa mierzą się z pradawnym zagrożeniem w postaci Amona. Polityczne intrygi Mengska, zdrady i poświęcenia splatają się w kosmiczną sagę o wolności, zemście i odkupieniu. To historia o tym, jak jednostkowe decyzje mogą przesądzić o losie całej galaktyki.",
+    dlc: [
+      {
+        title: "Heart of the Swarm",
+        description:
+          "Rozszerzenie skupione na losach Kerrigan i jej przejściu w rolę Królowej Ostrzy, z większym naciskiem na atak i charakterystyczny, brutalny ton zergowskiej inwazji.",
+      },
+      {
+        title: "Legacy of the Void",
+        description:
+          "Końcowe, najbardziej epickie rozszerzenie, które zamyka konflikt między rasami i odkrywa kosmiczne źródło zagrożenia stojącego za całym konfliktem.",
+      },
+    ],
   },
 
   "Cyberpunk 2077": {
@@ -474,6 +747,13 @@ const gameDescriptions = {
     location: "Futurystyczne USA (Night City), 2077 rok",
     description:
       "Otwarty świat Night City to neonowa dżungla, w której technologia miesza się z desperacją. V, najemnik próbujący przetrwać w świecie korporacyjnej dominacji, zostaje uwikłany w konflikt związany z eksperymentalnym biochipem. Historia balansuje między wolną wolą a utratą tożsamości, stawiając pytania o granice człowieczeństwa w erze cybernetycznych ulepszeń. To brutalna opowieść o ambicji, buncie i cenie marzeń.",
+    dlc: [
+      {
+        title: "Phantom Liberty",
+        description:
+          "Największe oficjalne rozszerzenie, które wprowadza nową, politycznie skomplikowaną kampanię, nowe otoczenie i jeszcze bardziej szokujący ton rozgrywki.",
+      },
+    ],
   },
 
   "Detroit Become Human": {
@@ -555,6 +835,26 @@ const gameDescriptions = {
     location: "Gallowmere, 1386 rok",
     description:
       "Humorystyczna gra akcji przedstawia losy niezdarnego rycerza, który powstaje z grobu, by naprawić swoje dawne tchórzostwo. Sir Daniel Fortesque musi pokonać czarnoksiężnika Zaroka i jego armię nieumarłych. Groteskowy klimat, gotycka stylistyka i lekki ton tworzą baśniową historię o drugiej szansie na bohaterstwo.",
+  },
+
+  "Shadow of Mordor": {
+    world: "Darkmoor, Azteca, Grizzleheim",
+    why: "Darkmoor daje atmosferę upadku i mrocznego, drapieżnego chaosu. Azteca kojarzy się z ruinami, dawnymi cywilizacjami i kulturą, która przerasta człowieka. Grizzleheim wzmacnia temat przemocy, bezwzględnego przetrwania i śladów wojny, które zostają w ludziach. Shadow of Mordor jest grą o zemście, wyniszczeniu i wielkiej cenie straty.",
+    protagonist: "Talion",
+    antagonist: "Sauron, Urukowie",
+    location: "Mordor, Śródziemie",
+    description:
+      "Talion, strażnik, odzyskuje świadomość po śmierci i łączy się z duchem, by zemścić się na wrogach, którzy zniszczyli jego świat. Wraz z rozwojem mocy bohater staje się coraz bardziej niebezpieczny, a jego konflikt z armią Uruków przechodzi z zwykłej zemsty w wielką wojnę, w której każde zwycięstwo ma swoje konsekwencje. Gra łączy brutalne walki, strategię i system, w którym wrogowie mają własne relacje, ambicje i słabości.",
+  },
+
+  "Shadow of War": {
+    world: "Darkmoor, Azteca, Grizzleheim",
+    why: "Te same światy, które wcześniej dawały aura mroku, ruin i pradawnych wojennych kultur, idealnie pasują do dalszego rozwoju historii Taliona. Tu wojna nie kończy się tylko jedną bitwą — rozciąga się na całe społeczeństwo i dotyka każdego, kto zbyt długo trwa przy władzy.",
+    protagonist: "Talion",
+    antagonist: "Sauron, nazgûle, Urukowie",
+    location: "Mordor, Śródziemie",
+    description:
+      "Kontynuacja przygody Taliona rozwija jego moc, a zarazem pokazuje, jak łatwo zemsta zamienia się w narzędzie wielkiej destrukcji. Bohater musi mierzyć się z coraz potężniejszymi przeciwnikami, nie tylko w bitwach, ale także w polityce, przebiegłości i manipulacji. To opowieść o końcu jednej wojny i początku czegoś znacznie większego — o zapłacie za przemoc i o koszcie władzy.",
   },
 
   "Shadow of The Tomb Raider": {
@@ -647,6 +947,13 @@ const gameDescriptions = {
       "9 światów mitologii nordyckiej (Midgard, Asgard, Vanaheim, Alfheim, Jötunheim, Svartalfheim, Helheim, Muspelheim, Niflheim)",
     description:
       "Epickie zakończenie nordyckiej sagi Kratosa i Atreusa, w którym losy bogów, ludzi i tytanów splatają się w katastrofalnym konflikcie. To opowieść o przeznaczeniu, rodzinie i walce, która przesądzi o losach całego świata.",
+    dlc: [
+      {
+        title: "Valhalla",
+        description:
+          "Dodatkowa, bardziej introspekcyjna i symboliczna przygoda, która rozciąga temat przeznaczenia, zemsty i echa dawnych bitew w nowe, mroczne wywołania końca świata.",
+      },
+    ],
   },
 
   "Ghost of Tsushima": {
@@ -657,6 +964,13 @@ const gameDescriptions = {
     location: "XIII-wieczna Japonia (Cuszima)",
     description:
       "Otwarte walki samuraja w feudalnej Japonii, gdzie Jin Sakai musi balansować między honorem a skutecznością. Gra łączy piękno krajobrazów z brutalną taktyką walki, tworząc epicką historię odwagi i poświęcenia.",
+    dlc: [
+      {
+        title: "Iki Island",
+        description:
+          "Rozszerzenie przenosi gracza na mroczniejsze, bardziej osobiste terytorium, z nową historią o traumie, zemście i konfliktach rodzinnych wpisujących się w świat samurajskiej kultury.",
+      },
+    ],
   },
 
   "Ghost of Yotei": {
@@ -777,6 +1091,13 @@ const gameDescriptions = {
     location: "Nowy Jork (Manhattan), 2018 rok",
     description:
       "Doświadczony Peter Parker mierzy się z Doktorem Octopusem, którego geniusz i ambicje stają się zagrożeniem dla całego miasta. Gra ukazuje ciężar odpowiedzialności, poświęcenie i cenę, jaką płaci bohater, próbując chronić ludzi przed niebezpieczeństwem, a jednocześnie zachować swoje człowieczeństwo.",
+    dlc: [
+      {
+        title: "The City That Never Sleeps",
+        description:
+          "Trzy odrębne epizody dodatku, które rozszerzają historię o nowe konflikty miejskie, nowych przeciwników i ważne, bardziej osobiste wątki dla Petera Parkera.",
+      },
+    ],
   },
 
   "Marvel Spiderman: Miles Morales": {
@@ -798,6 +1119,16 @@ const gameDescriptions = {
     description:
       "Peter Parker i Miles Morales muszą współpracować, aby stawić czoła nowemu, potężnemu zagrożeniu – Venomowi. Ich relacje, zaufanie i granice moralności zostają wystawione na próbę, tworząc opowieść o przyjaźni, odpowiedzialności i cenie bohaterstwa w świecie pełnym chaosu i niebezpieczeństw.",
   },
+  "LEGO Władca Pierścieni": {
+    world: "Wysteria, Avalon, Grizzleheim",
+    why: "Wysteria to świat przygody, różnorodnych kultur i emocji, które tworzą wielką przygodę. Avalon dodaje mityczny niepokój i legendarny charakter, a Grizzleheim wzmacnia surowość i epickość wielkiej drogi. LEGO Władca Pierścieni to opowieść o przyjaźni, poświęceniu i walce z ciemnością, która zamienia małą inicjatywę w wielką zmianę.",
+    protagonist: "Frodo, Aragorn, Legolas, Gimli",
+    antagonist: "Sauron, Nazgûle",
+    location: "Śródziemie",
+    description:
+      "Klockowa adaptacja legendy o Śródziemiu pozwala przeżyć epicką podróż od małego, niepozornego Frodona po wielkie zmagania z ciemnością. Gra łączy eksplorację, walkę i łamigłówki w świecie, który odwołuje się do przyjaźni, poświęcenia i wielkich wyzwań. To historia o tym, że nawet najmniejszy bohater może zmienić los całego świata.",
+  },
+
   "LEGO Ninjago Film Gra": {
     world: "Mooshu",
     why: "Mooshu to świat honoru, mistrzów i uczniów, w którym tradycja i duchowa równowaga są kluczowe. Ninja z LEGO Ninjago przechodzą podobną drogę – szkolą się, popełniają błędy i uczą się współpracy. Motywy wschodnich sztuk walki, dyscypliny oraz walki z wewnętrznymi słabościami doskonale pasują do estetyki i filozofii Mooshu.",
@@ -1131,6 +1462,13 @@ const gameDescriptions = {
     location: "Japonia (Tatsumi Port Island), 2009-2010 rok",
     description:
       "Nowoczesny remake kultowej RPG, w której gracze wcielają się w studenta przenoszącego się do miasta pełnego tajemnic. Nocą bohater wraz z drużyną SEES przemierza Tartarus – tajemniczą wieżę pełną potężnych Shadow – by zapobiec nadciągającej katastrofie. Między kolejnymi bitwami rozwija relacje z towarzyszami, zarządza codziennym życiem i stara się odnaleźć sens w konflikcie między światłem a mrokiem. To emocjonalna, głęboka opowieść o dorastaniu, stracie i sile więzi międzyludzkich.",
+    dlc: [
+      {
+        title: "Episode Aigis: The Answer",
+        description:
+          "Dodatkowa, emocjonalna i fabularnie ważna kampania, która rozwija zarówno losy Aigis, jak i sens konfliktu z Nyx, kończąc całą opowieść w pełniejszy, epicki sposób.",
+      },
+    ],
   },
 
   "Persona 3 Portable": {
@@ -1325,6 +1663,16 @@ const gameDescriptions = {
       "Przygodowa platformówka osadzona w starożytnym Egipcie, w której gracze przemierzają piramidy, pustynie i starożytne świątynie, by powstrzymać złowrogiego boga Set’a. Bohaterowie — wojownik Sphinx i przebudzony Mummy — mają odmienne umiejętności, które należy wykorzystać, aby rozwiązywać skomplikowane zagadki, pokonywać strażników i odkrywać mityczne sekrety. To podróż pełna tajemnic, mitologii i zręcznościowych wyzwań.",
   },
 
+  "Super Smash Bros": {
+    world: "Celestia, Polaris, Wysteria",
+    why: "Celestia odpowiada zestawowi niezwykłych, często kosmicznych bohaterów i pęknięciom, które wychodzą poza zwykłe zasady świata. Polaris podkreśla potrzebę rywalizacji, porządku i walki o dominację. Wysteria dodaje emocjonalny, dowcipny i artystyczny wymiar tej kosmicznej dozy. Super Smash Bros to gra, która pokazuje, że nawet najbardziej odległe światy mogą się spotkać w jednym, chaotycznym starciu.",
+    protagonist: "Różni bohaterowie Nintendo",
+    antagonist: "Różni przeciwnicy",
+    location: "Arena wielowymiarowa",
+    description:
+      "Super Smash Bros to jedna z najbardziej rozpoznawalnych bijatyk w historii gier, w której znane postacie z różnych uniwersów zderzają się w szybkim i chaotycznym starciu. Gra opiera się na precyzji, zręczności, wyczuciu czasu i inteligentnym wykorzystywaniu otoczenia. Choć jest to prosta w odbiorze rozgrywka, kryje w sobie prawdziwy poziom strategicznej kontroli przestrzeni i stylu walki.",
+  },
+
   "Buckshot Roulette": {
     world: "Darkmoor",
     why: "Psychologiczny horror, napięcie, gra z losem i poczucie nieuchronnej śmierci — Darkmoor to idealne tło. Brak jasnych zasad i ciągłe poczucie zagrożenia pasują do darkmoorowej filozofii: strach jako forma rozrywki i kontroli.",
@@ -1403,6 +1751,13 @@ const gameDescriptions = {
     location: "Wyspy Inkwell, Kasyno Diabła",
     description:
       "Run’n’gun platformówka inspirowana animacją z lat 30., gdzie gracze wcielają się w Cupheada i Mugmana — dwóch braci, którzy muszą spłacić dług duszy u diabła. Gra słynie z ekstremalnej trudności, ręcznie rysowanej grafiki i chaotycznych walk z bossami takimi jak Król Kości czy Szef Solniczka. Każda arena to wyzwanie zręczności i refleksu, a unikalny styl retro w połączeniu z jazzową ścieżką dźwiękową tworzy niezapomniane doświadczenie.",
+    dlc: [
+      {
+        title: "The Delicious Last Course",
+        description:
+          "Najważniejsze rozszerzenie, które dodaje nową postać, nowe lokacje, epicką walkę z bossami i potężne uzupełnienie świata Inkwell.",
+      },
+    ],
   },
 
   Hercules: {
@@ -1455,6 +1810,28 @@ const gameDescriptions = {
       "Dom na wzgórzu, piwnica, grota, sheol, katedra, wyobraźnia Isaaca, czasy współczesne",
     description:
       "Mroczny roguelike z elementami hack’n’slash i nieskończonymi lochami generowanymi proceduralnie. Isaac ucieka przed fanatyczną matką, która wierzy, że musi go poświęcić, i trafia do surrealistycznego podziemia pełnego potworów, bossów i groteskowych stworzeń. Każda śmierć to nowy start z innymi przedmiotami i wyzwaniami, a narracja gry balansuje między traumą, religią i absurdalnym horrorem.",
+    dlc: [
+      {
+        title: "Wrath of the Lamb",
+        description:
+          "Pierwsze ważniejsze rozszerzenie, które doprowadza grę do bardziej klasycznej, trudniejszej i bardziej nieprzewidywalnej odmiany roguelike’a.",
+      },
+      {
+        title: "Afterbirth",
+        description:
+          "Najbardziej znaczące rozszerzenie, które dodaje nową warstwę chaosu, przygód i jakościowo lepszych, bardziej zróżnicowanych bossa i lochów.",
+      },
+      {
+        title: "Afterbirth+",
+        description:
+          "Rozbudowana wersja, która niezależnie od chaosu wprowadza ogromne zwiększenie liczby przedmiotów, wyzwań i nowych mechanik.",
+      },
+      {
+        title: "Repentance",
+        description:
+          "Ostatnie i największe rozszerzenie, które zmienia klimat gry, dodaje nowe obszary, mechaniki, bossy i prawie całkowicie przeprojektowuje rytm rozgrywki.",
+      },
+    ],
   },
 
   "Squid Game Bez Pardonu": {
@@ -1651,9 +2028,35 @@ const gameDescriptions = {
     description:
       "Przygodowa gra eksploracyjna z nutą tajemnicy i surrealizmu, w której gracz wciela się w członków Ekspedycji 33 prowadzonych przez Gustave’a. Świat Clair Obscur to mozaika fragmentów rzeczywistości pełnych zagadek, iluzji i odniesień do sztuki. Malarka – enigmatyczna postać – wprowadza element niepokoju i prowokuje pytania o naturę tworzenia, pamięci i postrzegania. To opowieść, która prowadzi przez labirynt symboli, pamięci i własnych interpretacji.",
   },
-  Painkiller: {},
-  Witchfire: {},
-  "Rayman Legends": {},
+  Painkiller: {
+    world: "Darkmoor, Dragonspyre",
+    why: "Darkmoor odpowiada mrocznemu, amoralnemu klimatycznemu absurdowi i ciężkiej atmosferze horroru, a Dragonspyre dodaje motyw piekielnej destrukcji i konsekwencji grzechu. Painkiller jest grą o bezlitosnym polu bitwy między życiem a piekłem, więc oba światy dobrze ją określają.",
+    protagonist: "Pietro Bosch (The Painkiller)",
+    antagonist: "Piekielne hordy, demoniczny wróg",
+    location: "Piekło, różne zakątki świata, współczesność",
+    description:
+      "Painkiller to klasyczny shooter akcji, w którym bohater – legendarny żołnierz piekielnego wymiaru – wchodzi do coraz bardziej szalonych i przerażających krain, by zmierzyć się z demonicznymi hordami. Gra opiera się na szybkim tempie, ogromnym arsenałowi i brutalnym, bezpardonowym stylu walki. To historia o walce z złem nie z szlachetnych pobudek, lecz z czystej potrzeby przetrwania i kompletnie nieprzyjemnej, wyjątkowo krwawej zemsty.",
+  },
+
+  Witchfire: {
+    world: "Darkmoor",
+    why: "Darkmoor to świat mroku, winy i przerażających, mistycznych sił, które nie chcą rozpoznawać granic między dobrem a złem. Witchfire idealnie wpisuje się w ten klimat: to gra o wyznaniowej obsesji, magii i nieustannym przerażeniu, które nie daje chwili oddechu.",
+    protagonist: "Strzelec z piekła / łowca czarownic",
+    antagonist: "Czarownica, demoniczne zagrożenie",
+    location: "Mroczne, przeklęte ziemie i diabelskie święta",
+    description:
+      "Witchfire to brutalny, mroczny shooter akcji z mocnym naciskiem na atmosferę, szybkość i ciężkie starcia z demonicznymi przeciwnikami. Gra buduje klimat nieprzyjaznego świata, w którym każda chwila może stać się ostatnią, a każdy wybór podąża ku większej odpowiedzialności za własne czyny. To opowieść o walce z mocami, które nie chcą być pokonane zwykłą siłą, lecz wymagają odwagi, precyzji i nieustannego dążenia do przetrwania.",
+  },
+
+  "Rayman Legends": {
+    world: "Wysteria, Khrysalis",
+    why: "Wysteria daje surrealistyczną, artystyczną aurę, a Khrysalis wzmacnia motyw magicznej harmonii i delikatności świata. Rayman Legends to gra o pięknie, zabawie i chwiejnej równowadze między inną rzeczywistością a żywą, magiczną energią, więc oba światy pasują do niej bardzo dobrze.",
+    protagonist: "Rayman",
+    antagonist: "Nieznane demony i siły chaosu",
+    location: "Kraina magicznych świata i podziemnych wysp",
+    description:
+      "Rayman Legends to kolorowa, wesoła platformówka z bogatą eksploracją i ogromnym naciskiem na tempo, styl i zabawę. Bohaterowie przemierzają różnorodne etapy, rozwiązują zręcznościowe wyzwania i mierzą się z przeciwnikami w pięknych, surrealistycznych środowiskach. Gra błyszczy swoją energią, a jednocześnie oferuje przygodę, która jest prosta, radosna i pełna humoru — choć niekiedy robi się trudniej, kiedy świat zaczyna wymagać od gracza nie tylko zręczności, ale i determinacji.",
+  },
 
   "Slay The Princess": {
     world: "Darkmoor",

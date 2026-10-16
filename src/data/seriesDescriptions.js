@@ -136,7 +136,7 @@ const seriesDescriptions = {
     description:
       "Animowany musical fantasy o koniu przeniesionym do absurdalnego świata centaurów. Pod warstwą humoru i piosenek kryje się historia o traumie, stracie i próbie odnalezienia domu. Kontrast między mrocznym światem wojny a kolorowym Centaurworld tworzy emocjonalną opowieść o akceptacji i tożsamości.",
   },
-  Deathnote: {
+  "Death Note": {
     dimension: "Nether",
     why: "Nether to wymiar ognia i moralnego zepsucia. Light, jak gracz który znalazł zakazany przedmiot, zaczyna wierzyć, że może kontrolować życie i śmierć. Atmosfera ciągłego napięcia i paranoi przypomina przetrwanie w Netherze – jeden błąd i spadasz w lawę.",
     protagonist: "Light Yagami",
@@ -144,6 +144,37 @@ const seriesDescriptions = {
     location: "Japonia (głównie Tokio) od 2006 do 2013 roku",
     description:
       "Psychologiczny thriller o genialnym licealiście, który znajduje notatnik pozwalający zabijać ludzi poprzez zapisanie ich imienia. Light postanawia oczyścić świat z przestępców, stając się samozwańczym bogiem nowego porządku. Rozpoczyna się intelektualny pojedynek między nim a tajemniczym detektywem L. To historia o pysze, władzy i cienkiej granicy między sprawiedliwością a tyranią.",
+  },
+
+  "Death Note 2015": {
+    dimension: "Nether",
+    why: "Świat 2015 roku jest jak Nether – pełen ciemnych decyzji, moralnych pułapek i impulsu do bycia „wyższym” ponad innymi. Gdy ktoś dostaje narzędzie do wyrokowania, pojawia się gotowość do popadnięcia w obsesję i kontrolę nad życiem innych.",
+    protagonist: "Light Yagami",
+    antagonist: "L",
+    location: "Japonia, Tokio, współczesność",
+    description:
+      "Adaptacja koncepcji Death Note z mocniejszym akcentem na psychologiczną grę władzy i obsesji. Serial pokazuje, jak posiadanie notatnika śmierci zamienia inteligentnego młodego człowieka w istotę przekonaną o własnym prawie do sądzenia innych. To historia o sztuce kontroli, paranoi i niebezpiecznej granicy pomiędzy sprawiedliwością a pełną destrukcją moralną.",
+  },
+
+  "Murder Drones": {
+    dimension: "Nether, End",
+    why: "Robotyczne zabójcze drony, brutalny świat postapokaliptyczny i nieustanne zagrożenie przypominają Nether z elementami Endu – miejsce zniszczenia, pustki i przerażającej estetyki, w której nie ma już miejsca na bezpieczny spokój.",
+    protagonist: "Uzi Doorman",
+    antagonist: "N, V, J oraz złośliwe systemy w ogromnym wraku cywilizacji",
+    location:
+      "Wypalona ziemia, ruiny dawnych fabryk i odcięte sektory zniszczonej planety",
+    description:
+      "Serial opowiada o grupie robotów-przestępców, których głównym celem jest przetrwanie w świecie po katastrofie. Gdy pojawia się młoda, zdeterminowana Uzi, historia zamienia się w brutalną, ale jednocześnie bardzo inteligentną opowieść o agresji, samotności, dorastaniu i próbę znalezienia sensu w świecie, w którym przeżycie często oznacza wyrzeczenie się własnej człowieczeństwa.",
+  },
+
+  "Obłędny Cyfrowy Cyrk": {
+    dimension: "End",
+    why: "End to miejsce surrealistyczne, odcięte od rzeczywistości i pełne nieobliczalnych zasad. To dokładnie klimat „cyfrowego cyrku”, w którym bohaterowie nie rozumieją, jak znaleźli się w tej przestrzeni i dlaczego nie ma z niej drogi ucieczki.",
+    protagonist: "Pomni",
+    antagonist: "Caine i całe mechanizmy tego surrealistycznego świata",
+    location: "Cyfrowy świat cyrku i jego abstrakcyjne, niepokojące areny",
+    description:
+      "Animowany serial o grupie postaci uwięzionych w dziwnym, pełnym gry i absurdu cyfrowym świecie. Każdy dzień przypomina powtarzalny pokaz, a to, co dzieje się wokół, miesza humor, niepokój i emocjonalne cierpienie. To opowieść o utracie pamięci, traumie, relacjach i próbie znalezienia sensu w miejscu, które nie daje odpowiedzi na żadne pytanie.",
   },
 
   "Cyberpunk Edgerunners": {
@@ -822,6 +853,7 @@ const seriesDescriptions = {
     description:
       "Dramat polityczny opowiadający o Mei Changsu, który pod przybraną tożsamością planuje zemstę za zniszczenie swojej rodziny. Serial skupia się na intrygach, lojalności i sprawiedliwości.",
   },
+
   "Young Sherlock": {
     dimension: "Overworld",
     why: "Historyczny świat dynastii Tang z intrygami dworskimi – bez metafizyki, za to z polityką i zagadkami kryminalnymi.",
@@ -850,6 +882,46 @@ const seriesDescriptions = {
     location: "Fikcyjne królestwo inspirowane starożytnymi Chinami",
     description:
       "Dziewczyna z przyszłości trafia do świata rządzonego przez system znaków zodiaku. Lekka, romantyczna historia pełna humoru, rywalizacji i dworskich intryg.",
+  },
+
+  "Under the Skin": {
+    dimension: "Overworld",
+    why: "To bardziej historia o ludzkiej psychologii i wyraźnym, wyreżyserowanym konflikcie niż o apokaliptycznym wymiarze. Świat jest realistyczny, ale przepełniony napięciem i milczeniem.",
+    protagonist: "Główna postać / bohaterowie serii",
+    antagonist: "Tajemniczy przeciwnicy i ukryte konflikty",
+    location: "Współczesna Chiny / świat z intymnym, społecznym konfliktem",
+    description:
+      "Serial bada tożsamość, społeczne maski i konsekwencje bycia obserwowanym przez innych. To opowieść o tym, jak wrażliwa psychika, codzienność i niewidzialne napięcia mogą zmienić ludzkie relacje i decyzje.",
+  },
+
+  "Love in the Desert": {
+    dimension: "Overworld",
+    why: "Świat jest ciężki, surowy i pełen napięcia, ale osadzony w uporządkowanej rzeczywistości, w której emocje i los pełnią większą rolę niż demoniczne zagrożenie.",
+    protagonist: "Główna para / bohaterowie",
+    antagonist: "Konflikty rodzinne i polityczne",
+    location: "Pustynne krainy i dawny świat wschodniej kultury",
+    description:
+      "Romantyczna, emocjonalna historia o miłości, przetrwaniu i odwadze w świecie, który nieustannie testuje ludzi. Serial łączy uczucie z perspektywą walki o własną wolę, godność i sens przyszłości.",
+  },
+
+  "Towards the Republic": {
+    dimension: "Overworld",
+    why: "To świat polityki, przemian i ciężkiej odpowiedzialności, a nie świat naturalnie szalonej metafizyki. Historia ma oparcie w wyraźnym, realistycznym porządku społecznym.",
+    protagonist: "Bohaterowie rewolucji / główni protagonistowie",
+    antagonist: "System, władza, siły opresji",
+    location: "Republika, stoliczne i wojskowe centrum",
+    description:
+      "Serial opowiada o ludziach, którzy muszą wybrać między przetrwaniem a buntowniczą odwagą. W świecie rozdartej politycznie republiki każda decyzja ma znaczenie, a losy bohaterów splatają się z walką o sprawiedliwość i przyszłość kraju.",
+  },
+
+  "Ice Fantasy": {
+    dimension: "Overworld",
+    why: "To jasny, wyraźny świat baśniowej polityki i ludzkich konfliktów – z odrobiną mocy, ale bez labiryntowego mroku Endu czy Netheru.",
+    protagonist: "Bohaterowie / para główna",
+    antagonist: "Wrogowie, konflikt i przeznaczenie",
+    location: "Kraina lodu, mroźne królestwo i ziemie śmiertelników",
+    description:
+      "Historia osadzona w magicznej krainie lodu, gdzie emocje, decyzje i związki między bohaterami zmieniają losy całego królestwa. To opowieść o miłości, przywództwie i ryzyku, gdy świat zmaga się z tym, co zostało zapisane w przeszłości i co dopiero nadejdzie.",
   },
 
   "Arsenal Military Academy": {
@@ -922,7 +994,15 @@ const seriesDescriptions = {
       "Epoka wojny dobiega końca, gdy młody Avatar uczy się panowania nad wszystkimi żywiołami. Historia o przyjaźni, odpowiedzialności i dojrzewaniu.",
   },
 
-  "How NOT to summon a Demon Lord": {},
+  "How NOT to Summon a Demon Lord": {
+    dimension: "Overworld",
+    why: "Świat jest lekki, komediowy i zbudowany na absurdalnym, lecz uporządkowanym poczuciu logiki fantasy. To klasyczny Overworld, w którym humor i różnorodne konsekwencje magii są ważniejsze niż mrok czy apokalipsa.",
+    protagonist: "Takuma Sakamoto",
+    antagonist: "Demon, nieudane wezwania i absurdalne zagrożenia",
+    location: "Świat fantasy z magią, demonami i szkolnym klimatem",
+    description:
+      "Serial śledzi historię Takumy Sakamoto, zwykłego chłopca, który przypadkowo przywołuje demona i wchodzi w absurdalną komediię z magią, nieporozumieniami i nieprzewidywalnym rozwojem wydarzeń. To lekka, wesoła opowieść o przypadkowym wywołaniu chaosu, w której liczy się humor, relacje i dowcipna absurdalność całego świata.",
+  },
 
   "Gwiezdne Wojny: The Mandalorian": {
     dimension: "Overworld, Nether",

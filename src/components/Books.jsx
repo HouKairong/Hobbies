@@ -2,8 +2,6 @@ import "./Books.css";
 import { useState, useRef } from "react";
 import komedia from "../../public/images/komedia.jpg";
 import books from "../data/books";
-import booksManga from "../data/booksManga";
-import booksIntroduction from "../data/booksIntroduction";
 import booksDescriptions from "../data/booksDescriptions";
 import GalleryModal from "../elements/GalleryModal";
 
@@ -11,7 +9,6 @@ const Books = () => {
   const [selectedSeries, setSelectedSeries] = useState(null);
   const [selectedBook, setSelectedBook] = useState(null);
   const [selectedStory, setSelectedStory] = useState(null);
-  const [selectedCanon, setSelectedCanon] = useState("main");
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
   const seriesRefs = useRef({});
@@ -21,7 +18,7 @@ const Books = () => {
   const seriesWorlds = {
     Wiedźmin: "Wizard City, Grizzleheim, Krokotopia, Mooshu",
     "Pieśń Lodu i Ognia": "Krokotopia, Grizzleheim",
-    "Sherlock Holmes": "Marleybone, Mooshu, Dragonspyre",
+    "Sherlock Holmes": "Marleybone, Krokotopia, Mooshu, Dragonspyre",
     "Książki o Chinach": "Mooshu",
     "Boska Komedia": "Dragonspyre, Wizard City",
     "Mitologia Nordycka": "Grizzleheim",
@@ -31,12 +28,7 @@ const Books = () => {
     "Królestwo Kwarcu": "Wizard City, Dragonspyre",
   };
 
-  const currentBooks =
-    selectedCanon === "manga"
-      ? booksManga
-      : selectedCanon === "introduction"
-        ? booksIntroduction
-        : books;
+  const currentBooks = books;
 
   const toggleSeries = (series) => {
     setSelectedSeries(selectedSeries === series ? null : series);
@@ -88,44 +80,7 @@ const Books = () => {
     <div className="books-wrapper">
       <div className="books-container">
         <h2 className="books-title">Książki</h2>
-        {/* SWITCH KANONU */}
-        <div className="books-canon-switch">
-          <button
-            className={selectedCanon === "introduction" ? "active" : ""}
-            onClick={() => {
-              setSelectedCanon("introduction");
-              setSelectedSeries(null);
-              setSelectedBook(null);
-              setSelectedStory(null);
-            }}
-          >
-            Wprowadzenie
-          </button>
-
-          <button
-            className={selectedCanon === "main" ? "active" : ""}
-            onClick={() => {
-              setSelectedCanon("main");
-              setSelectedSeries(null);
-              setSelectedBook(null);
-              setSelectedStory(null);
-            }}
-          >
-            Główny kanon
-          </button>
-
-          <button
-            className={selectedCanon === "manga" ? "active" : ""}
-            onClick={() => {
-              setSelectedCanon("manga");
-              setSelectedSeries(null);
-              setSelectedBook(null);
-              setSelectedStory(null);
-            }}
-          >
-            Kanon komiksowy
-          </button>
-        </div>
+        {/* <h3 className="books-canon-title">Główny kanon</h3> */}
         {/* LISTA SERII */}
         <ul className="books-list">
           {Object.keys(currentBooks).map((series) => (
@@ -326,7 +281,7 @@ const Books = () => {
         </div>
         {isGalleryOpen && (
           <GalleryModal
-            galleryType={selectedCanon === "manga" ? "manga" : "books"}
+            galleryType="books"
             onClose={() => setIsGalleryOpen(false)}
           />
         )}

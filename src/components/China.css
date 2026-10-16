@@ -2,7 +2,7 @@
 .china-wrapper {
   min-height: 100vh;
   background:
-    linear-gradient(rgba(25, 15, 45, 0.55), rgba(25, 15, 45, 0.55)),
+    linear-gradient(rgba(88, 62, 122, 0.3), rgba(88, 62, 122, 0.3)),
     url("../../public/images/hanging-temple.jpg");
   background-size: cover;
   background-position: center;
@@ -11,32 +11,31 @@
   padding: 30px;
 }
 
-/* kontener */
 .china-container {
   max-width: 1200px;
   margin: auto;
-  padding: 20px;
-  background-color: rgba(245, 240, 255, 0.9);
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  padding: 22px;
+  background: rgba(16, 19, 26, 0.82);
+  border: 1px solid rgba(188, 168, 255, 0.22);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.32);
 }
 
-/* nagłówki */
 .china-title {
   text-align: center;
   font-size: 36px;
-  color: darkblue;
+  color: #d9ccff;
   font-style: italic;
   margin-bottom: 20px;
+  letter-spacing: 0.04em;
 }
 
 .china-subtitle {
   font-size: 1.5em;
   margin-bottom: 10px;
-  color: #2c2c2c;
+  color: #d9ccff;
 }
 
-/* lista kategorii */
 .china-categories {
   list-style: none;
   padding-left: 0;
@@ -46,22 +45,25 @@
 }
 
 .china-category {
-  background-color: #e5d9ff;
+  background: rgba(34, 39, 48, 0.9);
+  border: 1px solid rgba(188, 168, 255, 0.18);
   padding: 10px 15px;
   border-radius: 10px;
   font-weight: bold;
+  color: #edf2ff;
   cursor: pointer;
   transition:
     transform 0.2s ease,
-    background-color 0.2s ease;
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .china-category:hover {
-  background-color: #d1b3ff;
+  background: rgba(38, 31, 52, 0.9);
+  border-color: rgba(188, 168, 255, 0.45);
   transform: scale(1.02);
 }
 
-/* lista elementów */
 .china-items-list {
   list-style: none;
   padding-left: 0;
@@ -73,15 +75,14 @@
 .china-item-title.clickable {
   cursor: pointer;
   font-weight: bold;
-  color: #333;
+  color: #edf2ff;
   transition: color 0.2s ease;
 }
 
 .china-item-title.clickable:hover {
-  color: #007acc;
+  color: #d9ccff;
 }
 
-/* subitems */
 .china-subitems-list {
   list-style: none;
   padding-left: 20px;
@@ -91,35 +92,41 @@
 .china-subitem {
   margin-bottom: 4px;
   font-size: 0.95em;
-  color: #555;
+  color: #dfe6f3;
 }
 
 .china-item {
   padding: 10px 15px;
-  background-color: #f0ebff;
+  background: rgba(39, 46, 58, 0.9);
+  border: 1px solid rgba(188, 168, 255, 0.12);
   border-radius: 10px;
   margin-bottom: 8px;
   transition:
     transform 0.2s ease,
-    background-color 0.2s ease;
+    background-color 0.2s ease,
+    border-color 0.2s ease;
   cursor: pointer;
+  color: #edf2ff;
 }
 
 .china-item:hover {
-  background-color: #d1b3ff;
+  background: rgba(38, 31, 52, 0.9);
+  border-color: rgba(188, 168, 255, 0.40);
   transform: scale(1.01);
 }
 
 .china-description-section {
   margin-top: 20px;
   padding: 16px;
-  background-color: rgba(240, 235, 255, 0.92);
+  background: rgba(34, 39, 48, 0.9);
+  border: 1px solid rgba(188, 168, 255, 0.18);
   border-radius: 12px;
+  color: #edf2ff;
 }
 
 .china-description-section h3 {
   margin-top: 0;
-  color: #2c2c2c;
+  color: #d9ccff;
 }
 
 .china-description-section p {

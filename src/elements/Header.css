@@ -5,8 +5,9 @@ body {
   padding: 0;
   height: 100%;
   font-family: "Segoe UI", sans-serif;
+  background: #090b12;
 }
-/* reset listy i linków */
+
 ul {
   margin: 0;
   padding: 0;
@@ -17,42 +18,47 @@ a {
   text-decoration: none;
 }
 
-/* wrapper header + nav */
 .headerAndNav {
-  position: relative; /* normalny flow */
+  position: relative;
   width: 100%;
-  background-color: blueviolet;
-  padding: 10px 15px; /* zmniejszony padding */
-  box-shadow: 0 0 15px black;
+  background: linear-gradient(
+    180deg,
+    rgba(14, 11, 22, 0.98),
+    rgba(28, 22, 38, 0.95)
+  );
+  padding: 14px 18px 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  border-bottom: 1px solid rgba(194, 175, 255, 0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1; /* wystarczy, nie musimy nad overlay */
+  z-index: 1;
 }
 
-/* główny nagłówek */
 header {
-  font-size: 36px; /* zmniejszone, żeby mieściło się w 1080p */
+  font-size: 36px;
   font-style: italic;
   font-family: "Playfair Display", serif;
-  text-decoration: underline;
-  color: darkblue;
-  background-color: violet;
-  padding: 8px 20px; /* trochę mniejszy padding */
-  border-radius: 20px;
-  box-shadow: 0 0 15px black;
+  text-decoration: none;
+  color: #d9ccff;
+  background: rgba(31, 25, 40, 0.8);
+  border: 1px solid rgba(194, 175, 255, 0.35);
+  padding: 8px 24px;
+  border-radius: 18px;
+  box-shadow: 0 0 18px rgba(194, 175, 255, 0.15);
   transition:
     transform 0.3s ease,
-    background-color 0.3s ease;
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 header:hover {
-  transform: scale(1.05);
-  background-color: rgb(211, 105, 211);
+  transform: translateY(-1px);
+  background: rgba(42, 34, 58, 0.9);
+  box-shadow: 0 0 22px rgba(194, 175, 255, 0.22);
   cursor: pointer;
 }
 
-/* nawigacja */
 nav {
   margin-top: 12px;
   display: flex;
@@ -61,57 +67,62 @@ nav {
 
 nav ul {
   display: flex;
-  gap: 20px;
-  padding: 10px 20px;
-  background-color: violet;
-  border-radius: 20px;
-  box-shadow: 0 0 15px black;
+  gap: 12px;
+  padding: 10px 14px;
+  background: rgba(25, 20, 34, 0.8);
+  border: 1px solid rgba(194, 175, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav li a {
-  font-size: 18px;
-  font-weight: 500;
-  color: darkblue;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 600;
+  color: #edf2ff;
+  padding: 8px 12px;
+  border-radius: 10px;
   transition: 0.2s ease;
 }
 
 nav li a:hover {
-  color: white;
-  transform: scale(1.1);
+  color: #f4edff;
+  background: rgba(194, 175, 255, 0.08);
+  transform: translateY(-1px);
 }
 
-/* aktywny link */
 .active-link {
-  color: white !important;
-  background-color: darkblue;
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-weight: bold;
+  color: #111111 !important;
+  background: linear-gradient(180deg, #d9ccff, #bca8ff);
+  box-shadow: 0 0 12px rgba(194, 175, 255, 0.35);
+  font-weight: 800;
 }
 
 .galleryButton {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 14px;
+  right: 18px;
   font-size: 22px;
-  background: violet;
-  border: none;
+  background: linear-gradient(180deg, #d9ccff, #bca8ff);
+  border: 1px solid rgba(17, 17, 17, 0.4);
   padding: 8px 12px;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 15px rgba(194, 175, 255, 0.25);
   transition: 0.2s ease;
 }
 
 .galleryButton:hover {
-  transform: scale(1.1);
-  background-color: rgb(211, 105, 211);
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(194, 175, 255, 0.35);
 }
 
 @media (max-width: 850px) {
   .headerAndNav {
     align-items: stretch;
-    padding: 10px 12px;
+    padding: 12px;
   }
 
   nav {
@@ -134,7 +145,7 @@ nav li a:hover {
   nav li a {
     display: block;
     width: 100%;
-    font-size: 16px;
+    font-size: 15px;
     padding: 10px 8px;
     text-align: center;
   }
@@ -145,7 +156,7 @@ nav li a:hover {
   }
 
   .galleryButton {
-    top: 10px;
-    right: 10px;
+    top: 12px;
+    right: 12px;
   }
 }

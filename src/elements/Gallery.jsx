@@ -15,6 +15,7 @@ const galleryImages = {
     { src: `${basePath}images/komedia.jpg`, title: "Boska Komedia" },
     { src: `${basePath}images/hanging-temple.jpg`, title: "Hanging Temple" },
     { src: `${basePath}images/socrates.jpg`, title: "Socrates" },
+    { src: `${basePath}images/Warhammer.jpg`, title: "Warhammer 40,000" },
   ],
 
   games: [

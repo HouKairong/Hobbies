@@ -130,7 +130,7 @@ const chinaTopics = {
             "Romantyczny serial fantasy o miłości nieśmiertelnych w świecie chińskiej mitologii.",
         },
         {
-          title: "Eternal Love of dream",
+          title: "Eternal Love of Dream",
           description:
             "Historia miłości lisiej księżniczki Bai Fengjiu i boga Dong Hua.",
         },

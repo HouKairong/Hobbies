@@ -84,6 +84,16 @@ const Header = () => {
                 Filozofia
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/warhammer"
+                className={({ isActive }) =>
+                  isActive ? "active-link" : undefined
+                }
+              >
+                Warhammer 40,000
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </div>

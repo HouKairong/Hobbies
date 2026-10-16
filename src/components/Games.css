@@ -1,38 +1,36 @@
 .games-wrapper {
   min-height: 100vh;
   background:
-    linear-gradient(rgba(25, 15, 45, 0.55), rgba(25, 15, 45, 0.55)),
+    linear-gradient(rgba(82, 59, 120, 0.34), rgba(82, 59, 120, 0.34)),
     url("/images/Wizard.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* <--- to trzyma tło na miejscu */
+  background-attachment: fixed;
   padding: 30px;
 }
-/* kontener */
+
 .games-container {
   position: relative;
   max-width: 1200px;
   margin: auto;
-  padding: 20px;
-  background-color: rgba(245, 240, 255, 0.9);
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  padding: 22px;
+  background: rgba(16, 19, 26, 0.82);
+  border: 1px solid rgba(188, 168, 255, 0.22);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.32);
   z-index: 1;
 }
 
-/* reszta Twojego CSS pozostaje bez zmian */
-
-/* nagłówek */
 .games-title {
   text-align: center;
   font-size: 36px;
-  color: darkblue;
+  color: #d9ccff;
   margin-bottom: 20px;
   font-style: italic;
+  letter-spacing: 0.04em;
 }
 
-/* input wyszukiwania i select filtrujący - razem w jednej linii */
 .games-controls {
   display: flex;
   width: 100%;
@@ -44,34 +42,41 @@
 
 .games-search,
 .games-filter {
-  flex: 1 1 200px; /* rośnie, minimalnie 200px */
+  flex: 1 1 200px;
   min-width: 0;
   box-sizing: border-box;
   padding: 10px 15px;
   font-size: 16px;
   border-radius: 10px;
-  border: 2px solid blueviolet;
+  border: 1px solid rgba(188, 168, 255, 0.5);
+  background: rgba(21, 25, 34, 0.9);
+  color: #edf2ff;
   outline: none;
   transition:
     border-color 0.3s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.games-search::placeholder,
+.games-filter {
+  color: #cdd8ef;
 }
 
 .games-search:focus,
 .games-filter:hover {
-  border-color: violet;
+  border-color: #d9ccff;
+  box-shadow: 0 0 0 2px rgba(188, 168, 255, 0.15);
   transform: scale(1.02);
 }
 
-/* liczba gier */
 .games-count {
   font-size: 16px;
-
   margin-bottom: 15px;
   text-align: center;
+  color: #dfe7f5;
 }
 
-/* lista gier w gridzie po 2 wiersze */
 .games-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -82,33 +87,93 @@
 }
 
 .games-item {
-  padding: 10px 15px;
-  background-color: #e5d9ff;
-  border-radius: 10px;
-  cursor: default;
+  padding: 12px 16px;
+  background: rgba(34, 39, 48, 0.9);
+  border: 1px solid rgba(188, 168, 255, 0.18);
+  border-radius: 12px;
+  color: #edf2ff;
+  cursor: pointer;
   transition:
     transform 0.2s ease,
-    background-color 0.2s ease;
-  cursor: pointer;
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .games-item:hover {
-  background-color: #d1b3ff;
+  background: rgba(38, 31, 52, 0.9);
+  border-color: rgba(188, 168, 255, 0.45);
   transform: scale(1.02);
 }
 
 .games-item span {
   font-weight: bold;
+  color: #d9ccff;
 }
 
 .games-item em {
   font-style: italic;
-  color: gray;
+  color: #c7cedd;
   margin-left: 8px;
+}
+
+.game-description {
+  margin-top: 20px;
+  padding: 18px 20px;
+  background: rgba(26, 20, 35, 0.9);
+  border: 1px solid rgba(188, 168, 255, 0.2);
+  border-radius: 14px;
+  color: #edf2ff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.game-description h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #d9ccff;
+  font-size: 1.8rem;
+}
+
+.game-description p {
+  margin: 12px 0;
+  line-height: 1.7;
+  color: #edf2ff;
+}
+
+.game-description strong {
+  color: #d9ccff;
+}
+
+.game-dlc-block {
+  margin-top: 20px;
+}
+
+.game-dlc-block p {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #d9ccff;
+}
+
+.game-dlc-block p strong {
+  font-size: inherit;
+  color: inherit;
+}
+
+.game-dlc-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.game-dlc-list li {
+  margin: 12px 0;
+  line-height: 1.7;
 }
 
 .image-of-media {
   width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .dogs-purpose-section {

@@ -1,0 +1,100 @@
+.warhammer-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem 4rem;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(72, 52, 108, 0.28), rgba(72, 52, 108, 0.28)),
+    url("/images/Warhammer.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.warhammer-container {
+  width: min(1100px, 100%);
+  background: rgba(22, 17, 31, 0.8);
+  border: 1px solid rgba(195, 176, 255, 0.18);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.warhammer-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 1rem;
+  color: #d9ccff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.warhammer-intro {
+  margin: 0 0 2rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #e7e0ff;
+}
+
+.warhammer-sections {
+  display: grid;
+  gap: 1rem;
+}
+
+.warhammer-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(195, 176, 255, 0.14);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.warhammer-toggle {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #f3f7ff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: left;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.warhammer-toggle:hover {
+  background: rgba(188, 168, 255, 0.08);
+}
+
+.warhammer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 1.25rem 1.25rem;
+}
+
+.warhammer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(195, 176, 255, 0.12);
+  color: #e7e0ff;
+}
+
+.warhammer-item strong {
+  color: #d9ccff;
+  font-size: 1.05rem;
+}
+
+.warhammer-item span {
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .warhammer-container {
+    padding: 1.25rem;
+  }
+
+  .warhammer-toggle {
+    font-size: 1rem;
+  }
+}

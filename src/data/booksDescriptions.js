@@ -22,7 +22,7 @@ const booksDescriptions = {
       "Seria powieści fantasy autorstwa amerykańskiego pisarza George’a R.R. Martina, zaplanowana na siedem tomów, z których jak na razie wydanych zostało pięć: Gra o tron, Starcie królów, Nawałnica mieczy, Uczta dla wron oraz Taniec ze smokami. Trwają prace nad kolejnymi tomami sagi: The Winds of Winter i A Dream of Spring.",
   },
   "Sherlock Holmes": {
-    world: "Marleybone, Mooshu, Dragonspyre",
+    world: "Marleybone, Krokotopia, Mooshu, Dragonspyre",
     protagonist: "Sherlock Holmes, John Watson",
     antagonist: "Profesor Moriarty, inni przestępcy",
     location: "Wiktoriańska Anglia (Londyn), lata 1881-1914",
@@ -47,7 +47,8 @@ const booksDescriptions = {
     why: "Boska Komedia zdefiniowała piekło które widzimy w grach (np. Dante's Inferno, Devil May Cry, TES IV Oblivion), czy serialach (np. Nie z tego świata, Chilling Adventures of Sabrina, Hazbin Hotel). Oprócz tego pełne cierpienia Piekło i Czyściec przypominają Dragonspyre, a Niebo - Dragonspyre przed upadkiem. Jest to również książka filozoficzna, a filozofia mnie bardzo interesuje",
     description:
       "Poemat włoskiego poety Dantego Alighieri, napisany w latach 1307–1321. Boska komedia jest syntezą średniowiecznej myśli filozoficznej, historycznej, teologicznej oraz panoramą świata. Jako arcydzieło literatury włoskiej, należy do klasyki światowej i wywarła znaczny wpływ na kulturę europejską. Pierwsze wydanie drukiem Boskiej komedii, w języku włoskim, wyszło w 1472 r. we włoskim Foligno z warsztatu pochodzącego z Moguncji typografa Johannesa Numeistra. Poemat przedstawia wizję wędrówki poety przez zaświaty – Piekło, Czyściec i Raj. Pomysł wędrówki w zaświaty (zwany katabazą) Dante zaczerpnął od swoich poprzedników – motyw ten pojawia się w literaturze starożytnego Rzymu (bezpośrednią inspiracją Dantego była Eneida Wergiliusza) jak i literaturze okresu średniowiecza. Dante rozwinął ten motyw w obszerny poemat, czyniąc samego siebie głównym bohaterem, chociaż należy mieć świadomość, że w poemacie mamy do czynienia z dwoma wcieleniami Dantego – po pierwsze bohatera, który wędruje po zaświatach, po drugie narratora, który z perspektywy czasu opowiada historię swojej wędrówki. Wedle wyznania samego autora w zbiorze poezji Życie Nowe, napisał on Boską komedię po to, aby oddać hołd swojej zmarłej ukochanej, Beatrycze, aby pokazać światu ogromną miłość, jaką żywi do niej. Kolejną motywacją było pragnienie wskazania ludzkości drogi do odrzucenia występnego życia. A zatem jest to motywacja moralistyczno–religijna, typowa dla średniowiecza: pędząc żywot wygnańca Dante żywił przekonanie, że ludzkość zbłądziła. Być może chciał odstraszyć ludzi od grzechów wizjami okropnych kar, jakie czekają ich po śmierci w Piekle oraz zachęcić do cnotliwego życia przez ukazanie wizji Raju jako miejsca wiecznego szczęścia.",
-    specialReason: "Najważniejsza blablabla",
+    specialReason:
+      "Boska Komedia jest jedną z najważniejszych książek filozoficznych i literackich w historii, ponieważ łączy w sobie teologię, literaturę, politykę, psychologię i alegorię w formie, która od wieków kształtuje sposób myślenia o grzechu, winie, odkupieniu i sensie ludzkiej drogi.",
   },
 
   "Mitologia Nordycka": {
@@ -96,7 +97,7 @@ const booksDescriptions = {
     location: "Feudalna, alternatywna Japonia",
     why: "Manga łączy motywy wiedźmińskie z estetyką samurajską — pasuje jako uzupełnienie kanonu głównego",
     description:
-      "Mroczna reinterpretacja opowieści wiedźmińskich w klimatach samurajskich: samotny łowca potworów funkcjonuje jako ronin, stając przed yokai, klanowymi intrygami i dylematami honoru.",
+      "Mroczna reinterpretacja opowieści wiedźmińskich w klimatach samurajskich: samotny łowca potworów funkcjonuje jako ronin, stając przed yokai, klanowymi intrygami i dylematami honoru. To wersja, w której techniki wiedźmińskie, zimna pragmatyczność oraz świat pełen duchów i przestępczych rodów tworzą atmosferę zupełnie odmienną od klasycznego fantasy, ale równie fascynującą. W centralnym miejscu pojawia się konflikt między wolą przetrwania a kodeksem honoru, co czyni tę opowieść nie tylko actionową, ale też głęboko emocjonalną i moralnie złożoną.",
   },
   "Assassin's Creed: Miecz Shao Jun": {
     world: "Historyczne Chiny / Aquila",
@@ -105,7 +106,7 @@ const booksDescriptions = {
     location: "Chiny (okres dynastii Ming)",
     why: "Adaptacja uniwersum Assassin's Creed z perspektywy chińskiej bohaterki — ciekawy most między historią a fikcją",
     description:
-      "Komiksowa/mangowa adaptacja losów Shao Jun, członkini Zakonu Asasynów, której przygody splatają się z polityką, zemstą i umiejętnościami skrytobójczymi.",
+      "Komiksowa i mangowa adaptacja losów Shao Jun, członkini Zakonu Asasynów, której przygody splatają się z polityką, zemstą i umiejętnościami skrytobójczymi. Treść nie ogranicza się tylko do pojedynków i akcji, ale ukazuje też wewnętrzną drogę bohaterki od szkolenia do decyzji o tym, jaką część własnej tożsamości chce zachować w świecie pełnym zdrady, ambicji i przemocy. To historia o przebudzeniu, ślepym honorze i cenie, jaką trzeba zapłacić za bycie narzędziem w grze większych sił.",
   },
   "Persona 5": {
     world: "Wysteria / współczesne Tokio",
@@ -114,7 +115,7 @@ const booksDescriptions = {
     location: "Współczesne Tokio",
     why: "Manga adaptuje popularną grę, łącząc elementy psikologiczne, heist i nadprzyrodzone światy",
     description:
-      "Opowieść o grupie licealistów prowadzących podwójne życie: w dzień uczniowie, w nocy złodzieje serc, którzy wkraczają do metafizycznych pałaców, by obnażać korupcję i zło.",
+      "Opowieść o grupie licealistów prowadzących podwójne życie: w dzień uczniowie, w nocy złodzieje serc, którzy wkraczają do metafizycznych pałaców, by obnażać korupcję i zło. Persona 5 to nie tylko historia o walce z przemocą i przywłaszczeniu, ale przede wszystkim opowieść o zagubieniu, pragnieniu wolności i osobistej odwadze. Każdy z bohaterów niesie własną traumę, a ich wspólna misja zmienia się w metaforę przebudzenia i walki z tym, co w człowieku jest najsłabsze, a jednocześnie najbardziej destrukcyjne.",
   },
   "Królestwo Kwarcu": {
     world: "Fantastyczny świat kryształów",
@@ -123,7 +124,7 @@ const booksDescriptions = {
     location: "Królestwo złożone z krystalicznych krain",
     why: "Fantasy oparte na motywach magii kryształów — pasuje do reszty kolekcji",
     description:
-      "Przygodowa seria fantasy oparta na mitologii kryształów, politycznych intrygach i turniejach mocy.",
+      "Przygodowa seria fantasy oparta na mitologii kryształów, politycznych intrygach i turniejach mocy. Świat Królestwa Kwarcu jest zbudowany z motywów światła, twardości i odblasku — czymś w rodzaju magii materialnej, która przekształca każdą scenę w rytuał piękna i niebezpieczeństwa. Opowieść rozgrywa się w przestrzeni, w której moc nie jest tylko siłą fizyczną, lecz także symbolem tożsamości, procesem natury i źródłem decyzji politycznych. To książki o potędze, losie, ambicji i nieprzewidywalnym wpływie przeznaczenia na ludzi, którzy próbują zapanować nad własnym światem.",
   },
   "Inkwizytor Wiedźm": {
     world: "Mroczne krainy / Aquila",
@@ -132,7 +133,7 @@ const booksDescriptions = {
     location: "Średniowieczne, mroczne krainy",
     why: "Ciemniejsza, bardziej religijna kontrapunkcja do klasycznych opowieści o wiedźminach",
     description:
-      "Seria przedstawia inkwizytora tropiącego i osądzającego praktyki magiczne — granica między prawnym porządkiem a barbarzyństwem zostaje wystawiona na próbę.",
+      "Seria przedstawia inkwizytora tropiącego i osądzającego praktyki magiczne — granica między prawnym porządkiem a barbarzyństwem zostaje wystawiona na próbę. To opowieść o tym, jak w imię stabilności i bezpieczeństwa można popełnić największe zło, a jednocześnie jak trudno odróżnić prawdę od fanatyzmu, gdy w grę wchodzą wiara, władza i strach. Książki te tworzą mroczną, ale bardzo inteligentną analizę tego, co dzieje się, gdy system sprawiedliwości staje się narzędziem ucisku i gdy ludzie zaczynają wierzyć, że brutalna kontrola jest jedyną drogą do porządku.",
   },
   "Alice in Borderland": {
     world: "Postapokaliptyczne Tokio / Wysteria",
@@ -141,7 +142,7 @@ const booksDescriptions = {
     location: "Alternatywne Tokio opanowane przez śmiertelne gry",
     why: "Survivalowe wyzwania, psychologiczne gry i dystopijny klimat — dobrze pasuje do kolekcji",
     description:
-      "Grupa młodych ludzi przenosi się do opustoszałego miasta, gdzie zmuszeni są rozwiązywać śmiertelne gry, aby przetrwać. Historia bada granice ludzkiej moralności i woli przetrwania.",
+      "Grupa młodych ludzi przenosi się do opustoszałego miasta, gdzie zmuszeni są rozwiązywać śmiertelne gry, aby przetrwać. Historia bada granice ludzkiej moralności i woli przetrwania, pokazując jak szybko ludzie przyzwyczajają się do brutalnych zasad, gdy strach zaczyna dominować nad ludzkimi relacjami. W centrum opowieści stoi nie tylko obłędny mechanizm gier, ale również pytanie o to, jak niska może być cena życia w świecie, w którym każda decyzja może oznaczać śmierć lub zdradę.",
   },
   "How NOT to Summon a Demon Lord": {
     world: "Wirtualne MMORPG / Aquila",
@@ -150,7 +151,7 @@ const booksDescriptions = {
     location: "Świat gry oraz elementy realnego świata",
     why: "Isekai i komedia z elementami fantasy — popularny tytuł mangowy",
     description:
-      "Komediowo-eroiczna seria isekai, gdzie gracz uwięziony w ciele potężnego awatara próbuje odnaleźć drogę powrotną, mierząc się z demonami, society i własnym ego.",
+      "Komediowo-eroiczna seria isekai, gdzie gracz uwięziony w ciele potężnego awatara próbuje odnaleźć drogę powrotną, mierząc się z demonami, społeczeństwem i własnym ego. To opowieść o absurdalnych sytuacjach, gwałtownych konfliktach i sekretnych ambicjach, które często bardziej zagrażają bohaterowi niż wszelkie potwory. Połączenie humoru, fantastyki i lekko zmysłowych motywów nadaje tej serii ładunek rozrywkowy, ale poza komicznym frontem kryje się też spora dawka rozważań o tożsamości, kontroli i granicach władzy.",
   },
   "Dumb Mutt Girlfriend": {
     world: "Współczesne, slice-of-life",
@@ -159,7 +160,7 @@ const booksDescriptions = {
     location: "Współczesne miasto",
     why: "Lekka manga slice-of-life o relacjach i perypetiach",
     description:
-      "Komiks opowiadający zabawne i ciepłe historie pary, skupiając się na relacjach, nieporozumieniach i humorze codziennego życia.",
+      "Komiks opowiadający zabawne i ciepłe historie pary, skupiając się na relacjach, nieporozumieniach i humorze codziennego życia. To lektura zbudowana z drobnych, ale emocjonalnie trafnych momentów — błędów, wspólnych śmiechów, nieporozumień i codziennych gestów, które sprawiają, że relacja między bohaterami nabiera prawdziwej, żywej energii. Jego siła polega na tym, że nie próbuje być wielką epicką sagą, tylko po prostu odwołuje się do bardzo ludzkiego poczucia humoru i ciepła.",
   },
   "Księga smoków świata": {
     world: "Grizzleheim, Dragonspyre",
@@ -168,7 +169,7 @@ const booksDescriptions = {
     location: "Różne krainy świata",
     why: "Rozszerza wiedzę o smokach i ich roli w świecie — naturalne uzupełnienie kanonu",
     description:
-      "Ilustrowany przewodnik po smokach: ich taksonomia, historia, zwyczaje i wpływ na kulturę oraz magię świata.",
+      "Ilustrowany przewodnik po smokach: ich taksonomia, historia, zwyczaje i wpływ na kulturę oraz magię świata. Książka traktuje smoki nie tylko jako potwory czy zwierzęta, ale jako istotne elementy świata, spajające mitologię, geografię, politykę i wyobraźnię ludzi. W taki sposób tworzy nie tylko atlas stworzeń, lecz także opowieść o tym, jak wyobrażenie o potworach zmienia się wraz z historią, religią i ludzkimi potrzebami — od strachu po przyjaźń, od wojny po legendę.",
   },
   "Myśl jak filozof": {
     world: "Aquila / intelektualne kręgi",
@@ -177,7 +178,7 @@ const booksDescriptions = {
     location: "Uniwersytety i dialogi",
     why: "Wprowadzenie do sposobu myślenia filozoficznego — przydatne dla zainteresowań autora",
     description:
-      "Książka popularnonaukowa wyjaśniająca podstawowe techniki rozumowania filozoficznego oraz klasyczne problemy etyki, epistemologii i metafizyki.",
+      "Książka popularnonaukowa wyjaśniająca podstawowe techniki rozumowania filozoficznego oraz klasyczne problemy etyki, epistemologii i metafizyki. Jej siła polega na tym, że nie każe czytelnikowi od razu przyjmować gotowych odpowiedzi, lecz pokazuje, jak myśleć i jak stawiać pytania. Zamiast podawać gotowy system, książka zachęca do analizy pojęć, wątpienia w oczywiste przekonania i rozpoznawania tego, co naprawdę jest sprzeczne z logiką, wolą i doświadczeniem człowieka.",
   },
   "Historia Piekła": {
     world: "Dragonspyre / mityczne zaświaty",
@@ -186,7 +187,7 @@ const booksDescriptions = {
     location: "Piekło w różnych tradycjach kulturowych",
     why: "Analiza mitologii piekła i jej wpływu na kulturę — zgodne z zainteresowaniem Boską Komedią",
     description:
-      "Kompendium historii i interpretacji piekła w literaturze, religii i sztuce — od starożytności po współczesne interpretacje.",
+      "Kompendium historii i interpretacji piekła w literaturze, religii i sztuce — od starożytności po współczesne interpretacje. Książka pokazuje, że obraz piekła nie jest jedynie motywem religijnym, lecz także narzędziem do opisu ludzkiej winy, strachu, represji i komplikacji moralnych. W tej perspektywie piekło staje się metaforą nie tylko zaświatów, ale też ludzkiej psychiki, sprawiedliwości i niepokoju o grzech, który nie daje się łatwo wymazać.",
   },
 };
 

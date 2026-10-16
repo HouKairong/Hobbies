@@ -7,8 +7,17 @@ import HTTYD from "../../public/images/HTTYD.jpg";
 import Komedia from "../../public/images/komedia.jpg";
 import HangingTemple from "../../public/images/hanging-temple.jpg";
 import Socrates from "../../public/images/socrates.jpg";
+import Warhammer from "../../public/images/Warhammer.jpg";
 
-const images = [Wizard, Minecraft, HTTYD, Komedia, HangingTemple, Socrates];
+const images = [
+  Wizard,
+  Minecraft,
+  HTTYD,
+  Komedia,
+  HangingTemple,
+  Socrates,
+  Warhammer,
+];
 
 const Home = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -76,6 +85,13 @@ const Home = () => {
             <p>
               Wiedzę zdobywam dla samej wiedzy. A ja wiem że w gruncie rzeczy
               nic nie wiem
+            </p>
+          </div>
+          <div className="home-card" onClick={() => goTo("/warhammer")}>
+            <h2>⚔️ Warhammer 40,000</h2>
+            <p>
+              Mroczna galaktyka fanatyzmu, wojny i przetrwania w świecie, który
+              nie zna litości.
             </p>
           </div>
         </div>
