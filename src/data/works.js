@@ -113,11 +113,6 @@ const works = [
     themes: ["Egzystencjalizm", "Śmierć / Przemijanie", "Religia"],
   },
   {
-    title: "Interstellar",
-    media: "Filmy",
-    themes: ["Egzystencjalizm", "Metafizyka / Symulacja"],
-  },
-  {
     title: "Avatar",
     media: "Filmy",
     isSeries: true,
@@ -239,11 +234,6 @@ const works = [
   },
   {
     title: "Między piekłem a niebem",
-    media: "Filmy",
-    themes: ["Śmierć / Przemijanie", "Egzystencjalizm"],
-  },
-  {
-    title: "Niebo istnieje... naprawdę",
     media: "Filmy",
     themes: ["Śmierć / Przemijanie", "Egzystencjalizm"],
   },

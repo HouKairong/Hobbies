@@ -1,6 +1,61 @@
+const seriesMeta = {
+  Wiedźmin: {
+    author: "Andrzej Sapkowski",
+    type: "główna saga",
+    grouping: ["główna trylogia / cykl", "opowiadania", "komiksy", "spin-offy"],
+  },
+  "Pieśń Lodu i Ognia": {
+    author: "George R. R. Martin",
+    type: "główna saga",
+    grouping: ["główna saga", "powieści dodatkowe", "historie poboczne"],
+  },
+  "Sherlock Holmes": {
+    author: "Arthur Conan Doyle",
+    type: "seria klasyczna",
+    grouping: ["główne powieści", "zbiory opowiadań", "pastiche", "adaptacje"],
+  },
+  "Książki o Chinach": {
+    author: "różni autorzy",
+    type: "reportaże i wprowadzenia",
+    grouping: [
+      "reportaże",
+      "filozofia i historia",
+      "literatura",
+      "manga / gry",
+    ],
+  },
+  "Boska Komedia": {
+    author: "Dante Alighieri",
+    type: "poemat epicki",
+    grouping: ["części poematu"],
+  },
+  "Mitologia Nordycka": {
+    author: "Neil Gaiman",
+    type: "mitologia / popularnonaukowa",
+    grouping: ["wprowadzenie", "rozdziały tematyczne", "epilog"],
+  },
+  "Jak Wytresować Smoka": {
+    author: "Cressida Cowell",
+    type: "seria młodzieżowa",
+    grouping: ["główna seria", "powieści poboczne", "traktaty / dodatki"],
+  },
+  "Obrona Sokratesa": {
+    author: "Platon",
+    type: "dialog filozoficzny",
+    grouping: ["tekst główny", "fragmenty / komentarze"],
+  },
+  "Death Note": {
+    author: "Tsugumi Ohba, Takeshi Obata",
+    type: "manga / seria",
+    grouping: ["główna seria", "opowiadania", "prequele / spin-offy"],
+  },
+};
+
 const books = {
   Wiedźmin: [
     {
+      author: "Andrzej Sapkowski",
+      entryType: "główna seria",
       title: "Ostatnie życzenie",
       description:
         "Zbiór opowiadań wprowadzających w świat Geralta z Rivii – samotnego łowcy potworów, którego los splata się z magią, intrygami i moralnymi dylematami. Każda historia odsłania zarówno brutalność świata, jak i subtelności ludzkiego wyboru.",
@@ -43,6 +98,8 @@ const books = {
       ],
     },
     {
+      author: "Andrzej Sapkowski",
+      entryType: "główna seria",
       title: "Miecz przeznaczenia",
       description:
         "Zbiór opowiadań rozwijający świat Wiedźmina, ukazujący Geraltowe przygody w kontekście przeznaczenia, politycznych intryg i spotkań z bohaterami, którzy kształtują jego los.",
@@ -174,58 +231,225 @@ const books = {
     {
       title: "Szpony i Kły",
       description:
-        "Antologia opowiadań autorstwa różnych pisarzy amatorów osadzonych w świecie Wiedźmina",
-      stories: [],
+        "Antologia niekanonicznych opowiadań osadzonych w świecie wiedźmińskim, wyłonionych w konkursie organizowanym przez miesięcznik Nowa Fantastyka z okazji 30. urodzin Geralta z Rivii.",
+      stories: [
+        {
+          title: "Kres cudów",
+          description:
+            "Najbardziej klasyczne opowiadanie z antologii – Geralt mierzy się z nieprzewidywalnym światem magii, trudnym wyborem moralnym i własnym poczuciem odpowiedzialności za to, co dzieje się wokół niego.",
+        },
+        {
+          title: "Krew na śniegu. Apokryf Koral",
+          description:
+            "Mroczna, pełna napięcia opowieść o losach postaci związanych z magią, zemstą i brutalną rzeczywistością świata, w którym nawet niewinni muszą stawić czoła konsekwencjom własnych decyzji.",
+        },
+        {
+          title: "Ironia losu",
+          description:
+            "Opowiadanie o zderzeniu ludzkich ambicji z bezwzględnym biegiem przeznaczenia, w którym spryt, przypadek i konsekwencje dawnych wyborów prowadzą do nieoczekiwanych zwrotów akcji.",
+        },
+        {
+          title: "Co dwie głowy…",
+          description:
+            "Humorystyczno-mroczna historia, w której dwa różne spojrzenia na ten sam problem sprawiają, że świat wiedźmiński staje się bardziej niespodziewany, a decyzje bohaterów mają daleko idące konsekwencje.",
+        },
+        {
+          title: "Skala powinności",
+          description:
+            "Opowieść o etyce, odpowiedzialności i kosztach decyzji podejmowanych przez ludzi, którzy muszą wybierać między lojalnością, honorami a przetrwaniem w brutalnym świecie.",
+        },
+        {
+          title: "Bez wzajemności",
+          description:
+            "Mroczny i emocjonalny tekst o relacjach międzyludzkich, zdradzie i cierpieniu, w którym każdy gest może stać się początkiem tragedii albo okazją do chrześcijańskiej łaski.",
+        },
+        {
+          title: "Lekcja samotności",
+          description:
+            "Opowiadanie poświęcone pustce, izolacji i psychologicznym skutkom życia w świecie, w którym bohaterowie często są zmuszeni samodzielnie nosić swoje cierpienie i wybory.",
+        },
+        {
+          title: "Nie będzie śladu",
+          description:
+            "Mroźna, napięciowa historia o śladach po ludziach i przeszłości, w której jednostka zmaga się z konsekwencjami własnych działań i magiczną siłą, która nie odpuszcza.",
+        },
+        {
+          title: "Dziewczyna, która nigdy nie płakała",
+          description:
+            "Opowieść o tajemnicy, sile charakteru i chłodnym spojrzeniu na świat, w której kobieca determinacja i nieprzewidywalne losy stają w konflikcie z brutalnym otoczeniem.",
+        },
+        {
+          title: "Ballada o kwiatuszku",
+          description:
+            "Lżejsza, bardziej poetycka historia, która balansuje między melancholią, humorystycznym tonem a mistycznym klimatem wiedźmińskiego świata, w którym prosta chwila może stać się pamiętną legendą.",
+        },
+        {
+          title: "Szpony i kły",
+          description:
+            "Tytułowe opowiadanie antologii – mroczny, pełen symboliki i odcienia niepokoju tekst, w którym świat potworów, ludzkich ambicji i magicznych konsekwencji splata się w wyjątkowo wyrazistą opowieść o przemocy i przetrwaniu.",
+        },
+      ],
     },
 
     {
       title: "Komiksy Macieja Parowskiego i Bogusława Polcha",
-      description: "Pierwsze komiksy osadzone w świecie Wiedźmina",
+      description:
+        "Wczesne komiksowe adaptacje świata Wiedźmina, które próbowały przenieść klimat sagi na papier, łącząc przygodowy ton z mroczną, nieco surową estetyką opowieści o Geraltcie. To ważny etap rozwoju wiedźmińskiej popkultury, pokazujący, jak mocno uniwersum Sapkowskiego zyskało własną ikonografię i fanską tożsamość.",
       stories: [
-        { title: "Droga Bez Powrotu", description: "" },
-        { title: "Zdrada", description: "" },
-        { title: "Geralt", description: "" },
-        { title: "Mniejsze Zło", description: "" },
-        { title: "Ostatnie Życzenie", description: "" },
-        { title: "Granica Możliwości", description: "" },
+        {
+          title: "Droga Bez Powrotu",
+          description:
+            "Opowieść o podróży, niepewności i nagłych starciach z ludźmi oraz bestiami, w której świat Wiedźmina ukazany jest jako miejsce brutalnej codzienności i trudnych wyborów.",
+        },
+        {
+          title: "Zdrada",
+          description:
+            "Komiks skupia się na zdradzie, lojalności i konsekwencjach własnych decyzji, pokazując, że w świecie Geralta nawet niewielki gest może zmienić długofalowe losy bohaterów.",
+        },
+        {
+          title: "Geralt",
+          description:
+            "Punkt widzenia samego wiedźmina, który pokazuje jego codzienność, odwagę i trudną pozycję człowieka stojącego pomiędzy polityką, magią i przemocą.",
+        },
+        {
+          title: "Mniejsze Zło",
+          description:
+            "Historia o wyborze między odrobiną dobra a większym złem, ukazująca wiedźmińską filozofię życia, w której moralność nie jest czarno-biała.",
+        },
+        {
+          title: "Ostatnie Życzenie",
+          description:
+            "Komiksowy wariant tego, co w cyklu było kluczowym motywem: próba znalezienia sensu, wyboru i poświęcenia w świecie, w którym każdy ruch ma cenę.",
+        },
+        {
+          title: "Granica Możliwości",
+          description:
+            "Opowieść mówiąca o przekraczaniu granic własnych możliwości, zarówno fizycznych, jak i psychologicznych, w świecie, w którym cierpienie i walka są codziennością.",
+        },
       ],
     },
 
     {
       title: "Oryginalne komiksy CD Projekt RED",
-      description: "Komiksy w świecie gier Wiedźmin",
+      description:
+        "To ważne, samodzielne komiksowe uzupełnienie lore’a Wiedźmina, które rozwija uniwersum poza główną sagą i pokazuje, jak wielowymiarowy jest świat Geraltu. Komiksy te rozszerzają historię, tworzą nowe wątki i wzmacniają poczucie wielkiego, spójnego kosmosu fabularnego.",
       stories: [
-        { title: "Racja Stanu", description: "" },
-        { title: "Dom ze szkła", description: "" },
-        { title: "Dzieci lisicy", description: "" },
-        { title: "Jak zabijać potwory", description: "" },
-        { title: "Klątwa kruków", description: "" },
-        { title: "Córka płomienia", description: "" },
-        { title: "Zatarte wspomnienia", description: "" },
-        { title: "Once Upon a Time in the Woods", description: "" },
-        { title: "Wiedźmi Lament", description: "" },
-        { title: "Frog Kiss", description: "" },
-        { title: "Ballada o dwóch wilkach", description: "" },
-        { title: "Dzikie zwierzęta", description: "" },
-        { title: "Corvo Bianco", description: "" },
+        {
+          title: "Racja Stanu",
+          description:
+            "Polityczna intryga, w której szczebel władzy i własne ambicje mogą zniszczyć niejedną życiową drogę, a moralne wybory stają się równie ważne co miecz.",
+        },
+        {
+          title: "Dom ze szkła",
+          description:
+            "Historia o tajemnicach, przeszłości i świecie, w którym każdy ślad może prowadzić do niebezpiecznego odkrycia.",
+        },
+        {
+          title: "Dzieci lisicy",
+          description:
+            "Opowieść o losie, przeznaczeniu i relacji między ludźmi, magią i nieprzewidywalnym biegiem wydarzeń.",
+        },
+        {
+          title: "Jak zabijać potwory",
+          description:
+            "Komiks, który wraca do tematów najbardziej związanych z profesją wiedźmina: polowania, strategii i cen, jaką trzeba zapłacić za bycie łowcą.",
+        },
+        {
+          title: "Klątwa kruków",
+          description:
+            "Mroczna historia z elementami tajemnicy i starcia z niewyjaśnionym złem, która podkreśla, że świat Wiedźmina nieustannie połyka kolejne krwawe legendy.",
+        },
+        {
+          title: "Córka płomienia",
+          description:
+            "Opowieść o pochodzeniu, przeznaczeniu i niebezpiecznej sieci związku między ludźmi, magią i politycznymi ambicjami.",
+        },
+        {
+          title: "Zatarte wspomnienia",
+          description:
+            "Historia o przeszłości, która wraca i nie daje o sobie zapomnieć – o śladach, które wciąż wywołują cierpienie i pytanie, co naprawdę zostało zapomniane.",
+        },
+        {
+          title: "Once Upon a Time in the Woods",
+          description:
+            "Opowieść o zaskakująco lirycznym i mrocznym klimacie, która pokazuje, że nawet wśród lasów i niebezpieczeństw można usłyszeć echo dawnych legend.",
+        },
+        {
+          title: "Wiedźmi Lament",
+          description:
+            "Mroczny, emocjonalny komiks, w którym świadomość utraty i obsesja na punkcie przeszłości splatają się w opowieść o bólu i pamięci.",
+        },
+        {
+          title: "Frog Kiss",
+          description:
+            "Niezwykła, nieco groteskowa i absurdalna historia, która pokazuje, że świat Wiedźmina potrafi łączyć grozę z nieoczekiwanym humorem.",
+        },
+        {
+          title: "Ballada o dwóch wilkach",
+          description:
+            "Komiks skupiony na konfliktach, przyjaźni i nieprzewidywalnym ścieraniu się losów, które od dawna kształtowały świat Kontynentu.",
+        },
+        {
+          title: "Dzikie zwierzęta",
+          description:
+            "Historia o naturze, agresji i przetrwaniu, która podkreśla, jak wielką rolę w świecie Wiedźmina odgrywają zarówno ludzie, jak i bestie.",
+        },
+        {
+          title: "Corvo Bianco",
+          description:
+            "Pewna, spokojniejsza, a zarazem bardzo charakterystyczna opowieść, w której Geralt pokazuje, że poza walką i rozbojem istnieje też codzienność, odpoczynek i prywatne życie bohatera.",
+        },
       ],
     },
 
     {
       title: "Komiksowe adaptacje opowiadań CD Projekt RED",
-      description: "Jak w tytule",
+      description:
+        "Zestaw komiksowych przeróbek najważniejszych opowiadań z pierwszych tomów sagi, pokazujących, jak dobrze materiał źródłowy nadaje się do wizualnej adaptacji. To miejsce, w którym proza Sapkowskiego zyskuje dynamikę ilustracji, bez utraty mrocznego tonu i filozoficznej warstwy opowieści.",
       stories: [
-        { title: "Ziarno prawdy", description: "" },
-        { title: "Mniejsze zło", description: "" },
-        { title: "Kraniec świata[", description: "" },
-        { title: "Kwestia ceny", description: "" },
-        { title: "Wiedźmin", description: "" },
-        { title: "Ostatnie życzenie", description: "" },
+        {
+          title: "Ziarno prawdy",
+          description:
+            "Adaptacja historyjki o poszukiwaniach, mistyce i zasadach gry między prawdą a kłamstwem w świecie, w którym każda informacja może być narzędziem.",
+        },
+        {
+          title: "Mniejsze zło",
+          description:
+            "Konkretna, mocno osadzona w wiedźmińskiej moralności historia o decyzjach, które nie są ani czyste, ani łatwe.",
+        },
+        {
+          title: "Kraniec świata",
+          description:
+            "Komiksowa wersja opowieści o skraju świata, niepewności i pustce, która zyskuje dodatkowy wymiar wizualny.",
+        },
+        {
+          title: "Kwestia ceny",
+          description:
+            "Adaptacja tajemniczej i emocjonalnej opowieści o konsekwencjach działania, w której każde zwycięstwo ma swój koszt.",
+        },
+        {
+          title: "Wiedźmin",
+          description:
+            "Prawdziwy klasyk cyklu, przedstawiający najważniejsze cechy wiedźmińskiej profesji: brutalność, odwagę, cynizm i nieustanną walkę z moralnymi dylematami.",
+        },
+        {
+          title: "Ostatnie życzenie",
+          description:
+            "Ostatni z opisanych utworów pokazuje, jak istotną rolę pełni wybór w świecie, który nie ma miejsca na czystą moralną prostotę.",
+        },
       ],
     },
 
-    { title: "Komiks Wiedźmin Ronin", description: "" },
-    { title: "Komiks Wiedźmineczka", description: "" },
+    {
+      title: "Wiedźmin Ronin",
+      description:
+        "Mroczna, samurajska reinterpretacja uniwersum Wiedźmina, która przenosi Geralta do świata pełnego duchów, klanowych intryg i zjawiskowych stacji kulturowych. To bardzo wyrazista adaptacja w klimacie ninja/samuraj, z charakterystycznym tonalnym kontrastem między typowym wiedźmińskim cynizmem a estetyką orientalną.",
+    },
+    {
+      title: "Wiedźmineczka",
+      description:
+        "Lżejsza, bardziej rozrywkowa odsłona wiedźmińskiej fantastyki, która oddaje ducha świata sapkowskiego z humorem, lekkością i odrobiną absurdalnego uroku. To pozycja dla fanów, którzy chcą wrócić do uniwersum bez potrzeby przechodzenia przez cięższy, bardziej mroczny nurt głównej sagi.",
+    },
   ],
   "Pieśń Lodu i Ognia": [
     {
@@ -291,6 +515,8 @@ const books = {
   ],
   "Sherlock Holmes": [
     {
+      author: "Arthur Conan Doyle",
+      entryType: "główna seria",
       title: "Studium w szkarłacie",
       description:
         "Pierwsza powieść wprowadzająca genialnego detektywa Sherlocka Holmesa i doktora Watsona. Przedstawia ich spotkanie, narodziny partnerstwa i pierwszą zagadkę kryminalną, w której zdrada, tajemnica i skomplikowane intrygi splatają się w niezwykłą opowieść detektywistyczną.",
@@ -435,6 +661,8 @@ const books = {
       ],
     },
     {
+      author: "Arthur Conan Doyle",
+      entryType: "główna seria",
       title: "Pies Baskerville'ów",
       description:
         "Klasyczna powieść grozy, w której Holmes staje wobec legendy o złowrogim psie. Napięcie, tajemnica i klimat Dartmoor tworzą niezapomnianą detektywistyczną opowieść.",
@@ -631,6 +859,8 @@ const books = {
       ],
     },
     {
+      author: "Nicholas Meyer",
+      entryType: "pastiche / adaptacja",
       title: "The Seven-Per-Cent Solution",
       description:
         "A novel by Nicholas Meyer, in which Sherlock Holmes confronts his cocaine addiction and teams up with Sigmund Freud to solve a mystery involving a kidnapping and a secret society.",
@@ -643,43 +873,143 @@ const books = {
     {
       title: "A Case of Death and Honey",
       description:
-        "A Case of Death and Honey is a Sherlock Holmes pastiche novel by British author Neil Gaiman, published in 2018. The story is set in 1889 and follows Holmes and Dr. Watson as they investigate a series of murders that seem to be connected to the infamous Jack the Ripper. The novel explores themes of identity, morality, and the nature of evil, while also paying homage to the original works of Arthur Conan Doyle.",
+        "A Case of Death and Honey to mroczna, późno-wiktoriańska opowieść Neila Gaimana, w której Holmes i Watson stają wobec zagadki współczesnej w swojej formie, ale osadzonej w klimacie klasycznej literatury detektywistycznej. To książka o morderstwie, maskach tożsamości i wadze prawdy, która odsłania duchowy i psychologiczny wymiar słynnych przygód detektywa.",
     },
-    { title: "Sherlock Holmes and the Nine-Dragon Sigil", description: "" },
+    {
+      title: "Sherlock Holmes and The Nine-Dragon Sigil",
+      description:
+        "Powieść Tima Symondsa łączy klasyczny klimat Sherlocka Holmesa z tajemniczą, azjatycką intrygą. Holmes i Watson muszą rozwiązać zagadkę związana z legendarnym znakiem, przemocą, kultem i siecią spisków, które prowadzą do niebezpiecznego zderzenia polityki, religii i złowrogiej siły.",
+    },
     {
       title: "Sherlock Holmes and The Servants of Hell",
       description:
         "Sherlock Holmes and The Servants of Hell to mroczna, utrzymana w klimacie grozy opowieść łącząca klasyczny styl przygód Sherlocka Holmesa z elementami horroru inspirowanego światem Clive’a Barkera, w której słynny detektyw oraz dr Watson mierzą się z przerażającą, nadprzyrodzoną zagadką związaną z tajemniczą konfiguracją i piekielnymi istotami z innego wymiaru, prowadząc śledztwo pełne niepokoju, brutalności i stopniowego odkrywania, że granica między racjonalnym światem a koszmarem jest znacznie cieńsza, niż kiedykolwiek przypuszczali.",
     },
-    { title: "The Return of the Pharaoh", description: "" },
+    {
+      title: "The Return of the Pharaoh",
+      description:
+        "Kolejna pastiszowa przygoda ze słynnym detektywem, w której Holmes wraca do tropów związanych z historią, władzą, intrygami i niebezpiecznym wyzwaniem z przeszłości. To opowieść o tajemniczych przekazach, zaginionych artefaktach i śledztwie, które stawia na próbę logikę, spokój i odwagę Watsona oraz samego detektywa.",
+    },
     {
       title: "Moriarty the Patriot",
       description:
-        "Manga 'Moriarty the Patriot' (憂国のモリアーティ) – reinterpretacja postaci Profesora Moriarty'ego w duchu kryminału i intrygi społecznej. Poniżej lista tomów (stan na podstawie źródeł: 23 tomy).",
+        "Manga 'Moriarty the Patriot' (憂国のモリアーティ) – reinterpretacja postaci Profesora Moriarty'ego w duchu kryminału i intrygi społecznej. To opowieść o polityce, zemście i walce z nierównościami ustroju, w której postać genialnego antagonisty zyskuje nową, bardziej złożoną warstwę emocjonalną i ideologiczną.",
       stories: [
-        { title: "Tom 1", description: "" },
-        { title: "Tom 2", description: "" },
-        { title: "Tom 3", description: "" },
-        { title: "Tom 4", description: "" },
-        { title: "Tom 5", description: "" },
-        { title: "Tom 6", description: "" },
-        { title: "Tom 7", description: "" },
-        { title: "Tom 8", description: "" },
-        { title: "Tom 9", description: "" },
-        { title: "Tom 10", description: "" },
-        { title: "Tom 11", description: "" },
-        { title: "Tom 12", description: "" },
-        { title: "Tom 13", description: "" },
-        { title: "Tom 14", description: "" },
-        { title: "Tom 15", description: "" },
-        { title: "Tom 16", description: "" },
-        { title: "Tom 17", description: "" },
-        { title: "Tom 18", description: "" },
-        { title: "Tom 19", description: "" },
-        { title: "Tom 20", description: "" },
-        { title: "Tom 21", description: "" },
-        { title: "Tom 22", description: "" },
-        { title: "Tom 23", description: "" },
+        {
+          title: "Tom 1",
+          description:
+            "Pierwszy tom wprowadza do świata Moriarty'ego, pokazując jego początek drogi i pierwsze starcie z porządkiem, który uważa za niesprawiedliwy.",
+        },
+        {
+          title: "Tom 2",
+          description:
+            "Drugi tom pogłębia polityczną intrygę i pokazuje, jak historia i osobista zemsta splatają się w sprawę większą niż pojedyncza walka z wrogiem.",
+        },
+        {
+          title: "Tom 3",
+          description:
+            "W tomie trzecim napięcie rośnie, a spiski oraz osobiste tajemnice sprawiają, że każdy ruch Moriarty'ego ma większe konsekwencje niż kiedykolwiek wcześniej.",
+        },
+        {
+          title: "Tom 4",
+          description:
+            "Tom czwarty rozwija relacje między głównymi bohaterami i podkreśla, że za każdym planem stoi nie tylko geniusz, lecz także koszt emocjonalny walki z systemem.",
+        },
+        {
+          title: "Tom 5",
+          description:
+            "W tym tomie główny antagonista zyskuje jeszcze większą kontrolę nad sytuacją, a jego wizja zemsty staje się coraz bardziej niebezpieczna i przemyślana.",
+        },
+        {
+          title: "Tom 6",
+          description:
+            "Piąty tom przesuwa akcję do kolejnej warstwy intryg, w której ambicje, zdrada i strategia przechodzą do fazy otwartego konfliktu.",
+        },
+        {
+          title: "Tom 7",
+          description:
+            "Tom siódmy skupia się na konsekwencjach wcześniejszych decyzji i pokazuje, jak trudne staje się utrzymanie kontroli nad własnym celem.",
+        },
+        {
+          title: "Tom 8",
+          description:
+            "Piąty tom dalej pogłębia złożoność gry politycznej, w której każda informacja może zmienić przebieg całej operacji.",
+        },
+        {
+          title: "Tom 9",
+          description:
+            "W tym tomie napięcie przenosi się z planowania na działania, a konfrontacje przybierają coraz bardziej dramatyczny charakter.",
+        },
+        {
+          title: "Tom 10",
+          description:
+            "Tom dziesiąty zwiększa skalę konfliktu i ukazuje, jak daleko gotów jest pójść Moriarty, by zmienić świat według własnej logiki.",
+        },
+        {
+          title: "Tom 11",
+          description:
+            "W tomie jedenastym tajemnice i przeszłość bohaterów wracają z większą siłą, komplikując zarówno ich strategię, jak i relacje z innymi postaciami.",
+        },
+        {
+          title: "Tom 12",
+          description:
+            "To rozdział, w którym moralna cena zemsty staje się równie ważna co sama strategia i inteligencja bohatera.",
+        },
+        {
+          title: "Tom 13",
+          description:
+            "Tom trzynasty przynosi rozwinięcie konfliktu na poziomie osobistym i politycznym, odsłaniając coraz większą liczbę zakulisowych ruchów.",
+        },
+        {
+          title: "Tom 14",
+          description:
+            "W tomie czternastym historia osiąga nowy poziom napięcia, a Moriarty staje wobec wyboru między możliwością zwycięstwa a ceną, jaką trzeba zapłacić za wolę sprawiedliwości.",
+        },
+        {
+          title: "Tom 15",
+          description:
+            "Tom piętnasty nagromadza wątki, dzięki którym opowieść staje się coraz bardziej złożona i emocjonalnie wymagająca.",
+        },
+        {
+          title: "Tom 16",
+          description:
+            "W tomie szesnastym główni bohaterowie muszą zmierzyć się z konsekwencjami swoich decyzji, a każdy ruch ma większy wpływ na dalszy przebieg konfliktu.",
+        },
+        {
+          title: "Tom 17",
+          description:
+            "Tom siedemnasty podnosi stawkę, ukazując, że walka z systemem nie kończy się na jednym pojedynku, lecz na całym łańcuchu wyborów i ofiar.",
+        },
+        {
+          title: "Tom 18",
+          description:
+            "W tym tomie każdy z bohaterów musi rozliczyć się z własnym poczuciem moralności i z definicją sprawiedliwości.",
+        },
+        {
+          title: "Tom 19",
+          description:
+            "Tom dziewiętnasty pogłębia dylematy etyczne i pokazuje, że obrona ludzi może prowadzić do innych, równie bolesnych konsekwencji.",
+        },
+        {
+          title: "Tom 20",
+          description:
+            "W tomie dwudziestym napięcie osiąga punkt kulminacyjny, a straty oraz zdrady zmieniają obraz całej wojny między bohaterami a systemem.",
+        },
+        {
+          title: "Tom 21",
+          description:
+            "Tom dwudziesty pierwszy przynosi większą przejrzystość planów i zbliża widza do rozstrzygnięcia najważniejszych konfliktów.",
+        },
+        {
+          title: "Tom 22",
+          description:
+            "W tomie dwudziestym drugim opowieść coraz wyraźniej pokazuje, że zwycięstwo nie jest jedynie zwycięstwem w walce, lecz również w wewnętrznej walce z własną przeszłością.",
+        },
+        {
+          title: "Tom 23",
+          description:
+            "Ostatni tom zamyka wielką historię Moriarty'ego, podsumowując jego drogę, konsekwencje działań oraz trudną cenę rewolucyjnej walki z nierównością.",
+        },
       ],
     },
   ],
@@ -745,7 +1075,6 @@ const books = {
       description:
         "Wstrząsająca autobiografia o doświadczeniach życia w chińskich obozach pracy i represjach politycznych. Książka napisana przez Gulbahara Haitiwaji i Rozenn Morgat ukazuje cierpienie jednostki, przetrwanie, odporność psychiczną oraz znaczenie pamięci historycznej.",
     },
-    { title: "Sherlock Holmes and the Nine-Dragon Sigil", description: "" },
     { title: "Bestiariusz chiński", description: "" },
     {
       title: "Assassin's Creed Miecz Shao Jun",
@@ -786,15 +1115,25 @@ const books = {
       ],
     },
     {
-      title: "Zapiski Zielarki",
-      description: "",
+      title: "Journey to the West in Simple Chinese",
+      description:
+        "Uproszczona chińska wersja klasycznej powieści o Sun Wukongu, Tripitace i jego uczniach. Książka pozwala zapoznać się z jednym z najważniejszych dzieł chińskiej literatury w łatwej do czytania formie, z naciskiem na klasyczne motywy podróży, nauki i moralności.",
+    },
+    {
+      title: "吃透中国史：三国",
+      description:
+        "Książka omawiająca historię i legendę Trzech Królestw w Chinach. Dzieli się na dwie części, które obejmują wojny, politykę, strategię i znaczenie postaci, które ukształtowały historię Chin.",
       stories: [
-        { title: "Tom 1", description: "" },
-        { title: "Tom 2", description: "" },
-        { title: "Tom 3", description: "" },
-        { title: "Tom 4", description: "" },
-        { title: "Tom 5", description: "" },
-        { title: "Tom 6", description: "" },
+        {
+          title: "Część 1",
+          description:
+            "Pierwsza część książki wprowadza w najważniejsze wydarzenia i postacie okresu Trzech Królestw, skupiając się na początkiem konfliktów, politycznych zawirowaniach i rozwoju władzy.",
+        },
+        {
+          title: "Część 2",
+          description:
+            "Druga część rozwija analizę bitew, intryg i kluczowych decyzji, które miały decydujący wpływ na losy Chin w tym przełomowym okresie historii.",
+        },
       ],
     },
     { title: "Komiks Wiedźmin Ronin", description: "" },

@@ -471,8 +471,182 @@ const movies = {
         },
       ],
     },
-    { title: "Super Mario Bros" },
+    {
+      title: "Super Mario Bros",
+      parts: [
+        {
+          title: "Super Mario Bros. (2023)",
+          description:
+            "Pierwsza kinowa przygoda Mario i Luigiego, która wprowadza widza do świata pełnego przygód, wyzwań i niespodziewanych sojuszy.",
+        },
+        {
+          title: "Super Mario Bros. 2",
+          description:
+            "Kontynuacja przygód przyjaciół z Krainy Grzyw, w której nowi sojusznicy, niebezpieczeństwa i emocje prowadzą do kolejnej wielkiej przygody.",
+        },
+      ],
+    },
     { title: "Minecraft: Film" },
+    {
+      title: "Śródziemie",
+      parts: [
+        {
+          title: "Władca Pierścieni: Drużyna Pierścienia",
+          description:
+            "Pierwsza część trylogii, w której Frodo i jego towarzysze wyruszają, by zniszczyć Jedyny Pierścień i powstrzymać Saurona.",
+        },
+        {
+          title: "Władca Pierścieni: Dwie Wieże",
+          description:
+            "Drugi film trylogii, ukazujący rozdzielenie Drużyny i narastające zagrożenie ze strony Saurona oraz Sarumana.",
+        },
+        {
+          title: "Władca Pierścieni: Powrót Króla",
+          description:
+            "Finałowa część trylogii, w której bohaterowie stają do ostatecznej bitwy o Śródziemie i losy Pierścienia zostają rozstrzygnięte.",
+        },
+        {
+          title: "Hobbit: Niezwykła Podróż",
+          description:
+            "Początek przygód Bilba Bagginsa, który wyrusza z grupą krasnoludów na wyprawę do Samotnej Góry.",
+        },
+        {
+          title: "Hobbit: Pustkowie Smauga",
+          description:
+            "Druga część przygód Bilba, koncentrująca się na starciu z potężnym smokiem Smaugiem i zagrożeniu dla królestwa krasnoludów.",
+        },
+        {
+          title: "Hobbit: Bitwa Pięciu Armii",
+          description:
+            "Kulminacyjna część trylogii, w której rozgrywa się epicka bitwa między ludźmi, elfami, krasnoludami i siłami ciemności.",
+        },
+        {
+          title: "Władca Pierścieni: Wojna Rohirrimów",
+          description:
+            "Film opowiadający o losach Rohirrimów i ich kluczowej roli w wydarzeniach trylogii Władcy Pierścieni.",
+        },
+      ],
+    },
+    {
+      title: "Marvel Cinematic Universe",
+      parts: [
+        {
+          title: "Iron Man",
+          description:
+            "Film wprowadzający Tony'ego Starka i świat Marvela, który rozpoczyna epokę superbohaterskich przygód w MCU.",
+        },
+        {
+          title: "The Incredible Hulk",
+          description:
+            "Historia Bruce'a Bannera, który próbuje kontrolować swoje mutacyjne moce i uciekać przed wojskowym i naukowym zagrożeniem.",
+        },
+        {
+          title: "Iron Man 2",
+          description:
+            "Tony Stark mierzy się z konsekwencjami swojej sławy, rosnącą presją oraz nowym zagrożeniem dla świata technologii.",
+        },
+        {
+          title: "Thor",
+          description:
+            "Prywatna historia boga piorunów, który musi zmierzyć się z własnym ego, losem i wyzwaniem poza Asgardem.",
+        },
+        {
+          title: "Captain America: The First Avenger",
+          description:
+            "Przygoda Steve'a Rogersa, który przechodzi przez niezwykły program wojskowy i staje się bohaterem wojny światowej.",
+        },
+        {
+          title: "The Avengers",
+          description:
+            "Połączenie największych bohaterów Marvela w jedną drużynę, która musi powstrzymać kosmiczne zagrożenie.",
+        },
+        {
+          title: "Iron Man 3",
+          description:
+            "Po traumatycznych doświadczeniach Tony Stark musi stawić czoła własnym lękom i nowemu niebezpieczeństwu, które grozi światu.",
+        },
+        {
+          title: "Thor: The Dark World",
+          description:
+            "Thor wraca do walki z ciemną mocą, która zagraża zarówno Asgardowi, jak i światu ludzi.",
+        },
+        {
+          title: "Captain America: The Winter Soldier",
+          description:
+            "Steve Rogers odkrywa spisek w strukturach bezpieczeństwa i musi bronić swoich ideałów przed zdradą z wewnątrz.",
+        },
+        {
+          title: "Guardians of the Galaxy",
+          description:
+            "Kosmiczna przygoda pełna humoru, muzyki i niezwykłych postaci, które zyskują wspólne przeznaczenie.",
+        },
+        {
+          title: "Avengers: Age of Ultron",
+          description:
+            "Nadorganizacja pojawia się nowy, groźniejszy wróg, a bohaterowie muszą stawić czoła konsekwencjom własnej wielkiej siły.",
+        },
+        {
+          title: "Ant-Man",
+          description:
+            "Złodziej dzięki eksperymentowi z kurczeniem się staje się bohaterem, który musi ratować świat w niezwykle nietypowy sposób.",
+        },
+        {
+          title: "Captain America: Civil War",
+          description:
+            "Drużyna Avengers dzieli się na dwa obozy, a konflikt ideologii, lojalności i odpowiedzialności staje się fundamentem przyszłej ery MCU.",
+        },
+        {
+          title: "Doctor Strange",
+          description:
+            "Neurochirurg po wypadku odkrywa tajemnicze moce mistyczne i staje się obrońcą rzeczywistości przed złem z innych wymiarów.",
+        },
+        {
+          title: "Guardians of the Galaxy Vol. 2",
+          description:
+            "Nowa przygoda kosmiczna, w której rodzina, współczucie i prawdziwe więzi okazują się równie ważne co moc.",
+        },
+        {
+          title: "Spider-Man: Homecoming",
+          description:
+            "Młody Peter Parker musi pogodzić szkolne życie z obowiązkami nadchodzącego bohatera, próbując dojrzewać pod presją.",
+        },
+        {
+          title: "Thor: Ragnarok",
+          description:
+            "Thor staje przed śmiertelną zagrożeniem, która zmusza go do walki o własny świat i własną tożsamość.",
+        },
+        {
+          title: "Black Panther",
+          description:
+            "Królestwo Wakandy ujawnia swoją moc i kulturę, a T'Challa musi podjąć wyzwanie polityczne i militarne dla całego świata.",
+        },
+        {
+          title: "Avengers: Infinity War",
+          description:
+            "Największy konflikt w MCU, w którym bohaterowie stają wobec Thanos i tragedii, która zmienia całe uniwersum.",
+        },
+        {
+          title: "Ant-Man and the Wasp",
+          description:
+            "Po wydarzeniach wielkiej wojny bohaterowie wracają do swojej historii, by stawić czoła nowym wyzwaniom i niebezpieczeństwom.",
+        },
+        {
+          title: "Captain Marvel",
+          description:
+            "Kryptonimowa wojowniczka z kosmosu zyskuje swoje miejsce w historii MCU, w trakcie wielkiego przełomu galaktycznej skali.",
+        },
+        {
+          title: "Avengers: Endgame",
+          description:
+            "Finale wielkiej epoki MCU, w którym bohaterowie stawiają ostatnią walkę o przyszłość świata i całego uniwersum.",
+        },
+        {
+          title: "Spider-Man: Far From Home",
+          description:
+            "Po wielkich wydarzeniach bohaterowie wracają do codzienności, ale nowa tajemnicza niebezpieczeństwo zmusza Petera do kolejnej wielkiej próby.",
+        },
+      ],
+    },
   ],
 
   Seriale: [
@@ -730,7 +904,46 @@ const movies = {
       ],
     },
     { title: "LEGO Ninjago Film (2017)" },
-    { title: "Death Note" },
+    {
+      title: "Death Note",
+      parts: [
+        {
+          title: "Death Note (2006)",
+          description:
+            "Pierwszy japoński film live-action, w którym Light Yagami znajduje notes śmierci i zaczyna igrać z ideą sprawiedliwości.",
+        },
+        {
+          title: "Death Note: The Last Name (2006)",
+          description:
+            "Kontynuacja, która rozwija konflikt między Lightem a L i pokazuje konsekwencje działania notatnika śmierci.",
+        },
+        {
+          title: "L: Change the WorLd (2008)",
+          description:
+            "Spin-off skupiający się na L i jego ostatniej misji, w której pojawiają się dylematy moralne i emocjonalne.",
+        },
+        {
+          title: "Death Note (2017)",
+          description:
+            "Amerykańska adaptacja, która przenosi historię do nowej, bardziej zachodniej interpretacji motywu prawa do sądu nad ludźmi.",
+        },
+        {
+          title: "Death Note: Light Up the New World (2017)",
+          description:
+            "Następca, w którym nowa generacja użytkowników noteśnika śmierci stara się przejąć władzę nad losem innych.",
+        },
+        {
+          title: "Death Note: Relight 1: Visions of a God",
+          description:
+            "Anime-recap przedstawiający pierwszą część historii i jej najważniejsze momenty w mocniejszym, emocjonalnym skrócie.",
+        },
+        {
+          title: "Death Note: Relight 2: L's Successors",
+          description:
+            "Drugi anime-recap skupiający się na dalszym rozwoju spisku i losach następców L.",
+        },
+      ],
+    },
     { title: "Avatar: Ostatni Władca Wiatru" },
     { title: "Herkules" },
     {
@@ -941,7 +1154,46 @@ const movies = {
         },
       ],
     },
-    { title: "Death Note" },
+    {
+      title: "Death Note",
+      parts: [
+        {
+          title: "Death Note (2006)",
+          description:
+            "Pierwszy japoński film live-action, w którym Light Yagami znajduje notes śmierci i zaczyna igrać z ideą sprawiedliwości.",
+        },
+        {
+          title: "Death Note: The Last Name (2006)",
+          description:
+            "Kontynuacja, która rozwija konflikt między Lightem a L i pokazuje konsekwencje działania notatnika śmierci.",
+        },
+        {
+          title: "L: Change the WorLd (2008)",
+          description:
+            "Spin-off skupiający się na L i jego ostatniej misji, w której pojawiają się dylematy moralne i emocjonalne.",
+        },
+        {
+          title: "Death Note (2017)",
+          description:
+            "Amerykańska adaptacja, która przenosi historię do nowej, bardziej zachodniej interpretacji motywu prawa do sądu nad ludźmi.",
+        },
+        {
+          title: "Death Note: Light Up the New World (2017)",
+          description:
+            "Następca, w którym nowa generacja użytkowników noteśnika śmierci stara się przejąć władzę nad losem innych.",
+        },
+        {
+          title: "Death Note: Relight 1: Visions of a God",
+          description:
+            "Anime-recap przedstawiający pierwszą część historii i jej najważniejsze momenty w mocniejszym, emocjonalnym skrócie.",
+        },
+        {
+          title: "Death Note: Relight 2: L's Successors",
+          description:
+            "Drugi anime-recap skupiający się na dalszym rozwoju spisku i losach następców L.",
+        },
+      ],
+    },
     { title: "Avatar: Ostatni Władca Wiatru" },
     {
       title: "White Snake",
@@ -950,6 +1202,46 @@ const movies = {
     },
     { title: "Creation of the Gods I: Kingdom of Storms" },
     { title: "Painted Skin" },
+    {
+      title: "Śródziemie",
+      parts: [
+        {
+          title: "Władca Pierścieni: Drużyna Pierścienia",
+          description:
+            "Pierwsza część trylogii, w której Frodo i jego towarzysze wyruszają, by zniszczyć Jedyny Pierścień i powstrzymać Saurona.",
+        },
+        {
+          title: "Władca Pierścieni: Dwie Wieże",
+          description:
+            "Drugi film trylogii, ukazujący rozdzielenie Drużyny i narastające zagrożenie ze strony Saurona oraz Sarumana.",
+        },
+        {
+          title: "Władca Pierścieni: Powrót Króla",
+          description:
+            "Finałowa część trylogii, w której bohaterowie stają do ostatecznej bitwy o Śródziemie i losy Pierścienia zostają rozstrzygnięte.",
+        },
+        {
+          title: "Hobbit: Niezwykła Podróż",
+          description:
+            "Początek przygód Bilba Bagginsa, który wyrusza z grupą krasnoludów na wyprawę do Samotnej Góry.",
+        },
+        {
+          title: "Hobbit: Pustkowie Smauga",
+          description:
+            "Druga część przygód Bilba, koncentrująca się na starciu z potężnym smokiem Smaugiem i zagrożeniu dla królestwa krasnoludów.",
+        },
+        {
+          title: "Hobbit: Bitwa Pięciu Armii",
+          description:
+            "Kulminacyjna część trylogii, w której rozgrywa się epicka bitwa między ludźmi, elfami, krasnoludami i siłami ciemności.",
+        },
+        {
+          title: "Władca Pierścieni: Wojna Rohirrimów",
+          description:
+            "Film opowiadający o losach Rohirrimów i ich kluczowej roli w wydarzeniach trylogii Władcy Pierścieni.",
+        },
+      ],
+    },
     { title: "The Wandering Earth" },
   ],
 
@@ -987,7 +1279,18 @@ const movies = {
       },
       { title: "Jako w piekle, tak i na ziemi" },
       { title: "Minecraft: Film" },
-      { title: "Death Note" },
+      {
+        title: "Death Note",
+        parts: [
+          { title: "Death Note (2006)" },
+          { title: "Death Note: The Last Name (2006)" },
+          { title: "L: Change the WorLd (2008)" },
+          { title: "Death Note (2017)" },
+          { title: "Death Note: Light Up the New World (2017)" },
+          { title: "Death Note: Relight 1: Visions of a God" },
+          { title: "Death Note: Relight 2: L's Successors" },
+        ],
+      },
       {
         title: "Hellraiser",
         parts: [
@@ -1208,7 +1511,66 @@ const movies = {
           },
         ],
       },
-      { title: "Imię róży" },
+      {
+        title: "Wizarding World",
+        parts: [
+          {
+            title: "Kamień Filozoficzny",
+            description:
+              "Pierwsza część przygód Harry’ego Pottera, w której odkrywa on swoje magiczne zdolności i stawia czoła ciemnym siłom w Hogwarcie.",
+          },
+          {
+            title: "Komnata Tajemnic",
+            description:
+              "Harry i jego przyjaciele odkrywają tajemniczą komnatę w szkole, pełną zagadek i groźnych sekretów.",
+          },
+          {
+            title: "Więzień Azkabanu",
+            description:
+              "Opowieść o ucieczce groźnego więźnia, Siriusie Blacku, i nowym zagrożeniu dla Harry’ego w trzecim roku nauki.",
+          },
+          {
+            title: "Czara Ognia",
+            description:
+              "Harry bierze udział w niebezpiecznym Turnieju Trójmagiczny, pełnym wyzwań, rywalizacji i tajemnic.",
+          },
+          {
+            title: "Zakon Feniksa",
+            description:
+              "Harry zmaga się z powrotem Voldemorta i wstępuje do tajnej organizacji walczącej z ciemnymi siłami.",
+          },
+          {
+            title: "Książę Półkrwi",
+            description:
+              "Odkrywanie przeszłości Voldemorta i przygotowania do nadchodzącej wojny w magicznym świecie.",
+          },
+          {
+            title: "Insygnia Śmierci cz.1",
+            description:
+              "Pierwsza część finału serii, w której Harry, Ron i Hermiona wyruszają na misję odnalezienia horkruksów.",
+          },
+          {
+            title: "Insygnia Śmierci cz.2",
+            description:
+              "Kulminacyjna bitwa z Voldemortem i zakończenie sagi o Harrym Potterze.",
+          },
+          {
+            title: "Fantastyczne zwierzęta i jak je znaleźć",
+            description:
+              "Historia magizoologa Newta Scamandera, który przybywa do Nowego Jorku z walizką pełną magicznych stworzeń.",
+          },
+          {
+            title: "Fantastyczne zwierzęta: Zbrodnie Grindelwalda",
+            description:
+              "Grindelwald ucieka z niewoli i zaczyna otwarcie gromadzić zwolenników, głosząc ideę dominacji czarodziejów nad niemagicznymi.",
+          },
+          {
+            title: "Fantastyczne zwierzęta: Tajemnice Dumbledore’a",
+            description:
+              "Dumbledore organizuje grupę czarodziejów i czarownic, by przeciwstawić się rosnącej potędze Grindelwalda.",
+          },
+        ],
+      },
       { title: "Wiking" },
       {
         title: "Assassin's Creed",
@@ -1225,11 +1587,130 @@ const movies = {
           },
         ],
       },
+      {
+        title: "Marvel Cinematic Universe",
+        parts: [
+          {
+            title: "Iron Man",
+            description:
+              "Film wprowadzający Tony'ego Starka i świat Marvela, który rozpoczyna epokę superbohaterskich przygód w MCU.",
+          },
+          {
+            title: "The Incredible Hulk",
+            description:
+              "Historia Bruce'a Bannera, który próbuje kontrolować swoje mutacyjne moce i uciekać przed wojskowym i naukowym zagrożeniem.",
+          },
+          {
+            title: "Iron Man 2",
+            description:
+              "Tony Stark mierzy się z konsekwencjami swojej sławy, rosnącą presją oraz nowym zagrożeniem dla świata technologii.",
+          },
+          {
+            title: "Thor",
+            description:
+              "Prywatna historia boga piorunów, który musi zmierzyć się z własnym ego, losem i wyzwaniem poza Asgardem.",
+          },
+          {
+            title: "Captain America: The First Avenger",
+            description:
+              "Przygoda Steve'a Rogersa, który przechodzi przez niezwykły program wojskowy i staje się bohaterem wojny światowej.",
+          },
+          {
+            title: "The Avengers",
+            description:
+              "Połączenie największych bohaterów Marvela w jedną drużynę, która musi powstrzymać kosmiczne zagrożenie.",
+          },
+          {
+            title: "Iron Man 3",
+            description:
+              "Po traumatycznych doświadczeniach Tony Stark musi stawić czoła własnym lękom i nowemu niebezpieczeństwu, które grozi światu.",
+          },
+          {
+            title: "Thor: The Dark World",
+            description:
+              "Thor wraca do walki z ciemną mocą, która zagraża zarówno Asgardowi, jak i światu ludzi.",
+          },
+          {
+            title: "Captain America: The Winter Soldier",
+            description:
+              "Steve Rogers odkrywa spisek w strukturach bezpieczeństwa i musi bronić swoich ideałów przed zdradą z wewnątrz.",
+          },
+          {
+            title: "Guardians of the Galaxy",
+            description:
+              "Kosmiczna przygoda pełna humoru, muzyki i niezwykłych postaci, które zyskują wspólne przeznaczenie.",
+          },
+          {
+            title: "Avengers: Age of Ultron",
+            description:
+              "Nadorganizacja pojawia się nowy, groźniejszy wróg, a bohaterowie muszą stawić czoła konsekwencjom własnej wielkiej siły.",
+          },
+          {
+            title: "Ant-Man",
+            description:
+              "Złodziej dzięki eksperymentowi z kurczeniem się staje się bohaterem, który musi ratować świat w niezwykle nietypowy sposób.",
+          },
+          {
+            title: "Captain America: Civil War",
+            description:
+              "Drużyna Avengers dzieli się na dwa obozy, a konflikt ideologii, lojalności i odpowiedzialności staje się fundamentem przyszłej ery MCU.",
+          },
+          {
+            title: "Doctor Strange",
+            description:
+              "Neurochirurg po wypadku odkrywa tajemnicze moce mistyczne i staje się obrońcą rzeczywistości przed złem z innych wymiarów.",
+          },
+          {
+            title: "Guardians of the Galaxy Vol. 2",
+            description:
+              "Nowa przygoda kosmiczna, w której rodzina, współczucie i prawdziwe więzi okazują się równie ważne co moc.",
+          },
+          {
+            title: "Spider-Man: Homecoming",
+            description:
+              "Młody Peter Parker musi pogodzić szkolne życie z obowiązkami nadchodzącego bohatera, próbując dojrzewać pod presją.",
+          },
+          {
+            title: "Thor: Ragnarok",
+            description:
+              "Thor staje przed śmiertelną zagrożeniem, która zmusza go do walki o własny świat i własną tożsamość.",
+          },
+          {
+            title: "Black Panther",
+            description:
+              "Królestwo Wakandy ujawnia swoją moc i kulturę, a T'Challa musi podjąć wyzwanie polityczne i militarne dla całego świata.",
+          },
+          {
+            title: "Avengers: Infinity War",
+            description:
+              "Największy konflikt w MCU, w którym bohaterowie stają wobec Thanos i tragedii, która zmienia całe uniwersum.",
+          },
+          {
+            title: "Ant-Man and the Wasp",
+            description:
+              "Po wydarzeniach wielkiej wojny bohaterowie wracają do swojej historii, by stawić czoła nowym wyzwaniom i niebezpieczeństwom.",
+          },
+          {
+            title: "Captain Marvel",
+            description:
+              "Kryptonimowa wojowniczka z kosmosu zyskuje swoje miejsce w historii MCU, w trakcie wielkiego przełomu galaktycznej skali.",
+          },
+          {
+            title: "Avengers: Endgame",
+            description:
+              "Finale wielkiej epoki MCU, w którym bohaterowie stawiają ostatnią walkę o przyszłość świata i całego uniwersum.",
+          },
+          {
+            title: "Spider-Man: Far From Home",
+            description:
+              "Po wielkich wydarzeniach bohaterowie wracają do codzienności, ale nowa tajemnicza niebezpieczeństwo zmusza Petera do kolejnej wielkiej próby.",
+          },
+        ],
+      },
     ],
 
     Niebo: [
       { title: "Między piekłem a niebem" },
-      { title: "Niebo istnieje... naprawdę" },
       { title: "Małpi Król" },
       { title: "Herkules" },
       {
@@ -1248,6 +1729,7 @@ const movies = {
         ],
       },
       { title: "Odyseja" },
+      { title: "Sokrates" },
       { title: "Pasja" },
 
       {
@@ -1270,7 +1752,126 @@ const movies = {
           },
         ],
       },
-      { title: "Interstellar" },
+      {
+        title: "Marvel Cinematic Universe",
+        parts: [
+          {
+            title: "Iron Man",
+            description:
+              "Film wprowadzający Tony'ego Starka i świat Marvela, który rozpoczyna epokę superbohaterskich przygód w MCU.",
+          },
+          {
+            title: "The Incredible Hulk",
+            description:
+              "Historia Bruce'a Bannera, który próbuje kontrolować swoje mutacyjne moce i uciekać przed wojskowym i naukowym zagrożeniem.",
+          },
+          {
+            title: "Iron Man 2",
+            description:
+              "Tony Stark mierzy się z konsekwencjami swojej sławy, rosnącą presją oraz nowym zagrożeniem dla świata technologii.",
+          },
+          {
+            title: "Thor",
+            description:
+              "Prywatna historia boga piorunów, który musi zmierzyć się z własnym ego, losem i wyzwaniem poza Asgardem.",
+          },
+          {
+            title: "Captain America: The First Avenger",
+            description:
+              "Przygoda Steve'a Rogersa, który przechodzi przez niezwykły program wojskowy i staje się bohaterem wojny światowej.",
+          },
+          {
+            title: "The Avengers",
+            description:
+              "Połączenie największych bohaterów Marvela w jedną drużynę, która musi powstrzymać kosmiczne zagrożenie.",
+          },
+          {
+            title: "Iron Man 3",
+            description:
+              "Po traumatycznych doświadczeniach Tony Stark musi stawić czoła własnym lękom i nowemu niebezpieczeństwu, które grozi światu.",
+          },
+          {
+            title: "Thor: The Dark World",
+            description:
+              "Thor wraca do walki z ciemną mocą, która zagraża zarówno Asgardowi, jak i światu ludzi.",
+          },
+          {
+            title: "Captain America: The Winter Soldier",
+            description:
+              "Steve Rogers odkrywa spisek w strukturach bezpieczeństwa i musi bronić swoich ideałów przed zdradą z wewnątrz.",
+          },
+          {
+            title: "Guardians of the Galaxy",
+            description:
+              "Kosmiczna przygoda pełna humoru, muzyki i niezwykłych postaci, które zyskują wspólne przeznaczenie.",
+          },
+          {
+            title: "Avengers: Age of Ultron",
+            description:
+              "Nadorganizacja pojawia się nowy, groźniejszy wróg, a bohaterowie muszą stawić czoła konsekwencjom własnej wielkiej siły.",
+          },
+          {
+            title: "Ant-Man",
+            description:
+              "Złodziej dzięki eksperymentowi z kurczeniem się staje się bohaterem, który musi ratować świat w niezwykle nietypowy sposób.",
+          },
+          {
+            title: "Captain America: Civil War",
+            description:
+              "Drużyna Avengers dzieli się na dwa obozy, a konflikt ideologii, lojalności i odpowiedzialności staje się fundamentem przyszłej ery MCU.",
+          },
+          {
+            title: "Doctor Strange",
+            description:
+              "Neurochirurg po wypadku odkrywa tajemnicze moce mistyczne i staje się obrońcą rzeczywistości przed złem z innych wymiarów.",
+          },
+          {
+            title: "Guardians of the Galaxy Vol. 2",
+            description:
+              "Nowa przygoda kosmiczna, w której rodzina, współczucie i prawdziwe więzi okazują się równie ważne co moc.",
+          },
+          {
+            title: "Spider-Man: Homecoming",
+            description:
+              "Młody Peter Parker musi pogodzić szkolne życie z obowiązkami nadchodzącego bohatera, próbując dojrzewać pod presją.",
+          },
+          {
+            title: "Thor: Ragnarok",
+            description:
+              "Thor staje przed śmiertelną zagrożenią, która zmusza go do walki o własny świat i własną tożsamość.",
+          },
+          {
+            title: "Black Panther",
+            description:
+              "Królestwo Wakandy ujawnia swoją moc i kulturę, a T'Challa musi podjąć wyzwanie polityczne i militarne dla całego świata.",
+          },
+          {
+            title: "Avengers: Infinity War",
+            description:
+              "Największy konflikt w MCU, w którym bohaterowie stają wobec Thanos i tragedii, która zmienia całe uniwersum.",
+          },
+          {
+            title: "Ant-Man and the Wasp",
+            description:
+              "Po wydarzeniach wielkiej wojny bohaterowie wracają do swojej historii, by stawić czoła nowym wyzwaniom i niebezpieczeństwom.",
+          },
+          {
+            title: "Captain Marvel",
+            description:
+              "Kryptonimowa wojowniczka z kosmosu zyskuje swoje miejsce w historii MCU, w trakcie wielkiego przełomu galaktycznej skali.",
+          },
+          {
+            title: "Avengers: Endgame",
+            description:
+              "Finale wielkiej epoki MCU, w którym bohaterowie stawiają ostatnią walkę o przyszłość świata i całego uniwersum.",
+          },
+          {
+            title: "Spider-Man: Far From Home",
+            description:
+              "Po wielkich wydarzeniach bohaterowie wracają do codzienności, ale nowa tajemnicza niebezpieczeństwo zmusza Petera do kolejnej wielkiej próby.",
+          },
+        ],
+      },
       {
         title: "Gwiezdne wojny",
         parts: [
@@ -1411,14 +2012,23 @@ const movies = {
       ],
     },
     { title: "El Camino" },
-    { title: "Death Note" },
+    {
+      title: "Death Note",
+      parts: [
+        { title: "Death Note (2006)" },
+        { title: "Death Note: The Last Name (2006)" },
+        { title: "L: Change the WorLd (2008)" },
+        { title: "Death Note (2017)" },
+        { title: "Death Note: Light Up the New World (2017)" },
+        { title: "Death Note: Relight 1: Visions of a God" },
+        { title: "Death Note: Relight 2: L's Successors" },
+      ],
+    },
     { title: "Constantine" },
     { title: "Pasja" },
-    { title: "Noe: Wybrany przez Boga" },
     { title: "L'Inferno" },
     { title: "Dante's Inferno: An Animated Epic" },
     { title: "Behemoth" },
-    { title: "Siódma pieczęć" },
     {
       title: "Przyczajony Tygrys, Ukryty Smok",
       parts: [
@@ -1427,7 +2037,6 @@ const movies = {
       ],
     },
     { title: "Spirited Away: W Krainie Bogów" },
-    { title: "Rower z Pekinu" },
     {
       title: "Gwiezdne wojny",
       parts: [
@@ -1493,9 +2102,47 @@ const movies = {
         },
       ],
     },
+    {
+      title: "Śródziemie",
+      parts: [
+        {
+          title: "Władca Pierścieni: Drużyna Pierścienia",
+          description:
+            "Pierwsza część trylogii, w której Frodo i jego towarzysze wyruszają, by zniszczyć Jedyny Pierścień i powstrzymać Saurona.",
+        },
+        {
+          title: "Władca Pierścieni: Dwie Wieże",
+          description:
+            "Drugi film trylogii, ukazujący rozdzielenie Drużyny i narastające zagrożenie ze strony Saurona oraz Sarumana.",
+        },
+        {
+          title: "Władca Pierścieni: Powrót Króla",
+          description:
+            "Finałowa część trylogii, w której bohaterowie stają do ostatecznej bitwy o Śródziemie i losy Pierścienia zostają rozstrzygnięte.",
+        },
+        {
+          title: "Hobbit: Niezwykła Podróż",
+          description:
+            "Początek przygód Bilba Bagginsa, który wyrusza z grupą krasnoludów na wyprawę do Samotnej Góry.",
+        },
+        {
+          title: "Hobbit: Pustkowie Smauga",
+          description:
+            "Druga część przygód Bilba, koncentrująca się na starciu z potężnym smokiem Smaugiem i zagrożeniu dla królestwa krasnoludów.",
+        },
+        {
+          title: "Hobbit: Bitwa Pięciu Armii",
+          description:
+            "Kulminacyjna część trylogii, w której rozgrywa się epicka bitwa między ludźmi, elfami, krasnoludami i siłami ciemności.",
+        },
+        {
+          title: "Władca Pierścieni: Wojna Rohirrimów",
+          description:
+            "Film opowiadający o losach Rohirrimów i ich kluczowej roli w wydarzeniach trylogii Władcy Pierścieni.",
+        },
+      ],
+    },
     { title: "Między piekłem a niebem" },
-    { title: "Niebo istnieje... naprawdę" },
-    { title: "Wszystkie psy idą do Nieba" },
     {
       title: "Hellraiser",
       parts: [
@@ -1561,46 +2208,6 @@ const movies = {
     { title: "Norymberga" },
     { title: "Czas Apokalipsy" },
     { title: "Wiking" },
-    {
-      title: "Śródziemie",
-      parts: [
-        {
-          title: "Władca Pierścieni: Drużyna Pierścienia",
-          description:
-            "Pierwsza część trylogii, w której Frodo i jego towarzysze wyruszają, by zniszczyć Jedyny Pierścień i powstrzymać Saurona.",
-        },
-        {
-          title: "Władca Pierścieni: Dwie Wieże",
-          description:
-            "Drugi film trylogii, ukazujący rozdzielenie Drużyny i narastające zagrożenie ze strony Saurona oraz Sarumana.",
-        },
-        {
-          title: "Władca Pierścieni: Powrót Króla",
-          description:
-            "Finałowa część trylogii, w której bohaterowie stają do ostatecznej bitwy o Śródziemie i losy Pierścienia zostają rozstrzygnięte.",
-        },
-        {
-          title: "Hobbit: Niezwykła Podróż",
-          description:
-            "Początek przygód Bilba Bagginsa, który wyrusza z grupą krasnoludów na wyprawę do Samotnej Góry.",
-        },
-        {
-          title: "Hobbit: Pustkowie Smauga",
-          description:
-            "Druga część przygód Bilba, koncentrująca się na starciu z potężnym smokiem Smaugiem i zagrożeniu dla królestwa krasnoludów.",
-        },
-        {
-          title: "Hobbit: Bitwa Pięciu Armii",
-          description:
-            "Kulminacyjna część trylogii, w której rozgrywa się epicka bitwa między ludźmi, elfami, krasnoludami i siłami ciemności.",
-        },
-        {
-          title: "Władca Pierścieni: Wojna Rohirrimów",
-          description:
-            "Film opowiadający o losach Rohirrimów i ich kluczowej roli w wydarzeniach trylogii Władcy Pierścieni.",
-        },
-      ],
-    },
     {
       title: "Matrix",
       parts: [
@@ -1686,7 +2293,7 @@ const movies = {
         },
       ],
     },
-    { title: "Spirited Away: W krainie bogów" },
+    { title: "Spirited Away: W Krainie Bogów" },
     {
       title: "Adam Miauczyński",
       parts: [

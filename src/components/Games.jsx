@@ -69,7 +69,7 @@ const gameTitleYears = {
   "Cyberpunk 2077": 2020,
   "Detroit Become Human": 2018,
   "Life is Strange": 2015,
-  "Kangurek Kao": 2010,
+  "Kangurek Kao": 2022,
   "God of War": 2005,
   "God of War 2018": 2018,
   "God of War Ragnarok": 2022,
@@ -246,11 +246,61 @@ const renderDlcList = (dlcs) => {
 
 const Games = () => {
   const [selectedWorld, setSelectedWorld] = useState("Wszystkie");
+  const [selectedStatus, setSelectedStatus] = useState("Wszystkie");
   const [search, setSearch] = useState("");
   const [selectedGame, setSelectedGame] = useState(null);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [itemStatuses, setItemStatuses] = useState(() => {
+    if (typeof window === "undefined") return {};
+
+    try {
+      return JSON.parse(localStorage.getItem("hobbies-game-statuses") || "{}");
+    } catch {
+      return {};
+    }
+  });
+
+  const statusOptions = [
+    { value: "seen", label: "Nie znam" },
+    { value: "progress", label: "W trakcie" },
+    { value: "done", label: "Skończone" },
+  ];
+
+  const statusFilterOptions = [
+    { value: "Wszystkie", label: "Wszystkie" },
+    ...statusOptions.map((option) => ({
+      value: option.label,
+      label: option.label,
+    })),
+  ];
 
   const descriptionRef = useRef(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem(
+        "hobbies-game-statuses",
+        JSON.stringify(itemStatuses),
+      );
+    }
+  }, [itemStatuses]);
+
+  const updateStatus = (itemKey, nextStatus) => {
+    setItemStatuses((current) => ({
+      ...current,
+      [itemKey]: nextStatus,
+    }));
+  };
+
+  const filterByStatus = (itemKey) => {
+    if (selectedStatus === "Wszystkie") return true;
+
+    const selectedStatusValue = statusOptions.find(
+      (option) => option.label === selectedStatus,
+    )?.value;
+
+    return (itemStatuses[itemKey] ?? "seen") === selectedStatusValue;
+  };
 
   const filteredGames = useMemo(() => {
     return gamesData
@@ -259,19 +309,30 @@ const Games = () => {
           ? true
           : game.worlds.includes(selectedWorld),
       )
-      .filter((game) =>
-        game.title.toLowerCase().includes(search.toLowerCase()),
-      );
-  }, [selectedWorld, search]);
+      .filter((game) => game.title.toLowerCase().includes(search.toLowerCase()))
+      .filter((game) => filterByStatus(`game:${game.title}`));
+  }, [selectedWorld, search, selectedStatus, itemStatuses]);
 
-  useEffect(() => {
-    if (selectedGame && descriptionRef.current) {
-      descriptionRef.current.scrollIntoView({
+  const scrollToDescription = (element) => {
+    if (!element || typeof window === "undefined") return;
+    requestAnimationFrame(() => {
+      element.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
+    });
+  };
+
+  const handleGameClick = (title) => {
+    const nextGame = selectedGame === title ? null : title;
+    setSelectedGame(nextGame);
+
+    if (nextGame) {
+      requestAnimationFrame(() => {
+        scrollToDescription(descriptionRef.current);
+      });
     }
-  }, [selectedGame]);
+  };
 
   return (
     <div className="games-wrapper">
@@ -303,24 +364,59 @@ const Games = () => {
               </option>
             ))}
           </select>
+
+          <select
+            value={selectedStatus}
+            onChange={(e) => setSelectedStatus(e.target.value)}
+            className="games-filter"
+          >
+            {statusFilterOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
         </div>
 
         <p className="games-count">Liczba gier: {filteredGames.length}</p>
 
         <ul className="games-list">
-          {filteredGames.map((game, index) => (
-            <li
-              key={index}
-              className={`games-item ${
-                selectedGame === game.title ? "active" : ""
-              }`}
-              onClick={() =>
-                setSelectedGame(selectedGame === game.title ? null : game.title)
-              }
-            >
-              {formatGameTitle(game.title)}
-            </li>
-          ))}
+          {filteredGames.map((game, index) => {
+            const itemKey = `game:${game.title}`;
+            const currentStatus = itemStatuses[itemKey] ?? "seen";
+
+            return (
+              <li
+                key={index}
+                className={`games-item ${
+                  selectedGame === game.title ? "active" : ""
+                } ${currentStatus ? `item-status-${currentStatus}` : ""}`}
+                onClick={() => handleGameClick(game.title)}
+              >
+                <div className="games-item-content">
+                  <span>{formatGameTitle(game.title)}</span>
+
+                  <div className="status-control">
+                    {statusOptions.map((option) => (
+                      <button
+                        key={option.value}
+                        type="button"
+                        className={`status-button status-${option.value} ${
+                          currentStatus === option.value ? "active" : ""
+                        }`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          updateStatus(itemKey, option.value);
+                        }}
+                      >
+                        {option.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </li>
+            );
+          })}
         </ul>
 
         {selectedGame === "Wizard101" && gameDescriptions[selectedGame] && (

@@ -100,6 +100,27 @@ nav li a:hover {
   font-weight: 800;
 }
 
+.resetDataButton {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1220;
+  background: linear-gradient(180deg, #ffb4b4, #ff7d7d);
+  border: 1px solid rgba(17, 17, 17, 0.4);
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 125, 125, 0.25);
+  transition: 0.2s ease;
+}
+
+.resetDataButton:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0 18px rgba(255, 125, 125, 0.35);
+}
+
 .galleryButton {
   position: absolute;
   top: 14px;
@@ -153,6 +174,13 @@ nav li a:hover {
   header {
     width: fit-content;
     margin: 0 auto 12px auto;
+  }
+
+  .resetDataButton {
+    top: 12px;
+    left: 12px;
+    font-size: 12px;
+    padding: 7px 10px;
   }
 
   .galleryButton {

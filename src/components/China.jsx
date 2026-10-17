@@ -18,7 +18,8 @@ const China = () => {
         subitems: Object.keys(booksManga).map((title) => ({
           title,
           description:
-            (booksManga[title].description || "") ||
+            booksManga[title].description ||
+            "" ||
             (booksManga[title].stories && booksManga[title].stories.length
               ? `Zawiera ${booksManga[title].stories.length} tomów.`
               : ""),
@@ -31,50 +32,51 @@ const China = () => {
   const itemDescriptionRef = useRef(null);
   const subitemDescriptionRef = useRef(null);
 
+  const scrollToSection = (element) => {
+    if (!element || typeof window === "undefined") return;
+    requestAnimationFrame(() => {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  };
+
   const toggleCategory = (category) => {
-    setSelectedCategory(category === selectedCategory ? null : category);
+    const nextCategory = category === selectedCategory ? null : category;
+    setSelectedCategory(nextCategory);
     setSelectedItem(null);
     setSelectedSubitem(null);
+
+    if (nextCategory) {
+      requestAnimationFrame(() => {
+        scrollToSection(itemsRef.current);
+      });
+    }
   };
 
   const toggleItem = (item) => {
-    setSelectedItem(item === selectedItem ? null : item);
+    const nextItem = item === selectedItem ? null : item;
+    setSelectedItem(nextItem);
     setSelectedSubitem(null);
+
+    if (nextItem) {
+      requestAnimationFrame(() => {
+        scrollToSection(itemDescriptionRef.current);
+      });
+    }
   };
 
   const toggleSubitem = (sub) => {
-    setSelectedSubitem(sub === selectedSubitem ? null : sub);
+    const nextSubitem = sub === selectedSubitem ? null : sub;
+    setSelectedSubitem(nextSubitem);
+
+    if (nextSubitem) {
+      requestAnimationFrame(() => {
+        scrollToSection(subitemDescriptionRef.current);
+      });
+    }
   };
-
-  /* Scroll do listy itemów */
-  useEffect(() => {
-    if (selectedCategory && itemsRef.current) {
-      itemsRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  }, [selectedCategory]);
-
-  /* Scroll do opisu itemu */
-  useEffect(() => {
-    if (selectedItem && itemDescriptionRef.current) {
-      itemDescriptionRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  }, [selectedItem]);
-
-  /* Scroll do opisu subitemu */
-  useEffect(() => {
-    if (selectedSubitem && subitemDescriptionRef.current) {
-      subitemDescriptionRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  }, [selectedSubitem]);
 
   return (
     <div className="china-wrapper">

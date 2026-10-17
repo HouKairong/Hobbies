@@ -6,9 +6,29 @@ import "./Header.css";
 const Header = () => {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
+  const handleResetAllData = () => {
+    const confirmed = window.confirm(
+      "Usunąć wszystkie zapisane dane na stronie?",
+    );
+
+    if (!confirmed) return;
+
+    localStorage.clear();
+    window.location.reload();
+  };
+
   return (
     <>
       <div className="headerAndNav">
+        <button
+          className="resetDataButton"
+          type="button"
+          onClick={handleResetAllData}
+          aria-label="Resetuj wszystkie dane"
+        >
+          Reset
+        </button>
+
         <button
           className="galleryButton"
           onClick={() => setIsGalleryOpen(true)}

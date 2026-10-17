@@ -1235,13 +1235,55 @@ const seriesSeasons = {
 
 const Series = () => {
   const [selectedDimension, setSelectedDimension] = useState("Wszystkie");
+  const [selectedStatus, setSelectedStatus] = useState("Wszystkie");
   const [search, setSearch] = useState("");
   const [selectedSeries, setSelectedSeries] = useState(null);
   const [selectedSeason, setSelectedSeason] = useState(null);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [itemStatuses, setItemStatuses] = useState(() => {
+    if (typeof window === "undefined") return {};
+
+    try {
+      return JSON.parse(
+        localStorage.getItem("hobbies-series-statuses") || "{}",
+      );
+    } catch {
+      return {};
+    }
+  });
+
+  const statusOptions = [
+    { value: "seen", label: "Nie znam" },
+    { value: "progress", label: "W trakcie" },
+    { value: "done", label: "Skończone" },
+  ];
+
+  const statusFilterOptions = [
+    { value: "Wszystkie", label: "Wszystkie" },
+    ...statusOptions.map((option) => ({
+      value: option.label,
+      label: option.label,
+    })),
+  ];
 
   const descriptionRef = useRef(null);
   const seasonRef = useRef(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem(
+        "hobbies-series-statuses",
+        JSON.stringify(itemStatuses),
+      );
+    }
+  }, [itemStatuses]);
+
+  const updateStatus = (itemKey, nextStatus) => {
+    setItemStatuses((current) => ({
+      ...current,
+      [itemKey]: nextStatus,
+    }));
+  };
 
   const filteredSeries = useMemo(() => {
     return seriesData
@@ -1252,27 +1294,28 @@ const Series = () => {
       )
       .filter((serie) =>
         serie.title.toLowerCase().includes(search.toLowerCase()),
-      );
-  }, [selectedDimension, search]);
+      )
+      .filter((serie) => {
+        const itemKey = `series:${serie.title}`;
+        const currentStatus = itemStatuses[itemKey] ?? "seen";
 
-  // Scroll do opisu po zmianie selectedSeries
-  useEffect(() => {
-    if (selectedSeries && descriptionRef.current) {
-      descriptionRef.current.scrollIntoView({
+        if (selectedStatus === "Wszystkie") return true;
+        return (
+          currentStatus ===
+          statusOptions.find((option) => option.label === selectedStatus)?.value
+        );
+      });
+  }, [selectedDimension, search, selectedStatus, itemStatuses]);
+
+  const scrollToSection = (element) => {
+    if (!element || typeof window === "undefined") return;
+    requestAnimationFrame(() => {
+      element.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
-    }
-  }, [selectedSeries]);
-
-  useEffect(() => {
-    if (selectedSeason && seasonRef.current) {
-      seasonRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  }, [selectedSeason]);
+    });
+  };
 
   const handleSeriesClick = (serieTitle) => {
     if (selectedSeries === serieTitle) {
@@ -1283,12 +1326,20 @@ const Series = () => {
 
     setSelectedSeries(serieTitle);
     setSelectedSeason(null);
+    requestAnimationFrame(() => {
+      scrollToSection(descriptionRef.current);
+    });
   };
 
   const handleSeasonClick = (season) => {
-    setSelectedSeason((current) =>
-      current?.title === season.title ? null : season,
-    );
+    const nextSeason = selectedSeason?.title === season.title ? null : season;
+    setSelectedSeason(nextSeason);
+
+    if (nextSeason) {
+      requestAnimationFrame(() => {
+        scrollToSection(seasonRef.current);
+      });
+    }
   };
 
   return (
@@ -1318,18 +1369,55 @@ const Series = () => {
               </option>
             ))}
           </select>
+
+          <select
+            value={selectedStatus}
+            onChange={(e) => setSelectedStatus(e.target.value)}
+            className="series-filter"
+          >
+            {statusFilterOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
         </div>
         <p className="series-count">Liczba seriali: {filteredSeries.length}</p>
         <ul className="series-list">
-          {filteredSeries.map((serie, index) => (
-            <li
-              key={index}
-              className={`series-item ${selectedSeries === serie.title ? "active" : ""}`}
-              onClick={() => handleSeriesClick(serie.title)}
-            >
-              {formatSeriesTitle(serie.title)}
-            </li>
-          ))}
+          {filteredSeries.map((serie, index) => {
+            const itemKey = `series:${serie.title}`;
+            const currentStatus = itemStatuses[itemKey] ?? "seen";
+
+            return (
+              <li
+                key={index}
+                className={`series-item ${selectedSeries === serie.title ? "active" : ""} ${currentStatus ? `item-status-${currentStatus}` : ""}`}
+                onClick={() => handleSeriesClick(serie.title)}
+              >
+                <div className="series-item-content">
+                  <span>{formatSeriesTitle(serie.title)}</span>
+
+                  <div className="status-control">
+                    {statusOptions.map((option) => (
+                      <button
+                        key={option.value}
+                        type="button"
+                        className={`status-button status-${option.value} ${
+                          currentStatus === option.value ? "active" : ""
+                        }`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          updateStatus(itemKey, option.value);
+                        }}
+                      >
+                        {option.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </li>
+            );
+          })}
         </ul>
         {selectedSeries && seriesDescriptions[selectedSeries] && (
           <div className="series-description" ref={descriptionRef}>
