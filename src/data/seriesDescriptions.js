@@ -32,7 +32,7 @@ const seriesDescriptions = {
       "Lucyfer Morningstar porzuca tron Piekła i przeprowadza się do Los Angeles, gdzie zaczyna współpracować z policją jako konsultant. Serial łączy kryminał z fantastyką i dramatem obyczajowym. Pod płaszczem humoru i flirtu kryje się historia o wolnej woli, odkupieniu i relacji z Ojcem. Każdy sezon pogłębia mitologię, wprowadzając anioły, demony i rodzinne konflikty o kosmicznej skali.",
   },
 
-  "Wiedźmin netflixa": {
+  "Wiedźmin Netflix": {
     dimension: "Overworld",
     why: "Overworld to klasyczny świat fantasy – różnorodne krainy, potwory pojawiające się nocą i ludzie groźniejsi niż creepery. To przestrzeń moralnej szarości i ciągłej walki o przetrwanie.",
     protagonist: "Geralt z Rivii",
@@ -42,7 +42,7 @@ const seriesDescriptions = {
       "Serial fantasy oparty na twórczości Andrzeja Sapkowskiego. Śledzi losy Geralta z Rivii – mutanta i łowcy potworów – oraz splata jego historię z przeznaczeniem Ciri i Yennefer. Świat Kontynentu pełen jest politycznych intryg, rasowych napięć i magicznych zagrożeń. To opowieść o przeznaczeniu, wyborach i relacjach w brutalnym świecie, gdzie dobro i zło rzadko są jednoznaczne.",
   },
 
-  "Wiedźmin rodowód krwi": {
+  "Wiedźmin Rodowód Krwi": {
     dimension: "Overworld",
     why: "To pradawna wersja Overworldu – świat przed znanymi wydarzeniami, kiedy dopiero kształtują się fundamenty historii, jak generujący się nowy seed świata.",
     protagonist: "Geralt i Ciri",
@@ -52,7 +52,7 @@ const seriesDescriptions = {
       "Prequel ukazujący wydarzenia sprzed tysiąca lat – czasy elfich imperiów i Konjunkcji Sfer. Serial pokazuje genezę wiedźminów oraz upadek dawnych potęg. To bardziej surowa, mitologiczna opowieść o zdradzie, władzy i narodzinach świata, który później stanie się sceną dla historii Geralta.",
   },
 
-  "Wiedźmin polski": {
+  "Wiedźmin (polski serial)": {
     dimension: "Overworld",
     why: "To Overworld w swojej najbardziej klasycznej, baśniowej formie – mniej widowiskowy, bardziej surowy i teatralny, jak pierwsze dni w nowym świecie bez shaderów.",
     protagonist: "Geralt",
@@ -62,7 +62,7 @@ const seriesDescriptions = {
       "Polska adaptacja przygód Geralta z przełomu lat 90. i 2000. Skupia się głównie na opowiadaniach, prezentując potwory, moralne dylematy i relacje między bohaterami. Mimo ograniczonego budżetu serial zdobył status kultowego wśród części widzów, będąc jedną z pierwszych prób przeniesienia wiedźmińskiego świata na ekran.",
   },
 
-  "Gra o tron": {
+  "Gra o Tron": {
     dimension: "Overworld",
     why: "Overworld to świat wielu biomów – od mroźnej północy po pustynie. Tak samo Westeros jest różnorodne, pełne frakcji, konfliktów i nieustannej walki o przetrwanie.",
     protagonist:
@@ -75,7 +75,7 @@ const seriesDescriptions = {
       "Epicka saga fantasy opowiadająca o walce o Żelazny Tron i przetrwaniu w brutalnym świecie polityki, zdrady i wojny. Serial łączy realistyczne, często okrutne przedstawienie władzy z elementami magii i pradawnego zagrożenia z Północy. To historia o ambicji, lojalności i cenie władzy.",
   },
 
-  "Ród smoka": {
+  "Ród Smoka": {
     dimension: "Overworld",
     why: "To Overworld skupiony na jednym biomie – rodzie Targaryenów – gdzie zamiast eksploracji liczy się walka o dominację i kontrolę nad smokami, jak nad najrzadszym surowcem.",
     protagonist: "Rhaenyra Targaryen",
@@ -444,7 +444,7 @@ const seriesDescriptions = {
       "Prequel Madagaskaru skupiający się na ekscentrycznym królu Julianie. Serial pokazuje jego drogę do władzy, konflikty plemienne i absurdalne decyzje, które często prowadzą do chaosu.",
   },
 
-  "Kung fu panda legenda o niezwykłości": {
+  "Kung Fu Panda: Legenda o niezwykłości": {
     dimension: "Overworld",
     why: "Klasyczny świat przygody, treningu i duchowej równowagi – Overworld z biomem świątyń i gór.",
     protagonist: "Po",
@@ -454,7 +454,7 @@ const seriesDescriptions = {
       "Po jako Smoczy Wojownik chroni Dolinę Pokoju przed kolejnymi zagrożeniami. Serial łączy humor z motywami samodoskonalenia i przyjaźni.",
   },
 
-  "Kung fu panda łapy przeznaczenia": {
+  "Kung Fu Panda: Łapy przeznaczenia": {
     dimension: "Overworld",
     why: "To kontynuacja duchowej podróży w świecie pełnym energii chi i starożytnych legend – nadal klasyczny fantasy Overworld.",
     protagonist: "Po",
@@ -464,7 +464,7 @@ const seriesDescriptions = {
       "Po zostaje mentorem dla czwórki dzieci obdarzonych mocą dawnych wojowników. Musi nauczyć się odpowiedzialności nauczyciela, jednocześnie stawiając czoła nowemu zagrożeniu.",
   },
 
-  "Kung fu panda Smoczy rycerz": {
+  "Kung Fu Panda: Smoczy rycerz": {
     dimension: "Overworld",
     why: "Podróż przez różne krainy i artefakty przypomina eksplorację mapy w Overworldzie – przygodowo, epicko, ale bez apokaliptycznej pustki.",
     protagonist: "Po",

@@ -448,12 +448,12 @@ const works = [
     ],
   },
   {
-    title: "Gra o tron",
+    title: "Gra o Tron",
     media: "Seriale",
     themes: ["Władza i polityka", "Nihilizm / Absurd", "Etyka i moralność"],
   },
   {
-    title: "Ród smoka",
+    title: "Ród Smoka",
     media: "Seriale",
     themes: [
       "Władza i polityka",

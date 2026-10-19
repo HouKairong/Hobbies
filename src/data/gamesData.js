@@ -22,7 +22,7 @@ const gamesData = [
   { title: "TES V Skyrim", worlds: ["Grizzleheim", "Darkmoor"] },
   { title: "Dark Souls 3", worlds: ["Dragonspyre"] },
   { title: "Bloodborne", worlds: ["Marleybone", "Darkmoor"] },
-  { title: "Elden Ring", worlds: ["Wizard City, Dragonspyre"] },
+  { title: "Elden Ring", worlds: ["Wizard City", "Dragonspyre"] },
   { title: "Sekiro: Shadows Die Twice", worlds: ["Mooshu"] },
   { title: "Sinner: Sacrifice for Redemption", worlds: ["Dragonspyre"] },
   { title: "Ghost of a Tale", worlds: ["Khrysalis", "Avalon"] },
@@ -89,7 +89,7 @@ const gamesData = [
   { title: "Ori and The Blind Forest", worlds: ["Khrysalis"] },
   { title: "Ori and The Will of The Wisps", worlds: ["Khrysalis"] },
   {
-    title: "Warhammer 40k Dawn of War",
+    title: "Warhammer 40,000 Dawn of War",
     worlds: [
       "Polaris",
       "Zafaria",
@@ -100,15 +100,20 @@ const gamesData = [
     ],
   },
   {
-    title: "Warhammer 40k Space Marine",
+    title: "Warhammer 40,000 Space Marine",
     worlds: ["Polaris", "Zafaria", "Azteca", "Dragonspyre"],
   },
   {
-    title: "Warhammer 40k Space Marine 2",
+    title: "Warhammer 40,000 Space Marine 2",
     worlds: ["Polaris", "Khrysalis", "Dragonspyre"],
   },
-  { title: "Warhammer 40k Boltgun", worlds: ["Polaris", "Dragonspyre"] },
+  { title: "Warhammer 40,000 Boltgun", worlds: ["Polaris", "Dragonspyre"] },
+  {
+    title: "Warhammer 40,000 Boltgun 2",
+    worlds: ["Polaris", "Dragonspyre"],
+  },
   { title: "Starcraft 2", worlds: ["Polaris", "Khrysalis", "Celestia"] },
+  { title: "Valorant", worlds: ["Celestia", "Polaris"] },
   { title: "Cyberpunk 2077", worlds: ["Celestia"] },
   { title: "Detroit Become Human", worlds: ["Celestia"] },
   { title: "Mirror's Edge", worlds: "Celestia, Polaris" },
@@ -118,6 +123,11 @@ const gamesData = [
   { title: "Sniper Elite 3", worlds: ["Zafaria"] },
   { title: "Prince of Persia Warrior Within", worlds: ["Zafaria"] },
   { title: "MediEvil", worlds: ["Darkmoor"] },
+  {
+    title: "Clive Barker’s Hellraiser: Revival",
+    worlds: ["Darkmoor", "Dragonspyre"],
+  },
+
   { title: "Shadow of The Tomb Raider", worlds: ["Azteca"] },
   { title: "God of War", worlds: ["Aquila"] },
   { title: "God of War 2", worlds: ["Aquila"] },
@@ -127,6 +137,8 @@ const gamesData = [
   { title: "God of War 3", worlds: ["Aquila"] },
   { title: "God of War 2018", worlds: ["Grizzleheim"] },
   { title: "God of War Ragnarok", worlds: ["Grizzleheim"] },
+  { title: "God of War Sons of Sparta", worlds: ["Aquila", "Grizzleheim"] },
+  { title: "God of War Laufey", worlds: ["Grizzleheim", "Aquila"] },
   { title: "Ghost of Tsushima", worlds: ["Mooshu"] },
   { title: "Ghost of Yotei", worlds: ["Mooshu"] },
   { title: "Undertale", worlds: ["Wizard City"] },
@@ -188,8 +200,13 @@ const gamesData = [
   { title: "Among Us", worlds: ["Celestia"] },
   { title: "Diablo Immortal", worlds: ["Dragonspyre"] },
   { title: "Martha is Dead", worlds: ["Wysteria"] },
-  { title: "Sherlock Holmes Chapter One", worlds: ["Wysteria"] },
+  {
+    title: "Sherlock Holmes Zbrodnia i Kara",
+    worlds: ["Darkmoor", "Marleybone"],
+  },
+  { title: "Sherlock Holmes Chapter One", worlds: ["Wysteria", "Marleybone"] },
   { title: "Sherlock Holmes The Awakened", worlds: ["Marleybone", "Darkmoor"] },
+
   { title: "Persona 3 Reload", worlds: ["Wysteria", "Aquila"] },
   { title: "Persona 3 Portable", worlds: ["Wysteria", "Aquila"] },
   {
@@ -233,6 +250,10 @@ const gamesData = [
   { title: "Persona Q2", worlds: ["Wysteria"] },
   { title: "Epoka Lodowcowa 3", worlds: ["Polaris", "Azteca"] },
   { title: "Dante's Inferno", worlds: ["Dragonspyre"] },
+  {
+    title: "The Alighieri Circle: Dante's Bloodline",
+    worlds: ["Darkmoor", "Avalon"],
+  },
   { title: "Madagaskar", worlds: ["Zafaria"] },
   { title: "Madagaskar 2", worlds: ["Zafaria"] },
   { title: "Spooky's Jumpscare Mansion", worlds: ["Darkmoor"] },

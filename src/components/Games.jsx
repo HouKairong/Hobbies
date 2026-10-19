@@ -61,11 +61,18 @@ const gameTitleYears = {
   "DOOM The Dark Ages": 2025,
   "Ori and The Blind Forest": 2015,
   "Ori and The Will of The Wisps": 2020,
-  "Warhammer 40k Dawn of War": 2004,
-  "Warhammer 40k Space Marine": 2011,
-  "Warhammer 40k Space Marine 2": 2024,
-  "Warhammer 40k Boltgun": 2023,
+  "Warhammer 40,000 Dawn of War": 2004,
+  "Warhammer 40,000 Space Marine": 2011,
+  "Warhammer 40,000 Space Marine 2": 2024,
+  "Warhammer 40,000 Boltgun": 2023,
+  "Warhammer 40,000 Boltgun 2": 2026,
+  "Clive Barker’s Hellraiser: Revival": 2024,
+  "The Alighieri Circle: Dante's Bloodline": 2024,
+  "Sherlock Holmes Zbrodnia i Kara": 2025,
+  "God of War Sons of Sparta": 2025,
+  "God of War Laufey": 2025,
   "Starcraft 2": 2010,
+  Valorant: 2020,
   "Cyberpunk 2077": 2020,
   "Detroit Become Human": 2018,
   "Life is Strange": 2015,
@@ -323,6 +330,16 @@ const Games = () => {
     });
   };
 
+  const scrollToRelatedGame = () => {
+    if (typeof window === "undefined") return;
+
+    setTimeout(() => {
+      if (descriptionRef.current) {
+        scrollToDescription(descriptionRef.current);
+      }
+    }, 40);
+  };
+
   const handleGameClick = (title) => {
     const nextGame = selectedGame === title ? null : title;
     setSelectedGame(nextGame);
@@ -333,6 +350,26 @@ const Games = () => {
       });
     }
   };
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const target = sessionStorage.getItem("hobbies-related-target");
+    if (!target) return;
+
+    try {
+      const parsed = JSON.parse(target);
+      if (parsed.page !== "games") return;
+
+      const normalizedTitle = String(parsed.title || "").trim();
+      if (!normalizedTitle) return;
+
+      setSelectedGame(normalizedTitle);
+      scrollToRelatedGame();
+    } finally {
+      sessionStorage.removeItem("hobbies-related-target");
+    }
+  }, []);
 
   return (
     <div className="games-wrapper">

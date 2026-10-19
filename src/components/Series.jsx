@@ -10,9 +10,9 @@ const seriesTitleYears = {
   Czarnobyl: 2019,
   "Gambit królowej": 2020,
   Lucyfer: 2016,
-  "Wiedźmin netflixa": 2019,
-  "Gra o tron": 2011,
-  "Ród smoka": 2022,
+  "Wiedźmin Netflix": 2019,
+  "Gra o Tron": 2011,
+  "Ród Smoka": 2022,
   "Assassin's Creed: Rodowód": 2009,
   "Jeźdźcy smoków": 2019,
   Centaurworld: 2021,
@@ -64,8 +64,8 @@ const seriesTitleYears = {
   "How NOT to Summon a Demon Lord": 2018,
   "Gwiezdne Wojny: The Mandalorian": 2019,
   "The end of the fucking world": 2018,
-  "Wiedźmin rodowód krwi": 2022,
-  "Wiedźmin polski": 2002,
+  "Wiedźmin Rodowód Krwi": 2022,
+  "Wiedźmin (polski serial)": 2002,
   "Rycerz Siedmiu Królestw": 2026,
   "Jeźdźcy smoków 9 światów": 2021,
   "Persona Trinity Soul": 2008,
@@ -81,9 +81,9 @@ const seriesTitleYears = {
   Kalifat: 2020,
   "Pingwiny z Madagaskaru": 2008,
   "Niech żyje król julian": 2014,
-  "Kung fu panda legenda o niezwykłości": 2011,
-  "Kung fu panda łapy przeznaczenia": 2018,
-  "Kung fu panda Smoczy rycerz": 2022,
+  "Kung Fu Panda: Legenda o niezwykłości": 2011,
+  "Kung Fu Panda: Łapy przeznaczenia": 2018,
+  "Kung Fu Panda: Smoczy rycerz": 2022,
   "Gakkou Gurashi": 2015,
   Marianne: 2019,
   Folklor: 2018,
@@ -179,7 +179,7 @@ const seriesSeasons = {
         "Ostatni sezon zamyka linię rozwoju postaci, stawiając ją wobec ostatecznego wyboru między wolnością, lojalnością i własną naturą.",
     },
   ],
-  "Wiedźmin netflixa": [
+  "Wiedźmin Netflix": [
     {
       title: "Sezon 1",
       description:
@@ -201,7 +201,7 @@ const seriesSeasons = {
         "Czwarty sezon zamyka zasadniczy cykl przemian, intensyfikując dramat i ostateczny konflikt z prawdziwą siłą zła.",
     },
   ],
-  "Gra o tron": [
+  "Gra o Tron": [
     {
       title: "Sezon 1",
       description:
@@ -243,7 +243,7 @@ const seriesSeasons = {
         "Ostatni sezon zamyka wielką sagę z tragicznie epickim finałem, w którym każda dynastia płaci cenę za swoją ambicję.",
     },
   ],
-  "Ród smoka": [
+  "Ród Smoka": [
     {
       title: "Sezon 1",
       description:
@@ -873,7 +873,7 @@ const seriesSeasons = {
         "Piąty sezon zamyka wielką część przygód z charakterystycznym humorem i zaskakującą, lekką energią serii.",
     },
   ],
-  "Kung fu panda legenda o niezwykłości": [
+  "Kung Fu Panda: Legenda o niezwykłości": [
     {
       title: "Sezon 1",
       description:
@@ -890,7 +890,7 @@ const seriesSeasons = {
         "Trzeci sezon podnosi poziom walki, ambicji i rozwoju bohaterów, tworząc bardziej epicką narrację.",
     },
   ],
-  "Kung fu panda łapy przeznaczenia": [
+  "Kung Fu Panda: Łapy przeznaczenia": [
     {
       title: "Sezon 1",
       description:
@@ -902,7 +902,7 @@ const seriesSeasons = {
         "Drugi sezon pojmuje dalsze wyzwania, w których Po musi zasłużyć na swoją pozycję i rozwijać duchową jakość bohaterów.",
     },
   ],
-  "Kung fu panda Smoczy rycerz": [
+  "Kung Fu Panda: Smoczy rycerz": [
     {
       title: "Sezon 1",
       description:
@@ -1317,6 +1317,16 @@ const Series = () => {
     });
   };
 
+  const scrollToRelatedSeries = () => {
+    if (typeof window === "undefined") return;
+
+    setTimeout(() => {
+      if (descriptionRef.current) {
+        scrollToSection(descriptionRef.current);
+      }
+    }, 40);
+  };
+
   const handleSeriesClick = (serieTitle) => {
     if (selectedSeries === serieTitle) {
       setSelectedSeries(null);
@@ -1341,6 +1351,26 @@ const Series = () => {
       });
     }
   };
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const target = sessionStorage.getItem("hobbies-related-target");
+    if (!target) return;
+
+    try {
+      const parsed = JSON.parse(target);
+      if (parsed.page !== "series") return;
+
+      const normalizedTitle = String(parsed.title || "").trim();
+      if (!normalizedTitle) return;
+
+      setSelectedSeries(normalizedTitle);
+      scrollToRelatedSeries();
+    } finally {
+      sessionStorage.removeItem("hobbies-related-target");
+    }
+  }, []);
 
   return (
     <div className="series-wrapper">

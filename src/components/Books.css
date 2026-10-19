@@ -166,6 +166,58 @@
   color: #edf2ff;
 }
 
+.books-related-media {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: rgba(18, 22, 31, 0.7);
+  border: 1px solid rgba(188, 168, 255, 0.14);
+}
+
+.books-related-media-title {
+  margin: 0 0 10px;
+  color: #d9ccff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.books-related-groups {
+  display: grid;
+  gap: 10px;
+}
+
+.books-related-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.books-related-label {
+  font-weight: 700;
+  color: #d9ccff;
+}
+
+.books-related-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.books-related-list li {
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(94, 80, 154, 0.26);
+  border: 1px solid rgba(188, 168, 255, 0.2);
+  color: #edf2ff;
+  font-size: 0.82rem;
+}
+
 .books-group-block {
   margin-top: 18px;
 }

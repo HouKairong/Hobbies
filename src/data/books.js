@@ -340,6 +340,11 @@ const books = {
             "Polityczna intryga, w której szczebel władzy i własne ambicje mogą zniszczyć niejedną życiową drogę, a moralne wybory stają się równie ważne co miecz.",
         },
         {
+          title: "Rachunek sumienia",
+          description:
+            "Komiks o moralnej cenie decyzji, które nie pozostają bez konsekwencji i wciąż wracają do bohatera jak echo dawnych wyborów.",
+        },
+        {
           title: "Dom ze szkła",
           description:
             "Historia o tajemnicach, przeszłości i świecie, w którym każdy ślad może prowadzić do niebezpiecznego odkrycia.",

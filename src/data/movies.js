@@ -145,7 +145,7 @@ const movies = {
       title: "Jak Wytresować Smoka",
       parts: [
         {
-          title: "Część 1",
+          title: "Jak Wytresować Smoka",
           description:
             "Pierwsza część serii, opowiadająca o przyjaźni młodego Wikinga Hiccup’a z niebezpiecznym smokiem Bezzębkiem.",
         },
@@ -170,12 +170,12 @@ const movies = {
             "Krótki film będący pomostem między pierwszą a drugą częścią serii. Pokazuje początki organizacji Jeźdźców Smoków i pierwsze wspólne misje Czkawki oraz jego przyjaciół, gdy uczą się współpracować ze swoimi smokami w nowych, niebezpiecznych sytuacjach.",
         },
         {
-          title: "Część 2",
+          title: "Jak Wytresować Smoka 2",
           description:
             "Hiccup i Bezzębny kontynuują swoje przygody, odkrywając nowe krainy i wyzwania w świecie smoków.",
         },
         {
-          title: "Część 3",
+          title: "Jak Wytresować Smoka 3",
           description:
             "Finałowa część serii animowanej, w której Hiccup staje przed ostatecznym wyborem dotyczącym świata ludzi i smoków.",
         },
@@ -186,7 +186,7 @@ const movies = {
             "Świąteczna krótkometrażowa animacja rozgrywająca się po wydarzeniach trzeciego filmu. Mieszkańcy Berk próbują odnaleźć ducha dawnych tradycji, a Czkawka zastanawia się, jak podtrzymać pamięć o smokach w świecie, w którym już ich nie ma. Ciepła i nostalgiczna historia o rodzinie i tęsknocie.",
         },
         {
-          title: "Remake",
+          title: "Jak Wytresować Smoka Remake",
           description:
             "Nowa wersja pierwszego filmu, zaktualizowana pod względem animacji i efektów wizualnych.",
         },
@@ -267,7 +267,7 @@ const movies = {
             "Film wprowadzający genialnego detektywa Sherlocka Holmesa i jego pierwsze konfrontacje z przestępczym światem Londynu.",
         },
         {
-          title: "Gra cieni",
+          title: "Sherlock Holmes Gra Cieni",
           description:
             "Kontynuacja przygód Holmesa, w której staje do walki z arcywrogiem, profesor Moriartym, w serii inteligentnych zagadek i intryg.",
         },
@@ -699,7 +699,7 @@ const movies = {
       title: "Jak Wytresować Smoka",
       parts: [
         {
-          title: "Część 1",
+          title: "Jak Wytresować Smoka",
           description:
             "Pierwsza część serii, opowiadająca o przyjaźni młodego Wikinga Hiccup’a z niebezpiecznym smokiem Bezzębkiem.",
         },
@@ -724,23 +724,23 @@ const movies = {
             "Krótki film będący pomostem między pierwszą a drugą częścią serii. Pokazuje początki organizacji Jeźdźców Smoków i pierwsze wspólne misje Czkawki oraz jego przyjaciół, gdy uczą się współpracować ze swoimi smokami w nowych, niebezpiecznych sytuacjach.",
         },
         {
-          title: "Część 2",
+          title: "Jak Wytresować Smoka 2",
           description:
             "Hiccup i Bezzębny kontynuują swoje przygody, odkrywając nowe krainy i wyzwania w świecie smoków.",
         },
         {
-          title: "Część 3",
+          title: "Jak Wytresować Smoka 3",
           description:
             "Finałowa część serii animowanej, w której Hiccup staje przed ostatecznym wyborem dotyczącym świata ludzi i smoków.",
         },
-        { title: "Święta w Domu" },
+
         {
           title: "Święta w Domu",
           description:
             "Świąteczna krótkometrażowa animacja rozgrywająca się po wydarzeniach trzeciego filmu. Mieszkańcy Berk próbują odnaleźć ducha dawnych tradycji, a Czkawka zastanawia się, jak podtrzymać pamięć o smokach w świecie, w którym już ich nie ma. Ciepła i nostalgiczna historia o rodzinie i tęsknocie.",
         },
         {
-          title: "Remake",
+          title: "Jak Wytresować Smoka Remake",
           description:
             "Nowa wersja pierwszego filmu, zaktualizowana pod względem animacji i efektów wizualnych.",
         },
@@ -757,7 +757,7 @@ const movies = {
             "Film wprowadzający genialnego detektywa Sherlocka Holmesa i jego pierwsze konfrontacje z przestępczym światem Londynu.",
         },
         {
-          title: "Gra cieni",
+          title: "Sherlock Holmes Gra Cieni",
           description:
             "Kontynuacja przygód Holmesa, w której staje do walki z arcywrogiem, profesor Moriartym, w serii inteligentnych zagadek i intryg.",
         },
@@ -1202,46 +1202,7 @@ const movies = {
     },
     { title: "Creation of the Gods I: Kingdom of Storms" },
     { title: "Painted Skin" },
-    {
-      title: "Śródziemie",
-      parts: [
-        {
-          title: "Władca Pierścieni: Drużyna Pierścienia",
-          description:
-            "Pierwsza część trylogii, w której Frodo i jego towarzysze wyruszają, by zniszczyć Jedyny Pierścień i powstrzymać Saurona.",
-        },
-        {
-          title: "Władca Pierścieni: Dwie Wieże",
-          description:
-            "Drugi film trylogii, ukazujący rozdzielenie Drużyny i narastające zagrożenie ze strony Saurona oraz Sarumana.",
-        },
-        {
-          title: "Władca Pierścieni: Powrót Króla",
-          description:
-            "Finałowa część trylogii, w której bohaterowie stają do ostatecznej bitwy o Śródziemie i losy Pierścienia zostają rozstrzygnięte.",
-        },
-        {
-          title: "Hobbit: Niezwykła Podróż",
-          description:
-            "Początek przygód Bilba Bagginsa, który wyrusza z grupą krasnoludów na wyprawę do Samotnej Góry.",
-        },
-        {
-          title: "Hobbit: Pustkowie Smauga",
-          description:
-            "Druga część przygód Bilba, koncentrująca się na starciu z potężnym smokiem Smaugiem i zagrożeniu dla królestwa krasnoludów.",
-        },
-        {
-          title: "Hobbit: Bitwa Pięciu Armii",
-          description:
-            "Kulminacyjna część trylogii, w której rozgrywa się epicka bitwa między ludźmi, elfami, krasnoludami i siłami ciemności.",
-        },
-        {
-          title: "Władca Pierścieni: Wojna Rohirrimów",
-          description:
-            "Film opowiadający o losach Rohirrimów i ich kluczowej roli w wydarzeniach trylogii Władcy Pierścieni.",
-        },
-      ],
-    },
+
     { title: "The Wandering Earth" },
   ],
 
@@ -1445,7 +1406,7 @@ const movies = {
               "Film wprowadzający genialnego detektywa Sherlocka Holmesa i jego pierwsze konfrontacje z przestępczym światem Londynu.",
           },
           {
-            title: "Gra cieni",
+            title: "Sherlock Holmes Gra Cieni",
             description:
               "Kontynuacja przygód Holmesa, w której staje do walki z arcywrogiem, profesor Moriartym, w serii inteligentnych zagadek i intryg.",
           },
@@ -1584,126 +1545,6 @@ const movies = {
             title: "Assassin's Creed: Embers",
             description:
               "Krótkometrażowa animacja będąca epilogiem historii Ezio Auditore. Ukazuje jego spokojne życie na wsi we Włoszech po zakończeniu wieloletniej walki jako Mistrz Asasynów. Gdy pojawia się tajemnicza chińska asasynka Shao Jun, Ezio musi po raz ostatni zmierzyć się z cieniem swojej przeszłości. To melancholijna opowieść o przemijaniu, dziedzictwie i tym, że nawet legendy są tylko ludźmi.",
-          },
-        ],
-      },
-      {
-        title: "Marvel Cinematic Universe",
-        parts: [
-          {
-            title: "Iron Man",
-            description:
-              "Film wprowadzający Tony'ego Starka i świat Marvela, który rozpoczyna epokę superbohaterskich przygód w MCU.",
-          },
-          {
-            title: "The Incredible Hulk",
-            description:
-              "Historia Bruce'a Bannera, który próbuje kontrolować swoje mutacyjne moce i uciekać przed wojskowym i naukowym zagrożeniem.",
-          },
-          {
-            title: "Iron Man 2",
-            description:
-              "Tony Stark mierzy się z konsekwencjami swojej sławy, rosnącą presją oraz nowym zagrożeniem dla świata technologii.",
-          },
-          {
-            title: "Thor",
-            description:
-              "Prywatna historia boga piorunów, który musi zmierzyć się z własnym ego, losem i wyzwaniem poza Asgardem.",
-          },
-          {
-            title: "Captain America: The First Avenger",
-            description:
-              "Przygoda Steve'a Rogersa, który przechodzi przez niezwykły program wojskowy i staje się bohaterem wojny światowej.",
-          },
-          {
-            title: "The Avengers",
-            description:
-              "Połączenie największych bohaterów Marvela w jedną drużynę, która musi powstrzymać kosmiczne zagrożenie.",
-          },
-          {
-            title: "Iron Man 3",
-            description:
-              "Po traumatycznych doświadczeniach Tony Stark musi stawić czoła własnym lękom i nowemu niebezpieczeństwu, które grozi światu.",
-          },
-          {
-            title: "Thor: The Dark World",
-            description:
-              "Thor wraca do walki z ciemną mocą, która zagraża zarówno Asgardowi, jak i światu ludzi.",
-          },
-          {
-            title: "Captain America: The Winter Soldier",
-            description:
-              "Steve Rogers odkrywa spisek w strukturach bezpieczeństwa i musi bronić swoich ideałów przed zdradą z wewnątrz.",
-          },
-          {
-            title: "Guardians of the Galaxy",
-            description:
-              "Kosmiczna przygoda pełna humoru, muzyki i niezwykłych postaci, które zyskują wspólne przeznaczenie.",
-          },
-          {
-            title: "Avengers: Age of Ultron",
-            description:
-              "Nadorganizacja pojawia się nowy, groźniejszy wróg, a bohaterowie muszą stawić czoła konsekwencjom własnej wielkiej siły.",
-          },
-          {
-            title: "Ant-Man",
-            description:
-              "Złodziej dzięki eksperymentowi z kurczeniem się staje się bohaterem, który musi ratować świat w niezwykle nietypowy sposób.",
-          },
-          {
-            title: "Captain America: Civil War",
-            description:
-              "Drużyna Avengers dzieli się na dwa obozy, a konflikt ideologii, lojalności i odpowiedzialności staje się fundamentem przyszłej ery MCU.",
-          },
-          {
-            title: "Doctor Strange",
-            description:
-              "Neurochirurg po wypadku odkrywa tajemnicze moce mistyczne i staje się obrońcą rzeczywistości przed złem z innych wymiarów.",
-          },
-          {
-            title: "Guardians of the Galaxy Vol. 2",
-            description:
-              "Nowa przygoda kosmiczna, w której rodzina, współczucie i prawdziwe więzi okazują się równie ważne co moc.",
-          },
-          {
-            title: "Spider-Man: Homecoming",
-            description:
-              "Młody Peter Parker musi pogodzić szkolne życie z obowiązkami nadchodzącego bohatera, próbując dojrzewać pod presją.",
-          },
-          {
-            title: "Thor: Ragnarok",
-            description:
-              "Thor staje przed śmiertelną zagrożeniem, która zmusza go do walki o własny świat i własną tożsamość.",
-          },
-          {
-            title: "Black Panther",
-            description:
-              "Królestwo Wakandy ujawnia swoją moc i kulturę, a T'Challa musi podjąć wyzwanie polityczne i militarne dla całego świata.",
-          },
-          {
-            title: "Avengers: Infinity War",
-            description:
-              "Największy konflikt w MCU, w którym bohaterowie stają wobec Thanos i tragedii, która zmienia całe uniwersum.",
-          },
-          {
-            title: "Ant-Man and the Wasp",
-            description:
-              "Po wydarzeniach wielkiej wojny bohaterowie wracają do swojej historii, by stawić czoła nowym wyzwaniom i niebezpieczeństwom.",
-          },
-          {
-            title: "Captain Marvel",
-            description:
-              "Kryptonimowa wojowniczka z kosmosu zyskuje swoje miejsce w historii MCU, w trakcie wielkiego przełomu galaktycznej skali.",
-          },
-          {
-            title: "Avengers: Endgame",
-            description:
-              "Finale wielkiej epoki MCU, w którym bohaterowie stawiają ostatnią walkę o przyszłość świata i całego uniwersum.",
-          },
-          {
-            title: "Spider-Man: Far From Home",
-            description:
-              "Po wielkich wydarzeniach bohaterowie wracają do codzienności, ale nowa tajemnicza niebezpieczeństwo zmusza Petera do kolejnej wielkiej próby.",
           },
         ],
       },
@@ -2262,12 +2103,12 @@ const movies = {
       title: "Jak Wytresować Smoka",
       parts: [
         {
-          title: "Część 1",
+          title: "Jak Wytresować Smoka",
           description:
             "Pierwsza część serii, opowiadająca o przyjaźni młodego Wikinga Hiccup’a z niebezpiecznym smokiem Bezzębkiem.",
         },
         {
-          title: "Część 2",
+          title: "Jak Wytresować Smoka 2",
           description:
             "Hiccup i Bezzębny kontynuują swoje przygody, odkrywając nowe krainy i wyzwania w świecie smoków.",
         },
@@ -2389,7 +2230,7 @@ const movies = {
             "Film wprowadzający genialnego detektywa Sherlocka Holmesa i jego pierwsze konfrontacje z przestępczym światem Londynu.",
         },
         {
-          title: "Gra cieni",
+          title: "Sherlock Holmes Gra Cieni",
           description:
             "Kontynuacja przygód Holmesa, w której staje do walki z arcywrogiem, profesor Moriartym, w serii inteligentnych zagadek i intryg.",
         },
@@ -2418,7 +2259,7 @@ const movies = {
       title: "Jak Wytresować Smoka",
       parts: [
         {
-          title: "Część 1",
+          title: "Jak Wytresować Smoka",
           description:
             "Pierwsza część serii, opowiadająca o przyjaźni młodego Wikinga Hiccup’a z niebezpiecznym smokiem Bezzębkiem.",
         },
@@ -2443,12 +2284,12 @@ const movies = {
             "Krótki film będący pomostem między pierwszą a drugą częścią serii. Pokazuje początki organizacji Jeźdźców Smoków i pierwsze wspólne misje Czkawki oraz jego przyjaciół, gdy uczą się współpracować ze swoimi smokami w nowych, niebezpiecznych sytuacjach.",
         },
         {
-          title: "Część 2",
+          title: "Jak Wytresować Smoka 2",
           description:
             "Hiccup i Bezzębny kontynuują swoje przygody, odkrywając nowe krainy i wyzwania w świecie smoków.",
         },
         {
-          title: "Część 3",
+          title: "Jak Wytresować Smoka 3",
           description:
             "Finałowa część serii animowanej, w której Hiccup staje przed ostatecznym wyborem dotyczącym świata ludzi i smoków.",
         },
@@ -2459,7 +2300,7 @@ const movies = {
             "Świąteczna krótkometrażowa animacja rozgrywająca się po wydarzeniach trzeciego filmu. Mieszkańcy Berk próbują odnaleźć ducha dawnych tradycji, a Czkawka zastanawia się, jak podtrzymać pamięć o smokach w świecie, w którym już ich nie ma. Ciepła i nostalgiczna historia o rodzinie i tęsknocie.",
         },
         {
-          title: "Remake",
+          title: "Jak Wytresować Smoka Remake",
           description:
             "Nowa wersja pierwszego filmu, zaktualizowana pod względem animacji i efektów wizualnych.",
         },

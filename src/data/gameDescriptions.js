@@ -653,7 +653,7 @@ const gameDescriptions = {
     ],
   },
 
-  "Warhammer 40k Dawn of War": {
+  "Warhammer 40,000 Dawn of War": {
     world: "Polaris, Zafaria, Azteca, Celestia, Dragonspyre, Darkmoor",
     why: "Polaris – zimny, militarny, bezosobowy charakter wojny totalnej. Polaris kojarzy się z konfliktem na wielką skalę, gdzie jednostka ma znaczenie tylko jako część armii. Zafaria – ciągła walka frakcji o dominację nad terytorium i wpływy pośród dzikiej natury. Azteca – brutalność, pierwotna siła i kultura wojny (Orkowie idealnie tu pasują). Ale również Dominium Tau, jako jaszczuroludzie przypominają azteckich dinozauroludzi Celestia – starożytne, kosmiczne technologie i pradawne moce (Eldarzy, Necroni, Warp jako wyższy wymiar). Dragonspyre – świat zniszczony przez niekontrolowaną potęgę; Chaos to dokładnie ta sama energia samozagłady. Darkmoor – nieumarli Necroni",
     protagonist: "Różne frakcje",
@@ -680,7 +680,7 @@ const gameDescriptions = {
     ],
   },
 
-  "Warhammer 40k Space Marine": {
+  "Warhammer 40,000 Space Marine": {
     world: "Polaris, Zafaria, Azteca, Dragonspyre",
     why: "Polaris – bezwzględna dyscyplina, wojskowy etos i chłodna lojalność wobec Imperium. Zafaria – konflikt o kontrolę nad światem-forge i strategiczne znaczenie planety. Orkowie są jak niezorganizowane plemiona Zafarii. Azteca – Orkowie również jako ucieleśnienie brutalnej, plemiennej siły. Dragonspyre – Chaos jako ogień herezji niszczący cywilizację od środka.",
     protagonist: "Kapitan Titus",
@@ -697,7 +697,7 @@ const gameDescriptions = {
     ],
   },
 
-  "Warhammer 40k Space Marine 2": {
+  "Warhammer 40,000 Space Marine 2": {
     world: "Polaris, Khrysalis, Dragonspyre",
     why: "Polaris – Imperium jako machina przetrwania w zimnym, obojętnym kosmosie. Khrysalis – Tyranidzi jako biologiczna, rojąca się siła natury, która pochłania wszystko jak pasożytniczy cień. Dragonspyre – Chaos wciąż reprezentuje niszczącą, demoniczną energię prowadzącą do upadku.",
     protagonist: "Kapitan Titus",
@@ -707,14 +707,35 @@ const gameDescriptions = {
       "Kontynuacja podnosi skalę konfliktu, rzucając Titusa przeciwko przerażającym rojem Tyranidów. Widowiskowe bitwy i większy nacisk na epickie starcia podkreślają beznadzieję galaktycznej wojny. Imperium ludzkości chwieje się pod naporem wrogów, a każdy Space Marine jest żywą bronią w imię przetrwania gatunku.",
   },
 
-  "Warhammer 40k Boltgun": {
+  "Warhammer 40,000 Boltgun": {
     world: "Polaris, Dragonspyre",
     why: "Polaris – czysta wojskowa ofensywa bez refleksji, tylko misja i eksterminacja. Dragonspyre – spalone twierdze, demoniczne siły i piekielna estetyka bitew z wyznawcami Chaosu.",
     protagonist: "Malum Caedo",
     antagonist: "Siły Chaosu",
     location: "Graia, 41 milenium",
     description:
-      "Oldschoolowy shooter inspirowany klasykami lat 90., osadzony w realiach Warhammer 40k. Malum Caedo przemierza zniszczone fortece i plugawione światy, eliminując wyznawców Chaosu z pomocą potężnego boltera. Pikselowa stylistyka łączy nostalgię z brutalnością uniwersum, tworząc dynamiczne i bezpośrednie doświadczenie walki.",
+      "Oldschoolowy shooter inspirowany klasykami lat 90., osadzony w realiach Warhammer 40,000. Malum Caedo przemierza zniszczone fortece i plugawione światy, eliminując wyznawców Chaosu z pomocą potężnego boltera. Pikselowa stylistyka łączy nostalgię z brutalnością uniwersum, tworząc dynamiczne i bezpośrednie doświadczenie walki.",
+  },
+
+  "Warhammer 40,000 Boltgun 2": {
+    world: "Polaris, Dragonspyre",
+    why: "Polaris – nieprzerwany front ostatecznej eksterminacji i militarna logika operacji. Dragonspyre – demoniczny chaos, zniszczone fortece i wartościowość brutalnej, ekspansywnej wojny. To dalej ten sam klimat piekła, tylko rozciągnięty na większą skalę i bardziej destrukcyjną, krwawą kampanię.",
+    protagonist: "Malum Caedo",
+    antagonist: "Siły Chaosu",
+    location: "Graia, 41 milenium",
+    description:
+      "Kontynuacja klasycznego, brutalnego strzelania z bolterem rozwija skalę konfliktu i mocniej podkręca tempo walki. Malum Caedo wkracza w jeszcze bardziej zniszczone i zarażone herezją miejsca, gdzie każda komnata to niebezpieczeństwo, a każdy przeciwnik ma być eksterminowany bezwzględnie. To gra o czystej agresji, starciedynamice i psychodelicznym, przerażającym klimacie Imperium w otchłani wojny.",
+  },
+
+  Valorant: {
+    world: "Celestia, Polaris",
+    why: "Celestia – nowoczesna, wyrafinowana technologia i kwestia przewagi w skali globalnej. Polaris – dyscyplina, precyzja i wojskowy porządek, które bardzo dobrze oddają charakter taktycznych starć w Valorant. To świat, w którym wygrywa nie chaos, lecz kontrola i perfekcja wykonania.",
+    protagonist: "Różni agenci",
+    antagonist:
+      "Rivalizujące frakcje, kontraktowe siły i tajemniczy konflikt o moc Radiant",
+    location: "Współczesny świat i strefy radiacyjno-technologiczne",
+    description:
+      "Taktyczna strzelanka 5 na 5 łączy szybkie starcia, precyzyjne umiejętności agentów i wspólną pracę drużyny. Każdy bohater ma unikalne zdolności, co sprawia, że zwycięstwo zależy od koordynacji, planowania i elastyczności. Gra eksponuje szybkość, strategię i świetną komunikację, tworząc mocny klimat współczesnej, agresywnej rywalizacji.",
   },
 
   "Starcraft 2": {
@@ -1452,6 +1473,56 @@ const gameDescriptions = {
       "Anglia (Londyn), Szwajcaria, USA (Nowy Orlean), Szkocja, 1894 rok",
     description:
       "Mroczna, gotycka przygodowa gra detektywistyczna, która łączy klasyczne tropy Sherlocka Holmesa z kosmicznym horrorem inspirowanym twórczością H.P. Lovecrafta. Holmes i Watson zostają wciągnięci w serię niewyjaśnionych zaginięć, które prowadzą ich w świat sekt, artefaktów i pradawnych istot. Im głębiej wchodzą w śledztwo, tym bardziej rzeczywistość zaczyna się wymykać spod kontroli. To opowieść o obsesji, ludzkiej psychice i cieniu, jaki rzucają niepojęte kosmiczne siły.",
+  },
+
+  "Sherlock Holmes Zbrodnia i Kara": {
+    world: "Darkmoor, Marleybone",
+    why: "Marleybone daje szkielet klasycznego, racjonalnego śledztwa, a Darkmoor przejmuje klimat moralnej głębi, winy i mroku. To doskonałe połączenie detektywistycznej logiki i psychologicznego ciężaru, które dobrze koresponduje z konwencją zbrodni i kary w atmosferze wielkiego miasta i tajemniczych, mrocznych zakątków.",
+    protagonist: "Sherlock Holmes, John Watson",
+    antagonist: "Aresztowany sprawca, siły zła i moralna degeneracja",
+    location: "Wiktoriańska Anglia, Londyn",
+    description:
+      "Nastrojowa przygoda detektywistyczna, w której Sherlock Holmes staje przed sprawą wymagającą nie tylko inteligencji, ale i odczuć moralnych. Śledztwo prowadzi przez mroczne zaułki, tajemnicze skandale i zagadkowe zbrodnie, które odsłaniają ciemną stronę natury ludzkiej. Gra łączy logiczne tropienie z ciężkim klimatem psychologicznym, ukazując, że nawet najlepsza dedukcja nie zawsze rozwiązuje problem winy, zemsty i ludzkiej przeszłości.",
+  },
+
+  "Clive Barker’s Hellraiser: Revival": {
+    world: "Darkmoor, Dragonspyre",
+    why: "Darkmoor to świat mroku, fetyszów zła i grozy, a Dragonspyre przez destrukcyjną, piekielną estetykę i demoniczne przesłanie. Oba światy bardzo dobrze wspierają motyw nieustannego przywoływania bólu, grzechu i udręki, które są centralnym punktem Hellraiser.",
+    protagonist: "Frank Cotton, Kirsty Cotton",
+    antagonist: "Pinhead, Siły Piekieł",
+    location: "Mroczna posiadłość, piekielne wymiarowe przejście",
+    description:
+      "Nowa odsłona horroru osadzonego w świecie cierpienia, agonii i religijnego szaleństwa. Kiedy tajemnicze wrzucenie znaku do świata cierpienia aktywuje piekielne więzi, bohaterowie muszą stawić czoła demonicznym ekstazom i łamaniu ludzkiej natury. To historia o zbuntowanej cielesności, strachu przed rozkładem tożsamości i obietnicy wiecznego cierpienia.",
+  },
+
+  "The Alighieri Circle: Dante's Bloodline": {
+    world: "Darkmoor, Avalon",
+    why: "Darkmoor oferuje baśniowy cierń grozy, a Avalon jest światem wielkich legend, mistycznej genealogii i przeznaczenia. To bardzo dobra mieszanka tradycji poetyckiej, zbuntowanej duchowości i konfliktów opartych na krwi, honorze i przekleństwie rasy.",
+    protagonist: "Dante, rodowód Alighieri",
+    antagonist: "Krew i przekleństwo rodu, demoniczne źródło zła",
+    location: "Włochy, mroczne dziedzictwo rodowe, tajemne kręgi",
+    description:
+      "Historia osadzona w świecie mistycznej krwi i rodzinnych tajemnic, w której potomkowie Dantego muszą rozwiązać zagadkę zła przenikającego przez kolejne pokolenia. Gra łączy atmosferę średniowiecznego widzenia piekła z nowoczesną narracją o winie, dziedzictwie i odkupieniu. To śledztwo o to, czy przeznaczenie można przełamać, czy też każde pokolenie musi ponieść ten sam ciężar.",
+  },
+
+  "God of War Sons of Sparta": {
+    world: "Aquila, Grizzleheim",
+    why: "Aquila odpowiada za grecką mitologię i duch starożytnej walki, a Grizzleheim dodaje nordycki ciężar przeznaczenia i konfliktu z losem. To tytuł o budowaniu legendy przez pokolenie, co bardzo dobrze wpisuje się w oba światy Spiral.",
+    protagonist: "Kratos, synowie wojny",
+    antagonist: "Bogowie, przeznaczenie, starożytna zemsta",
+    location: "Grecja, północne światy",
+    description:
+      "Epicka opowieść o pokoleniu wojowników, których losy splatają starożytna walka, dynastie i spór o to, czy bohater może wyrwać się z cyklu zemsty. Gra skupia się na rozciągnięciu mitu Kratosa na nowe pokolenie, łącząc brutalną walkę z tematami honoru, władzy i poświęcenia.",
+  },
+
+  "God of War Laufey": {
+    world: "Grizzleheim, Aquila",
+    why: "Grizzleheim to świat nordyckich legend i bogów, a Aquila dodaje mroczną, heroiczną dynamikę mitologicznej walki. Laufey to postać, która łączy obie tradycje: rodzinny ciężar przeznaczenia i nieubłagany bieg wydarzeń, wyznaczony przez bogów i los.",
+    protagonist: "Laufey, Kratos",
+    antagonist: "Przeznaczenie, bogowie, dawny konflikt",
+    location: "Nordyckie światy i greckie ślady przeszłości",
+    description:
+      "Historia z głębi mitologii, w której zaznacza się ciężar rodowego dziedzictwa, władzy i nieustającej walki z przeznaczeniem. To opowieść o tym, jak nawet najpotężniejsi bohaterowie nie są wolni od wpływu przeszłości, a każdy wybór prowadzi do nowych, krwawych konsekwencji.",
   },
 
   "Persona 3 Reload": {

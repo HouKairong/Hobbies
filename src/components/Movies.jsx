@@ -10,6 +10,7 @@ const Movies = () => {
   const [openSubgroup, setOpenSubgroup] = useState(null);
   const [selectedSeries, setSelectedSeries] = useState(null);
   const [selectedPart, setSelectedPart] = useState(null);
+  const [movieChoiceOptions, setMovieChoiceOptions] = useState(null);
   const [itemStatuses, setItemStatuses] = useState(() => {
     if (typeof window === "undefined") return {};
 
@@ -84,6 +85,123 @@ const Movies = () => {
     }
   };
 
+  const findMovieTargets = (title) => {
+    const matches = [];
+
+    Object.entries(movies).forEach(([category, categoryItems]) => {
+      const flattenedItems = Array.isArray(categoryItems)
+        ? categoryItems
+        : Object.values(categoryItems ?? {}).flatMap((group) =>
+            Array.isArray(group) ? group : [],
+          );
+
+      const matchingSeries = flattenedItems.filter(
+        (item) =>
+          item &&
+          (item.title === title ||
+            item.parts?.some((part) => part.title === title)),
+      );
+
+      matchingSeries.forEach((series) => {
+        matches.push({
+          category,
+          series,
+          part: series.parts?.find((part) => part.title === title) ?? null,
+        });
+      });
+    });
+
+    return matches;
+  };
+
+  const chooseMovieLicense = (match) => {
+    setSelectedCategory(match.category);
+    setSelectedSeries(match.series);
+    setSelectedPart(match.part);
+    setMovieChoiceOptions(null);
+
+    if (match.category === "Boska Komedia") {
+      const groupForSeries = Object.entries(movies["Boska Komedia"]).find(
+        ([group, items]) =>
+          Array.isArray(items) &&
+          items.some((item) => item.title === match.series.title),
+      );
+
+      setOpenSubgroup(groupForSeries ? groupForSeries[0] : null);
+    } else {
+      setOpenSubgroup(null);
+    }
+
+    const targetTitle = match.part ? match.part.title : match.series.title;
+    const elementToScroll = () => {
+      if (typeof document === "undefined") return null;
+
+      const escapedTitle = targetTitle.replace(/["'\\]/g, "\\$&");
+      const selector = match.part
+        ? `[data-part-title="${escapedTitle}"]`
+        : `[data-series-title="${escapedTitle}"]`;
+
+      return document.querySelector(selector) || null;
+    };
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const foundElement = elementToScroll();
+        if (foundElement) {
+          foundElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+          return;
+        }
+
+        const fallback = match.part ? partRef.current : seriesRef.current;
+        if (fallback) {
+          scrollToSection(fallback);
+        }
+      });
+    });
+  };
+
+  const resolveMovieSelectionTarget = () => {
+    if (typeof window === "undefined") return;
+
+    const target = sessionStorage.getItem("hobbies-related-target");
+    if (!target) return;
+
+    try {
+      const parsed = JSON.parse(target);
+      if (parsed.page !== "movies") return;
+
+      const normalizedTitle = String(parsed.title || "").trim();
+      if (!normalizedTitle) return;
+
+      const matchedTargets = findMovieTargets(normalizedTitle).filter(Boolean);
+      if (!matchedTargets.length) {
+        setMovieChoiceOptions(null);
+        return;
+      }
+
+      setMovieChoiceOptions({
+        title: normalizedTitle,
+        options: matchedTargets,
+      });
+    } finally {
+      sessionStorage.removeItem("hobbies-related-target");
+    }
+  };
+
+  useEffect(() => {
+    resolveMovieSelectionTarget();
+
+    if (typeof window === "undefined") return;
+
+    const onHashChange = () => resolveMovieSelectionTarget();
+    window.addEventListener("hashchange", onHashChange);
+
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
+
   const toggleSubgroup = (group) => {
     setOpenSubgroup(openSubgroup === group ? null : group);
   };
@@ -137,10 +255,61 @@ const Movies = () => {
     });
   };
 
+  const scrollToRelatedMovie = (targetElement) => {
+    if (typeof window === "undefined") return;
+
+    setTimeout(() => {
+      if (targetElement) {
+        scrollToSection(targetElement);
+      }
+    }, 50);
+  };
+
+  const shouldShowMovieChoice =
+    !!movieChoiceOptions &&
+    Array.isArray(movieChoiceOptions.options) &&
+    movieChoiceOptions.options.length > 0;
+
   return (
     <div className="movies-wrapper">
       <div className="movies-container">
         <h2 className="movies-title">Filmy</h2>
+
+        {shouldShowMovieChoice && (
+          <div
+            className="movie-choice-overlay"
+            onClick={() => setMovieChoiceOptions(null)}
+          >
+            <div
+              className="movie-choice-modal"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="movie-choice-header">
+                <h3>Wybierz licencję dla: {movieChoiceOptions.title}</h3>
+                <button
+                  type="button"
+                  className="movie-choice-close"
+                  onClick={() => setMovieChoiceOptions(null)}
+                  aria-label="Zamknij wybór licencji"
+                >
+                  ×
+                </button>
+              </div>
+
+              <ul className="movie-choice-list">
+                {movieChoiceOptions.options.map((option) => (
+                  <li
+                    key={`${option.category}-${option.series.title}`}
+                    className="movie-choice-option"
+                    onClick={() => chooseMovieLicense(option)}
+                  >
+                    {option.category}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
 
         <div className="movies-select-row">
           <label className="movies-select-label">
@@ -281,7 +450,11 @@ const Movies = () => {
 
         {/* Szczegóły serii */}
         {selectedSeries && (
-          <div className="series-details" ref={seriesRef}>
+          <div
+            className="series-details"
+            ref={seriesRef}
+            data-series-title={selectedSeries.title}
+          >
             <h3>{selectedSeries.title}</h3>
 
             {moviesDescriptions[selectedSeries.title] && (
@@ -357,7 +530,11 @@ const Movies = () => {
 
             {/* 🔥 Jeśli to HTTYD — pokaż część NAD obrazem */}
             {isHTTYD && selectedPart && (
-              <div className="part-details" ref={partRef}>
+              <div
+                className="part-details"
+                ref={partRef}
+                data-part-title={selectedPart.title}
+              >
                 <h4>{selectedPart.title}</h4>
                 <p>{selectedPart.description}</p>
               </div>
@@ -372,7 +549,11 @@ const Movies = () => {
 
         {/* 🔥 Szczegóły części dla innych serii */}
         {selectedPart && !isHTTYD && (
-          <div className="part-details" ref={partRef}>
+          <div
+            className="part-details"
+            ref={partRef}
+            data-part-title={selectedPart.title}
+          >
             <h4>{selectedPart.title}</h4>
             <p>{selectedPart.description}</p>
           </div>
