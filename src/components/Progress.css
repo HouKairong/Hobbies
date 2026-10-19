@@ -1,0 +1,509 @@
+.progressPage {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 0 18px 40px;
+  color: #f4ebff;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b8a8ff;
+}
+
+.progressHeader h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #f3ebff;
+}
+
+.progressResetButton {
+  border: none;
+  background: linear-gradient(180deg, #ffb4b4, #ff7d7d);
+  color: #1a1220;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(255, 125, 125, 0.25);
+}
+
+.progressCategories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 14px 0 22px;
+}
+
+.progressCategoryItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(28, 22, 38, 0.7);
+  border: 1px solid rgba(194, 175, 255, 0.2);
+  color: #f3ebff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.progressCategoryItem.active {
+  background: linear-gradient(180deg, #d9ccff, #bca8ff);
+  color: #14121a;
+  border-color: rgba(194, 175, 255, 0.7);
+  box-shadow: 0 0 18px rgba(194, 175, 255, 0.25);
+}
+
+.progressSummary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(140px, 1fr));
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.progressSummary div,
+.progressPlanButton,
+.progressRandomButton {
+  background: rgba(28, 22, 38, 0.9);
+  border: 1px solid rgba(194, 175, 255, 0.25);
+  border-radius: 18px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progressSummary span {
+  color: #ccb8ff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.progressSummary strong {
+  font-size: 1.7rem;
+}
+
+.progressPlanButton,
+.progressRandomButton {
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #f3ebff;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 18px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.progressPlanButton {
+  background: linear-gradient(180deg, #d9ccff, #bca8ff);
+  color: #14121a;
+  border-color: rgba(194, 175, 255, 0.7);
+  box-shadow: 0 0 18px rgba(194, 175, 255, 0.25);
+}
+
+.progressRandomButton {
+  min-height: 120px;
+  background: linear-gradient(180deg, #ffafd8 0%, #ff7cc3 40%, #ff5fa8 100%);
+  border: 1px solid rgba(255, 112, 184, 0.9);
+  color: #2c0f1d;
+  box-shadow: 0 0 18px rgba(255, 113, 184, 0.28);
+}
+
+.progressRandomModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 6, 12, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.progressRandomModal {
+  position: relative;
+  width: min(520px, 100%);
+  background: rgba(22, 17, 27, 0.96);
+  border: 1px solid rgba(194, 175, 255, 0.28);
+  border-radius: 24px;
+  padding: 28px 24px 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  color: #f4ebff;
+}
+
+.progressRandomCloseButton {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f4ebff;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.progressRandomEyebrow {
+  margin: 0 0 10px;
+  font-size: 0.84rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #e5d4ff;
+}
+
+.progressRandomModal h2 {
+  margin: 0 0 18px;
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  color: #f3ebff;
+}
+
+.progressRandomFieldset {
+  margin-bottom: 18px;
+}
+
+.progressRandomLegend {
+  display: block;
+  margin-bottom: 10px;
+  color: #ccb8ff;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.progressRandomOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.progressRandomOption {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(41, 32, 50, 0.9);
+  border: 1px solid rgba(194, 175, 255, 0.2);
+  color: #f4ebff;
+  font-size: 0.92rem;
+}
+
+.progressRandomOption input {
+  accent-color: #ff7cc3;
+}
+
+.progressRandomResultBox {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 18px 0 10px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 124, 195, 0.1);
+  border: 1px solid rgba(255, 124, 195, 0.4);
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.progressRandomResultBox:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 172, 221, 0.9);
+  box-shadow: 0 8px 22px rgba(255, 124, 195, 0.12);
+}
+
+.progressRandomResultBox strong {
+  font-size: 1rem;
+  color: #ffd5eb;
+}
+
+.progressRandomResultBox span {
+  color: #f4ebff;
+}
+
+.progressRandomResultBoxEmpty {
+  cursor: default;
+}
+
+.progressRandomResultBoxEmpty:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.progressRandomActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.progressRandomDrawButton,
+.progressRandomCloseSecondary {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.progressRandomDrawButton {
+  background: linear-gradient(180deg, #ffafd8, #ff7cc3);
+  color: #2a1220;
+}
+
+.progressRandomCloseSecondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: #f4ebff;
+  border: 1px solid rgba(194, 175, 255, 0.18);
+}
+
+.progressBarTrack {
+  width: 100%;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(194, 175, 255, 0.24);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #8d76ff, #caa6ff, #8ef0d0);
+  box-shadow: 0 0 18px rgba(130, 162, 255, 0.4);
+  transition: width 0.25s ease;
+}
+
+.progressColumns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.progressColumn {
+  background: rgba(24, 18, 32, 0.9);
+  border: 1px solid rgba(194, 175, 255, 0.24);
+  border-radius: 18px;
+  padding: 16px 14px;
+  min-height: 260px;
+}
+
+.progressColumn h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  color: #f6f1ff;
+}
+
+.progressColumnList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 200px;
+}
+
+.progressTaskCard {
+  background: rgba(28, 22, 38, 0.8);
+  border: 1px solid rgba(194, 175, 255, 0.18);
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: #f3ebff;
+  cursor: grab;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.progressMovieGroup {
+  background: rgba(34, 28, 46, 0.9);
+  border: 1px solid rgba(194, 175, 255, 0.28);
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: inset 0 0 0 1px rgba(194, 175, 255, 0.08);
+}
+
+.progressMovieGroupHeader {
+  padding: 8px 10px 10px;
+  border-radius: 10px;
+  background: rgba(52, 43, 66, 0.92);
+  border: 1px solid rgba(194, 175, 255, 0.16);
+  color: #e9dcff;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.progressMovieGroupList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.progressTaskCard:hover {
+  transform: translateY(-1px);
+  border-color: rgba(194, 175, 255, 0.42);
+}
+
+.progressTaskCard:active {
+  cursor: grabbing;
+}
+
+.progressTaskTitle {
+  display: block;
+  font-weight: 600;
+  color: #f3ebff;
+}
+
+.addTaskBox {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  background: rgba(28, 22, 38, 0.8);
+  border: 1px solid rgba(194, 175, 255, 0.2);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.addTaskBox select,
+.addTaskBox input,
+.addTaskBox button {
+  border-radius: 12px;
+  border: 1px solid rgba(194, 175, 255, 0.24);
+  background: rgba(12, 10, 18, 0.7);
+  color: #f4ebff;
+  padding: 10px 12px;
+  font-size: 1rem;
+}
+
+.addTaskBox select {
+  min-width: 180px;
+}
+
+.addTaskBox input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.addTaskBox button {
+  background: linear-gradient(180deg, #d9ccff, #bca8ff);
+  color: #101114;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.progressGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.progressSection {
+  background: rgba(24, 18, 32, 0.9);
+  border: 1px solid rgba(194, 175, 255, 0.24);
+  border-radius: 18px;
+  padding: 18px 16px;
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.18);
+}
+
+.progressSection h2 {
+  margin: 0 0 14px;
+  color: #f6f1ff;
+  font-size: 1.2rem;
+}
+
+.progressSection ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.progressSection li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(194, 175, 255, 0.12);
+  border-radius: 12px;
+  padding: 8px 10px;
+}
+
+.progressSection li.done {
+  background: rgba(142, 240, 208, 0.08);
+}
+
+.progressSection label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.progressSection input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #8ef0d0;
+}
+
+.progressSection li.done span {
+  text-decoration: line-through;
+  color: rgba(244, 235, 255, 0.72);
+}
+
+.removeTaskButton {
+  border: none;
+  background: transparent;
+  color: #ffb4b4;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.emptySection {
+  margin: 0;
+  color: rgba(244, 235, 255, 0.66);
+}
+
+@media (max-width: 650px) {
+  .progressHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .progressSummary {
+    grid-template-columns: 1fr;
+  }
+
+  .addTaskBox {
+    flex-direction: column;
+  }
+
+  .addTaskBox input,
+  .addTaskBox select,
+  .addTaskBox button {
+    width: 100%;
+  }
+}

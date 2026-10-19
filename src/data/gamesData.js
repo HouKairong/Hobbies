@@ -159,6 +159,7 @@ const gamesData = [
   { title: "LEGO Harry Potter Lata 5–7", worlds: ["Wizard City"] },
   { title: "Harry Potter i Kamień Filozoficzny", worlds: ["Wizard City"] },
   { title: "Hogwart's Legacy", worlds: ["Wizard City"] },
+  { title: "Hogwart's Mystery", worlds: ["Wizard City"] },
   { title: "School of Dragons", worlds: ["Grizzleheim"] },
   { title: "Rise of Berk", worlds: ["Grizzleheim"] },
   { title: "Titan Uprising", worlds: ["Grizzleheim"] },

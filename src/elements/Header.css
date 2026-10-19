@@ -100,20 +100,42 @@ nav li a:hover {
   font-weight: 800;
 }
 
+.progressButton,
 .resetDataButton {
   position: absolute;
   top: 14px;
-  left: 18px;
   font-size: 14px;
   font-weight: 700;
+  border-radius: 999px;
+  transition: 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressButton {
+  left: 98px;
+  color: #101114;
+  background: linear-gradient(180deg, #d9ccff, #bca8ff);
+  border: 1px solid rgba(17, 17, 17, 0.4);
+  padding: 8px 14px;
+  box-shadow: 0 0 15px rgba(194, 175, 255, 0.25);
+}
+
+.progressButton:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0 18px rgba(194, 175, 255, 0.35);
+}
+
+.resetDataButton {
+  left: 18px;
   color: #1a1220;
   background: linear-gradient(180deg, #ffb4b4, #ff7d7d);
   border: 1px solid rgba(17, 17, 17, 0.4);
   padding: 8px 14px;
-  border-radius: 999px;
   cursor: pointer;
   box-shadow: 0 0 15px rgba(255, 125, 125, 0.25);
-  transition: 0.2s ease;
 }
 
 .resetDataButton:hover {
@@ -176,11 +198,19 @@ nav li a:hover {
     margin: 0 auto 12px auto;
   }
 
+  .progressButton,
   .resetDataButton {
     top: 12px;
-    left: 12px;
     font-size: 12px;
     padding: 7px 10px;
+  }
+
+  .progressButton {
+    left: 88px;
+  }
+
+  .resetDataButton {
+    left: 12px;
   }
 
   .galleryButton {

@@ -3,6 +3,11 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import seriesData from "../data/seriesData";
 import seriesDescriptions from "../data/seriesDescriptions";
 import GalleryModal from "../elements/GalleryModal";
+import {
+  readSeriesStatuses,
+  subscribeToSeriesStatuses,
+  updateSeriesStatus,
+} from "../data/seriesStatuses";
 
 const dimensionsList = ["Wszystkie", "Overworld", "Nether", "End"];
 
@@ -1240,17 +1245,7 @@ const Series = () => {
   const [selectedSeries, setSelectedSeries] = useState(null);
   const [selectedSeason, setSelectedSeason] = useState(null);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
-  const [itemStatuses, setItemStatuses] = useState(() => {
-    if (typeof window === "undefined") return {};
-
-    try {
-      return JSON.parse(
-        localStorage.getItem("hobbies-series-statuses") || "{}",
-      );
-    } catch {
-      return {};
-    }
-  });
+  const [itemStatuses, setItemStatuses] = useState(() => readSeriesStatuses());
 
   const statusOptions = [
     { value: "seen", label: "Nie znam" },
@@ -1270,19 +1265,13 @@ const Series = () => {
   const seasonRef = useRef(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem(
-        "hobbies-series-statuses",
-        JSON.stringify(itemStatuses),
-      );
-    }
-  }, [itemStatuses]);
+    const unsubscribe = subscribeToSeriesStatuses(setItemStatuses);
+    return unsubscribe;
+  }, []);
 
   const updateStatus = (itemKey, nextStatus) => {
-    setItemStatuses((current) => ({
-      ...current,
-      [itemKey]: nextStatus,
-    }));
+    const next = updateSeriesStatus(itemKey, nextStatus);
+    setItemStatuses(next);
   };
 
   const filteredSeries = useMemo(() => {

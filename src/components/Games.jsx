@@ -5,6 +5,11 @@ import Minecraft from "../../public/images/Minecraft.jpg";
 import gamesData from "../data/gamesData";
 import gameDescriptions from "../data/gameDescriptions";
 import GalleryModal from "../elements/GalleryModal";
+import {
+  readGameStatuses,
+  subscribeToGameStatuses,
+  updateGameStatus,
+} from "../data/gameStatuses";
 
 const worldsList = [
   "Wizard City",
@@ -109,6 +114,7 @@ const gameTitleYears = {
   "Game Of Thrones RPG": 2015,
   "Call of Duty World War 2": 2017,
   "Hogwart's Legacy": 2023,
+  "Hogwart's Mystery": 2018,
   "Persona 3 Reload": 2024,
   "Persona 4 Golden": 2012,
   "Persona 5 Royal": 2020,
@@ -257,15 +263,7 @@ const Games = () => {
   const [search, setSearch] = useState("");
   const [selectedGame, setSelectedGame] = useState(null);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
-  const [itemStatuses, setItemStatuses] = useState(() => {
-    if (typeof window === "undefined") return {};
-
-    try {
-      return JSON.parse(localStorage.getItem("hobbies-game-statuses") || "{}");
-    } catch {
-      return {};
-    }
-  });
+  const [itemStatuses, setItemStatuses] = useState(() => readGameStatuses());
 
   const statusOptions = [
     { value: "seen", label: "Nie znam" },
@@ -292,11 +290,14 @@ const Games = () => {
     }
   }, [itemStatuses]);
 
+  useEffect(() => {
+    const unsubscribe = subscribeToGameStatuses(setItemStatuses);
+    return unsubscribe;
+  }, []);
+
   const updateStatus = (itemKey, nextStatus) => {
-    setItemStatuses((current) => ({
-      ...current,
-      [itemKey]: nextStatus,
-    }));
+    const next = updateGameStatus(itemKey, nextStatus);
+    setItemStatuses(next);
   };
 
   const filterByStatus = (itemKey) => {

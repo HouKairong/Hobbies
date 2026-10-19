@@ -322,37 +322,37 @@ const movies = {
       title: "Epoka Lodowcowa",
       parts: [
         {
-          title: "Część 1",
+          title: "Epoka Lodowcowa",
           description:
             "Pierwsza część serii, w której Manny, Sid i Diego wyruszają w podróż, by zwrócić małe dziecko jego rodzinie.",
         },
         {
-          title: "Odwilż",
+          title: "Epoka Lodowcowa 2 Odwilż",
           description:
             "Druga część serii, przedstawiająca przygody bohaterów w nowym, cieplejszym klimacie oraz nowe wyzwania.",
         },
         {
-          title: "Era Dinozaurów",
+          title: "Epoka Lodowcowa 3 Era Dinozaurów",
           description:
             "Trzecia część, w której bohaterowie odkrywają tajemniczą krainę pełną prehistorycznych stworzeń.",
         },
         {
-          title: "Mamucia Gwiazdka",
+          title: "Epoka Lodowcowa: Mamucia Gwiazdka",
           description:
             "Świąteczny film krótkometrażowy, w którym Sid przypadkowo niszczy ulubiony kamień Manny’ego i trafia na listę niegrzecznych Mikołaja. Chcąc naprawić sytuację, wyrusza na Biegun Północny, gdzie jego dobre intencje szybko zamieniają się w kolejną lawinę chaosu. Ciepła, humorystyczna opowieść o przyjaźni i odpowiedzialności.",
         },
         {
-          title: "Wędrówka Kontynentów",
+          title: "Epoka Lodowcowa 4 Wędrówka Kontynentów",
           description:
             "Czwarta część serii, ukazująca zmagania bohaterów z przesuwającymi się kontynentami i katastrofami naturalnymi.",
         },
         {
-          title: "Wielkanocne niespodzianki",
+          title: "Epoka Lodowcowa: Wielkanocne Niespodzianki",
           description:
             "Krótkometrażowy specjal świąteczny skupiający się na Squincie, który przejmuje rolę Zajączka Wielkanocnego. Próba kontrolowania dostaw jajek szybko wymyka się spod kontroli, a Manny, Sid i Diego muszą uratować święta przed totalnym bałaganem.",
         },
         {
-          title: "Mocne Uderzenie",
+          title: "Epoka Lodowcowa 5 Mocne Uderzenie",
           description:
             "Piąta część serii, w której bohaterowie stawiają czoła wielkiemu zagrożeniu w postaci meteorytu zmieniającego świat.",
         },
@@ -2361,6 +2361,49 @@ const alphabeticalMovieCategories = [
   "IPiN",
   "Polskie",
 ];
+
+const normalizeGenericMovieParts = (entryMap) => {
+  Object.values(entryMap).forEach((categoryItems) => {
+    if (!Array.isArray(categoryItems)) return;
+
+    categoryItems.forEach((series) => {
+      if (!series || !Array.isArray(series.parts)) return;
+
+      series.parts = series.parts.map((part) => {
+        if (!part || typeof part.title !== "string") return part;
+
+        const genericMatch = part.title.match(
+          /^(?:Część|Part|Chapter|Episode|#)\s*(\d+)(?:\s*[:\-–]?\s*(.*))?$/i,
+        );
+        if (!genericMatch) return part;
+
+        const partNumber = Number(genericMatch[1]);
+        const subtitle = (genericMatch[2] || "").trim();
+        const seriesTitle = series.title?.trim();
+
+        if (!seriesTitle) return part;
+
+        if (subtitle) {
+          return {
+            ...part,
+            title:
+              partNumber === 1
+                ? `${seriesTitle}: ${subtitle}`
+                : `${seriesTitle} ${partNumber}: ${subtitle}`,
+          };
+        }
+
+        return {
+          ...part,
+          title:
+            partNumber === 1 ? seriesTitle : `${seriesTitle} ${partNumber}`,
+        };
+      });
+    });
+  });
+};
+
+normalizeGenericMovieParts(movies);
 
 alphabeticalMovieCategories.forEach((category) => {
   if (Array.isArray(movies[category])) {

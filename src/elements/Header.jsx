@@ -20,6 +20,10 @@ const Header = () => {
   return (
     <>
       <div className="headerAndNav">
+        <Link to="/progress" className="progressButton">
+          Postępy
+        </Link>
+
         <button
           className="resetDataButton"
           type="button"

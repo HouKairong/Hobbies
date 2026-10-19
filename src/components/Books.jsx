@@ -355,65 +355,46 @@ const getRelatedMedia = (seriesName) => {
               target: game.title,
             }))
         : seriesName === "Boska Komedia"
-        ? Array.from(
-            new Set([
-              ...gameMatches.filter((title) => {
-                const normalizedTitle = normalizeTitle(title);
+          ? Array.from(
+              new Set([
+                ...gameMatches.filter((title) => {
+                  const normalizedTitle = normalizeTitle(title);
 
-                return ![
-                  "Assassin's Creed",
-                  "Assassin's Creed Brotherhood",
-                ].some(
-                  (blocked) => normalizeTitle(blocked) === normalizedTitle,
-                );
-              }),
-              ...boskaKomediaForcedGameTitles.filter((title) =>
-                gamesData.some(
-                  (game) =>
-                    normalizeTitle(game.title) === normalizeTitle(title),
+                  return ![
+                    "Assassin's Creed",
+                    "Assassin's Creed Brotherhood",
+                  ].some(
+                    (blocked) => normalizeTitle(blocked) === normalizedTitle,
+                  );
+                }),
+                ...boskaKomediaForcedGameTitles.filter((title) =>
+                  gamesData.some(
+                    (game) =>
+                      normalizeTitle(game.title) === normalizeTitle(title),
+                  ),
                 ),
-              ),
-            ]),
-          )
-        : seriesName === "Obrona Sokratesa"
-          ? [
-              {
-                label: "Assassin's Creed Odyssey",
-                target: "Assassin's Creed Odyssey",
-              },
-            ]
-          : seriesName === "Mitologia Nordycka"
+              ]),
+            )
+          : seriesName === "Obrona Sokratesa"
             ? [
-                { label: "TES V Skyrim", target: "TES V Skyrim" },
-                { label: "Wiedźmin 3", target: "Wiedźmin 3" },
                 {
-                  label: "Assassin's Creed Valhalla",
-                  target: "Assassin's Creed Valhalla",
+                  label: "Assassin's Creed Odyssey",
+                  target: "Assassin's Creed Odyssey",
                 },
-                { label: "Valheim", target: "Valheim" },
-                {
-                  label: "LEGO Marvel Super Heroes",
-                  target: "LEGO Marvel Super Heroes",
-                },
-                { label: "School of Dragons", target: "School of Dragons" },
-                { label: "Rise of Berk", target: "Rise of Berk" },
-                { label: "Titan Uprising", target: "Titan Uprising" },
-                {
-                  label: "How To Train Your Dragon",
-                  target: "How To Train Your Dragon",
-                },
-                {
-                  label: "How To Train Your Dragon 2",
-                  target: "How To Train Your Dragon 2",
-                },
-                { label: "Dawn Of New Riders", target: "Dawn Of New Riders" },
-                { label: "Dragons Wild Skies", target: "Dragons Wild Skies" },
-                { label: "God of War (2018)", target: "God of War 2018" },
-                { label: "God of War Ragnarök", target: "God of War Ragnarok" },
-                { label: "God of War Laufey", target: "God of War Laufey" },
               ]
-            : seriesName === "Jak Wytresować Smoka"
+            : seriesName === "Mitologia Nordycka"
               ? [
+                  { label: "TES V Skyrim", target: "TES V Skyrim" },
+                  { label: "Wiedźmin 3", target: "Wiedźmin 3" },
+                  {
+                    label: "Assassin's Creed Valhalla",
+                    target: "Assassin's Creed Valhalla",
+                  },
+                  { label: "Valheim", target: "Valheim" },
+                  {
+                    label: "LEGO Marvel Super Heroes",
+                    target: "LEGO Marvel Super Heroes",
+                  },
                   { label: "School of Dragons", target: "School of Dragons" },
                   { label: "Rise of Berk", target: "Rise of Berk" },
                   { label: "Titan Uprising", target: "Titan Uprising" },
@@ -427,12 +408,40 @@ const getRelatedMedia = (seriesName) => {
                   },
                   { label: "Dawn Of New Riders", target: "Dawn Of New Riders" },
                   { label: "Dragons Wild Skies", target: "Dragons Wild Skies" },
+                  { label: "God of War (2018)", target: "God of War 2018" },
                   {
-                    label: "Dragons Nine Realms",
-                    target: "Dragons Nine Realms",
+                    label: "God of War Ragnarök",
+                    target: "God of War Ragnarok",
                   },
+                  { label: "God of War Laufey", target: "God of War Laufey" },
                 ]
-              : gameMatches;
+              : seriesName === "Jak Wytresować Smoka"
+                ? [
+                    { label: "School of Dragons", target: "School of Dragons" },
+                    { label: "Rise of Berk", target: "Rise of Berk" },
+                    { label: "Titan Uprising", target: "Titan Uprising" },
+                    {
+                      label: "How To Train Your Dragon",
+                      target: "How To Train Your Dragon",
+                    },
+                    {
+                      label: "How To Train Your Dragon 2",
+                      target: "How To Train Your Dragon 2",
+                    },
+                    {
+                      label: "Dawn Of New Riders",
+                      target: "Dawn Of New Riders",
+                    },
+                    {
+                      label: "Dragons Wild Skies",
+                      target: "Dragons Wild Skies",
+                    },
+                    {
+                      label: "Dragons Nine Realms",
+                      target: "Dragons Nine Realms",
+                    },
+                  ]
+                : gameMatches;
 
   const relatedMedia = {
     games: filteredGameMatches,
@@ -766,6 +775,18 @@ const Books = () => {
     }
   }, [currentBooks]);
 
+  const getSharedBookKey = (bookTitle) =>
+    `book:${String(bookTitle || "")
+      .trim()
+      .toLowerCase()}`;
+
+  const getSharedStoryKey = (bookTitle, storyTitle) =>
+    `story:${String(bookTitle || "")
+      .trim()
+      .toLowerCase()}:${String(storyTitle || "")
+      .trim()
+      .toLowerCase()}`;
+
   const updateStatus = (itemKey, nextStatus) => {
     setItemStatuses((current) => ({
       ...current,
@@ -1083,12 +1104,14 @@ const Books = () => {
   };
 
   const getBookStatus = (series, book) => {
+    const sharedBookKey = getSharedBookKey(book.title);
+
     if (!book.stories || book.stories.length === 0) {
-      return itemStatuses[`book:${series}:${book.title}`] ?? "seen";
+      return itemStatuses[sharedBookKey] ?? "seen";
     }
 
     const storyStatuses = book.stories.map((story) => {
-      const storyKey = `story:${series}:${book.title}:${story.title}`;
+      const storyKey = getSharedStoryKey(book.title, story.title);
       return itemStatuses[storyKey] ?? "seen";
     });
 
@@ -1113,11 +1136,11 @@ const Books = () => {
     );
 
     flatSeriesItems.forEach((book) => {
-      const bookKey = `book:${series}:${book.title}`;
+      const bookKey = getSharedBookKey(book.title);
       seriesItems.push(itemStatuses[bookKey] ?? "seen");
 
       book.stories?.forEach((story) => {
-        const storyKey = `story:${series}:${book.title}:${story.title}`;
+        const storyKey = getSharedStoryKey(book.title, story.title);
         seriesItems.push(itemStatuses[storyKey] ?? "seen");
       });
     });
@@ -1285,7 +1308,7 @@ const Books = () => {
 
                   <ul className="books-item-list">
                     {currentBooks[series]?.map((book) => {
-                      const itemKey = `book:${series}:${book.title}`;
+                      const itemKey = getSharedBookKey(book.title);
                       const currentStatus = getBookStatus(series, book);
                       const hasStories = Boolean(book.stories?.length);
 
@@ -1342,7 +1365,10 @@ const Books = () => {
                       {selectedBook.stories && (
                         <ul className="books-story-list">
                           {selectedBook.stories.map((story) => {
-                            const itemKey = `story:${series}:${selectedBook.title}:${story.title}`;
+                            const itemKey = getSharedStoryKey(
+                              selectedBook.title,
+                              story.title,
+                            );
                             const currentStatus =
                               itemStatuses[itemKey] ?? "seen";
 
@@ -1453,7 +1479,7 @@ const Books = () => {
 
                         <ul className="books-item-list">
                           {items.map((book) => {
-                            const itemKey = `book:${series}:${book.title}`;
+                            const itemKey = getSharedBookKey(book.title);
                             const currentStatus = getBookStatus(series, book);
                             const hasStories = Boolean(book.stories?.length);
 
@@ -1515,7 +1541,10 @@ const Books = () => {
                       {selectedBook.stories && (
                         <ul className="books-story-list">
                           {selectedBook.stories.map((story) => {
-                            const itemKey = `story:${series}:${selectedBook.title}:${story.title}`;
+                            const itemKey = getSharedStoryKey(
+                              selectedBook.title,
+                              story.title,
+                            );
                             const currentStatus =
                               itemStatuses[itemKey] ?? "seen";
 

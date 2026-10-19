@@ -1211,6 +1211,16 @@ const gameDescriptions = {
       "Otwarte RPG w uniwersum Harry’ego Pottera, dające graczom możliwość stworzenia własnego ucznia i eksploracji Hogwartu oraz okolicznych terenów. Gracz poznaje sekrety czarodziejskiego świata, rozwija swoje umiejętności magiczne i zmaga się z mrocznymi siłami, w tym tajemniczym Ranrokiem, odkrywając wciągającą historię pełną magii i przygód.",
   },
 
+  "Hogwart's Mystery": {
+    world: "Wizard City",
+    why: "Wizard City to miejsce, w którym gracz poznaje zasady magii, buduje relacje i samodzielnie kształtuje własną drogę. Hogwart’s Mystery odwołuje się do tego samego uczucia: młody uczeń odkrywa tajemnice Hogwartu, tworzy przyjaźnie i przechodzi przez wybory, które mogą wywrócić jego szkolne życie do góry nogami.",
+    protagonist: "Uczeń Hogwartu",
+    antagonist: "Mroczne siły i tajemniczy przeciwnicy",
+    location: "Hogwart, początek XX wieku",
+    description:
+      "Mobilna gra fabularna osadzona w świecie Harry’ego Pottera, w której gracz tworzy własną postać i uczestniczy w codziennym życiu ucznia, rozwiązuje zadania, poznaje nauczycieli i toczy przyjaźnie, które wpływają na przebieg historii. To gra o odkrywaniu tajemnic szkoły, zmaganiu się z magią i podejmowaniu decyzji, które mogą zmienić przyszłość bohatera.",
+  },
+
   "School of Dragons": {
     world: "Grizzleheim",
     why: "Grizzleheim to świat wojowników, klanów i surowej natury, gdzie siła, lojalność i więź z bestiami odgrywają kluczową rolę. Relacja trenera ze smokiem w School of Dragons idealnie pasuje do nordyckiego ducha Grizzleheim – zamiast czystej magii liczy się współpraca, zaufanie i hart ducha w obliczu niebezpieczeństw.",
