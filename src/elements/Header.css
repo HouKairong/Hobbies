@@ -100,10 +100,52 @@ nav li a:hover {
   font-weight: 800;
 }
 
-.progressButton,
-.resetDataButton {
+.headerTopLeftPanel {
   position: absolute;
   top: 14px;
+  left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.headerTopLeftActions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accountNameLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(228, 236, 255, 0.86);
+  padding-left: 4px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
+}
+
+.accountLogoutButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(17, 17, 17, 0.4);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 700;
+  color: #fff7fb;
+  background: linear-gradient(180deg, #d74d66, #ba2f47);
+  cursor: pointer;
+  transition: 0.2s ease;
+  min-width: 120px;
+}
+
+.accountLogoutButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 12px rgba(215, 77, 102, 0.4);
+}
+
+.accountButton,
+.progressButton,
+.resetDataButton {
   font-size: 14px;
   font-weight: 700;
   border-radius: 999px;
@@ -112,10 +154,24 @@ nav li a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-family: inherit;
+}
+
+.accountButton {
+  color: #edf2ff;
+  background: linear-gradient(180deg, #333a4b, #232939);
+  border: 1px solid rgba(227, 236, 255, 0.32);
+  padding: 8px 14px;
+  box-shadow: 0 0 14px rgba(110, 130, 170, 0.26);
+  cursor: pointer;
+}
+
+.accountButton:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0 17px rgba(130, 150, 194, 0.35);
 }
 
 .progressButton {
-  left: 98px;
   color: #101114;
   background: linear-gradient(180deg, #d9ccff, #bca8ff);
   border: 1px solid rgba(17, 17, 17, 0.4);
@@ -129,7 +185,6 @@ nav li a:hover {
 }
 
 .resetDataButton {
-  left: 18px;
   color: #1a1220;
   background: linear-gradient(180deg, #ffb4b4, #ff7d7d);
   border: 1px solid rgba(17, 17, 17, 0.4);
@@ -160,6 +215,120 @@ nav li a:hover {
 .galleryButton:hover {
   transform: scale(1.08);
   box-shadow: 0 0 18px rgba(194, 175, 255, 0.35);
+}
+
+.accountModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 14, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  padding: 16px;
+}
+
+.accountModalCard {
+  width: min(92vw, 440px);
+  background: linear-gradient(
+    180deg,
+    rgba(22, 29, 43, 0.98),
+    rgba(14, 19, 30, 0.98)
+  );
+  border: 1px solid rgba(217, 204, 255, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  padding: 22px;
+  position: relative;
+}
+
+.accountModalCard h3 {
+  margin: 0;
+  color: #f0f4ff;
+  font-size: 24px;
+}
+
+.accountModalCard p {
+  margin: 10px 0 18px;
+  color: rgba(229, 236, 255, 0.82);
+}
+
+.accountModalClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(180, 196, 225, 0.34);
+  background: rgba(41, 53, 75, 0.82);
+  color: #f4f8ff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accountModalClose:hover {
+  background: rgba(58, 74, 104, 0.92);
+}
+
+.accountLoginForm {
+  display: flex;
+  gap: 10px;
+}
+
+.accountLoginForm input {
+  flex: 1;
+  background: rgba(13, 19, 30, 0.85);
+  border: 1px solid rgba(170, 188, 222, 0.36);
+  border-radius: 10px;
+  color: #eef4ff;
+  padding: 10px 12px;
+  font-size: 15px;
+}
+
+.accountLoginForm input::placeholder {
+  color: rgba(206, 220, 246, 0.6);
+}
+
+.accountLoginForm button {
+  border: 1px solid rgba(17, 17, 17, 0.38);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 700;
+  color: #101114;
+  background: linear-gradient(180deg, #d9ccff, #bca8ff);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.accountLoginForm button:hover {
+  transform: translateY(-1px);
+}
+
+.accountLoginForm button:disabled,
+.accountLogoutButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.accountLoggedInfo {
+  margin-top: 14px;
+  color: #d7e4ff;
+}
+
+.accountLoggedInfo strong {
+  color: #ffffff;
+}
+
+.accountErrorMessage {
+  margin-top: 12px;
+  color: #ffb6b6;
+  font-size: 13px;
 }
 
 @media (max-width: 850px) {
@@ -198,23 +367,32 @@ nav li a:hover {
     margin: 0 auto 12px auto;
   }
 
+  .headerTopLeftPanel {
+    top: 12px;
+    left: 12px;
+  }
+
+  .headerTopLeftActions {
+    gap: 8px;
+  }
+
+  .accountNameLabel {
+    font-size: 11px;
+  }
+
+  .accountButton,
   .progressButton,
   .resetDataButton {
-    top: 12px;
     font-size: 12px;
     padding: 7px 10px;
-  }
-
-  .progressButton {
-    left: 88px;
-  }
-
-  .resetDataButton {
-    left: 12px;
   }
 
   .galleryButton {
     top: 12px;
     right: 12px;
+  }
+
+  .accountLoginForm {
+    flex-direction: column;
   }
 }

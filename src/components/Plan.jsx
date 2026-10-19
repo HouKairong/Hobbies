@@ -9,8 +9,18 @@ import moviesData from "../data/movies";
 import booksData from "../data/books";
 import { readGameStatuses, updateGameStatus } from "../data/gameStatuses";
 import { readSeriesStatuses, updateSeriesStatus } from "../data/seriesStatuses";
-
-const PLAN_STORAGE_KEY = "hobbies-plan-entries";
+import {
+  buildBookStatusKey,
+  readBookStatuses,
+  updateBookStatus,
+} from "../data/bookStatuses";
+import { readMovieStatuses, updateMovieStatus } from "../data/movieStatuses";
+import {
+  readPlanEntries,
+  subscribeToPlanEntries,
+  writePlanEntries,
+} from "../data/planEntriesStore";
+import { subscribeToAccountState } from "../data/accountStore";
 
 const planCategories = ["Gry", "Seriale", "Książki", "Filmy"];
 const planStatuses = ["Nie znam", "W trakcie", "Zakończone"];
@@ -577,20 +587,6 @@ const mapMovieStatusToProgressStatus = (status) => {
   return "not-started";
 };
 
-const readMovieStatuses = () => {
-  if (typeof window === "undefined") {
-    return {};
-  }
-
-  try {
-    return JSON.parse(
-      window.localStorage.getItem("hobbies-movie-statuses") || "{}",
-    );
-  } catch {
-    return {};
-  }
-};
-
 const getMovieItems = (movieStatuses) => {
   const items = [];
   const seen = new Set();
@@ -652,24 +648,7 @@ const getMovieItems = (movieStatuses) => {
 
 const getBookItems = () => {
   const items = [];
-
-  let savedPlan = {};
-  if (typeof window !== "undefined") {
-    try {
-      savedPlan =
-        JSON.parse(
-          window.localStorage.getItem("myHobbiesProgressPlan") || "{}",
-        ) || {};
-    } catch {
-      savedPlan = {};
-    }
-  }
-
-  const savedBookStatuses = new Map(
-    (Array.isArray(savedPlan["Książki"]) ? savedPlan["Książki"] : []).map(
-      (item) => [item.title, item.status],
-    ),
-  );
+  const savedBookStatuses = readBookStatuses();
 
   Object.entries(booksData).forEach(([seriesName, seriesBooks]) => {
     (Array.isArray(seriesBooks) ? seriesBooks : []).forEach((book) => {
@@ -679,7 +658,9 @@ const getBookItems = () => {
       items.push({
         title,
         section: "Książki",
-        status: savedBookStatuses.get(title) || "not-started",
+        status: mapSeriesStatusToProgressStatus(
+          savedBookStatuses[buildBookStatusKey(title)],
+        ),
         series: seriesName,
       });
     });
@@ -695,7 +676,9 @@ const getBookItems = () => {
     items.push({
       title,
       section: "Książki",
-      status: savedBookStatuses.get(title) || "not-started",
+      status: mapSeriesStatusToProgressStatus(
+        savedBookStatuses[buildBookStatusKey(title)],
+      ),
       series: "Crossovery",
     });
   });
@@ -744,23 +727,11 @@ const getInProgressItems = () => {
 };
 
 const getStoredPlanEntries = () => {
-  if (typeof window === "undefined") {
-    return [];
-  }
-
-  try {
-    return JSON.parse(window.localStorage.getItem(PLAN_STORAGE_KEY) || "[]");
-  } catch {
-    return [];
-  }
+  return readPlanEntries();
 };
 
 const setStoredPlanEntries = (entries) => {
-  if (typeof window === "undefined") {
-    return;
-  }
-
-  window.localStorage.setItem(PLAN_STORAGE_KEY, JSON.stringify(entries));
+  writePlanEntries(entries);
 };
 
 const getCategoryStatusEntries = (category) => {
@@ -827,12 +798,7 @@ const getCategoryStatusEntries = (category) => {
   }
 
   if (category === "Książki") {
-    const savedPlan = getStoredPlanEntries();
-    const savedBookStatuses = new Map(
-      savedPlan
-        .filter((item) => item.category === "Książki")
-        .map((item) => [item.title, item.status]),
-    );
+    const savedBookStatuses = readBookStatuses();
 
     Object.values(booksData).forEach((list) => {
       if (!Array.isArray(list)) {
@@ -845,7 +811,12 @@ const getCategoryStatusEntries = (category) => {
           return;
         }
 
-        addEntry(title, savedBookStatuses.get(title) || "Nie rozpoczęte");
+        addEntry(
+          title,
+          mapMovieStatusToProgressStatus(
+            savedBookStatuses[buildBookStatusKey(title)],
+          ),
+        );
       });
     });
   }
@@ -901,6 +872,21 @@ const Plan = () => {
     totalItems: "1",
     startFrom: "1",
   });
+
+  useEffect(() => {
+    const unsubscribeEntries = subscribeToPlanEntries(() => {
+      setPlanVersion((current) => current + 1);
+    });
+
+    const unsubscribeAccount = subscribeToAccountState(() => {
+      setPlanVersion((current) => current + 1);
+    });
+
+    return () => {
+      unsubscribeEntries();
+      unsubscribeAccount();
+    };
+  }, []);
 
   const savedEntries = useMemo(
     () => getStoredPlanEntries().filter((entry) => !isEntryInPast(entry)),
@@ -1217,8 +1203,6 @@ const Plan = () => {
     }
 
     if (category === "Filmy") {
-      const movieStatuses = readMovieStatuses();
-      const nextMovieStatuses = { ...movieStatuses };
       const groupMatch = Object.entries(moviesData).find(
         ([, items]) =>
           Array.isArray(items) &&
@@ -1234,43 +1218,15 @@ const Plan = () => {
       if (groupMatch) {
         const [groupTitle] = groupMatch;
         const targetKey = `movie-part:${groupTitle}:${title}`;
-        nextMovieStatuses[targetKey] = normalizedStatus;
+        updateMovieStatus(targetKey, normalizedStatus);
       } else {
-        nextMovieStatuses[`movie:${title}`] = normalizedStatus;
-      }
-
-      if (typeof window !== "undefined") {
-        window.localStorage.setItem(
-          "hobbies-movie-statuses",
-          JSON.stringify(nextMovieStatuses),
-        );
+        updateMovieStatus(`movie:${title}`, normalizedStatus);
       }
       return;
     }
 
     if (category === "Książki") {
-      const nextBookStatuses = {
-        ...(() => {
-          if (typeof window === "undefined") return {};
-          try {
-            return JSON.parse(
-              localStorage.getItem("hobbies-book-statuses") || "{}",
-            );
-          } catch {
-            return {};
-          }
-        })(),
-      };
-
-      nextBookStatuses[`book:${String(title).trim().toLowerCase()}`] =
-        normalizedStatus;
-
-      if (typeof window !== "undefined") {
-        window.localStorage.setItem(
-          "hobbies-book-statuses",
-          JSON.stringify(nextBookStatuses),
-        );
-      }
+      updateBookStatus(buildBookStatusKey(title), normalizedStatus);
     }
   };
 

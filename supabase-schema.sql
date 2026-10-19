@@ -1,0 +1,42 @@
+-- Run this in Supabase SQL Editor
+create table if not exists public.hobbies_accounts (
+  nickname text primary key,
+  payload jsonb not null default '{}'::jsonb,
+  updated_at timestamptz not null default now()
+);
+
+create or replace function public.set_hobbies_accounts_updated_at()
+returns trigger
+language plpgsql
+as $$
+begin
+  new.updated_at = now();
+  return new;
+end;
+$$;
+
+drop trigger if exists trg_hobbies_accounts_updated_at on public.hobbies_accounts;
+create trigger trg_hobbies_accounts_updated_at
+before update on public.hobbies_accounts
+for each row execute procedure public.set_hobbies_accounts_updated_at();
+
+alter table public.hobbies_accounts enable row level security;
+
+drop policy if exists "Allow read accounts" on public.hobbies_accounts;
+create policy "Allow read accounts"
+on public.hobbies_accounts
+for select
+using (true);
+
+drop policy if exists "Allow insert accounts" on public.hobbies_accounts;
+create policy "Allow insert accounts"
+on public.hobbies_accounts
+for insert
+with check (true);
+
+drop policy if exists "Allow update accounts" on public.hobbies_accounts;
+create policy "Allow update accounts"
+on public.hobbies_accounts
+for update
+using (true)
+with check (true);

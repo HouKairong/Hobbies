@@ -1,7 +1,5 @@
 import "./Games.css";
 import { useState, useMemo, useRef, useEffect } from "react";
-import Wizard from "../../public/images/Wizard.jpg";
-import Minecraft from "../../public/images/Minecraft.jpg";
 import gamesData from "../data/gamesData";
 import gameDescriptions from "../data/gameDescriptions";
 import GalleryModal from "../elements/GalleryModal";
@@ -10,6 +8,9 @@ import {
   subscribeToGameStatuses,
   updateGameStatus,
 } from "../data/gameStatuses";
+
+const Wizard = `${import.meta.env.BASE_URL}images/Wizard.jpg`;
+const Minecraft = `${import.meta.env.BASE_URL}images/Minecraft.jpg`;
 
 const worldsList = [
   "Wizard City",
@@ -280,15 +281,6 @@ const Games = () => {
   ];
 
   const descriptionRef = useRef(null);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem(
-        "hobbies-game-statuses",
-        JSON.stringify(itemStatuses),
-      );
-    }
-  }, [itemStatuses]);
 
   useEffect(() => {
     const unsubscribe = subscribeToGameStatuses(setItemStatuses);

@@ -15,8 +15,18 @@ import {
   subscribeToSeriesStatuses,
   updateSeriesStatus,
 } from "../data/seriesStatuses";
-
-const STORAGE_KEY = "myHobbiesProgressPlan";
+import {
+  buildBookStatusKey,
+  readBookStatuses,
+  subscribeToBookStatuses,
+  updateBookStatuses,
+} from "../data/bookStatuses";
+import {
+  readMovieStatuses,
+  subscribeToMovieStatuses,
+  updateMovieStatuses,
+} from "../data/movieStatuses";
+import { readProgressPlan, writeProgressPlan } from "../data/progressPlanStore";
 
 const categoryOrder = [
   "Ogólne",
@@ -131,6 +141,12 @@ const mapMovieStatusToProgressStatus = (status) => {
   return "not-started";
 };
 
+const mapBookStatusToProgressStatus = (status) => {
+  if (status === "progress") return "in-progress";
+  if (status === "done") return "done";
+  return "not-started";
+};
+
 const mapProgressStatusToGameStatus = (status) => {
   if (status === "in-progress") return "progress";
   if (status === "done") return "done";
@@ -149,18 +165,18 @@ const mapProgressStatusToMovieStatus = (status) => {
   return "seen";
 };
 
-const readMovieStatuses = () => {
-  if (typeof window === "undefined") {
+const mapProgressStatusToBookStatus = (status) => {
+  if (status === "in-progress") return "progress";
+  if (status === "done") return "done";
+  return "seen";
+};
+
+const normalizePlanPayload = (value) => {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
     return {};
   }
 
-  try {
-    return JSON.parse(
-      window.localStorage.getItem("hobbies-movie-statuses") || "{}",
-    );
-  } catch {
-    return {};
-  }
+  return value;
 };
 
 const createEmptyPlan = () =>
@@ -177,10 +193,7 @@ const loadPlan = () => {
   }
 
   try {
-    const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (!saved) return createEmptyPlan();
-
-    const parsed = JSON.parse(saved);
+    const parsed = normalizePlanPayload(readProgressPlan());
 
     return Object.fromEntries(
       Object.entries(defaultPlan).map(([section, titles]) => {
@@ -221,6 +234,7 @@ const Progress = () => {
     readSeriesStatuses(),
   );
   const [movieStatuses, setMovieStatuses] = useState(() => readMovieStatuses());
+  const [bookStatuses, setBookStatuses] = useState(() => readBookStatuses());
   const [isRandomModalOpen, setIsRandomModalOpen] = useState(false);
   const [randomCategories, setRandomCategories] = useState({
     Gry: true,
@@ -236,7 +250,7 @@ const Progress = () => {
   const [randomResult, setRandomResult] = useState(null);
 
   useEffect(() => {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(plan));
+    writeProgressPlan(plan);
   }, [plan]);
 
   useEffect(() => {
@@ -246,6 +260,16 @@ const Progress = () => {
 
   useEffect(() => {
     const unsubscribe = subscribeToSeriesStatuses(setSeriesStatuses);
+    return unsubscribe;
+  }, []);
+
+  useEffect(() => {
+    const unsubscribe = subscribeToBookStatuses(setBookStatuses);
+    return unsubscribe;
+  }, []);
+
+  useEffect(() => {
+    const unsubscribe = subscribeToMovieStatuses(setMovieStatuses);
     return unsubscribe;
   }, []);
 
@@ -350,10 +374,12 @@ const Progress = () => {
           return;
         }
 
-        const entry = plan["Książki"]?.find((item) => item.title === title);
+        const entryStatus = mapBookStatusToProgressStatus(
+          bookStatuses[buildBookStatusKey(title)],
+        );
         items.push({
           title,
-          status: entry?.status ?? "not-started",
+          status: entryStatus,
           groupTitle: seriesName,
         });
       });
@@ -370,10 +396,12 @@ const Progress = () => {
     ];
 
     const crossoverItems = crossoverTitles.map((title) => {
-      const entry = plan["Książki"]?.find((item) => item.title === title);
+      const entryStatus = mapBookStatusToProgressStatus(
+        bookStatuses[buildBookStatusKey(title)],
+      );
       return {
         title,
-        status: entry?.status ?? "not-started",
+        status: entryStatus,
         groupTitle: "Crossovery",
       };
     });
@@ -382,7 +410,7 @@ const Progress = () => {
       groups: [...groups, { title: "Crossovery", items: crossoverItems }],
       flatItems: [...groups.flatMap((group) => group.items), ...crossoverItems],
     };
-  }, [plan]);
+  }, [bookStatuses]);
 
   const generalItems = useMemo(() => {
     const items = [];
@@ -673,17 +701,7 @@ const Progress = () => {
 
     if (section === "Gry") {
       const mappedStatus = mapProgressStatusToGameStatus(status);
-      const nextStatuses = {
-        ...readGameStatuses(),
-        [`game:${title}`]: mappedStatus,
-      };
-
-      if (typeof window !== "undefined") {
-        window.localStorage.setItem(
-          "hobbies-game-statuses",
-          JSON.stringify(nextStatuses),
-        );
-      }
+      const nextStatuses = updateGameStatus(`game:${title}`, mappedStatus);
 
       setGameStatuses(nextStatuses);
       setRefreshKey((current) => current + 1);
@@ -692,17 +710,7 @@ const Progress = () => {
 
     if (section === "Seriale") {
       const mappedStatus = mapProgressStatusToSeriesStatus(status);
-      const nextStatuses = {
-        ...readSeriesStatuses(),
-        [`series:${title}`]: mappedStatus,
-      };
-
-      if (typeof window !== "undefined") {
-        window.localStorage.setItem(
-          "hobbies-series-statuses",
-          JSON.stringify(nextStatuses),
-        );
-      }
+      const nextStatuses = updateSeriesStatus(`series:${title}`, mappedStatus);
 
       setSeriesStatuses(nextStatuses);
       setRefreshKey((current) => current + 1);
@@ -742,12 +750,7 @@ const Progress = () => {
         }
       }
 
-      if (typeof window !== "undefined") {
-        window.localStorage.setItem(
-          "hobbies-movie-statuses",
-          JSON.stringify(nextStatuses),
-        );
-      }
+      updateMovieStatuses(nextStatuses);
 
       setMovieStatuses(nextStatuses);
       setRefreshKey((current) => current + 1);
@@ -755,39 +758,27 @@ const Progress = () => {
     }
 
     if (section === "Książki") {
-      setPlan((previous) => {
-        const existingItems = Array.isArray(previous[section])
-          ? previous[section]
-          : [];
+      const targetTitles =
+        mode === "series"
+          ? (
+              bookGroups.groups.find((group) => group.title === title)?.items ??
+              []
+            ).map((item) => item.title)
+          : [title];
 
-        const targetTitles =
-          mode === "series"
-            ? (
-                bookGroups.groups.find((group) => group.title === title)
-                  ?.items ?? []
-              ).map((item) => item.title)
-            : [title];
+      if (targetTitles.length === 0) {
+        return;
+      }
 
-        const updatedItems = existingItems.map((item) =>
-          targetTitles.includes(item.title) ? { ...item, status } : item,
-        );
+      const mappedStatus = mapProgressStatusToBookStatus(status);
+      const updates = Object.fromEntries(
+        targetTitles.map((targetTitle) => [
+          buildBookStatusKey(targetTitle),
+          mappedStatus,
+        ]),
+      );
 
-        const missingItems = targetTitles.filter(
-          (targetTitle) =>
-            !updatedItems.some((item) => item.title === targetTitle),
-        );
-
-        return {
-          ...previous,
-          [section]: [
-            ...updatedItems,
-            ...missingItems.map((targetTitle) => ({
-              title: targetTitle,
-              status,
-            })),
-          ],
-        };
-      });
+      updateBookStatuses(updates);
       return;
     }
 
@@ -1116,11 +1107,16 @@ const Progress = () => {
                     ? "progressRandomResultBox progressRandomResultBoxEmpty"
                     : "progressRandomResultBox"
                 }
-                onClick={randomResult.empty ? undefined : handleRandomResultClick}
+                onClick={
+                  randomResult.empty ? undefined : handleRandomResultClick
+                }
                 role={randomResult.empty ? undefined : "button"}
                 tabIndex={randomResult.empty ? undefined : 0}
                 onKeyDown={(event) => {
-                  if (!randomResult.empty && (event.key === "Enter" || event.key === " ")) {
+                  if (
+                    !randomResult.empty &&
+                    (event.key === "Enter" || event.key === " ")
+                  ) {
                     event.preventDefault();
                     handleRandomResultClick();
                   }

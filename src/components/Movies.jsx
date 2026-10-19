@@ -1,8 +1,14 @@
 import "./Movies.css";
 import { useState, useRef, useEffect } from "react";
-import HTTYD from "../../public/images/HTTYD.jpg";
 import moviesDescriptions from "../data/moviesDescriptions";
 import movies from "../data/movies";
+import {
+  readMovieStatuses,
+  subscribeToMovieStatuses,
+  updateMovieStatus,
+} from "../data/movieStatuses";
+
+const HTTYD = `${import.meta.env.BASE_URL}images/HTTYD.jpg`;
 
 const Movies = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -11,15 +17,7 @@ const Movies = () => {
   const [selectedSeries, setSelectedSeries] = useState(null);
   const [selectedPart, setSelectedPart] = useState(null);
   const [movieChoiceOptions, setMovieChoiceOptions] = useState(null);
-  const [itemStatuses, setItemStatuses] = useState(() => {
-    if (typeof window === "undefined") return {};
-
-    try {
-      return JSON.parse(localStorage.getItem("hobbies-movie-statuses") || "{}");
-    } catch {
-      return {};
-    }
-  });
+  const [itemStatuses, setItemStatuses] = useState(() => readMovieStatuses());
 
   const statusOptions = [
     { value: "seen", label: "Nie znam" },
@@ -39,19 +37,12 @@ const Movies = () => {
   const partRef = useRef(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem(
-        "hobbies-movie-statuses",
-        JSON.stringify(itemStatuses),
-      );
-    }
-  }, [itemStatuses]);
+    const unsubscribe = subscribeToMovieStatuses(setItemStatuses);
+    return unsubscribe;
+  }, []);
 
   const updateStatus = (itemKey, nextStatus) => {
-    setItemStatuses((current) => ({
-      ...current,
-      [itemKey]: nextStatus,
-    }));
+    updateMovieStatus(itemKey, nextStatus);
   };
 
   const handleCategoryChange = (value) => {

@@ -1,24 +1,31 @@
+import {
+  getAccountDataValue,
+  mergeAccountObjectValue,
+  subscribeToAccountState,
+} from "./accountStore";
+
 export const SERIES_STATUS_STORAGE_KEY = "hobbies-series-statuses";
+
+export const SERIES_STATUS_DATA_KEY = "seriesStatuses";
 
 const listeners = new Set();
 
-export const readSeriesStatuses = () => {
-  if (typeof window === "undefined") {
-    return {};
-  }
-
-  try {
-    return JSON.parse(
-      window.localStorage.getItem(SERIES_STATUS_STORAGE_KEY) || "{}",
-    );
-  } catch {
-    return {};
-  }
-};
-
-export const notifySeriesStatusListeners = () => {
+const emitSeriesStatuses = () => {
   const nextStatuses = readSeriesStatuses();
   listeners.forEach((listener) => listener(nextStatuses));
+};
+
+export const readSeriesStatuses = () => {
+  const value = getAccountDataValue(SERIES_STATUS_DATA_KEY, {});
+  return value && typeof value === "object" ? value : {};
+};
+
+subscribeToAccountState(() => {
+  emitSeriesStatuses();
+});
+
+export const notifySeriesStatusListeners = () => {
+  emitSeriesStatuses();
 };
 
 export const subscribeToSeriesStatuses = (listener) => {
@@ -35,12 +42,9 @@ export const updateSeriesStatus = (itemKey, nextStatus) => {
     [itemKey]: nextStatus,
   };
 
-  if (typeof window !== "undefined") {
-    window.localStorage.setItem(
-      SERIES_STATUS_STORAGE_KEY,
-      JSON.stringify(nextStatuses),
-    );
-  }
+  mergeAccountObjectValue(SERIES_STATUS_DATA_KEY, {
+    [itemKey]: nextStatus,
+  });
 
   notifySeriesStatusListeners();
   return nextStatuses;

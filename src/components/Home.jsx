@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // <-- importujemy
 import "./Home.css";
-import Wizard from "../../public/images/Wizard.jpg";
-import Minecraft from "../../public/images/Minecraft.jpg";
-import HTTYD from "../../public/images/HTTYD.jpg";
-import Komedia from "../../public/images/komedia.jpg";
-import HangingTemple from "../../public/images/hanging-temple.jpg";
-import Socrates from "../../public/images/socrates.jpg";
-import Warhammer from "../../public/images/Warhammer.jpg";
+const Wizard = `${import.meta.env.BASE_URL}images/Wizard.jpg`;
+const Minecraft = `${import.meta.env.BASE_URL}images/Minecraft.jpg`;
+const HTTYD = `${import.meta.env.BASE_URL}images/HTTYD.jpg`;
+const Komedia = `${import.meta.env.BASE_URL}images/komedia.jpg`;
+const HangingTemple = `${import.meta.env.BASE_URL}images/hanging-temple.jpg`;
+const Socrates = `${import.meta.env.BASE_URL}images/socrates.jpg`;
+const Warhammer = `${import.meta.env.BASE_URL}images/Warhammer.jpg`;
 
 const images = [
   Wizard,

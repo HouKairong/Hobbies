@@ -1,12 +1,20 @@
 import "./Books.css";
 import { useState, useRef, useEffect } from "react";
-import komedia from "../../public/images/komedia.jpg";
 import books from "../data/books";
 import booksDescriptions from "../data/booksDescriptions";
 import gamesData from "../data/gamesData";
 import seriesData from "../data/seriesData";
 import movies from "../data/movies";
 import GalleryModal from "../elements/GalleryModal";
+import {
+  buildBookStatusKey,
+  buildBookStoryStatusKey,
+  readBookStatuses,
+  subscribeToBookStatuses,
+  updateBookStatus,
+} from "../data/bookStatuses";
+
+const komedia = `${import.meta.env.BASE_URL}images/komedia.jpg`;
 
 const normalizeTitle = (value = "") =>
   value
@@ -704,15 +712,7 @@ const Books = () => {
   const [selectedStory, setSelectedStory] = useState(null);
   const [selectedStatus, setSelectedStatus] = useState("Wszystkie");
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
-  const [itemStatuses, setItemStatuses] = useState(() => {
-    if (typeof window === "undefined") return {};
-
-    try {
-      return JSON.parse(localStorage.getItem("hobbies-book-statuses") || "{}");
-    } catch {
-      return {};
-    }
-  });
+  const [itemStatuses, setItemStatuses] = useState(() => readBookStatuses());
 
   const statusOptions = [
     { value: "seen", label: "Nie znam" },
@@ -748,13 +748,9 @@ const Books = () => {
   );
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem(
-        "hobbies-book-statuses",
-        JSON.stringify(itemStatuses),
-      );
-    }
-  }, [itemStatuses]);
+    const unsubscribe = subscribeToBookStatuses(setItemStatuses);
+    return unsubscribe;
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -775,23 +771,13 @@ const Books = () => {
     }
   }, [currentBooks]);
 
-  const getSharedBookKey = (bookTitle) =>
-    `book:${String(bookTitle || "")
-      .trim()
-      .toLowerCase()}`;
+  const getSharedBookKey = (bookTitle) => buildBookStatusKey(bookTitle);
 
   const getSharedStoryKey = (bookTitle, storyTitle) =>
-    `story:${String(bookTitle || "")
-      .trim()
-      .toLowerCase()}:${String(storyTitle || "")
-      .trim()
-      .toLowerCase()}`;
+    buildBookStoryStatusKey(bookTitle, storyTitle);
 
   const updateStatus = (itemKey, nextStatus) => {
-    setItemStatuses((current) => ({
-      ...current,
-      [itemKey]: nextStatus,
-    }));
+    updateBookStatus(itemKey, nextStatus);
   };
 
   const seriesWorlds = {
