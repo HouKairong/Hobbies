@@ -403,7 +403,7 @@ const movies = {
       title: "Kung Fu Panda",
       parts: [
         {
-          title: "Część 1",
+          title: "Kung Fu Panda",
           description:
             "Połączenie komedii i akcji, w którym niezdarny panda Po staje się wybranym wojownikiem kung fu.",
         },
@@ -418,7 +418,7 @@ const movies = {
             "Świąteczny specjal, w którym Po musi pogodzić obowiązki Smoczego Wojownika z rodzinną tradycją przygotowywania świątecznej uczty w restauracji pana Pinga. Ciepła historia o równowadze między obowiązkiem a rodziną.",
         },
         {
-          title: "Część 2",
+          title: "Kung Fu Panda 2",
           description:
             "Po kontynuuje swoją podróż jako wojownik, stawiając czoła nowemu zagrożeniu dla Doliny Pokoju.",
         },
@@ -433,7 +433,7 @@ const movies = {
             "Specjalny odcinek ukazujący alternatywną wersję wydarzeń, w której to nie Po zostaje Smoczym Wojownikiem. Historia w humorystyczny sposób pokazuje, że przeznaczenie może wyglądać inaczej, ale odwaga i determinacja są kluczowe.",
         },
         {
-          title: "Część 3",
+          title: "Kung Fu Panda 3",
           description:
             "Po odkrywa swoją prawdziwą tożsamość i łączy siły z ojcem oraz nowymi przyjaciółmi, aby pokonać wroga.",
         },
@@ -443,7 +443,7 @@ const movies = {
             "Krótkometrażowa animacja skupiająca się na Po i jego codziennych, często komicznych zmaganiach jako Smoczy Wojownik. Pokazuje lżejszą stronę jego treningu i życia w Dolinie Pokoju.",
         },
         {
-          title: "Część 4",
+          title: "Kung Fu Panda 4",
           description:
             "Najnowsza część serii, w której Po staje przed nowymi wyzwaniami, w tym potężnym przeciwnikiem z przeszłości kung fu.",
         },
@@ -852,7 +852,7 @@ const movies = {
       title: "Kung Fu Panda",
       parts: [
         {
-          title: "Część 1",
+          title: "Kung Fu Panda",
           description:
             "Połączenie komedii i akcji, w którym niezdarny panda Po staje się wybranym wojownikiem kung fu.",
         },
@@ -867,7 +867,7 @@ const movies = {
             "Świąteczny specjal, w którym Po musi pogodzić obowiązki Smoczego Wojownika z rodzinną tradycją przygotowywania świątecznej uczty w restauracji pana Pinga. Ciepła historia o równowadze między obowiązkiem a rodziną.",
         },
         {
-          title: "Część 2",
+          title: "Kung Fu Panda 2",
           description:
             "Po kontynuuje swoją podróż jako wojownik, stawiając czoła nowemu zagrożeniu dla Doliny Pokoju.",
         },
@@ -882,7 +882,7 @@ const movies = {
             "Specjalny odcinek ukazujący alternatywną wersję wydarzeń, w której to nie Po zostaje Smoczym Wojownikiem. Historia w humorystyczny sposób pokazuje, że przeznaczenie może wyglądać inaczej, ale odwaga i determinacja są kluczowe.",
         },
         {
-          title: "Część 3",
+          title: "Kung Fu Panda 3",
           description:
             "Po odkrywa swoją prawdziwą tożsamość i łączy siły z ojcem oraz nowymi przyjaciółmi, aby pokonać wroga.",
         },
@@ -892,7 +892,7 @@ const movies = {
             "Krótkometrażowa animacja skupiająca się na Po i jego codziennych, często komicznych zmaganiach jako Smoczy Wojownik. Pokazuje lżejszą stronę jego treningu i życia w Dolinie Pokoju.",
         },
         {
-          title: "Część 4",
+          title: "Kung Fu Panda 4",
           description:
             "Najnowsza część serii, w której Po staje przed nowymi wyzwaniami, w tym potężnym przeciwnikiem z przeszłości kung fu.",
         },
@@ -1018,7 +1018,7 @@ const movies = {
       title: "Kung Fu Panda",
       parts: [
         {
-          title: "Część 1",
+          title: "Kung Fu Panda",
           description:
             "Połączenie komedii i akcji, w którym niezdarny panda Po staje się wybranym wojownikiem kung fu.",
         },
@@ -1033,7 +1033,7 @@ const movies = {
             "Świąteczny specjal, w którym Po musi pogodzić obowiązki Smoczego Wojownika z rodzinną tradycją przygotowywania świątecznej uczty w restauracji pana Pinga. Ciepła historia o równowadze między obowiązkiem a rodziną.",
         },
         {
-          title: "Część 2",
+          title: "Kung Fu Panda 2",
           description:
             "Po kontynuuje swoją podróż jako wojownik, stawiając czoła nowemu zagrożeniu dla Doliny Pokoju.",
         },
@@ -1048,7 +1048,7 @@ const movies = {
             "Specjalny odcinek ukazujący alternatywną wersję wydarzeń, w której to nie Po zostaje Smoczym Wojownikiem. Historia w humorystyczny sposób pokazuje, że przeznaczenie może wyglądać inaczej, ale odwaga i determinacja są kluczowe.",
         },
         {
-          title: "Część 3",
+          title: "Kung Fu Panda 3",
           description:
             "Po odkrywa swoją prawdziwą tożsamość i łączy siły z ojcem oraz nowymi przyjaciółmi, aby pokonać wroga.",
         },
@@ -1058,7 +1058,7 @@ const movies = {
             "Krótkometrażowa animacja skupiająca się na Po i jego codziennych, często komicznych zmaganiach jako Smoczy Wojownik. Pokazuje lżejszą stronę jego treningu i życia w Dolinie Pokoju.",
         },
         {
-          title: "Część 4",
+          title: "Kung Fu Panda 4",
           description:
             "Najnowsza część serii, w której Po staje przed nowymi wyzwaniami, w tym potężnym przeciwnikiem z przeszłości kung fu.",
         },
@@ -1202,8 +1202,21 @@ const movies = {
     },
     { title: "Creation of the Gods I: Kingdom of Storms" },
     { title: "Painted Skin" },
-
-    { title: "The Wandering Earth" },
+    {
+      title: "The Wandering Earth",
+      parts: [
+        {
+          title: "The Wandering Earth",
+          description:
+            "Film science-fiction opowiadający o ludzkości próbującej uratować Ziemię przed zbliżającą się katastrofą kosmiczną poprzez wstrząsający plan wykonania niezbędnej podróży po układzie słonecznym.",
+        },
+        {
+          title: "The Wandering Earth 2",
+          description:
+            "Kontynuacja opowieści o globalnym wysiłku ludzkości, która stawia nowych bohaterów i większe zagrożenia przed decyzjami o przetrwaniu planety i przyszłości całej cywilizacji.",
+        },
+      ],
+    },
   ],
 
   "Boska Komedia": {
@@ -2118,17 +2131,17 @@ const movies = {
       title: "Kung Fu Panda",
       parts: [
         {
-          title: "Część 1",
+          title: "Kung Fu Panda",
           description:
             "Połączenie komedii i akcji, w którym niezdarny panda Po staje się wybranym wojownikiem kung fu.",
         },
         {
-          title: "Część 2",
+          title: "Kung Fu Panda 2",
           description:
             "Po kontynuuje swoją podróż jako wojownik, stawiając czoła nowemu zagrożeniu dla Doliny Pokoju.",
         },
         {
-          title: "Część 3",
+          title: "Kung Fu Panda 3",
           description:
             "Po odkrywa swoją prawdziwą tożsamość i łączy siły z ojcem oraz nowymi przyjaciółmi, aby pokonać wroga.",
         },
@@ -2203,57 +2216,259 @@ const movies = {
     { title: "Mustang z Dzikiej Doliny" },
     { title: "Egzorcyzmy Siostry Ann" },
   ],
-  "Maraton 1": [
-    {
-      title: "Zwierzogród",
-      parts: [
-        {
-          title: "Zwierzogród 1",
-          description:
-            "Pierwsza część animowanej serii o Judy Hopps i Nicku Wilde, którzy wspólnie rozwiązują zagadki kryminalne w tętniącym życiem mieście Zwierzogród.",
-        },
-        {
-          title: "Zwierzogród 2",
-          description:
-            "Kontynuacja przygód bohaterów, w której Judy i Nick stawiają czoła nowym wyzwaniom i zagrożeniom w mieście Zwierzogród.",
-        },
-      ],
-    },
-    { title: "Norymberga" },
-    { title: "Behemoth" },
-    {
-      title: "Sherlock Holmes",
-      parts: [
-        {
-          title: "Sherlock Holmes",
-          description:
-            "Film wprowadzający genialnego detektywa Sherlocka Holmesa i jego pierwsze konfrontacje z przestępczym światem Londynu.",
-        },
-        {
-          title: "Sherlock Holmes Gra Cieni",
-          description:
-            "Kontynuacja przygód Holmesa, w której staje do walki z arcywrogiem, profesor Moriartym, w serii inteligentnych zagadek i intryg.",
-        },
-      ],
-    },
-    { title: "Raya i Ostatni Smok" },
-    { title: "Małpi Król" },
-    {
-      title: "DOOM",
-      parts: [
-        {
-          title: "DOOM (2005)",
-          description:
-            "Adaptacja kultowej gry FPS, w której żołnierze stawiają czoła demonicznym siłom na Marsie.",
-        },
-        {
-          title: "DOOM: Anihilacja (2019)",
-          description:
-            "Nowsza ekranizacja gry, koncentrująca się na brutalnej walce z demonami w stacji badawczej na Marsie.",
-        },
-      ],
-    },
-  ],
+  "Maraton 1": {
+    "Wizard City": [
+      {
+        title: "Zwierzogród",
+        parts: [
+          {
+            title: "Zwierzogród 1",
+            description:
+              "Pierwsza część animowanej serii o Judy Hopps i Nicku Wilde, którzy wspólnie rozwiązują zagadki kryminalne w tętniącym życiem mieście Zwierzogród.",
+          },
+          {
+            title: "Zwierzogród 2",
+            description:
+              "Kontynuacja przygód bohaterów, w której Judy i Nick stawiają czoła nowym wyzwaniom i zagrożeniom w mieście Zwierzogród.",
+          },
+        ],
+      },
+    ],
+    "Krokotopia - Dragonspyre": [
+      { title: "Norymberga" },
+      { title: "Behemoth" },
+    ],
+    Marleybone: [
+      {
+        title: "Sherlock Holmes",
+        parts: [
+          {
+            title: "Sherlock Holmes",
+            description:
+              "Film wprowadzający genialnego detektywa Sherlocka Holmesa i jego pierwsze konfrontacje z przestępczym światem Londynu.",
+          },
+          {
+            title: "Sherlock Holmes Gra Cieni",
+            description:
+              "Kontynuacja przygód Holmesa, w której staje do walki z arcywrogiem, profesor Moriartym, w serii inteligentnych zagadek i intryg.",
+          },
+        ],
+      },
+    ],
+    Mooshu: [{ title: "Raya i Ostatni Smok" }, { title: "Małpi Król" }],
+    "Dragonspyre - Celestia": [
+      {
+        title: "DOOM",
+        parts: [
+          {
+            title: "DOOM (2005)",
+            description:
+              "Adaptacja kultowej gry FPS, w której żołnierze stawiają czoła demonicznym siłom na Marsie.",
+          },
+          {
+            title: "DOOM: Anihilacja (2019)",
+            description:
+              "Nowsza ekranizacja gry, koncentrująca się na brutalnej walce z demonami w stacji badawczej na Marsie.",
+          },
+        ],
+      },
+    ],
+  },
+  "Maraton 2": {
+    Marleybone: [{ title: "Lalka" }, { title: "Pan Wilk i Spółka" }],
+    Mooshu: [
+      {
+        title: "Kung Fu Panda",
+        parts: [
+          {
+            title: "Kung Fu Panda",
+            description:
+              "Połączenie komedii i akcji, w którym niezdarny panda Po staje się wybranym wojownikiem kung fu.",
+          },
+          {
+            title: "Sekrety Potężnej Piątki",
+            description:
+              "Krótkometrażowy film animowany, w którym Mistrz Shifu opowiada Po historie o młodości Tygrysicy, Małpy, Żurawia, Modliszki i Żmii. Każde z nich musiało pokonać własne słabości, zanim stało się legendarnym wojownikiem kung fu. Opowieść podkreśla, że prawdziwa siła rodzi się z charakteru, nie z talentu.",
+          },
+          {
+            title: "Święta, święta i Po",
+            description:
+              "Świąteczny specjal, w którym Po musi pogodzić obowiązki Smoczego Wojownika z rodzinną tradycją przygotowywania świątecznej uczty w restauracji pana Pinga. Ciepła historia o równowadze między obowiązkiem a rodziną.",
+          },
+          {
+            title: "Kung Fu Panda 2",
+            description:
+              "Po kontynuuje swoją podróż jako wojownik, stawiając czoła nowemu zagrożeniu dla Doliny Pokoju.",
+          },
+          {
+            title: "Kung Fu Panda: Sekrety Mistrzów",
+            description:
+              "Krótka animacja przedstawiająca historię trzech legendarnych mistrzów kung fu: Thundering Rhino, Storming Ox i Croc. Młody Shifu uczy się od nich, czym jest prawdziwe bohaterstwo i odpowiedzialność wojownika.",
+          },
+          {
+            title: "Kung Fu Panda: Tajemnice zwoju",
+            description:
+              "Specjalny odcinek ukazujący alternatywną wersję wydarzeń, w której to nie Po zostaje Smoczym Wojownikiem. Historia w humorystyczny sposób pokazuje, że przeznaczenie może wyglądać inaczej, ale odwaga i determinacja są kluczowe.",
+          },
+          {
+            title: "Kung Fu Panda 3",
+            description:
+              "Po odkrywa swoją prawdziwą tożsamość i łączy siły z ojcem oraz nowymi przyjaciółmi, aby pokonać wroga.",
+          },
+          {
+            title: "Panda Paws",
+            description:
+              "Krótkometrażowa animacja skupiająca się na Po i jego codziennych, często komicznych zmaganiach jako Smoczy Wojownik. Pokazuje lżejszą stronę jego treningu i życia w Dolinie Pokoju.",
+          },
+          {
+            title: "Kung Fu Panda 4",
+            description:
+              "Najnowsza część serii, w której Po staje przed nowymi wyzwaniami, w tym potężnym przeciwnikiem z przeszłości kung fu.",
+          },
+          {
+            title: "Dueling Dumplings",
+            description:
+              "Krótki film przedstawiający młodego Po i jego relację z panem Pingiem. Historia skupia się na ich przyjacielskiej rywalizacji przy gotowaniu klusek, ukazując początki marzeń Po i jego miłość do jedzenia oraz kung fu.",
+          },
+        ],
+      },
+      { title: "Rower z Pekinu" },
+    ],
+    Dragonspyre: [{ title: "Ręką Dantego" }, { title: "Constantine" }],
+    Grizzleheim: [
+      { title: "Wiking" },
+      {
+        title: "Jak Wytresować Smoka",
+        parts: [
+          {
+            title: "Jak Wytresować Smoka",
+            description:
+              "Pierwsza część serii, opowiadająca o przyjaźni młodego Wikinga Hiccup’a z niebezpiecznym smokiem Bezzębkiem.",
+          },
+          {
+            title: "Prezent Nocnej Furii",
+            description:
+              "Krótkometrażowa świąteczna opowieść osadzona po wydarzeniach pierwszego filmu. Podczas wikińskiego święta smoków wszystkie stworzenia niespodziewanie odlatują, a Czkawka i Astrid próbują odkryć powód ich tajemniczego zniknięcia. To ciepła historia o więzi między ludźmi i smokami oraz o tym, że czasem trzeba pozwolić komuś odejść.",
+          },
+          {
+            title: "Legenda o Smoku Gnatochrupie",
+            description:
+              "Humorystyczna krótka animacja skupiająca się na Pyskaczu i jego obsesji na punkcie legendarnego Smoka Gnatochrupa. Gdy tajemnicze wydarzenia zaczynają przypominać starą opowieść, bohaterowie muszą zmierzyć się z własnymi lękami i wyobraźnią. Lekka, komediowa historia bawiąca się smokowymi mitami.",
+          },
+          {
+            title: "Księga Smoków",
+            description:
+              "Specjalny odcinek stylizowany na dokument, w którym Czkawka, Astrid i ich przyjaciele prezentują znane gatunki smoków z Berk. To rozszerzenie wiedzy o świecie serii – pełne ciekawostek, humoru i charakterystycznych komentarzy bohaterów.",
+          },
+          {
+            title: "Świt Jeźdźców Smoków",
+            description:
+              "Krótki film będący pomostem między pierwszą a drugą częścią serii. Pokazuje początki organizacji Jeźdźców Smoków i pierwsze wspólne misje Czkawki oraz jego przyjaciół, gdy uczą się współpracować ze swoimi smokami w nowych, niebezpiecznych sytuacjach.",
+          },
+          {
+            title: "Jak Wytresować Smoka 2",
+            description:
+              "Hiccup i Bezzębny kontynuują swoje przygody, odkrywając nowe krainy i wyzwania w świecie smoków.",
+          },
+          {
+            title: "Jak Wytresować Smoka 3",
+            description:
+              "Finałowa część serii animowanej, w której Hiccup staje przed ostatecznym wyborem dotyczącym świata ludzi i smoków.",
+          },
+          {
+            title: "Święta w Domu",
+            description:
+              "Świąteczna krótkometrażowa animacja rozgrywająca się po wydarzeniach trzeciego filmu. Mieszkańcy Berk próbują odnaleźć ducha dawnych tradycji, a Czkawka zastanawia się, jak podtrzymać pamięć o smokach w świecie, w którym już ich nie ma. Ciepła i nostalgiczna historia o rodzinie i tęsknocie.",
+          },
+          {
+            title: "Jak Wytresować Smoka Remake",
+            description:
+              "Nowa wersja pierwszego filmu, zaktualizowana pod względem animacji i efektów wizualnych.",
+          },
+        ],
+      },
+    ],
+    Aquila: [
+      {
+        title: "Starcie Tytanów",
+        parts: [
+          {
+            title: "Starcie Tytanów",
+            description:
+              "Film opowiadający o Perseuszu, jego walce z potworami i bogami, oraz próbie uratowania księżniczki i ludzkości.",
+          },
+          {
+            title: "Zemsta Tytanów",
+            description:
+              "Kontynuacja historii Perseusza, w której bohater stawia czoła nowym mitologicznym zagrożeniom i potężnym tytanom.",
+          },
+        ],
+      },
+      { title: "Sokrates" },
+    ],
+    Celestia: [
+      {
+        title: "The Wandering Earth",
+        parts: [
+          {
+            title: "The Wandering Earth",
+            description:
+              "Film science-fiction opowiadający o ludzkości próbującej uratować Ziemię przed zbliżającą się katastrofą kosmiczną poprzez wstrząsający plan wykonania niezbędnej podróży po układzie słonecznym.",
+          },
+          {
+            title: "The Wandering Earth 2",
+            description:
+              "Kontynuacja opowieści o globalnym wysiłku ludzkości, która stawia nowych bohaterów i większe zagrożenia przed decyzjami o przetrwaniu planety i przyszłości całej cywilizacji.",
+          },
+        ],
+      },
+      { title: "Project Hail Mary" },
+    ],
+    Zafaria: [{ title: "Pasja" }, { title: "Mowgli: Legenda Dżungli" }],
+    Avalon: [
+      {
+        title: "Śródziemie",
+        parts: [
+          {
+            title: "Władca Pierścieni: Drużyna Pierścienia",
+            description:
+              "Pierwsza część trylogii, w której Frodo i jego towarzysze wyruszają, by zniszczyć Jedyny Pierścień i powstrzymać Saurona.",
+          },
+          {
+            title: "Władca Pierścieni: Dwie Wieże",
+            description:
+              "Drugi film trylogii, ukazujący rozdzielenie Drużyny i narastające zagrożenie ze strony Saurona oraz Sarumana.",
+          },
+          {
+            title: "Władca Pierścieni: Powrót Króla",
+            description:
+              "Finałowa część trylogii, w której bohaterowie stają do ostatecznej bitwy o Śródziemie i losy Pierścienia zostają rozstrzygnięte.",
+          },
+          {
+            title: "Hobbit: Niezwykła Podróż",
+            description:
+              "Początek przygód Bilba Bagginsa, który wyrusza z grupą krasnoludów na wyprawę do Samotnej Góry.",
+          },
+          {
+            title: "Hobbit: Pustkowie Smauga",
+            description:
+              "Druga część przygód Bilba, koncentrująca się na starciu z potężnym smokiem Smaugiem i zagrożeniu dla królestwa krasnoludów.",
+          },
+          {
+            title: "Hobbit: Bitwa Pięciu Armii",
+            description:
+              "Kulminacyjna część trylogii, w której rozgrywa się epicka bitwa między ludźmi, elfami, krasnoludami i siłami ciemności.",
+          },
+          {
+            title: "Władca Pierścieni: Wojna Rohirrimów",
+            description:
+              "Film opowiadający o losach Rohirrimów i ich kluczowej roli w wydarzeniach trylogii Władcy Pierścieni.",
+          },
+        ],
+      },
+      { title: "Jack Pogromca Olbrzymów" },
+    ],
+  },
   HTTYD: [
     {
       title: "Jak Wytresować Smoka",
@@ -2319,6 +2534,34 @@ const movies = {
       ],
     },
     {
+      title: "Lalka",
+    },
+    {
+      title: "Sala Samobójców",
+      parts: [
+        {
+          title: "Sala Samobójców",
+          description:
+            "Polski film o młodych ludziach zmagających się z agresją, pustką i własnymi demonami w współczesnym świecie.",
+        },
+        {
+          title: "Sala Samobójców: Hejter",
+          description:
+            "Kontynuacja, która pogłębia wątki buntu, tożsamości i destrukcyjnych wzorców współczesnej kultury.",
+        },
+      ],
+    },
+    {
+      title: "Zemsta",
+      parts: [
+        {
+          title: "Zemsta",
+          description:
+            "Polski film o konsekwencjach odwetu, honorze i emocjonalnym rozdarciu po wywołanym konflikcie.",
+        },
+      ],
+    },
+    {
       title: "Adam Miauczyński",
       parts: [
         {
@@ -2360,6 +2603,7 @@ const alphabeticalMovieCategories = [
   "Filosofia",
   "IPiN",
   "Polskie",
+  "Maraton 2",
 ];
 
 const normalizeGenericMovieParts = (entryMap) => {

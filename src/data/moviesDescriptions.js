@@ -651,6 +651,36 @@ const moviesDescriptions = {
     description:
       "Nieporadny farmer próbuje przetrwać na Dzikim Zachodzie, gdzie niemal wszystko może go zabić.",
   },
+  Lalka: {
+    licence: "Polskie",
+    protagonist: "Stanisław Wokulski",
+    antagonist:
+      "Socjalne i emocjonalne rozdarcie, ambicja oraz wpływ wielkich sił społecznych",
+    why: "Polski klasyk literacki i filmowy, który pokazuje dramat jednostki w świecie pełnym kontrastów i niestałych wartości.",
+    location: "Warszawa, okres II Rzeczypospolitej",
+    description:
+      "Lalka to pozycja, która ma dla mnie znaczenie przede wszystkim ze względu na klasyczną polską opowieść o miłości, ambicji i wielkim konflikcie między człowiekiem a światem społecznym. To historia o pragnieniu, przemijaniu i kosztach marzeń w czasach niezwykłego napięcia politycznego i emocjonalnego. To film, który pokazuje, jak trudne jest zachowanie własnej tożsamości w obliczu wyzwań historii, pieniędzy i uczuć.",
+  },
+  "Sala Samobójców": {
+    licence: "Polskie",
+    protagonist:
+      "Młodzi bohaterowie, ich relacje i decyzje w świecie pełnym agresji",
+    antagonist: "Kultura przemocy, pustka, ból i własne lęki",
+    why: "Film poruszający temat współczesnej młodości, agresji i poszukiwania sensu w trudnych warunkach społecznych.",
+    location: "Polska, współczesność",
+    description:
+      "Sala Samobójców to pozycja, która ma dla mnie znaczenie przede wszystkim ze względu na motyw współczesnej młodości i zmagania z agresją, emocjonalnym rozdarciem oraz pustką codzienności. To film, który pokazuje, jak bardzo ludzie mogą cierpieć, gdy nie znajdują sensu, wyjścia ani własnej drogi. Jego wartość tkwi w bezpośredniości i w refleksji nad tym, jak destrukcyjne mogą być środowiska, które zamiast wspierać, pogłębiają chaos.",
+  },
+  Zemsta: {
+    licence: "Polskie",
+    protagonist:
+      "Bohater zmuszony do mierzenia się z własnym cierpieniem i żądzą odwetu",
+    antagonist: "Wina, gniew i konsekwencje działań sprzed lat",
+    why: "Film o honorze, emocjach i kosztach zemsty w polskim kontekście kulturowym i moralnym.",
+    location: "Polska",
+    description:
+      "Zemsta to pozycja, która ma dla mnie znaczenie przede wszystkim ze względu na temat odwetu, sprawiedliwości i ceny, jaką płaci człowiek, gdy wraca do wspomnień i urazów. To historia o gniewze, cierpieniu i trudnej odpowiedzialności za własne decyzje. Polskie spojrzenie na zemstę robi wrażenie swoją wstrzemięźliwością, ale też emocjonalną mocą.",
+  },
   "Adam Miauczyński": {
     licence: "Filozofia, IPiN, Polskie",
     protagonist: "Adam Miauczyński",

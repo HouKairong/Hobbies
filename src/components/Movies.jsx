@@ -10,6 +10,41 @@ import {
 
 const HTTYD = `${import.meta.env.BASE_URL}images/HTTYD.jpg`;
 
+const normalizeMovieTitle = (value = "") =>
+  String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s*\((?:19|20)\d{2}\)\s*$/, "")
+    .replace(/\s+gra\s*$/i, "")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const getMovieTitleKey = (value = "") => {
+  const normalized = normalizeMovieTitle(value);
+  if (!normalized) return "";
+
+  if (normalized === "lego ninjago film") {
+    return "LEGO Ninjago Film";
+  }
+
+  return String(value ?? "").trim();
+};
+
+const resolveMovieDescriptionKey = (title = "") => {
+  const directMatch = moviesDescriptions[String(title || "").trim()];
+  if (directMatch) return String(title || "").trim();
+
+  const normalizedTarget = normalizeMovieTitle(title);
+  const matchingKey = Object.keys(moviesDescriptions).find(
+    (key) => normalizeMovieTitle(key) === normalizedTarget,
+  );
+
+  return matchingKey || String(title || "").trim();
+};
+
 const Movies = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedStatus, setSelectedStatus] = useState("Wszystkie");
@@ -77,7 +112,9 @@ const Movies = () => {
   };
 
   const findMovieTargets = (title) => {
+    const targetKey = getMovieTitleKey(title);
     const matches = [];
+    const seen = new Set();
 
     Object.entries(movies).forEach(([category, categoryItems]) => {
       const flattenedItems = Array.isArray(categoryItems)
@@ -86,18 +123,38 @@ const Movies = () => {
             Array.isArray(group) ? group : [],
           );
 
-      const matchingSeries = flattenedItems.filter(
-        (item) =>
-          item &&
-          (item.title === title ||
-            item.parts?.some((part) => part.title === title)),
-      );
+      const matchingSeries = flattenedItems.filter((item) => {
+        if (!item) return false;
+
+        const seriesTitleKey = getMovieTitleKey(item.title);
+        const matchingPart = item.parts?.find(
+          (part) => getMovieTitleKey(part.title) === targetKey,
+        );
+
+        return (
+          seriesTitleKey === targetKey ||
+          matchingPart ||
+          (item.title && getMovieTitleKey(item.title) === targetKey)
+        );
+      });
 
       matchingSeries.forEach((series) => {
+        const part = series.parts?.find(
+          (part) => getMovieTitleKey(part.title) === targetKey,
+        );
+        const canonicalSeriesTitle = getMovieTitleKey(series.title);
+        const canonicalPartTitle = part
+          ? getMovieTitleKey(part.title)
+          : "series";
+        const matchKey = `${canonicalSeriesTitle}:${canonicalPartTitle}`;
+
+        if (seen.has(matchKey)) return;
+        seen.add(matchKey);
+
         matches.push({
           category,
           series,
-          part: series.parts?.find((part) => part.title === title) ?? null,
+          part: part ?? null,
         });
       });
     });
@@ -111,8 +168,13 @@ const Movies = () => {
     setSelectedPart(match.part);
     setMovieChoiceOptions(null);
 
-    if (match.category === "Boska Komedia") {
-      const groupForSeries = Object.entries(movies["Boska Komedia"]).find(
+    if (
+      match.category &&
+      movies[match.category] &&
+      typeof movies[match.category] === "object" &&
+      !Array.isArray(movies[match.category])
+    ) {
+      const groupForSeries = Object.entries(movies[match.category]).find(
         ([group, items]) =>
           Array.isArray(items) &&
           items.some((item) => item.title === match.series.title),
@@ -173,9 +235,22 @@ const Movies = () => {
         return;
       }
 
+      const uniqueTargets = [];
+      const seenTargets = new Set();
+      matchedTargets.forEach((target) => {
+        const canonicalSeriesTitle = getMovieTitleKey(target.series.title);
+        const canonicalPartTitle = target.part
+          ? getMovieTitleKey(target.part.title)
+          : "series";
+        const targetKey = `${canonicalSeriesTitle}:${canonicalPartTitle}`;
+        if (seenTargets.has(targetKey)) return;
+        seenTargets.add(targetKey);
+        uniqueTargets.push(target);
+      });
+
       setMovieChoiceOptions({
         title: normalizedTitle,
-        options: matchedTargets,
+        options: uniqueTargets,
       });
     } finally {
       sessionStorage.removeItem("hobbies-related-target");
@@ -197,7 +272,12 @@ const Movies = () => {
     setOpenSubgroup(openSubgroup === group ? null : group);
   };
 
-  const isBoskaKomedia = selectedCategory === "Boska Komedia";
+  const groupedMovieCategories = new Set([
+    "Boska Komedia",
+    "Maraton 1",
+    "Maraton 2",
+  ]);
+  const isGroupedMovieCategory = groupedMovieCategories.has(selectedCategory);
   const isHTTYD = selectedSeries?.title === "Jak Wytresować Smoka";
 
   const getMovieStatusKey = (title, partTitle = null) => {
@@ -338,7 +418,7 @@ const Movies = () => {
         </div>
 
         {/* Zwykłe kategorie */}
-        {!isBoskaKomedia && selectedCategory && (
+        {!isGroupedMovieCategory && selectedCategory && (
           <ul className="movies-list">
             {movies[selectedCategory]
               .filter((series) => filterByStatus(series))
@@ -355,7 +435,7 @@ const Movies = () => {
                     <div className="movies-item-content">
                       <span>{series.title}</span>
 
-                      {!series.parts || series.parts.length <= 1 ? (
+                      {(!series.parts || series.parts.length === 0) && (
                         <div className="status-control">
                           {statusOptions.map((option) => (
                             <button
@@ -373,7 +453,7 @@ const Movies = () => {
                             </button>
                           ))}
                         </div>
-                      ) : null}
+                      )}
                     </div>
                   </li>
                 );
@@ -381,9 +461,8 @@ const Movies = () => {
           </ul>
         )}
 
-        {/* Boska Komedia */}
-        {isBoskaKomedia &&
-          Object.keys(movies["Boska Komedia"]).map((group) => (
+        {isGroupedMovieCategory &&
+          Object.keys(movies[selectedCategory] || {}).map((group) => (
             <div key={group} className="movies-group">
               <h3
                 className="movies-group-title clickable"
@@ -394,7 +473,7 @@ const Movies = () => {
 
               {openSubgroup === group && (
                 <ul className="movies-list">
-                  {movies["Boska Komedia"][group]
+                  {movies[selectedCategory][group]
                     .filter((series) => filterByStatus(series))
                     .map((series) => {
                       const itemKey = getMovieStatusKey(series.title);
@@ -409,7 +488,7 @@ const Movies = () => {
                           <div className="movies-item-content">
                             <span>{series.title}</span>
 
-                            {!series.parts || series.parts.length <= 1 ? (
+                            {(!series.parts || series.parts.length === 0) && (
                               <div className="status-control">
                                 {statusOptions.map((option) => (
                                   <button
@@ -429,7 +508,7 @@ const Movies = () => {
                                   </button>
                                 ))}
                               </div>
-                            ) : null}
+                            )}
                           </div>
                         </li>
                       );
@@ -448,34 +527,41 @@ const Movies = () => {
           >
             <h3>{selectedSeries.title}</h3>
 
-            {moviesDescriptions[selectedSeries.title] && (
-              <div className="series-description">
-                <p>
-                  <strong>Licencja: </strong>
-                  {moviesDescriptions[selectedSeries.title].licence}
-                </p>
-                <p>
-                  <strong>Dlaczego tu jest: </strong>
-                  {moviesDescriptions[selectedSeries.title].why}
-                </p>
-                <p>
-                  <strong>Główni Protagoniści: </strong>
-                  {moviesDescriptions[selectedSeries.title].protagonist}
-                </p>
-                <p>
-                  <strong>Główni Antagoniści: </strong>
-                  {moviesDescriptions[selectedSeries.title].antagonist}
-                </p>
-                <p>
-                  <strong>Miejsce Akcji: </strong>
-                  {moviesDescriptions[selectedSeries.title].location}
-                </p>
-                <p>
-                  <strong>Opis: </strong>
-                  {moviesDescriptions[selectedSeries.title].description}
-                </p>
-              </div>
-            )}
+            {(() => {
+              const descriptionKey = resolveMovieDescriptionKey(
+                selectedSeries.title,
+              );
+              const description = moviesDescriptions[descriptionKey];
+
+              return description ? (
+                <div className="series-description">
+                  <p>
+                    <strong>Licencja: </strong>
+                    {description.licence}
+                  </p>
+                  <p>
+                    <strong>Dlaczego tu jest: </strong>
+                    {description.why}
+                  </p>
+                  <p>
+                    <strong>Główni Protagoniści: </strong>
+                    {description.protagonist}
+                  </p>
+                  <p>
+                    <strong>Główni Antagoniści: </strong>
+                    {description.antagonist}
+                  </p>
+                  <p>
+                    <strong>Miejsce Akcji: </strong>
+                    {description.location}
+                  </p>
+                  <p>
+                    <strong>Opis: </strong>
+                    {description.description}
+                  </p>
+                </div>
+              ) : null;
+            })()}
 
             {selectedSeries.parts && (
               <ul className="movies-sublist">
